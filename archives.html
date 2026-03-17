@@ -53,19 +53,27 @@
                 const cases = await response.json();
                 const grid = document.getElementById('archive-grid');
                 
-                // Sort by date string descending (newest first)
+                // Get Today's Date in Central Time (CST)
+                const options = { timeZone: 'America/Chicago', year: 'numeric', month: '2-digit', day: '2-digit' };
+                const formatter = new Intl.DateTimeFormat('en-CA', options);
+                const todayCST = formatter.format(new Date());
+
+                // 1. Sort: Newest first
                 cases.sort((a, b) => b.date.localeCompare(a.date));
 
+                // 2. Filter & Display: Only show if date <= today
                 cases.forEach(c => {
-                    const box = document.createElement('div');
-                    box.className = 'date-box';
-                    box.innerHTML = `<span>CASE DATE</span>${c.date}`;
-                    box.onclick = () => window.location.href = `index.html?caseId=${c.date}`;
-                    grid.appendChild(box);
+                    if (c.date <= todayCST) {
+                        const box = document.createElement('div');
+                        box.className = 'date-box';
+                        box.innerHTML = `<span>CASE DATE</span>${c.date}`;
+                        box.onclick = () => window.location.href = `index.html?caseId=${c.date}`;
+                        grid.appendChild(box);
+                    }
                 });
             } catch (e) {
                 console.error("Archive failure:", e);
-                document.getElementById('archive-grid').innerHTML = "<p>Error loading archives. Please check cases.json format.</p>";
+                document.getElementById('archive-grid').innerHTML = "<p>Error loading archives.</p>";
             }
         }
         loadArchives();
