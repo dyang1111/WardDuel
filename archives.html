@@ -58,12 +58,12 @@
                 const formatter = new Intl.DateTimeFormat('en-CA', options);
                 const todayCST = formatter.format(new Date());
 
-                // 1. Sort: Newest first
+                // Sort: Newest first
                 cases.sort((a, b) => b.date.localeCompare(a.date));
 
-                // 2. Filter & Display: Only show if date <= today
+                // Filter & Display: Only show if date is LESS THAN today (Past cases only)
                 cases.forEach(c => {
-                    if (c.date <= todayCST) {
+                    if (c.date < todayCST) {
                         const box = document.createElement('div');
                         box.className = 'date-box';
                         box.innerHTML = `<span>CASE DATE</span>${c.date}`;
