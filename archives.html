@@ -1,24 +1,69 @@
-[
-  {
-    "date": "2026-03-16",
-    "hx_brief": "62yo male with sudden onset tearing chest pain radiating to the back.",
-    "hints": {
-      "hx": "History of uncontrolled hypertension. Patient describes pain as 10/10.",
-      "pe": "Blood pressure 180/100 in right arm, 140/90 in left arm. Diminished femoral pulses.",
-      "lab": "Elevated D-dimer. Normal Troponin.",
-      "img": "Chest X-ray shows widened mediastinum."
-    },
-    "answer": "Aortic Dissection"
-  },
-  {
-    "date": "2026-03-17",
-    "hx_brief": "24yo female with periumbilical pain that migrated to the RLQ.",
-    "hints": {
-      "hx": "Nausea and one episode of vomiting. Appetite is gone (anorexia).",
-      "pe": "Tenderness at McBurney's point. Positive Rovsing sign.",
-      "lab": "Leukocytosis (WBC 15,000) with left shift.",
-      "img": "Ultrasound shows non-compressible appendix >6mm."
-    },
-    "answer": "Appendicitis"
-  }
-]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARDDUEL | Archives</title>
+    <style>
+        :root { --bg: #0b1120; --panel: #1a2235; --accent: #00f2ff; --text: #e2e8f0; }
+        body { background-color: var(--bg); color: var(--text); font-family: sans-serif; margin: 0; display: flex; flex-direction: column; align-items: center; }
+        .top-bar { width: 100%; padding: 15px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #334155; box-sizing: border-box; }
+        .logo { font-weight: bold; font-size: 1.5rem; color: var(--accent); text-decoration: none; }
+        
+        /* THE 3-COLUMN GRID */
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 20px;
+            width: 90%;
+            max-width: 800px;
+            margin-top: 40px;
+        }
+
+        .date-box {
+            background: var(--panel);
+            padding: 30px 10px;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            cursor: pointer;
+            transition: 0.2s;
+            font-weight: bold;
+        }
+
+        .date-box:hover { border-color: var(--accent); transform: scale(1.05); }
+        .date-box span { display: block; font-size: 0.8rem; color: var(--accent); margin-bottom: 5px; }
+
+        @media (max-width: 600px) { .archive-grid { grid-template-columns: 1fr 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="index.html" class="logo">WARDDUEL</a>
+        <a href="index.html" style="color: var(--accent); text-decoration: none; font-weight: bold;">← BACK</a>
+    </div>
+
+    <h1>Clinical Archives</h1>
+    <div id="archive-grid" class="archive-grid"></div>
+
+    <script>
+        async function loadArchives() {
+            const response = await fetch('cases.json');
+            const cases = await response.json();
+            const grid = document.getElementById('archive-grid');
+            
+            // Sort: Newest first
+            cases.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            cases.forEach(c => {
+                const box = document.createElement('div');
+                box.className = 'date-box';
+                box.innerHTML = `<span>CASE DATE</span>${c.date}`;
+                box.onclick = () => window.location.href = `index.html?caseId=${c.date}`;
+                grid.appendChild(box);
+            });
+        }
+        loadArchives();
+    </script>
+</body>
+</html>
