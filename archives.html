@@ -1,43 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WardDuel | Archive</title>
-    <style>
-        :root { --bg: #0f172a; --panel: #1e293b; --accent: #38bdf8; --text: #f8fafc; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
-        .top-bar { width: 100%; padding: 15px 25px; display: flex; justify-content: space-between; border-bottom: 2px solid var(--panel); box-sizing: border-box; }
-        .logo { font-weight: 800; font-size: 1.8rem; color: var(--accent); text-decoration: none; }
-        .archive-list { width: 90%; max-width: 800px; margin-top: 30px; }
-        .case-card { background: var(--panel); padding: 20px; border-radius: 12px; margin-bottom: 15px; cursor: pointer; border: 1px solid #334155; transition: 0.2s; }
-        .case-card:hover { border-color: var(--accent); }
-    </style>
-</head>
-<body>
-    <div class="top-bar">
-        <a href="index.html" class="logo">WARDDUEL</a>
-        <div style="font-weight: bold; color: var(--accent);">CASE ARCHIVE</div>
-    </div>
-
-    <div class="archive-list" id="list">
-        <h2>Past Cases</h2>
-        </div>
-
-    <script>
-        async function loadArchive() {
-            const res = await fetch('cases.json');
-            const cases = await res.json();
-            const list = document.getElementById('list');
-            cases.forEach(c => {
-                const card = document.createElement('div');
-                card.className = 'case-card';
-                card.innerHTML = `<strong>${c.date}</strong><br>${c.hx_brief.substring(0, 50)}...`;
-                card.onclick = () => alert("Practice mode for this case coming soon!");
-                list.appendChild(card);
-            });
-        }
-        loadArchive();
-    </script>
-</body>
-</html>
+[
+  {
+    "date": "2026-03-16",
+    "hx_brief": "62yo male with sudden onset tearing chest pain radiating to the back.",
+    "hints": {
+      "hx": "History of uncontrolled hypertension. Patient describes pain as 10/10.",
+      "pe": "Blood pressure 180/100 in right arm, 140/90 in left arm. Diminished femoral pulses.",
+      "lab": "Elevated D-dimer. Normal Troponin.",
+      "img": "Chest X-ray shows widened mediastinum."
+    },
+    "answer": "Aortic Dissection"
+  },
+  {
+    "date": "2026-03-17",
+    "hx_brief": "24yo female with periumbilical pain that migrated to the RLQ.",
+    "hints": {
+      "hx": "Nausea and one episode of vomiting. Appetite is gone (anorexia).",
+      "pe": "Tenderness at McBurney's point. Positive Rovsing sign.",
+      "lab": "Leukocytosis (WBC 15,000) with left shift.",
+      "img": "Ultrasound shows non-compressible appendix >6mm."
+    },
+    "answer": "Appendicitis"
+  }
+]
