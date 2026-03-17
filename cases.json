@@ -1,13 +1,24 @@
 [
   {
-    "date": "2026-03-17",
-    "hx_brief": "54yo male comes in with diarrhea and abdominal pain x 6 months. Patient denies fever, blood in stool, PMH, or significant FMH.",
+    "date": "2026-03-16",
+    "hx_brief": "62yo male with sudden onset tearing chest pain radiating to the back.",
     "hints": {
-      "hx": "Intermittent joint pain. Notable skin findings over shins.",
-      "pe": "Erythema Nodosum on the anterior shins.",
-      "lab": "Elevated ESR and CRP. Stool cultures negative.",
-      "img": "CT: Non-specific thickening of the terminal ileum."
+      "hx": "History of uncontrolled hypertension. Patient describes pain as 10/10.",
+      "pe": "Blood pressure 180/100 in right arm, 140/90 in left arm. Diminished femoral pulses.",
+      "lab": "Elevated D-dimer. Normal Troponin.",
+      "img": "Chest X-ray shows widened mediastinum."
     },
-    "answer": "Crohn's Disease"
+    "answer": "Aortic Dissection"
+  },
+  {
+    "date": "2026-03-17",
+    "hx_brief": "24yo female with periumbilical pain that migrated to the RLQ.",
+    "hints": {
+      "hx": "Nausea and one episode of vomiting. Appetite is gone (anorexia).",
+      "pe": "Tenderness at McBurney's point. Positive Rovsing sign.",
+      "lab": "Leukocytosis (WBC 15,000) with left shift.",
+      "img": "Ultrasound shows non-compressible appendix >6mm."
+    },
+    "answer": "Appendicitis"
   }
 ]
