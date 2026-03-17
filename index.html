@@ -57,7 +57,19 @@
 
         .search-container { position: relative; width: 100%; }
         input[type="text"] { width: 100%; padding: 15px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 8px; box-sizing: border-box; }
-        .dropdown { position: absolute; width: 100%; background: #1e293b; border: 1px solid var(--accent); max-height: 200px; overflow-y: auto; z-index: 100; display: none; }
+        
+        /* UPDATED DROPDOWN HEIGHT AND STYLE */
+        .dropdown { 
+            position: absolute; 
+            width: 100%; 
+            background: #1e293b; 
+            border: 1px solid var(--accent); 
+            max-height: 280px; 
+            overflow-y: auto; 
+            z-index: 100; 
+            display: none; 
+            border-radius: 0 0 8px 8px;
+        }
         .dropdown div { padding: 12px; cursor: pointer; border-bottom: 1px solid #334155; }
         .dropdown div:hover { background: var(--accent); color: var(--bg); }
 
@@ -135,11 +147,18 @@
         let currentCase = null, hp = 100, timeLeft = 300, isSignUp = true, timerId = null;
         const unlockedHints = new Set();
         window.isLiveGame = true; 
-
-        const diagnosisPool = ["Achalasia", "Acute Cholecystitis", "Acute Liver Failure", "Acute Pancreatitis", "Aortic Dissection", "Appendicitis", "Asthma", "Bacterial Meningitis", "Celiac Disease", "Crohn's Disease", "Diabetic Ketoacidosis", "Ectopic Pregnancy", "Esophageal Varices", "Graves Disease", "Hashimoto Thyroiditis", "Intussusception", "Multiple Sclerosis", "Myocardial Infarction", "Pheochromocytoma", "Pneumonia", "Pneumothorax", "Pulmonary Embolism", "Pyelonephritis", "Sarcoidosis", "Septic Arthritis", "Subarachnoid Hemorrhage", "Ulcerative Colitis"].sort();
+        
+        // GLOBAL POOL LOADED FROM FILE
+        let diagnosisPool = []; 
 
         async function initGame() {
             try {
+                // FETCH DIAGNOSES FROM SEPARATE JSON
+                const dxResponse = await fetch('diagnoses.json');
+                diagnosisPool = await dxResponse.json();
+                diagnosisPool.sort();
+
+                // FETCH CASES
                 const response = await fetch('cases.json');
                 const cases = await response.json();
 
@@ -163,7 +182,10 @@
 
                 document.getElementById('case-hx').innerText = currentCase.hx_brief;
                 startTimer();
-            } catch (e) { document.getElementById('case-hx').innerText = "Case Load Error."; }
+            } catch (e) { 
+                console.error(e);
+                document.getElementById('case-hx').innerText = "Load Error. Check JSON files."; 
+            }
         }
         initGame();
 
