@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WardDuel | Clinical 1v1</title>
     <style>
-        :root { --bg: #0f172a; --panel: #1e293b; --accent: #38bdf8; --danger: #ef4444; --text: #f8fafc; }
+        :root { --bg: #0f172a; --panel: #1e293b; --accent: #38bdf8; --danger: #ef4444; --success: #22c55e; --text: #f8fafc; }
         body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
         .top-bar { width: 100%; padding: 15px 25px; display: flex; justify-content: space-between; border-bottom: 2px solid var(--panel); box-sizing: border-box; }
         .logo { font-weight: 800; font-size: 1.8rem; color: var(--accent); text-decoration: none; }
-        .game-board { width: 90%; max-width: 800px; background: var(--panel); margin-top: 20px; padding: 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); position: relative; }
         
-        /* HP Display */
-        #hp-display { font-size: 1.5rem; font-weight: 900; color: var(--danger); margin-bottom: 15px; text-align: right; }
+        .game-board { width: 90%; max-width: 800px; background: var(--panel); margin-top: 20px; padding: 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         
+        /* HP BAR STYLES */
+        .status-container { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .hp-container { width: 70%; height: 20px; background: #0f172a; border-radius: 10px; overflow: hidden; border: 1px solid #334155; }
+        #hp-bar { width: 100%; height: 100%; background: var(--success); transition: width 0.4s ease, background 0.4s ease; }
+        #timer { font-size: 1.5rem; font-weight: 900; color: var(--accent); }
+
         .action-btn { background: #1e293b; border: 1px solid #475569; color: white; padding: 12px; cursor: pointer; border-radius: 8px; font-weight: bold; }
         .search-container { position: relative; margin-top: 20px; }
         input[type="text"] { width: 100%; padding: 15px; background: #0f172a; border: 2px solid #334155; color: white; border-radius: 10px; font-size: 1rem; box-sizing: border-box; }
@@ -47,7 +51,11 @@
     </div>
 
     <div class="game-board">
-        <div id="hp-display">HP: 100</div>
+        <div class="status-container">
+            <div class="hp-container"><div id="hp-bar"></div></div>
+            <div id="timer">01:00</div>
+        </div>
+        
         <div id="case-title" style="font-size: 1.3rem; margin-bottom: 20px; border-left: 4px solid var(--accent); padding-left: 15px;">Loading Daily Duel...</div>
         
         <div class="grid-buttons" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
@@ -86,16 +94,11 @@
 
         let currentCase = null;
         let hp = 100;
+        let timeLeft = 60;
+        let timerId = null;
         let isSignUp = true;
 
-        const rawList = [
-            "Achalasia", "Acute Cholecystitis", "Acute Liver Failure", "Acute Pancreatitis", "Aortic Dissection", 
-            "Appendicitis", "Asthma", "Bacterial Meningitis", "Celiac Disease", "Crohn's Disease", 
-            "Diabetic Ketoacidosis", "Ectopic Pregnancy", "Esophageal Varices", "Graves Disease", 
-            "Hashimoto Thyroiditis", "Intussusception", "Multiple Sclerosis", "Myocardial Infarction", 
-            "Pheochromocytoma", "Pneumonia", "Pneumothorax", "Pulmonary Embolism", "Pyelonephritis", 
-            "Sarcoidosis", "Septic Arthritis", "Subarachnoid Hemorrhage", "Ulcerative Colitis"
-        ];
+        const rawList = ["Achalasia", "Acute Cholecystitis", "Acute Liver Failure", "Acute Pancreatitis", "Aortic Dissection", "Appendicitis", "Asthma", "Bacterial Meningitis", "Celiac Disease", "Crohn's Disease", "Diabetic Ketoacidosis", "Ectopic Pregnancy", "Esophageal Varices", "Graves Disease", "Hashimoto Thyroiditis", "Intussusception", "Multiple Sclerosis", "Myocardial Infarction", "Pheochromocytoma", "Pneumonia", "Pneumothorax", "Pulmonary Embolism", "Pyelonephritis", "Sarcoidosis", "Septic Arthritis", "Subarachnoid Hemorrhage", "Ulcerative Colitis"];
         const diagnosisPool = [...new Set(rawList)].sort();
 
         async function initGame() {
@@ -105,17 +108,45 @@
                 const cases = await response.json();
                 currentCase = cases.find(c => c.date === today) || cases[cases.length - 1];
                 document.getElementById('case-title').innerText = currentCase.hx_brief;
+                startTimer();
             } catch (e) { document.getElementById('case-title').innerText = "Error loading cases.json"; }
         }
         initGame();
 
+        function startTimer() {
+            timerId = setInterval(() => {
+                timeLeft--;
+                let m = Math.floor(timeLeft / 60);
+                let s = timeLeft % 60;
+                document.getElementById('timer').innerText = `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+                if(timeLeft <= 0) {
+                    clearInterval(timerId);
+                    alert("Time Expired! The patient has been transferred.");
+                    location.reload();
+                }
+            }, 1000);
+        }
+
+        function updateHP() {
+            const bar = document.getElementById('hp-bar');
+            bar.style.width = hp + "%";
+            if(hp > 60) bar.style.background = "var(--success)";
+            else if(hp > 30) bar.style.background = "#eab308"; // Yellow
+            else bar.style.background = "var(--danger)";
+            
+            if(hp <= 0) {
+                clearInterval(timerId);
+                alert("Critical Failure: HP depleted.");
+                location.reload();
+            }
+        }
+
         window.reveal = (type, cost) => {
             hp -= cost;
-            document.getElementById('hp-display').innerText = `HP: ${hp}`;
+            updateHP();
             const box = document.getElementById('hint-box');
             box.style.display = 'block';
             box.innerText = currentCase.hints[type];
-            if(hp <= 0) alert("Critical Condition! You've run out of HP.");
         };
 
         window.filterDx = () => {
@@ -123,17 +154,12 @@
             let div = document.getElementById('dropdown');
             div.innerHTML = '';
             if(!val) { div.style.display='none'; return; }
-            
             let matches = diagnosisPool.filter(d => d.toUpperCase().startsWith(val));
             div.style.display = matches.length ? 'block' : 'none';
-            
             matches.forEach(m => {
                 let d = document.createElement('div');
                 d.innerText = m;
-                d.onclick = () => {
-                    document.getElementById('dx-input').value = m;
-                    div.style.display = 'none';
-                };
+                d.onclick = () => { document.getElementById('dx-input').value = m; div.style.display='none'; };
                 div.appendChild(d);
             });
         };
@@ -141,14 +167,15 @@
         window.checkAnswer = async () => {
             let guess = document.getElementById('dx-input').value;
             if(guess === currentCase.answer) {
-                alert(`Correct! Final Score: ${hp} HP`);
+                clearInterval(timerId);
+                alert(`Case Resolved! Final Score: ${hp} HP`);
                 if(auth.currentUser) {
                     await updateDoc(doc(db, "users", auth.currentUser.uid), { lastScore: hp });
                 }
             } else {
                 hp -= 20;
-                document.getElementById('hp-display').innerText = `HP: ${hp}`;
-                alert("Incorrect. -20 HP Penalty.");
+                updateHP();
+                alert("Incorrect Diagnosis. -20 HP Penalty.");
             }
         };
 
