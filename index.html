@@ -23,7 +23,6 @@
         .logo { font-weight: bold; font-size: 1.5rem; letter-spacing: 2px; color: var(--accent); text-decoration: none; }
         .login-btn { background: none; border: 1px solid var(--accent); color: var(--accent); padding: 8px 15px; cursor: pointer; border-radius: 4px; font-weight: bold; }
 
-        /* 🏥 STATS BAR WITH OVERLAY HP */
         .stats-container {
             width: 90%; max-width: 800px; margin-top: 20px;
             display: flex; justify-content: space-between; align-items: center; gap: 15px;
@@ -33,7 +32,6 @@
         .hp-bar-bg { width: 100%; height: 100%; background: #334155; border-radius: 15px; overflow: hidden; border: 2px solid #475569; }
         #hp-fill { height: 100%; width: 100%; background: var(--success); transition: width 0.3s ease; }
         
-        /* This sits exactly on top of the bar */
         .hp-text-overlay { 
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             display: flex; align-items: center; justify-content: center;
@@ -43,18 +41,19 @@
         #timer-display { font-weight: bold; color: var(--accent); font-family: monospace; font-size: 1.2rem; }
         #rank { font-weight: bold; color: #94a3b8; font-size: 0.9rem; }
 
-        /* GAME BOARD */
         .game-board {
             width: 90%; max-width: 800px; background: var(--panel); margin-top: 20px;
             padding: 30px; border-radius: 12px; border: 1px solid #334155;
         }
 
         .hx-box { font-size: 1.2rem; border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 25px; }
-        .hint-output { background: #0f172a; padding: 15px; border-radius: 8px; margin-bottom: 15px; display: none; color: #94a3b8; }
+        .hint-output { background: #0f172a; padding: 15px; border-radius: 8px; margin-bottom: 15px; display: none; color: #94a3b8; border: 1px solid #334155; }
 
         .grid-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
         .action-btn { background: #1e293b; border: 1px solid #475569; color: white; padding: 15px; cursor: pointer; border-radius: 6px; font-weight: bold; }
+        .action-btn.unlocked { border-color: var(--success); background: #064e3b; }
         .action-btn span { float: right; color: var(--danger); }
+        .action-btn.unlocked span { color: var(--success); }
 
         .search-container { position: relative; width: 100%; }
         input[type="text"] { width: 100%; padding: 15px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 8px; box-sizing: border-box; }
@@ -86,7 +85,7 @@
     </div>
 
     <div class="stats-container">
-        <div>TIME: <span id="timer-display">01:00</span></div>
+        <div>TIME: <span id="timer-display">05:00</span></div>
         <div class="hp-container">
             <div class="hp-bar-bg"><div id="hp-fill"></div></div>
             <div class="hp-text-overlay">HP: <span id="hp-val">100</span></div>
@@ -98,10 +97,10 @@
         <div class="hx-box" id="case-hx">Loading Today's Case...</div>
         <div id="hint-display" class="hint-output"></div>
         <div class="grid-buttons">
-            <button class="action-btn" onclick="getHint('hx', 10)">Add. History <span>-10 HP</span></button>
-            <button class="action-btn" onclick="getHint('pe', 15)">PE Findings <span>-15 HP</span></button>
-            <button class="action-btn" onclick="getHint('lab', 20)">Lab Results <span>-20 HP</span></button>
-            <button class="action-btn" onclick="getHint('img', 25)">Imaging <span>-25 HP</span></button>
+            <button class="action-btn" id="btn-hx" onclick="getHint('hx', 10)">Add. History <span>-10 HP</span></button>
+            <button class="action-btn" id="btn-pe" onclick="getHint('pe', 15)">PE Findings <span>-15 HP</span></button>
+            <button class="action-btn" id="btn-lab" onclick="getHint('lab', 20)">Lab Results <span>-20 HP</span></button>
+            <button class="action-btn" id="btn-img" onclick="getHint('img', 25)">Imaging <span>-25 HP</span></button>
         </div>
         <div class="search-container">
             <input type="text" id="dx-input" placeholder="Search Diagnosis..." onkeyup="window.filterDiagnosis()">
@@ -128,7 +127,8 @@
         const auth = getAuth(app);
         const db = getFirestore(app);
 
-        let currentCase = null, hp = 100, timeLeft = 60, isSignUp = true, timerId = null;
+        let currentCase = null, hp = 100, timeLeft = 300, isSignUp = true, timerId = null;
+        const unlockedHints = new Set();
 
         const diagnosisPool = ["Achalasia", "Acute Cholecystitis", "Acute Liver Failure", "Acute Pancreatitis", "Aortic Dissection", "Appendicitis", "Asthma", "Bacterial Meningitis", "Celiac Disease", "Crohn's Disease", "Diabetic Ketoacidosis", "Ectopic Pregnancy", "Esophageal Varices", "Graves Disease", "Hashimoto Thyroiditis", "Intussusception", "Multiple Sclerosis", "Myocardial Infarction", "Pheochromocytoma", "Pneumonia", "Pneumothorax", "Pulmonary Embolism", "Pyelonephritis", "Sarcoidosis", "Septic Arthritis", "Subarachnoid Hemorrhage", "Ulcerative Colitis"].sort();
 
@@ -147,20 +147,16 @@
         function startTimer() {
             timerId = setInterval(() => {
                 timeLeft--;
-                
-                // 🕒 TICK DOWN: -1 HP every 10 seconds
-                if (timeLeft % 10 === 0 && timeLeft !== 60) {
+                if (timeLeft % 10 === 0 && timeLeft !== 300) {
                     hp -= 1;
                     updateHPVisuals();
                 }
-
                 let m = Math.floor(timeLeft / 60).toString().padStart(2, '0');
                 let s = (timeLeft % 60).toString().padStart(2, '0');
                 document.getElementById('timer-display').innerText = `${m}:${s}`;
-
                 if(timeLeft <= 0) {
                     clearInterval(timerId);
-                    alert("TIME EXPIRED: Patient condition became terminal.");
+                    alert("TIME EXPIRED: Case Transfer Required.");
                     location.reload();
                 }
             }, 1000);
@@ -171,11 +167,9 @@
             document.getElementById('hp-val').innerText = hp;
             const fill = document.getElementById('hp-fill');
             fill.style.width = hp + "%";
-            
             if(hp > 60) fill.style.background = "var(--success)";
             else if(hp > 30) fill.style.background = "#eab308";
             else fill.style.background = "var(--danger)";
-
             if(hp <= 0) {
                 clearInterval(timerId);
                 alert("CRITICAL FAILURE: Diagnostic accuracy depleted.");
@@ -184,8 +178,14 @@
         }
 
         window.getHint = (type, cost) => {
-            hp -= cost;
-            updateHPVisuals();
+            if (!unlockedHints.has(type)) {
+                hp -= cost;
+                unlockedHints.add(type);
+                const btn = document.getElementById(`btn-${type}`);
+                btn.classList.add('unlocked');
+                btn.querySelector('span').innerText = "CHECKED";
+                updateHPVisuals();
+            }
             const display = document.getElementById('hint-display');
             display.style.display = "block";
             display.innerText = currentCase.hints[type];
@@ -212,12 +212,12 @@
             let val = document.getElementById('dx-input').value;
             if (val === currentCase.answer) {
                 clearInterval(timerId);
-                alert(`CORRECT! Final HP: ${hp}`);
+                alert(`CORRECT! Final Score: ${hp} HP`);
                 if(auth.currentUser) await updateDoc(doc(db, "users", auth.currentUser.uid), { lastScore: hp });
             } else {
                 hp -= 20;
                 updateHPVisuals();
-                alert("INCORRECT. -20 HP penalty applied.");
+                alert("INCORRECT. -20 HP penalty.");
             }
         };
 
