@@ -13,9 +13,22 @@
         .action-btn { background: #1e293b; border: 1px solid #475569; color: white; padding: 12px; cursor: pointer; border-radius: 8px; font-weight: bold; }
         .search-container { position: relative; margin-top: 20px; }
         input[type="text"] { width: 100%; padding: 15px; background: #0f172a; border: 2px solid #334155; color: white; border-radius: 10px; font-size: 1rem; box-sizing: border-box; }
-        .dropdown { position: absolute; width: 100%; background: #1e293b; border: 1px solid var(--accent); max-height: 200px; overflow-y: auto; display: none; z-index: 100; border-radius: 8px; }
-        .dropdown div { padding: 10px; cursor: pointer; border-bottom: 1px solid #334155; }
+        
+        /* Dropdown Polish */
+        .dropdown { 
+            position: absolute; 
+            width: 100%; 
+            background: #1e293b; 
+            border: 1px solid var(--accent); 
+            max-height: 250px; /* Prevents it from going off-screen */
+            overflow-y: auto; /* Adds scrollbar for massive lists */
+            display: none; 
+            z-index: 100; 
+            border-radius: 0 0 10px 10px; 
+        }
+        .dropdown div { padding: 12px; cursor: pointer; border-bottom: 1px solid #334155; }
         .dropdown div:hover { background: var(--accent); color: var(--bg); }
+
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
         .modal-content { background: var(--panel); margin: 15% auto; padding: 30px; border-radius: 15px; width: 320px; border: 1px solid var(--accent); text-align: center; }
         .submit-btn { width: 100%; padding: 15px; background: var(--danger); border: none; border-radius: 10px; color: white; font-weight: bold; cursor: pointer; margin-top: 10px; }
@@ -51,7 +64,7 @@
         </div>
         <div id="hint-box" style="background:#0f172a; padding:15px; border-radius:8px; display:none; margin-bottom:20px;"></div>
         <div class="search-container">
-            <input type="text" id="dx-input" placeholder="Search Diagnosis..." onkeyup="filterDx()">
+            <input type="text" id="dx-input" placeholder="Search Diagnosis..." onkeyup="window.filterDx()">
             <div id="dropdown" class="dropdown"></div>
         </div>
         <button class="submit-btn" onclick="checkAnswer()">SUBMIT FINAL DIAGNOSIS</button>
@@ -79,7 +92,9 @@
         let hp = 100;
         let isSignUp = true;
 
-        const diagnosisPool = ["Achalasia", "Acute Cholecystitis", "Acute Pancreatitis", "Aortic Dissection", "Appendicitis", "Crohn's Disease", "Ectopic Pregnancy", "Pheochromocytoma", "Pneumothorax", "Subarachnoid Hemorrhage"].sort();
+        // Expanded Pool - Type as many as you want here
+        const rawList = ["Achalasia", "Acute Cholecystitis", "Acute Pancreatitis", "Aortic Dissection", "Appendicitis", "Crohn's Disease", "Ectopic Pregnancy", "Pheochromocytoma", "Pneumothorax", "Subarachnoid Hemorrhage"];
+        const diagnosisPool = [...new Set(rawList)].sort();
 
         async function initGame() {
             const today = new Date().toISOString().split('T')[0];
@@ -104,7 +119,10 @@
             let div = document.getElementById('dropdown');
             div.innerHTML = '';
             if(!val) { div.style.display='none'; return; }
-            let matches = diagnosisPool.filter(d => d.toUpperCase().includes(val));
+            
+            // Starts-With Search Logic
+            let matches = diagnosisPool.filter(d => d.toUpperCase().startsWith(val));
+            
             div.style.display = matches.length ? 'block' : 'none';
             matches.forEach(m => {
                 let d = document.createElement('div');
@@ -151,10 +169,6 @@
         onAuthStateChanged(auth, (user) => {
             if(user) document.getElementById('auth-ui').innerHTML = `<span style="color:var(--accent); font-weight:bold;">DR. ${user.email.split('@')[0].toUpperCase()}</span>`;
         });
-    </script>
-</body>
-</html>
-        }
     </script>
 </body>
 </html>
