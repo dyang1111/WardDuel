@@ -1,248 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WARDDUEL | Clinical 1v1</title>
-    <style>
-        :root {
-            --bg: #0b1120; --panel: #1a2235; --accent: #00f2ff;
-            --danger: #ff4b4b; --text: #e2e8f0; --success: #22c55e;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WARDDUEL | Diagnose or Die</title>
 
-        body {
-            background-color: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif;
-            margin: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh;
-        }
+<style>
+:root {
+    --bg:#0b1120; --panel:#1a2235; --accent:#00f2ff;
+    --danger:#ff4b4b; --text:#e2e8f0; --success:#22c55e;
+}
 
-        .top-bar {
-            width: 100%; padding: 15px 25px; display: flex; justify-content: space-between;
-            align-items: center; box-sizing: border-box; border-bottom: 1px solid #334155;
-        }
+body {
+    background:var(--bg); color:var(--text);
+    font-family:'Segoe UI',sans-serif;
+    margin:0; display:flex; flex-direction:column; align-items:center;
+}
 
-        .logo { font-weight: bold; font-size: 1.5rem; letter-spacing: 2px; color: var(--accent); text-decoration: none; }
-        .login-btn { background: none; border: 1px solid var(--accent); color: var(--accent); padding: 8px 15px; cursor: pointer; border-radius: 4px; font-weight: bold; }
+.top-bar {
+    width:100%; padding:15px 25px;
+    display:flex; justify-content:space-between; align-items:center;
+    border-bottom:1px solid #334155;
+}
 
-        .stats-container {
-            width: 90%; max-width: 800px; margin-top: 20px;
-            display: flex; justify-content: space-between; align-items: center; gap: 15px;
-        }
+.logo { color:var(--accent); font-weight:bold; text-decoration:none; font-size:1.5rem; }
+.login-btn { border:1px solid var(--accent); background:none; color:var(--accent); padding:8px 15px; cursor:pointer; }
 
-        .hp-container { flex-grow: 1; position: relative; max-width: 400px; height: 30px; }
-        .hp-bar-bg { width: 100%; height: 100%; background: #334155; border-radius: 15px; overflow: hidden; border: 2px solid #475569; }
-        #hp-fill { height: 100%; width: 100%; background: var(--success); transition: width 0.3s ease; }
-        
-        .hp-text-overlay { 
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 900; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); pointer-events: none;
-        }
+.stats-container {
+    width:90%; max-width:800px;
+    margin-top:20px; display:flex; justify-content:space-between; align-items:center;
+}
 
-        #timer-display { font-weight: bold; color: var(--accent); font-family: monospace; font-size: 1.2rem; }
-        #rank { font-weight: bold; color: #94a3b8; font-size: 0.9rem; }
+.hp-container { flex:1; position:relative; height:30px; margin:0 15px; }
+.hp-bar-bg { width:100%; height:100%; background:#334155; border-radius:15px; overflow:hidden; }
+#hp-fill { height:100%; width:100%; background:var(--success); transition:0.3s; }
 
-        .game-board {
-            width: 90%; max-width: 800px; background: var(--panel); margin-top: 20px;
-            padding: 30px; border-radius: 12px; border: 1px solid #334155;
-        }
+.hp-text-overlay {
+    position:absolute; width:100%; height:100%;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:bold;
+}
 
-        .hx-box { font-size: 1.2rem; border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 25px; }
-        .hint-output { background: #0f172a; padding: 15px; border-radius: 8px; margin-bottom: 15px; display: none; color: #94a3b8; border: 1px solid #334155; }
+#timer-display { font-family:monospace; font-weight:bold; color:var(--accent); }
 
-        .grid-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
-        .action-btn { background: #1e293b; border: 1px solid #475569; color: white; padding: 15px; cursor: pointer; border-radius: 6px; font-weight: bold; }
-        .action-btn.unlocked { border-color: var(--success); background: #064e3b; }
-        .action-btn span { float: right; color: var(--danger); }
-        .action-btn.unlocked span { color: var(--success); }
+.game-board {
+    width:90%; max-width:800px;
+    background:var(--panel); margin-top:20px;
+    padding:30px; border-radius:12px;
+}
 
-        .search-container { position: relative; width: 100%; }
-        input[type="text"] { width: 100%; padding: 15px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 8px; box-sizing: border-box; }
-        .dropdown { position: absolute; width: 100%; background: #1e293b; border: 1px solid var(--accent); max-height: 200px; overflow-y: auto; z-index: 100; display: none; }
-        .dropdown div { padding: 12px; cursor: pointer; border-bottom: 1px solid #334155; }
-        .dropdown div:hover { background: var(--accent); color: var(--bg); }
+.hx-box {
+    font-size:1.3rem; line-height:1.5;
+    border-left:4px solid var(--accent);
+    padding-left:15px; margin-bottom:20px;
+}
 
-        .submit-btn { width: 100%; padding: 15px; margin-top: 20px; background: var(--danger); color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 8px; }
+.hint-output {
+    display:none; background:#0f172a;
+    padding:15px; margin-bottom:15px;
+    border-radius:8px;
+}
 
-        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
-        .modal-content { background: var(--panel); margin: 15% auto; padding: 30px; border-radius: 15px; width: 320px; border: 1px solid var(--accent); text-align: center; }
-    </style>
+.grid-buttons {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:15px; margin-bottom:20px;
+}
+
+.action-btn {
+    padding:15px; background:#1e293b;
+    border:1px solid #475569; color:white;
+    cursor:pointer; transition:0.2s;
+}
+
+.action-btn:hover {
+    transform:translateY(-2px);
+    border-color:var(--accent);
+}
+
+.action-btn.unlocked {
+    background:#064e3b; border-color:var(--success);
+    opacity:0.85;
+}
+
+input {
+    width:100%; padding:15px;
+    background:#0f172a; border:1px solid #475569;
+    color:white;
+}
+
+.dropdown {
+    position:absolute; width:100%;
+    background:#1e293b; display:none;
+    max-height:150px; overflow:auto;
+}
+
+.dropdown div {
+    padding:10px; cursor:pointer;
+}
+
+.dropdown div:hover {
+    background:var(--accent); color:black;
+}
+
+.submit-btn {
+    width:100%; margin-top:15px;
+    padding:15px; background:var(--danger);
+    border:none; color:white; cursor:pointer;
+}
+
+.modal {
+    display:none; position:fixed;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background:var(--panel);
+    margin:15% auto; padding:20px;
+    width:300px; text-align:center;
+}
+
+.shake { animation:shake 0.3s; }
+@keyframes shake {
+    0%{transform:translateX(0)}
+    25%{transform:translateX(-5px)}
+    50%{transform:translateX(5px)}
+    75%{transform:translateX(-5px)}
+    100%{transform:translateX(0)}
+}
+</style>
 </head>
+
 <body>
 
-    <div class="top-bar">
-        <a href="index.html" class="logo">WARDDUEL</a>
-        <div id="auth-ui"><button class="login-btn" onclick="document.getElementById('authModal').style.display='block'">LOGIN / SIGN UP</button></div>
+<div class="top-bar">
+    <a class="logo">WARDDUEL</a>
+</div>
+
+<div class="stats-container">
+    <div>TIME: <span id="timer-display">05:00</span></div>
+
+    <div class="hp-container">
+        <div class="hp-bar-bg"><div id="hp-fill"></div></div>
+        <div class="hp-text-overlay">HP: <span id="hp-val">100</span></div>
+    </div>
+</div>
+
+<div class="game-board">
+    <div class="hx-box" id="case-hx">Loading case...</div>
+
+    <div id="hint-display" class="hint-output"></div>
+
+    <div class="grid-buttons">
+        <button class="action-btn" onclick="getHint('hx',10)">History (-10)</button>
+        <button class="action-btn" onclick="getHint('pe',15)">PE (-15)</button>
+        <button class="action-btn" onclick="getHint('lab',20)">Labs (-20)</button>
+        <button class="action-btn" onclick="getHint('img',25)">Imaging (-25)</button>
     </div>
 
-    <div id="authModal" class="modal">
-        <div class="modal-content">
-            <h2 id="auth-title" style="color: var(--accent)">Join the Wards</h2>
-            <input type="text" id="username-input" placeholder="Username" style="width:90%; padding:10px; margin-bottom:10px;">
-            <input type="password" id="password-input" placeholder="Password" style="width:90%; padding:10px; margin-bottom:10px;">
-            <button class="submit-btn" onclick="window.processAuth()">CONFIRM</button>
-            <p onclick="window.toggleAuthMode()" style="font-size:0.8rem; cursor:pointer; color:var(--accent); margin-top:15px;">Switch Auth Mode</p>
-        </div>
+    <div style="position:relative;">
+        <input id="dx-input" placeholder="Search diagnosis..." onkeyup="filterDiagnosis()">
+        <div id="dropdown" class="dropdown"></div>
     </div>
 
-    <div class="stats-container">
-        <div>TIME: <span id="timer-display">05:00</span></div>
-        <div class="hp-container">
-            <div class="hp-bar-bg"><div id="hp-fill"></div></div>
-            <div class="hp-text-overlay">HP: <span id="hp-val">100</span></div>
-        </div>
-        <div id="rank">RANK: ANONYMOUS</div>
+    <button class="submit-btn" onclick="checkDiagnosis()">SUBMIT</button>
+</div>
+
+<!-- WIN MODAL -->
+<div id="winModal" class="modal">
+    <div class="modal-content">
+        <h2 style="color:var(--success)">Correct Diagnosis</h2>
+        <p id="final-score"></p>
+        <button class="submit-btn" onclick="location.reload()">Play Again</button>
     </div>
+</div>
 
-    <div class="game-board">
-        <div class="hx-box" id="case-hx">Loading Today's Case...</div>
-        <div id="hint-display" class="hint-output"></div>
-        <div class="grid-buttons">
-            <button class="action-btn" id="btn-hx" onclick="getHint('hx', 10)">Add. History <span>-10 HP</span></button>
-            <button class="action-btn" id="btn-pe" onclick="getHint('pe', 15)">PE Findings <span>-15 HP</span></button>
-            <button class="action-btn" id="btn-lab" onclick="getHint('lab', 20)">Lab Results <span>-20 HP</span></button>
-            <button class="action-btn" id="btn-img" onclick="getHint('img', 25)">Imaging <span>-25 HP</span></button>
-        </div>
-        <div class="search-container">
-            <input type="text" id="dx-input" placeholder="Search Diagnosis..." onkeyup="window.filterDiagnosis()">
-            <div id="dropdown" class="dropdown"></div>
-        </div>
-        <button class="submit-btn" onclick="window.checkDiagnosis()">SUBMIT DIAGNOSIS</button>
-    </div>
+<script>
+let hp = 100;
+let timeLeft = 300;
+let timer;
 
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-        import { getFirestore, doc, setDoc, updateDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+const caseData = {
+    hx_brief: "Chest pain radiating to left arm",
+    answer: "Myocardial Infarction",
+    hints: {
+        hx: "Diaphoresis present",
+        pe: "Tachycardia",
+        lab: "Elevated troponin",
+        img: "ST elevation"
+    }
+};
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyBzVNM6yylE2LF_8SfqRluqdQVRBB6i6HI",
-            authDomain: "wardduel.firebaseapp.com",
-            projectId: "wardduel",
-            storageBucket: "wardduel.firebasestorage.app",
-            messagingSenderId: "45792689084",
-            appId: "1:45792689084:web:64d3e5843611b038c189b9"
-        };
+document.getElementById("case-hx").innerText = caseData.hx_brief;
 
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const db = getFirestore(app);
-
-        let currentCase = null, hp = 100, timeLeft = 300, isSignUp = true, timerId = null;
-        const unlockedHints = new Set();
-
-        const diagnosisPool = ["Achalasia", "Acute Cholecystitis", "Acute Liver Failure", "Acute Pancreatitis", "Aortic Dissection", "Appendicitis", "Asthma", "Bacterial Meningitis", "Celiac Disease", "Crohn's Disease", "Diabetic Ketoacidosis", "Ectopic Pregnancy", "Esophageal Varices", "Graves Disease", "Hashimoto Thyroiditis", "Intussusception", "Multiple Sclerosis", "Myocardial Infarction", "Pheochromocytoma", "Pneumonia", "Pneumothorax", "Pulmonary Embolism", "Pyelonephritis", "Sarcoidosis", "Septic Arthritis", "Subarachnoid Hemorrhage", "Ulcerative Colitis"].sort();
-
-        async function initGame() {
-            try {
-                const response = await fetch('cases.json');
-                const cases = await response.json();
-                const today = new Date().toISOString().split('T')[0];
-                currentCase = cases.find(c => c.date === today) || cases[cases.length - 1];
-                document.getElementById('case-hx').innerText = currentCase.hx_brief;
-                startTimer();
-            } catch (e) { document.getElementById('case-hx').innerText = "Case Load Error."; }
+function startTimer(){
+    timer = setInterval(()=>{
+        timeLeft--;
+        if(timeLeft < 60){
+            document.getElementById("timer-display").style.color="red";
         }
-        initGame();
+        let m = String(Math.floor(timeLeft/60)).padStart(2,'0');
+        let s = String(timeLeft%60).padStart(2,'0');
+        document.getElementById("timer-display").innerText=`${m}:${s}`;
+    },1000);
+}
+startTimer();
 
-        function startTimer() {
-            timerId = setInterval(() => {
-                timeLeft--;
-                if (timeLeft % 10 === 0 && timeLeft !== 300) {
-                    hp -= 1;
-                    updateHPVisuals();
-                }
-                let m = Math.floor(timeLeft / 60).toString().padStart(2, '0');
-                let s = (timeLeft % 60).toString().padStart(2, '0');
-                document.getElementById('timer-display').innerText = `${m}:${s}`;
-                if(timeLeft <= 0) {
-                    clearInterval(timerId);
-                    alert("TIME EXPIRED: Case Transfer Required.");
-                    location.reload();
-                }
-            }, 1000);
-        }
+function updateHP(){
+    if(hp<0) hp=0;
+    document.getElementById("hp-val").innerText=hp;
+    document.getElementById("hp-fill").style.width=hp+"%";
+}
 
-        function updateHPVisuals() {
-            if (hp < 0) hp = 0;
-            document.getElementById('hp-val').innerText = hp;
-            const fill = document.getElementById('hp-fill');
-            fill.style.width = hp + "%";
-            if(hp > 60) fill.style.background = "var(--success)";
-            else if(hp > 30) fill.style.background = "#eab308";
-            else fill.style.background = "var(--danger)";
-            if(hp <= 0) {
-                clearInterval(timerId);
-                alert("CRITICAL FAILURE: Diagnostic accuracy depleted.");
-                location.reload();
-            }
-        }
+function getHint(type,cost){
+    hp-=cost;
+    updateHP();
+    document.getElementById("hint-display").style.display="block";
+    document.getElementById("hint-display").innerText=caseData.hints[type];
+}
 
-        window.getHint = (type, cost) => {
-            if (!unlockedHints.has(type)) {
-                hp -= cost;
-                unlockedHints.add(type);
-                const btn = document.getElementById(`btn-${type}`);
-                btn.classList.add('unlocked');
-                btn.querySelector('span').innerText = "CHECKED";
-                updateHPVisuals();
-            }
-            const display = document.getElementById('hint-display');
-            display.style.display = "block";
-            display.innerText = currentCase.hints[type];
+const diagnoses = ["Myocardial Infarction","Pneumonia","Asthma"];
+
+function filterDiagnosis(){
+    let input=document.getElementById("dx-input").value.toUpperCase();
+    let drop=document.getElementById("dropdown");
+    drop.innerHTML="";
+    if(!input){ drop.style.display="none"; return; }
+
+    diagnoses.filter(d=>d.toUpperCase().includes(input))
+    .forEach(d=>{
+        let div=document.createElement("div");
+        div.innerText=d;
+        div.onclick=()=>{
+            document.getElementById("dx-input").value=d;
+            drop.style.display="none";
         };
+        drop.appendChild(div);
+    });
 
-        window.filterDiagnosis = () => {
-            let input = document.getElementById('dx-input').value.toUpperCase();
-            let div = document.getElementById('dropdown');
-            div.innerHTML = '';
-            if (!input) { div.style.display = 'none'; return; }
-            let matches = diagnosisPool.filter(dz => dz.toUpperCase().startsWith(input));
-            if (matches.length > 0) {
-                div.style.display = 'block';
-                matches.forEach(m => {
-                    let item = document.createElement('div');
-                    item.innerText = m;
-                    item.onclick = () => { document.getElementById('dx-input').value = m; div.style.display = 'none'; };
-                    div.appendChild(item);
-                });
-            } else { div.style.display = 'none'; }
-        };
+    drop.style.display="block";
+}
 
-        window.checkDiagnosis = async () => {
-            let val = document.getElementById('dx-input').value;
-            if (val === currentCase.answer) {
-                clearInterval(timerId);
-                alert(`CORRECT! Final Score: ${hp} HP`);
-                if(auth.currentUser) await updateDoc(doc(db, "users", auth.currentUser.uid), { lastScore: hp });
-            } else {
-                hp -= 20;
-                updateHPVisuals();
-                alert("INCORRECT. -20 HP penalty.");
-            }
-        };
+function checkDiagnosis(){
+    let val=document.getElementById("dx-input").value;
 
-        window.toggleAuthMode = () => { isSignUp = !isSignUp; document.getElementById('auth-title').innerText = isSignUp ? "Sign Up" : "Log In"; };
+    if(val===caseData.answer){
+        clearInterval(timer);
+        document.getElementById("final-score").innerText=`Score: ${hp}`;
+        document.getElementById("winModal").style.display="block";
+    } else {
+        hp-=20;
+        updateHP();
 
-        window.processAuth = async () => {
-            const username = document.getElementById('username-input').value;
-            const userEmail = username + "@wardduel.com", pass = document.getElementById('password-input').value;
-            try {
-                if(isSignUp) {
-                    const res = await createUserWithEmailAndPassword(auth, userEmail, pass);
-                    await setDoc(doc(db, "users", res.user.uid), { username: username, elo: 1000 });
-                } else { await signInWithEmailAndPassword(auth, userEmail, pass); }
-                document.getElementById('authModal').style.display='none';
-            } catch (e) { alert(e.message); }
-        };
+        document.querySelector(".game-board").classList.add("shake");
+        setTimeout(()=>document.querySelector(".game-board").classList.remove("shake"),300);
+    }
+}
+</script>
 
-        onAuthStateChanged(auth, async (user) => {
-            if(user) {
-                const userDoc = await getDoc(doc(db, "users", user.uid));
-                const userData = userDoc.data();
-                document.getElementById('auth-ui').innerHTML = `<b style="color:var(--accent)">DR. ${userData.username.toUpperCase()}</b>`;
-                document.getElementById('rank').innerText = `RANK: ${userData.elo >= 1200 ? 'ATTENDING' : 'RESIDENT'}`;
-            }
-        });
-    </script>
 </body>
 </html>
