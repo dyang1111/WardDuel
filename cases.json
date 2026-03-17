@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-03-16",
+    "hx_brief": "62M with sudden onset 'tearing' chest pain radiating to the back. BP 210/120.",
+    "hints": {
+      "hx": "History of uncontrolled hypertension and Marfan syndrome.",
+      "pe": "Asymmetric pulses in upper extremities. New diastolic murmur.",
+      "lab": "D-dimer: Elevated. Troponin: Normal.",
+      "img": "CXR: Mediastinal widening."
+    },
+    "answer": "Aortic Dissection",
+    "adminScore": 70
+  },
+  {
+    "date": "2026-03-17",
+    "hx_brief": "28F with severe polyuria, polydipsia, and weight loss. Kussmaul breathing noted.",
+    "hints": {
+      "hx": "Recent viral illness. Constant thirst and frequent urination.",
+      "pe": "Dry mucous membranes. Fruity breath odor. Diffuse abdominal pain.",
+      "lab": "Glucose: 450. pH: 7.1. Bicarbonate: 12. Positive ketones.",
+      "img": "CXR: Clear lungs. KUB: Non-specific gas pattern."
+    },
+    "answer": "Diabetic Ketoacidosis",
+    "adminScore": 85
+  }
+]
