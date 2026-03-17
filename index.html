@@ -12,11 +12,24 @@
         
         .game-board { width: 90%; max-width: 800px; background: var(--panel); margin-top: 20px; padding: 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         
-        /* HP BAR STYLES */
-        .status-container { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-        .hp-container { width: 70%; height: 20px; background: #0f172a; border-radius: 10px; overflow: hidden; border: 1px solid #334155; }
-        #hp-bar { width: 100%; height: 100%; background: var(--success); transition: width 0.4s ease, background 0.4s ease; }
-        #timer { font-size: 1.5rem; font-weight: 900; color: var(--accent); }
+        /* 🏥 THE VISUAL HP BAR - FIXED */
+        .status-container { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; gap: 20px; }
+        .hp-container { 
+            flex-grow: 1; 
+            height: 24px; 
+            background: #020617; /* Dark empty track */
+            border-radius: 12px; 
+            border: 2px solid #334155; 
+            overflow: hidden; /* Clips the inner bar */
+            position: relative;
+        }
+        #hp-bar { 
+            width: 100%; 
+            height: 100%; 
+            background: var(--success); /* Solid green start */
+            transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.4s ease; 
+        }
+        #timer { font-size: 1.5rem; font-weight: 900; color: var(--accent); font-family: monospace; min-width: 80px; text-align: right; }
 
         .action-btn { background: #1e293b; border: 1px solid #475569; color: white; padding: 12px; cursor: pointer; border-radius: 8px; font-weight: bold; }
         .search-container { position: relative; margin-top: 20px; }
@@ -52,7 +65,9 @@
 
     <div class="game-board">
         <div class="status-container">
-            <div class="hp-container"><div id="hp-bar"></div></div>
+            <div class="hp-container">
+                <div id="hp-bar" style="width: 100%;"></div>
+            </div>
             <div id="timer">01:00</div>
         </div>
         
@@ -121,13 +136,13 @@
                 document.getElementById('timer').innerText = `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
                 if(timeLeft <= 0) {
                     clearInterval(timerId);
-                    alert("Time Expired! The patient has been transferred.");
+                    alert("Time Expired! The patient was transferred to another team.");
                     location.reload();
                 }
             }, 1000);
         }
 
-        function updateHP() {
+        function updateHPVisuals() {
             const bar = document.getElementById('hp-bar');
             bar.style.width = hp + "%";
             if(hp > 60) bar.style.background = "var(--success)";
@@ -136,14 +151,15 @@
             
             if(hp <= 0) {
                 clearInterval(timerId);
-                alert("Critical Failure: HP depleted.");
+                alert("Game Over: Your diagnostic accuracy fell too low.");
                 location.reload();
             }
         }
 
         window.reveal = (type, cost) => {
+            if (hp <= 0) return;
             hp -= cost;
-            updateHP();
+            updateHPVisuals();
             const box = document.getElementById('hint-box');
             box.style.display = 'block';
             box.innerText = currentCase.hints[type];
@@ -168,14 +184,14 @@
             let guess = document.getElementById('dx-input').value;
             if(guess === currentCase.answer) {
                 clearInterval(timerId);
-                alert(`Case Resolved! Final Score: ${hp} HP`);
+                alert(`Case Resolved! You saved the patient with ${hp} HP remaining.`);
                 if(auth.currentUser) {
                     await updateDoc(doc(db, "users", auth.currentUser.uid), { lastScore: hp });
                 }
             } else {
                 hp -= 20;
-                updateHP();
-                alert("Incorrect Diagnosis. -20 HP Penalty.");
+                updateHPVisuals();
+                alert("Incorrect Diagnosis. The patient's condition is worsening (-20 HP).");
             }
         };
 
