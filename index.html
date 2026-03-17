@@ -58,7 +58,6 @@
         .search-container { position: relative; width: 100%; }
         input[type="text"] { width: 100%; padding: 15px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 8px; box-sizing: border-box; }
         
-        /* UPDATED DROPDOWN HEIGHT AND STYLE */
         .dropdown { 
             position: absolute; 
             width: 100%; 
@@ -147,27 +146,21 @@
         let currentCase = null, hp = 100, timeLeft = 300, isSignUp = true, timerId = null;
         const unlockedHints = new Set();
         window.isLiveGame = true; 
-        
-        // GLOBAL POOL LOADED FROM FILE
         let diagnosisPool = []; 
 
         async function initGame() {
             try {
-                // FETCH DIAGNOSES FROM SEPARATE JSON
                 const dxResponse = await fetch('diagnoses.json');
                 diagnosisPool = await dxResponse.json();
                 diagnosisPool.sort();
 
-                // FETCH CASES
                 const response = await fetch('cases.json');
                 const cases = await response.json();
 
-                // Get Current Date in CST
                 const options = { timeZone: 'America/Chicago', year: 'numeric', month: '2-digit', day: '2-digit' };
                 const formatter = new Intl.DateTimeFormat('en-CA', options);
                 const todayCST = formatter.format(new Date());
 
-                // Check URL for Archive ID
                 const urlParams = new URLSearchParams(window.location.search);
                 const archiveId = urlParams.get('caseId');
 
@@ -201,7 +194,7 @@
                 document.getElementById('timer-display').innerText = `${m}:${s}`;
                 if(timeLeft <= 0) {
                     clearInterval(timerId);
-                    alert("TIME EXPIRED: Case Transfer Required.");
+                    alert("TIME EXPIRED.");
                     location.reload();
                 }
             }, 1000);
@@ -236,12 +229,16 @@
             display.innerText = currentCase.hints[type];
         };
 
+        // UPDATED FUZZY SEARCH LOGIC
         window.filterDiagnosis = () => {
             let input = document.getElementById('dx-input').value.toUpperCase();
             let div = document.getElementById('dropdown');
             div.innerHTML = '';
             if (!input) { div.style.display = 'none'; return; }
-            let matches = diagnosisPool.filter(dz => dz.toUpperCase().startsWith(input));
+
+            // Changed .startsWith to .includes so it finds matches anywhere in the word
+            let matches = diagnosisPool.filter(dz => dz.toUpperCase().includes(input));
+            
             if (matches.length > 0) {
                 div.style.display = 'block';
                 matches.forEach(m => {
