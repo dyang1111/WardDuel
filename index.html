@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WardDuel | Clinical 1v1</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --panel: #1e293b;
+            --accent: #38bdf8;
+            --danger: #ef4444;
+            --text: #f8fafc;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            width: 100%;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            border-bottom: 2px solid var(--panel);
+        }
+
+        .logo { font-weight: 800; font-size: 1.8rem; letter-spacing: -1px; color: var(--accent); }
+        .login-btn { background: var(--accent); border: none; color: var(--bg); padding: 8px 18px; cursor: pointer; border-radius: 6px; font-weight: bold; }
+
+        /* Stats Bar */
+        .stats-container {
+            width: 90%;
+            max-width: 800px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hp-container { width: 50%; position: relative; }
+        .hp-bar-bg { width: 100%; height: 25px; background: #334155; border-radius: 6px; overflow: hidden; }
+        .hp-bar-fill { height: 100%; width: 100%; background: linear-gradient(90deg, var(--danger), #22c55e); transition: width 0.4s ease; }
+        .hp-text { position: absolute; width: 100%; text-align: center; top: 2px; font-weight: bold; color: white; font-size: 0.9rem; }
+
+        /* Game Board */
+        .game-board {
+            width: 90%;
+            max-width: 800px;
+            background: var(--panel);
+            margin-top: 20px;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            box-sizing: border-box;
+        }
+
+        .hx-box { font-size: 1.1rem; line-height: 1.6; padding: 20px; background: #0f172a; border-radius: 8px; margin-bottom: 25px; border-left: 5px solid var(--accent); }
+        .hint-output { background: #334155; padding: 15px; border-radius: 8px; margin-bottom: 15px; display: none; font-size: 0.95rem; border: 1px dashed var(--accent); }
+
+        /* Action Buttons */
+        .grid-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 30px; }
+        .action-btn { 
+            background: #1e293b; border: 1px solid #475569; color: white; padding: 15px; 
+            cursor: pointer; text-align: left; border-radius: 8px; font-size: 0.9rem;
+        }
+        .action-btn:hover { border-color: var(--accent); background: #0f172a; }
+        .action-btn span { float: right; color: var(--danger); font-weight: bold; }
+
+        /* Search & Submit */
+        .search-container { position: relative; width: 100%; }
+        input[type="text"] {
+            width: 100%; padding: 16px; box-sizing: border-box; background: #0f172a; border: 2px solid #334155;
+            color: white; border-radius: 12px; font-size: 1.1rem; outline: none;
+        }
+        input[type="text"]:focus { border-color: var(--accent); }
+        .dropdown {
+            position: absolute; width: 100%; background: #1e293b; border: 1px solid #475569;
+            max-height: 250px; overflow-y: auto; z-index: 100; display: none; border-radius: 8px; margin-top: 5px;
+        }
+        .dropdown div { padding: 12px; cursor: pointer; border-bottom: 1px solid #334155; }
+        .dropdown div:hover { background: var(--accent); color: var(--bg); }
+
+        .submit-btn {
+            width: 100%; padding: 18px; margin-top: 15px; background: var(--danger);
+            color: white; border: none; font-weight: 800; font-size: 1.2rem; cursor: pointer; border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="logo">WARDDUEL</div>
+        <button class="login-btn">LOG IN</button>
+    </div>
+
+    <div class="stats-container">
+        <div>⏱️ <span id="timer">00:00</span></div>
+        <div class="hp-container">
+            <div class="hp-bar-bg"><div id="hp-fill" class="hp-bar-fill"></div></div>
+            <div class="hp-text">HP: <span id="hp-val">100</span></div>
+        </div>
+        <div id="rank">RANK: ANONYMOUS</div>
+    </div>
+
+    <div class="game-board">
+        <div class="hx-box" id="case-hx">Loading Today's Duel...</div>
+        <div id="hint-display" class="hint-output"></div>
+
+        <div class="grid-buttons">
+            <button class="action-btn" onclick="getHint('hx', 10)">Add. History <span>-10 HP</span></button>
+            <button class="action-btn" onclick="getHint('pe', 15)">PE Findings <span>-15 HP</span></button>
+            <button class="action-btn" onclick="getHint('lab', 20)">Lab Results <span>-20 HP</span></button>
+            <button class="action-btn" onclick="getHint('img', 25)">Imaging <span>-25 HP</span></button>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="dx-input" placeholder="Search Diagnosis..." onkeyup="filterDiagnosis()" autocomplete="off">
+            <div id="dropdown" class="dropdown"></div>
+        </div>
+        <button class="submit-btn" onclick="checkDiagnosis()">SUBMIT DIAGNOSIS</button>
+    </div>
+
+    <script>
+        const diagnosisPool = [
+            "Achalasia", "Acute Cholecystitis", "Acute Liver Failure", "Acute Pancreatitis", "Acute Pericarditis", "Acute Renal Failure", 
+            "Aortic Dissection", "Appendicitis", "Asthma", "Atrial Fibrillation", "Bacterial Endocarditis", "Bacterial Meningitis", 
+            "Celiac Disease", "Cholangitis", "Crohn's Disease", "Cushing Syndrome", "Deep Vein Thrombosis", "Diverticulitis", 
+            "Ectopic Pregnancy", "Graves Disease", "Hashimoto Thyroiditis", "Hepatocellular Carcinoma", "Hodgkin Lymphoma", 
+            "Hyperthyroidism", "Hypothyroidism", "Intussusception", "Iron Deficiency Anemia", "Irritable Bowel Syndrome", 
+            "Multiple Sclerosis", "Myocardial Infarction", "Nephrotic Syndrome", "Osteomyelitis", "Peptic Ulcer Disease", 
+            "Pheochromocytoma", "Pneumonia", "Pneumothorax", "Pulmonary Embolism", "Pyloric Stenosis", "Pyelonephritis", 
+            "Rheumatoid Arthritis", "Sarcoidosis", "Septic Arthritis", "Sickle Cell Anemia", "Systemic Lupus Erythematosus", 
+            "Tension Pneumothorax", "Ulcerative Colitis", "Volvulus", "Whipple's Disease", "Zenker Diverticulum"
+        ].sort();
+
+        const dailyCase = {
+            hx_brief: "45F with sudden onset excruciating mid-epigastric pain radiating to the back. Patient is a heavy drinker.",
+            hints: {
+                hx: "Patient has a history of gallstones. Admits to drinking 1 bottle of wine daily. No recent trauma.",
+                pe: "Vitals: BP 90/60, HR 120. Epigastric tenderness. Faint blue bruising around the umbilicus (Cullen sign).",
+                lab: "Lipase: 900 U/L (High). ALT/AST: Slightly elevated. WBC: 16k.",
+                img: "Abdominal X-ray: 'Sentinel loop' of dilated bowel. (꽝: Suggestive, but non-diagnostic!)"
+            },
+            answer: "Acute Pancreatitis",
+            adminScore: 55
+        };
+
+        let hp = 100;
+        let seconds = 0;
+        let gameActive = true;
+
+        document.getElementById('case-hx').innerText = dailyCase.hx_brief;
+        
+        setInterval(() => {
+            if (!gameActive) return;
+            seconds++;
+            if (seconds % 10 === 0) updateHP(1);
+            let m = Math.floor(seconds / 60).toString().padStart(2, '0');
+            let s = (seconds % 60).toString().padStart(2, '0');
+            document.getElementById('timer').innerText = `${m}:${s}`;
+        }, 1000);
+
+        function updateHP(amount) {
+            hp -= amount;
+            if (hp < 0) hp = 0;
+            document.getElementById('hp-val').innerText = hp;
+            document.getElementById('hp-fill').style.width = hp + "%";
+            if (hp <= 0) { gameActive = false; alert("GAME OVER: HP reached 0."); }
+        }
+
+        function getHint(type, cost) {
+            if (!gameActive) return;
+            updateHP(cost);
+            const display = document.getElementById('hint-display');
+            display.style.display = "block";
+            display.innerText = dailyCase.hints[type];
+        }
+
+        function filterDiagnosis() {
+            let input = document.getElementById('dx-input').value.toUpperCase();
+            let div = document.getElementById('dropdown');
+            div.innerHTML = '';
+            if (!input) { div.style.display = 'none'; return; }
+            let matches = diagnosisPool.filter(dz => dz.toUpperCase().includes(input));
+            if (matches.length > 0) {
+                div.style.display = 'block';
+                matches.forEach(m => {
+                    let item = document.createElement('div');
+                    item.innerText = m;
+                    item.onclick = () => { document.getElementById('dx-input').value = m; div.style.display = 'none'; };
+                    div.appendChild(item);
+                });
+            } else { div.style.display = 'none'; }
+        }
+
+        function checkDiagnosis() {
+            if (!gameActive) return;
+            let val = document.getElementById('dx-input').value;
+            if (val === dailyCase.answer) {
+                gameActive = false;
+                let outcome = (hp > dailyCase.adminScore) ? "VICTORY" : "DEFEAT";
+                alert(`${outcome}! You finished with ${hp} HP. Opponent Score: ${dailyCase.adminScore} HP.`);
+            } else {
+                alert("INCORRECT. -20 HP Penalty.");
+                updateHP(20);
+            }
+        }
+    </script>
+</body>
+</html>
