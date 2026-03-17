@@ -10,14 +10,14 @@
         .top-bar { width: 100%; padding: 15px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #334155; box-sizing: border-box; }
         .logo { font-weight: bold; font-size: 1.5rem; color: var(--accent); text-decoration: none; }
         
-        /* THE 3-COLUMN GRID */
         .archive-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             width: 90%;
             max-width: 800px;
             margin-top: 40px;
+            padding-bottom: 50px;
         }
 
         .date-box {
@@ -48,20 +48,25 @@
 
     <script>
         async function loadArchives() {
-            const response = await fetch('cases.json');
-            const cases = await response.json();
-            const grid = document.getElementById('archive-grid');
-            
-            // Sort: Newest first
-            cases.sort((a, b) => new Date(b.date) - new Date(a.date));
+            try {
+                const response = await fetch('cases.json');
+                const cases = await response.json();
+                const grid = document.getElementById('archive-grid');
+                
+                // Sort by date string descending (newest first)
+                cases.sort((a, b) => b.date.localeCompare(a.date));
 
-            cases.forEach(c => {
-                const box = document.createElement('div');
-                box.className = 'date-box';
-                box.innerHTML = `<span>CASE DATE</span>${c.date}`;
-                box.onclick = () => window.location.href = `index.html?caseId=${c.date}`;
-                grid.appendChild(box);
-            });
+                cases.forEach(c => {
+                    const box = document.createElement('div');
+                    box.className = 'date-box';
+                    box.innerHTML = `<span>CASE DATE</span>${c.date}`;
+                    box.onclick = () => window.location.href = `index.html?caseId=${c.date}`;
+                    grid.appendChild(box);
+                });
+            } catch (e) {
+                console.error("Archive failure:", e);
+                document.getElementById('archive-grid').innerHTML = "<p>Error loading archives. Please check cases.json format.</p>";
+            }
         }
         loadArchives();
     </script>
