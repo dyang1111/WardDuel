@@ -21,4 +21,81 @@
     },
     "answer": "Appendicitis"
   }
+  {
+    "date": "2026-03-18",
+    "hx_brief": "55yo female with sudden onset of severe 'pounding' headache and blurry vision.",
+    "hints": {
+      "hx": "Patient has a history of hypertension. Reports seeing 'halos' around lights.",
+      "pe": "Right eye is red. Pupil is mid-dilated and non-reactive to light. Eye feels 'rock hard'.",
+      "lab": "Normal ESR. Elevated intraocular pressure (IOP) on tonometry.",
+      "img": "Slit-lamp exam shows shallow anterior chamber."
+    },
+    "answer": "Acute Angle-Closure Glaucoma"
+  },
+  {
+    "date": "2026-03-19",
+    "hx_brief": "32yo male with 2 days of progressive weakness in his legs and tingling in his feet.",
+    "hints": {
+      "hx": "Had a diarrheal illness 2 weeks ago (Campylobacter). Weakness is moving up his body.",
+      "pe": "Symmetric ascending muscle weakness. Absent deep-tendon reflexes (areflexia).",
+      "lab": "CSF analysis shows high protein but normal WBC count (albuminocytologic dissociation).",
+      "img": "Nerve conduction studies show slowed conduction velocities."
+    },
+    "answer": "Guillain-Barre Syndrome"
+  },
+  {
+    "date": "2026-03-20",
+    "hx_brief": "68yo male with painless gross hematuria (blood in urine) for three weeks.",
+    "hints": {
+      "hx": "50-pack-year smoking history. Worked in a chemical factory for 30 years.",
+      "pe": "No flank pain. No suprapubic tenderness. Prostate is normal on digital rectal exam.",
+      "lab": "Urinalysis confirms 4+ blood. Negative for nitrites or leukocyte esterase.",
+      "img": "Cystoscopy reveals a papillary mass on the bladder wall."
+    },
+    "answer": "Bladder Cancer"
+  },
+  {
+    "date": "2026-03-21",
+    "hx_brief": "45yo obese female with RUQ pain that radiates to her right shoulder after eating a burger.",
+    "hints": {
+      "hx": "Nausea and bloating. This has happened before, but this time the pain won't stop.",
+      "pe": "Positive Murphy’s sign. Guarding in the right upper quadrant.",
+      "lab": "Elevated WBC (14,000). Mildly elevated Alkaline Phosphatase.",
+      "img": "Ultrasound shows gallbladder wall thickening and pericholecystic fluid."
+    },
+    "answer": "Acute Cholecystitis"
+  },
+  {
+    "date": "2026-03-22",
+    "hx_brief": "19yo male athlete with sudden collapse and death during a basketball game.",
+    "hints": {
+      "hx": "Uncle died suddenly at age 25. No previous medical history of asthma or heart disease.",
+      "pe": "Harsh systolic murmur that increases in intensity with Valsalva maneuver.",
+      "lab": "Genetic testing often shows mutations in the myosin heavy chain.",
+      "img": "Echo shows asymmetric septal hypertrophy and systolic anterior motion of the mitral valve."
+    },
+    "answer": "Hypertrophic Cardiomyopathy"
+  },
+  {
+    "date": "2026-03-23",
+    "hx_brief": "29yo female with 3 days of 'crushing' fatigue, pale skin, and dark yellow urine.",
+    "hints": {
+      "hx": "Just finished a course of nitrofurantoin for a UTI. Reports eating fava beans yesterday.",
+      "pe": "Slightly icteric (yellow) sclera. Splenomegaly is absent.",
+      "lab": "Low hemoglobin. Low haptoglobin. High indirect bilirubin.",
+      "img": "Peripheral blood smear shows Heinz bodies and Bite cells."
+    },
+    "answer": "G6PD Deficiency"
+  },
+  {
+    "date": "2026-03-24",
+    "hx_brief": "72yo female with sudden 'worst headache of my life' and neck stiffness.",
+    "hints": {
+      "hx": "History of polycystic kidney disease (ADPKD). No history of trauma.",
+      "pe": "Positive Kernig and Brudzinski signs. Ptosis of the left eye (CN III palsy).",
+      "lab": "Lumbar puncture shows xanthochromia (yellowish CSF from old blood).",
+      "img": "Non-contrast CT of the head shows white 'starfish' pattern in the basal cisterns."
+    },
+    "answer": "Subarachnoid Hemorrhage"
+  }
 ]
