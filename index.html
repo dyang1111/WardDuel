@@ -64,18 +64,23 @@
         .submit-btn { width: 100%; padding: 15px; margin-top: 20px; background: var(--danger); color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 8px; }
 
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
-        .modal-content { background: var(--panel); margin: 15% auto; padding: 30px; border-radius: 15px; width: 320px; border: 1px solid var(--accent); text-align: center; }
+        .modal-content { background: var(--panel); margin: 15% auto; padding: 30px; border-radius: 15px; width: 320px; border: 1px solid var(--accent); text-align: center; position: relative; }
+        .close-modal { position: absolute; top: 10px; right: 15px; cursor: pointer; color: var(--accent); font-weight: bold; font-size: 1.2rem; }
     </style>
 </head>
 <body>
 
     <div class="top-bar">
         <a href="index.html" class="logo">WARDDUEL</a>
-        <div id="auth-ui"><button class="login-btn" onclick="document.getElementById('authModal').style.display='block'">LOGIN / SIGN UP</button></div>
+        <div style="display: flex; align-items: center;">
+            <a href="archives.html" style="margin-right: 20px; color: var(--accent); text-decoration: none; font-weight: bold; font-size: 0.9rem;">ARCHIVES</a>
+            <div id="auth-ui"><button class="login-btn" onclick="document.getElementById('authModal').style.display='block'">LOGIN / SIGN UP</button></div>
+        </div>
     </div>
 
     <div id="authModal" class="modal">
         <div class="modal-content">
+            <span class="close-modal" onclick="document.getElementById('authModal').style.display='none'">✕</span>
             <h2 id="auth-title" style="color: var(--accent)">Join the Wards</h2>
             <input type="text" id="username-input" placeholder="Username" style="width:90%; padding:10px; margin-bottom:10px;">
             <input type="password" id="password-input" placeholder="Password" style="width:90%; padding:10px; margin-bottom:10px;">
@@ -94,7 +99,7 @@
     </div>
 
     <div class="game-board">
-        <div class="hx-box" id="case-hx">Loading Today's Case...</div>
+        <div class="hx-box" id="case-hx">Loading Clinical Case...</div>
         <div id="hint-display" class="hint-output"></div>
         <div class="grid-buttons">
             <button class="action-btn" id="btn-hx" onclick="getHint('hx', 10)">Add. History <span>-10 HP</span></button>
@@ -129,6 +134,7 @@
 
         let currentCase = null, hp = 100, timeLeft = 300, isSignUp = true, timerId = null;
         const unlockedHints = new Set();
+        window.isLiveGame = true; 
 
         const diagnosisPool = ["Achalasia", "Acute Cholecystitis", "Acute Liver Failure", "Acute Pancreatitis", "Aortic Dissection", "Appendicitis", "Asthma", "Bacterial Meningitis", "Celiac Disease", "Crohn's Disease", "Diabetic Ketoacidosis", "Ectopic Pregnancy", "Esophageal Varices", "Graves Disease", "Hashimoto Thyroiditis", "Intussusception", "Multiple Sclerosis", "Myocardial Infarction", "Pheochromocytoma", "Pneumonia", "Pneumothorax", "Pulmonary Embolism", "Pyelonephritis", "Sarcoidosis", "Septic Arthritis", "Subarachnoid Hemorrhage", "Ulcerative Colitis"].sort();
 
@@ -136,8 +142,25 @@
             try {
                 const response = await fetch('cases.json');
                 const cases = await response.json();
-                const today = new Date().toISOString().split('T')[0];
-                currentCase = cases.find(c => c.date === today) || cases[cases.length - 1];
+
+                // Get Current Date in CST
+                const options = { timeZone: 'America/Chicago', year: 'numeric', month: '2-digit', day: '2-digit' };
+                const formatter = new Intl.DateTimeFormat('en-CA', options);
+                const todayCST = formatter.format(new Date());
+
+                // Check URL for Archive ID
+                const urlParams = new URLSearchParams(window.location.search);
+                const archiveId = urlParams.get('caseId');
+
+                if (archiveId) {
+                    currentCase = cases.find(c => c.date === archiveId);
+                    window.isLiveGame = (archiveId === todayCST);
+                    if (!window.isLiveGame) document.getElementById('rank').innerText = "PRACTICE MODE";
+                } else {
+                    currentCase = cases.find(c => c.date === todayCST) || cases[cases.length - 1];
+                    window.isLiveGame = true;
+                }
+
                 document.getElementById('case-hx').innerText = currentCase.hx_brief;
                 startTimer();
             } catch (e) { document.getElementById('case-hx').innerText = "Case Load Error."; }
@@ -172,7 +195,7 @@
             else fill.style.background = "var(--danger)";
             if(hp <= 0) {
                 clearInterval(timerId);
-                alert("CRITICAL FAILURE: Diagnostic accuracy depleted.");
+                alert("CRITICAL FAILURE.");
                 location.reload();
             }
         }
@@ -213,7 +236,9 @@
             if (val === currentCase.answer) {
                 clearInterval(timerId);
                 alert(`CORRECT! Final Score: ${hp} HP`);
-                if(auth.currentUser) await updateDoc(doc(db, "users", auth.currentUser.uid), { lastScore: hp });
+                if(auth.currentUser && window.isLiveGame) {
+                    await updateDoc(doc(db, "users", auth.currentUser.uid), { lastScore: hp });
+                }
             } else {
                 hp -= 20;
                 updateHPVisuals();
@@ -240,7 +265,7 @@
                 const userDoc = await getDoc(doc(db, "users", user.uid));
                 const userData = userDoc.data();
                 document.getElementById('auth-ui').innerHTML = `<b style="color:var(--accent)">DR. ${userData.username.toUpperCase()}</b>`;
-                document.getElementById('rank').innerText = `RANK: ${userData.elo >= 1200 ? 'ATTENDING' : 'RESIDENT'}`;
+                if(window.isLiveGame) document.getElementById('rank').innerText = `RANK: ${userData.elo >= 1200 ? 'ATTENDING' : 'RESIDENT'}`;
             }
         });
     </script>
