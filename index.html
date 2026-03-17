@@ -173,6 +173,7 @@
                     window.isLiveGame = true;
                 }
 
+                if (!currentCase) throw new Error("Case not found");
                 document.getElementById('case-hx').innerText = currentCase.hx_brief;
                 startTimer();
             } catch (e) { 
@@ -229,14 +230,12 @@
             display.innerText = currentCase.hints[type];
         };
 
-        // UPDATED FUZZY SEARCH LOGIC
         window.filterDiagnosis = () => {
             let input = document.getElementById('dx-input').value.toUpperCase();
             let div = document.getElementById('dropdown');
             div.innerHTML = '';
             if (!input) { div.style.display = 'none'; return; }
 
-            // Changed .startsWith to .includes so it finds matches anywhere in the word
             let matches = diagnosisPool.filter(dz => dz.toUpperCase().includes(input));
             
             if (matches.length > 0) {
