@@ -68,7 +68,6 @@
         #submit-area { margin-top: 20px; }
         .submit-btn { width: 100%; padding: 15px; background: var(--danger); color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 8px; }
         
-        /* Notification Toast */
         #toast {
             position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
             padding: 15px 30px; border-radius: 8px; font-weight: bold; z-index: 2000;
@@ -76,9 +75,9 @@
         }
         @keyframes fadeInOut { 0% { opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; } }
 
-        /* Modal */
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
         .modal-content { background: var(--panel); margin: 15% auto; padding: 30px; border-radius: 15px; width: 320px; border: 1px solid var(--accent); text-align: center; position: relative; }
+        .close-modal { position: absolute; top: 10px; right: 15px; cursor: pointer; color: var(--accent); font-weight: bold; font-size: 1.2rem; }
     </style>
 </head>
 <body>
@@ -95,6 +94,7 @@
 
     <div id="authModal" class="modal">
         <div class="modal-content">
+            <span class="close-modal" onclick="document.getElementById('authModal').style.display='none'">✕</span>
             <h2 id="auth-title" style="color: var(--accent)">Join the Wards</h2>
             <input type="text" id="username-input" placeholder="Username" style="width:90%; padding:10px; margin-bottom:10px;">
             <input type="password" id="password-input" placeholder="Password" style="width:90%; padding:10px; margin-bottom:10px;">
@@ -240,7 +240,6 @@
             }
         };
 
-        // Auth remains standard
         window.toggleAuthMode = () => { isSignUp = !isSignUp; document.getElementById('auth-title').innerText = isSignUp ? "Sign Up" : "Log In"; };
         window.processAuth = async () => {
             const username = document.getElementById('username-input').value;
