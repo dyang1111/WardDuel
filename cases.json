@@ -3,10 +3,15 @@
     "date": "2026-03-16",
     "hx_brief": "62yo male with sudden onset tearing chest pain radiating to the back.",
     "hints": {
-      "hx": "History of uncontrolled hypertension. Patient describes pain as 10/10.",
-      "pe": "Blood pressure 180/100 in right arm, 140/90 in left arm. Diminished femoral pulses.",
-      "lab": "Elevated D-dimer. Normal Troponin.",
-      "img": "Chest X-ray shows widened mediastinum."
+      "hx": "Pain is 'tearing' and 10/10. Patient has long-standing untreated HTN.",
+      "pe": "Blood pressure discrepancy of >20mmHg between arms. New early diastolic murmur.",
+      "img": "CTA Chest: Clearly visualized intimal tear with a 'true' and 'false' lumen."
+    },
+    "specialty_name": "D-Dimer",
+    "lab_results": {
+      "CBC": "Normal", "CMP": "Cr 1.4 (Mildly Elevated)", "EKG": "Left Axis Deviation",
+      "Trop": "Negative x2", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Significantly elevated (3,500 ng/mL); non-specific for origin."
     },
     "answer": "Aortic Dissection"
   },
@@ -14,87 +19,127 @@
     "date": "2026-03-17",
     "hx_brief": "24yo female with periumbilical pain that migrated to the RLQ.",
     "hints": {
-      "hx": "Nausea and one episode of vomiting. Appetite is gone (anorexia).",
-      "pe": "Tenderness at McBurney's point. Positive Rovsing sign.",
-      "lab": "Leukocytosis (WBC 15,000) with left shift.",
-      "img": "Ultrasound shows non-compressible appendix >6mm."
+      "hx": "Started as dull midline pain; now sharp in the RLQ. Nausea and anorexia present.",
+      "pe": "Positive Psoas sign and Rovsing sign. Guarding in the right lower quadrant.",
+      "img": "CT Abdomen: Dilated appendix >7mm with wall thickening and fat stranding."
+    },
+    "specialty_name": "CRP",
+    "lab_results": {
+      "CBC": "WBC 15.5 (Shift to the left)", "CMP": "Normal", "EKG": "Normal",
+      "Trop": "Normal", "Lipase": "Normal", "UA": "Negative for hematuria/nitrites", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Elevated inflammatory markers (40 mg/L)."
     },
     "answer": "Appendicitis"
   },
   {
     "date": "2026-03-18",
-    "hx_brief": "55yo female with sudden onset of severe 'pounding' headache and blurry vision.",
+    "hx_brief": "55yo female with sudden severe 'pounding' headache and blurry vision.",
     "hints": {
-      "hx": "Patient has a history of hypertension. Reports seeing 'halos' around lights.",
-      "pe": "Right eye is red. Pupil is mid-dilated and non-reactive to light. Eye feels 'rock hard'.",
-      "lab": "Normal ESR. Elevated intraocular pressure (IOP) on tonometry.",
-      "img": "Slit-lamp exam shows shallow anterior chamber."
+      "hx": "Pain is orbital. Patient mentions seeing 'rainbow halos' around the light bulbs.",
+      "pe": "Right eye: Steamy/cloudy cornea. Pupil is mid-dilated and non-reactive to light.",
+      "img": "Slit-lamp: Total occlusion of the iridocorneal angle."
+    },
+    "specialty_name": "Tonometry",
+    "lab_results": {
+      "CBC": "Normal", "CMP": "Normal", "EKG": "Normal",
+      "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Intraocular pressure is 58 mmHg (Normal: 10-21)."
     },
     "answer": "Acute Angle-Closure Glaucoma"
   },
   {
     "date": "2026-03-19",
-    "hx_brief": "32yo male with 2 days of progressive weakness in his legs and tingling in his feet.",
+    "hx_brief": "32yo male with 2 days of progressive weakness in his legs moving upward.",
     "hints": {
-      "hx": "Had a diarrheal illness 2 weeks ago (Campylobacter). Weakness is moving up his body.",
-      "pe": "Symmetric ascending muscle weakness. Absent deep-tendon reflexes (areflexia).",
-      "lab": "CSF analysis shows high protein but normal WBC count (albuminocytologic dissociation).",
-      "img": "Nerve conduction studies show slowed conduction velocities."
+      "hx": "Recently recovered from a 'stomach flu' with bloody diarrhea 2 weeks ago.",
+      "pe": "Lower extremity strength 1/5. Absent patellar and Achilles reflexes.",
+      "img": "MRI Spine: Enhancement of the cauda equina nerve roots."
+    },
+    "specialty_name": "CSF Analysis",
+    "lab_results": {
+      "CBC": "Normal", "CMP": "Normal", "EKG": "Normal",
+      "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Reduced Negative Inspiratory Force (NIF)", "Coags": "Normal",
+      "Specialty": "Albuminocytologic dissociation (High Protein, Normal Cell Count)."
     },
     "answer": "Guillain-Barre Syndrome"
   },
   {
     "date": "2026-03-20",
-    "hx_brief": "68yo male with painless gross hematuria (blood in urine) for three weeks.",
+    "hx_brief": "68yo male with painless gross hematuria for three weeks.",
     "hints": {
-      "hx": "50-pack-year smoking history. Worked in a chemical factory for 30 years.",
-      "pe": "No flank pain. No suprapubic tenderness. Prostate is normal on digital rectal exam.",
-      "lab": "Urinalysis confirms 4+ blood. Negative for nitrites or leukocyte esterase.",
-      "img": "Cystoscopy reveals a papillary mass on the bladder wall."
+      "hx": "Ex-smoker. Patient mentions working in a dye manufacturing plant for 25 years.",
+      "pe": "No palpable masses. Non-tender abdomen. Normal DRE.",
+      "img": "Cystoscopy: Multiple exophytic, cauliflower-like lesions on the trigone."
+    },
+    "specialty_name": "Urine Cytology",
+    "lab_results": {
+      "CBC": "Hb 10.8 (Anemia of chronic disease)", "CMP": "Normal", "EKG": "Normal",
+      "Trop": "Normal", "Lipase": "Normal", "UA": "Numerous RBCs; No casts; No dysmorphic RBCs", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "High-grade pleomorphic urothelial cells detected."
     },
     "answer": "Bladder Cancer"
   },
   {
     "date": "2026-03-21",
-    "hx_brief": "45yo obese female with RUQ pain that radiates to her right shoulder after eating a burger.",
+    "hx_brief": "45yo obese female with RUQ pain radiating to the right shoulder.",
     "hints": {
-      "hx": "Nausea and bloating. This has happened before, but this time the pain won't stop.",
-      "pe": "Positive Murphy’s sign. Guarding in the right upper quadrant.",
-      "lab": "Elevated WBC (14,000). Mildly elevated Alkaline Phosphatase.",
-      "img": "Ultrasound shows gallbladder wall thickening and pericholecystic fluid."
+      "hx": "Pain occurs roughly 30 minutes after eating fatty foods. Nausea is severe.",
+      "pe": "Positive Murphy’s sign. Patient stops breathing mid-inspiration during RUQ palpation.",
+      "img": "HIDA Scan: Non-visualization of the gallbladder after tracer injection."
+    },
+    "specialty_name": "LFTs",
+    "lab_results": {
+      "CBC": "WBC 14.0", "CMP": "Normal Albumin/Protein", "EKG": "Normal",
+      "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Mildly elevated AST/ALT; Normal Total Bilirubin."
     },
     "answer": "Acute Cholecystitis"
   },
   {
     "date": "2026-03-22",
-    "hx_brief": "19yo male athlete with sudden collapse and death during a basketball game.",
+    "hx_brief": "19yo male athlete collapses and dies during a basketball game.",
     "hints": {
-      "hx": "Uncle died suddenly at age 25. No previous medical history of asthma or heart disease.",
-      "pe": "Harsh systolic murmur that increases in intensity with Valsalva maneuver.",
-      "lab": "Genetic testing often shows mutations in the myosin heavy chain.",
-      "img": "Echo shows asymmetric septal hypertrophy and systolic anterior motion of the mitral valve."
+      "hx": "Patient was previously healthy but his father died of 'heart issues' at age 30.",
+      "pe": "4/6 Crescendo-decrescendo murmur at LLSB. Murmur softens when squatting.",
+      "img": "Echo: Marked ventricular septal thickening; Systolic Anterior Motion (SAM) of mitral valve."
+    },
+    "specialty_name": "Genetic Panel",
+    "lab_results": {
+      "CBC": "Normal", "CMP": "Normal", "EKG": "Deep narrow 'dagger' Q waves in lateral leads",
+      "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Identified mutation in Sarcomere protein (Beta-myosin heavy chain)."
     },
     "answer": "Hypertrophic Cardiomyopathy"
   },
   {
     "date": "2026-03-23",
-    "hx_brief": "29yo female with 3 days of 'crushing' fatigue, pale skin, and dark yellow urine.",
+    "hx_brief": "29yo female with fatigue, pale skin, and dark yellow urine.",
     "hints": {
-      "hx": "Just finished a course of nitrofurantoin for a UTI. Reports eating fava beans yesterday.",
-      "pe": "Slightly icteric (yellow) sclera. Splenomegaly is absent.",
-      "lab": "Low hemoglobin. Low haptoglobin. High indirect bilirubin.",
-      "img": "Peripheral blood smear shows Heinz bodies and Bite cells."
+      "hx": "Ate a Mediterranean salad with fava beans 48 hours ago. Starting UTI meds.",
+      "pe": "Mild scleral icterus. No hepatosplenomegaly noted.",
+      "img": "Smear: Polychromasia, 'Bite' cells, and oxidized hemoglobin inclusions (Heinz bodies)."
+    },
+    "specialty_name": "Bilirubin",
+    "lab_results": {
+      "CBC": "Hb 8.2; Reticulocytes 6% (High)", "CMP": "Normal", "EKG": "Normal",
+      "Trop": "Normal", "Lipase": "Normal", "UA": "Dark urine; Positive for Heme; Negative for RBCs", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Indirect (Unconjugated) hyperbilirubinemia."
     },
     "answer": "G6PD Deficiency"
   },
   {
     "date": "2026-03-24",
-    "hx_brief": "72yo female with sudden 'worst headache of my life' and neck stiffness.",
+    "hx_brief": "72yo female with sudden 'worst headache of my life'.",
     "hints": {
-      "hx": "History of polycystic kidney disease (ADPKD). No history of trauma.",
-      "pe": "Positive Kernig and Brudzinski signs. Ptosis of the left eye (CN III palsy).",
-      "lab": "Lumbar puncture shows xanthochromia (yellowish CSF from old blood).",
-      "img": "Non-contrast CT of the head shows white 'starfish' pattern in the basal cisterns."
+      "hx": "Thunderclap onset. Patient has history of Autosomal Dominant Polycystic Kidney Disease.",
+      "pe": "Nuchal rigidity. Left eye is 'down and out' with pupillary dilation.",
+      "img": "CT Head: Hyperdensity within the subarachnoid space and basal cisterns."
+    },
+    "specialty_name": "LP (Lumbar Puncture)",
+    "lab_results": {
+      "CBC": "Normal", "CMP": "Normal", "EKG": "Deep, wide, inverted T-waves (Cerebral T-waves)",
+      "Trop": "Mildly elevated (0.09)", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Xanthochromia present in all four tubes."
     },
     "answer": "Subarachnoid Hemorrhage"
   }
