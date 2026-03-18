@@ -1,427 +1,318 @@
-[
-    "AAA (Abdominal Aortic Aneurysm)",
-    "Acanthosis Nigricans",
-    "Achalasia",
-    "Acne Vulgaris",
-    "Acromegaly",
-    "Actinic Keratosis",
-    "Acute Angle-Closure Glaucoma",
-    "Acute Cholecystitis",
-    "Acute Coronary Syndrome (ACS)",
-    "Acute Intermittent Porphyria",
-    "Acute Liver Failure",
-    "Acute Lymphoblastic Leukemia (ALL)",
-    "Acute Myeloid Leukemia (AML)",
-    "Acute Pancreatitis",
-    "Acute Pericarditis",
-    "Acute Respiratory Distress Syndrome (ARDS)",
-    "Acute Tubular Necrosis (ATN)",
-    "Addison Disease (Adrenal Insufficiency)",
-    "Adenomyosis",
-    "Adrenoleukodystrophy",
-    "Adult Respiratory Distress Syndrome",
-    "Agammaglobulinemia (Bruton)",
-    "Albinism",
-    "Alcohol Withdrawal Delirium (Delirium Tremens)",
-    "Alpha-1 Antitrypsin Deficiency",
-    "Alport Syndrome",
-    "Alzheimer Disease",
-    "Amiodarone-Induced Thyrotoxicosis",
-    "Amyloidosis (Systemic)",
-    "Amyotrophic Lateral Sclerosis (ALS)",
-    "Anaphylaxis",
-    "Ankylosing Spondylitis",
-    "Anorexia Nervosa",
-    "Anthrax (Bacillus anthracis)",
-    "Antiphospholipid Syndrome",
-    "Aortic Dissection",
-    "Aortic Regurgitation",
-    "Aortic Stenosis",
-    "Appendicitis",
-    "Asbestosis",
-    "Ascariasis",
-    "Aspergillosis (ABPA)",
-    "Asthma",
-    "Ataxia-Telangiectasia",
-    "Atrial Fibrillation (A-Fib)",
-    "Atrial Flutter",
-    "Atrial Septal Defect (ASD)",
-    "Autoimmune Hemolytic Anemia",
-    "Autoimmune Hepatitis",
-    "Bacterial Meningitis",
-    "Bacterial Vaginosis",
-    "Baker Cyst (Popliteal Cyst)",
-    "Barrett Esophagus",
-    "Bartholin Gland Abscess",
-    "Basal Cell Carcinoma",
-    "Beckwith-Wiedemann Syndrome",
-    "Behcet Disease",
-    "Bell Palsy",
-    "Benign Paroxysmal Positional Vertigo (BPPV)",
-    "Benign Prostatic Hyperplasia (BPH)",
-    "Bernard-Soulier Syndrome",
-    "Biliary Atresia",
-    "Bladder Cancer",
-    "Blastomycosis",
-    "Borderline Personality Disorder",
-    "Botulism",
-    "Bronchiectasis",
-    "Brugada Syndrome",
-    "Brucellosis",
-    "Budd-Chiari Syndrome",
-    "Buerger Disease",
-    "Bulimia Nervosa",
-    "Bullous Pemphigoid",
-    "Burkitt Lymphoma",
-    "C. Difficile Infection",
-    "Carbon Monoxide Poisoning",
-    "Carcinoid Syndrome",
-    "Cardiac Tamponade",
-    "Cardiogenic Shock",
-    "Cat Scratch Disease (Bartonella)",
-    "Cavernous Sinus Thrombosis",
-    "Celiac Disease",
-    "Cellulitis",
-    "Central Retinal Artery Occlusion",
-    "Central Retinal Vein Occlusion",
-    "Cerebral Palsy",
-    "Cervical Cancer",
-    "Chagas Disease",
-    "Chancroid (Haemophilus ducreyi)",
-    "Chediak-Higashi Syndrome",
-    "Chickenpox (Varicella)",
-    "Chlamydia",
-    "Cholangiocarcinoma",
-    "Choledocholithiasis",
-    "Cholethiasis",
-    "Choriocarcinoma",
-    "Chronic Granulomatous Disease",
-    "Chronic Lymphocytic Leukemia (CLL)",
-    "Chronic Myeloid Leukemia (CML)",
-    "Chronic Obstructive Pulmonary Disease (COPD)",
-    "Churg-Strauss Syndrome (EGPA)",
-    "Cirrhosis",
-    "Cluster Headache",
-    "Coarctation of the Aorta",
-    "Coccidioidomycosis",
-    "Condyloma Accuminatum (HPV)",
-    "Congestive Heart Failure (CHF)",
-    "Conn Syndrome (Primary Hyperaldosteronism)",
-    "Contact Dermatitis",
-    "Craniopharyngioma",
-    "Creutzfeldt-Jakob Disease",
-    "Cri-du-chat Syndrome",
-    "Crohn's Disease",
-    "Croup",
-    "Cryoglobulinemia",
-    "Cryptococcosis",
-    "Cryptorchidism",
-    "Cushing Syndrome",
-    "Cystic Fibrosis",
-    "Cystinuria",
-    "Cytomegalovirus (CMV)",
-    "Deep Vein Thrombosis (DVT)",
-    "Dermatomyositis",
-    "Diabetes Insipidus (Central)",
-    "Diabetes Insipidus (Nephrogenic)",
-    "Diabetes Mellitus Type 1",
-    "Diabetes Mellitus Type 2",
-    "Diabetic Ketoacidosis (DKA)",
-    "Diffuse Large B-Cell Lymphoma",
-    "DiGeorge Syndrome",
-    "Diverticulitis",
-    "Duchenne Muscular Dystrophy",
-    "Dumping Syndrome",
-    "Duodenal Atresia",
-    "Dupuytren Contracture",
-    "Eclampsia",
-    "Ectopic Pregnancy",
-    "Edwards Syndrome (Trisomy 18)",
-    "Ehlers-Danlos Syndrome",
-    "Eisenmenger Syndrome",
-    "Emphysema",
-    "Empty Sella Syndrome",
-    "Endocarditis",
-    "Endometrial Cancer",
-    "Endometriosis",
-    "Epidural Hematoma",
-    "Epiglottitis",
-    "Erb Palsy",
-    "Erysipelas",
-    "Erythema Multiforme",
-    "Erythema Nodosum",
-    "Esophageal Cancer",
-    "Esophageal Varices",
-    "Ewing Sarcoma",
-    "Factor V Leiden",
-    "Fanconi Anemia",
-    "Fat Embolism Syndrome",
-    "Felty Syndrome",
-    "Fibroadenoma",
-    "Fibrocystic Breast Changes",
-    "Fibromyalgia",
-    "Fitz-Hugh-Curtis Syndrome",
-    "Fragile X Syndrome",
-    "Friedreich Ataxia",
-    "G6PD Deficiency",
-    "Galactosemia",
-    "Gastrinoma (Zollinger-Ellison)",
-    "Gastroesophageal Reflux Disease (GERD)",
-    "Gaucher Disease",
-    "Giant Cell Arteritis (Temporal Arteritis)",
-    "Giardiasis",
-    "Gilbert Syndrome",
-    "Glanzmann Thrombasthenia",
-    "Glioblastoma Multiforme",
-    "Glomerulonephritis",
-    "Glucagonoma",
-    "Glycogen Storage Disease (von Gierke)",
-    "Gonorrhea",
-    "Goodpasture Syndrome",
-    "Gout",
-    "Graft-vs-Host Disease",
-    "Graves Disease",
-    "Guillain-Barre Syndrome (GBS)",
-    "Hairy Cell Leukemia",
-    "Hashimoto Thyroiditis",
-    "HELLP Syndrome",
-    "Hemophilia A",
-    "Hemophilia B",
-    "Henoch-Schonlein Purpura (HSP)",
-    "Hepatitis A",
-    "Hepatitis B",
-    "Hepatitis C",
-    "Hepatocellular Carcinoma",
-    "Hepatorenal Syndrome",
-    "Hereditary Angioedema",
-    "Hereditary Hemochromatosis",
-    "Hereditary Hemorrhagic Telangiectasia (Osler-Weber-Rendu)",
-    "Hereditary Spherocytosis",
-    "Herpes Simplex Virus (HSV)",
-    "Herpes Zoster (Shingles)",
-    "Hirschsprung Disease",
-    "Histoplasmosis",
-    "HIV / AIDS",
-    "Hodgkin Lymphoma",
-    "Holoprosencephaly",
-    "Homocystinuria",
-    "Horner Syndrome",
-    "Huntington Disease",
-    "Hydatidiform Mole",
-    "Hydrocephalus (Obstructive)",
-    "Hyperparathyroidism (Primary)",
-    "Hyperparathyroidism (Secondary)",
-    "Hypertrophic Cardiomyopathy (HCM)",
-    "Hypoparathyroidism",
-    "Hypothyroidism",
-    "Idiopathic Thrombocytopenic Purpura (ITP)",
-    "IgA Nephropathy (Berger Disease)",
-    "IgA Vasculitis",
-    "Impetigo",
-    "Infectious Mononucleosis",
-    "Influenza",
-    "Insulinoma",
-    "Interceptive Period of Gout",
-    "Interstitial Cystitis",
-    "Intussusception",
-    "Iron Deficiency Anemia",
-    "Irritable Bowel Syndrome (IBS)",
-    "Ischemic Colitis",
-    "Ischemic Stroke",
-    "Juvenile Idiopathic Arthritis",
-    "Kaposi Sarcoma",
-    "Kartagener Syndrome",
-    "Kawasaki Disease",
-    "Klinefelter Syndrome",
-    "Korsakoff Syndrome",
-    "Krabbe Disease",
-    "Lambert-Eaton Myasthenic Syndrome",
-    "Larynogomalacia",
-    "Legionnaires' Disease",
-    "Leishmaniasis",
-    "Lesch-Nyhan Syndrome",
-    "Lichen Planus",
-    "Listeriosis",
-    "Ludwig Angina",
-    "Lyme Disease",
-    "Lymphogranuloma Venereum",
-    "Mallory-Weiss Tear",
-    "Marfan Syndrome",
-    "Measles (Rubeola)",
-    "Meckel Diverticulum",
-    "Melanoma",
-    "Meniere Disease",
-    "Meningioma",
-    "Mesothelioma",
-    "Metachromatic Leukodystrophy",
-    "Microscopic Polyangiitis",
-    "Minimal Change Disease",
-    "Mitral Regurgitation",
-    "Mitral Stenosis",
-    "Mixed Connective Tissue Disease",
-    "Molluscum Contagiosum",
-    "Multiple Myeloma",
-    "Multiple Sclerosis (MS)",
-    "Mumps",
-    "Myasthenia Gravis",
-    "Myelofibrosis",
-    "Myocardial Infarction (Heart Attack)",
-    "Myxedema Coma",
-    "Nonalcoholic Fatty Liver Disease (NAFLD)",
-    "Normal Pressure Hydrocephalus",
-    "Nystagmus",
-    "Obsessive-Compulsive Disorder (OCD)",
-    "Oral Leukoplakia",
-    "Orchitis",
-    "Osteoarthritis",
-    "Osteogenesis Imperfecta",
-    "Osteomalacia",
-    "Osteomyelitis",
-    "Osteosarcoma",
-    "Ovarian Cancer",
-    "Paget Disease of Bone",
-    "Paget Disease of the Breast",
-    "Pancreatic Cancer",
-    "Panic Disorder",
-    "Parkinson Disease",
-    "Patent Ductus Arteriosus (PDA)",
-    "Patent Foramen Ovale",
-    "Pellagra",
-    "Pemphigus Vulgaris",
-    "Peptic Ulcer Disease",
-    "Pericardial Effusion",
-    "Peripheral Artery Disease",
-    "Pernicious Anemia",
-    "Peyronie Disease",
-    "Pheochromocytoma",
-    "Pityriasis Rosea",
-    "Placenta Previa",
-    "Placental Abruption",
-    "Pneumoconiosis (Coal Worker)",
-    "Pneumocystis Jirovecii Pneumonia (PCP)",
-    "Pneumonia",
-    "Pneumothorax (Spontaneous)",
-    "Pneumothorax (Tension)",
-    "Polycystic Kidney Disease (ADPKD)",
-    "Polycystic Ovary Syndrome (PCOS)",
-    "Polycythemia Vera",
-    "Polyhydramnios",
-    "Polymyalgia Rheumatica",
-    "Polymyositis",
-    "Pompe Disease",
-    "Post-Streptococcal Glomerulonephritis",
-    "Post-Traumatic Stress Disorder (PTSD)",
-    "Posterior Reversible Encephalopathy Syndrome (PRES)",
-    "Pott Disease (Tuberculosis of Spine)",
-    "Preeclampsia",
-    "Primary Biliary Cholangitis",
-    "Primary Sclerosing Cholangitis",
-    "Prinzmetal Angina",
-    "Prostate Cancer",
-    "Pseudogout",
-    "Pseudohypoparathyroidism",
-    "Pseudomembranous Colitis",
-    "Pseudotumor Cerebri",
-    "Psoriasis",
-    "Pulmonary Embolism (PE)",
-    "Pulmonary Hypertension",
-    "Pyelonephritis",
-    "Pyloric Stenosis",
-    "Pyoderma Gangrenosum",
-    "Raynaud Phenomenon",
-    "Reiter Syndrome (Reactive Arthritis)",
-    "Renal Cell Carcinoma",
-    "Respiratory Syncytial Virus (RSV)",
-    "Retinal Detachment",
-    "Retinoblastoma",
-    "Reye Syndrome",
-    "Rheumatic Fever",
-    "Rheumatoid Arthritis (RA)",
-    "Rickets",
-    "Rocky Mountain Spotted Fever",
-    "Rosacea",
-    "Rotavirus",
-    "Salmonellosis",
-    "Sarcoidosis",
-    "Scabies",
-    "Scarlet Fever",
-    "Schistosomiasis",
-    "Schizoaffective Disorder",
-    "Schizophrenia",
-    "Scleroderma (Systemic Sclerosis)",
-    "Septic Arthritis",
-    "Septic Shock",
-    "Serotonin Syndrome",
-    "Shigellosis",
-    "SIADH",
-    "Sickle Cell Anemia",
-    "Sideroblastic Anemia",
-    "Silicosis",
-    "Sjogren Syndrome",
-    "Small Cell Lung Cancer",
-    "Somatization Disorder",
-    "Spermatocele",
-    "Spina Bifida",
-    "Splenic Rupture",
-    "Squamous Cell Carcinoma",
-    "Stable Angina",
-    "Staphylococcal Scalded Skin Syndrome",
-    "Stevens-Johnson Syndrome (SJS)",
-    "Subarachnoid Hemorrhage (SAH)",
-    "Subdural Hematoma",
-    "Subacute Sclerosing Panencephalitis",
-    "Syphilis (Primary)",
-    "Syphilis (Secondary)",
-    "Syphilis (Tertiary)",
-    "Syringomyelia",
-    "Systemic Lupus Erythematosus (SLE)",
-    "Takayasu Arteritis",
-    "Tay-Sachs Disease",
-    "Temporal Arteritis",
-    "Tension Pneumothorax",
-    "Teratoma",
-    "Testicular Cancer",
-    "Testicular Torsion",
-    "Tetanus",
-    "Tetralogy of Fallot",
-    "Thalassemia (Alpha)",
-    "Thalassemia (Beta)",
-    "Thrombotic Thrombocytopenic Purpura (TTP)",
-    "Thyroid Cancer (Papillary)",
-    "Thyroid Cancer (Follicular)",
-    "Thyroid Cancer (Medullary)",
-    "Thyroid Storm",
-    "Tinea Corporis (Ringworm)",
-    "Tinea Versicolor",
-    "Torsades de Pointes",
-    "Toxic Epidermal Necrolysis (TEN)",
-    "Toxic Megacolon",
-    "Toxic Shock Syndrome",
-    "Toxoplasmosis",
-    "Transposition of the Great Arteries",
-    "Trichomoniasis",
-    "Trigeminal Neuralgia",
-    "Tuberculosis (TB)",
-    "Tuberous Sclerosis",
-    "Turner Syndrome",
-    "Ulcerative Colitis (UC)",
-    "Upper Gastrointestinal Bleed",
-    "Urinary Tract Infection (UTI)",
-    "Urolithiasis (Kidney Stones)",
-    "Ventricular Septal Defect (VSD)",
-    "Vitamin B12 Deficiency",
-    "Volvulus",
-    "Von Gierke Disease",
-    "Von Hippel-Lindau Disease",
-    "Von Willebrand Disease",
-    "Waldenstrom Macroglobulinemia",
-    "Wegener Granulomatosis (GPA)",
-    "Wernicke Encephalopathy",
-    "West Nile Virus",
-    "Whipple Disease",
-    "Wilms Tumor",
-    "Wilson Disease",
-    "Wolff-Parkinson-White Syndrome (WPW)",
-    "Yellow Fever",
-    "Zollinger-Ellison Syndrome"
-]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARDDUEL | Clinical 1v1</title>
+    <style>
+        :root {
+            --bg: #0b1120; --panel: #1a2235; --accent: #00f2ff;
+            --danger: #ff4b4b; --text: #e2e8f0; --success: #22c55e;
+        }
+
+        body {
+            background-color: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif;
+            margin: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh;
+        }
+
+        .top-bar {
+            width: 100%; padding: 15px 25px; display: flex; justify-content: space-between;
+            align-items: center; box-sizing: border-box; border-bottom: 1px solid #334155;
+        }
+
+        .logo { font-weight: bold; font-size: 1.5rem; letter-spacing: 2px; color: var(--accent); text-decoration: none; }
+        .login-btn { background: none; border: 1px solid var(--accent); color: var(--accent); padding: 8px 15px; cursor: pointer; border-radius: 4px; font-weight: bold; }
+
+        .stats-container {
+            width: 90%; max-width: 800px; margin-top: 20px;
+            display: flex; justify-content: space-between; align-items: center; gap: 15px;
+        }
+
+        .hp-container { flex-grow: 1; position: relative; max-width: 400px; height: 30px; }
+        .hp-bar-bg { width: 100%; height: 100%; background: #334155; border-radius: 15px; overflow: hidden; border: 2px solid #475569; }
+        #hp-fill { height: 100%; width: 100%; background: var(--success); transition: width 0.3s ease; }
+        
+        .hp-text-overlay { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 900; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); pointer-events: none;
+        }
+
+        #timer-display { font-weight: bold; color: var(--accent); font-family: monospace; font-size: 1.2rem; }
+        #rank { font-weight: bold; color: #94a3b8; font-size: 0.9rem; }
+
+        .game-board {
+            width: 90%; max-width: 800px; background: var(--panel); margin-top: 20px;
+            padding: 30px; border-radius: 12px; border: 1px solid #334155; position: relative;
+        }
+
+        .hx-box { font-size: 1.2rem; border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 25px; }
+        .hint-output { background: #0f172a; padding: 15px; border-radius: 8px; margin-bottom: 15px; display: none; color: #94a3b8; border: 1px solid #334155; }
+
+        .lab-grid { 
+            display: none; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 10px; 
+            background: #0f172a; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin-bottom: 20px; 
+            border: 1px solid var(--accent); 
+        }
+        .lab-btn { 
+            background: #1e293b; border: 1px solid #475569; color: white; 
+            padding: 10px 5px; font-size: 0.75rem; cursor: pointer; border-radius: 4px; font-weight: bold;
+        }
+        .lab-btn:hover { border-color: var(--accent); background: #2d3a4f; }
+        .lab-btn.ordered { border-color: var(--success) !important; color: var(--success) !important; cursor: default; background: #064e3b; }
+
+        .grid-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
+        .action-btn { background: #1e293b; border: 1px solid #475569; color: white; padding: 15px; cursor: pointer; border-radius: 6px; font-weight: bold; }
+        .action-btn.unlocked { border-color: var(--success); background: #064e3b; }
+        .action-btn span { float: right; color: var(--danger); font-size: 0.8rem; }
+
+        .ordered-labs-list { margin-top: 15px; border-top: 1px solid #334155; padding-top: 15px; }
+        .lab-result-row { margin-bottom: 8px; font-size: 0.9rem; color: var(--accent); font-family: monospace; }
+
+        .search-container { position: relative; width: 100%; }
+        input[type="text"] { width: 100%; padding: 15px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 8px; box-sizing: border-box; }
+        .dropdown { position: absolute; width: 100%; background: #1e293b; border: 1px solid var(--accent); max-height: 200px; overflow-y: auto; z-index: 100; display: none; border-radius: 0 0 8px 8px; }
+        .dropdown div { padding: 12px; cursor: pointer; border-bottom: 1px solid #334155; }
+        .dropdown div:hover { background: var(--accent); color: var(--bg); }
+
+        .submit-btn { width: 100%; padding: 15px; margin-top: 20px; background: var(--danger); color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 8px; }
+
+        .disclaimer { 
+            margin-top: 40px; 
+            font-size: 0.7rem; 
+            color: #64748b; 
+            text-align: center; 
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        #toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); padding: 15px 30px; border-radius: 8px; font-weight: bold; z-index: 2000; display: none; }
+        @keyframes fadeInOut { 0% { opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; } }
+
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
+        .modal-content { background: var(--panel); margin: 15% auto; padding: 30px; border-radius: 15px; width: 320px; border: 1px solid var(--accent); text-align: center; position: relative; }
+        .close-modal { position: absolute; top: 10px; right: 15px; cursor: pointer; color: var(--accent); font-weight: bold; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="top-bar">
+        <a href="index.html" class="logo">WARDDUEL</a>
+        <div style="display: flex; align-items: center;">
+            <a href="archives.html" style="margin-right: 20px; color: var(--accent); text-decoration: none; font-weight: bold; font-size: 0.9rem;">ARCHIVES</a>
+            <div id="auth-ui"><button class="login-btn" onclick="document.getElementById('authModal').style.display='block'">LOGIN / SIGN UP</button></div>
+        </div>
+    </div>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="document.getElementById('authModal').style.display='none'">✕</span>
+            <h2 id="auth-title" style="color: var(--accent)">Join the Wards</h2>
+            <input type="text" id="username-input" placeholder="Username" style="width:90%; padding:10px; margin-bottom:10px;">
+            <input type="password" id="password-input" placeholder="Password" style="width:90%; padding:10px; margin-bottom:10px;">
+            <button class="submit-btn" style="background:var(--success)" onclick="window.processAuth()">CONFIRM</button>
+        </div>
+    </div>
+
+    <div class="stats-container">
+        <div>TIME: <span id="timer-display">05:00</span></div>
+        <div class="hp-container">
+            <div class="hp-bar-bg"><div id="hp-fill"></div></div>
+            <div class="hp-text-overlay">HP: <span id="hp-val">100</span></div>
+        </div>
+        <div id="rank">RANK: ANONYMOUS</div>
+    </div>
+
+    <div class="game-board">
+        <div class="hx-box" id="case-hx">Loading Clinical Case...</div>
+        
+        <div id="hint-display" class="hint-output"></div>
+
+        <div id="lab-grid" class="lab-grid">
+            <button class="lab-btn" id="lab-CBC" onclick="orderLab('CBC')">CBC</button>
+            <button class="lab-btn" id="lab-CMP" onclick="orderLab('CMP')">CMP</button>
+            <button class="lab-btn" id="lab-EKG" onclick="orderLab('EKG')">EKG</button>
+            <button class="lab-btn" id="lab-Trop" onclick="orderLab('Trop')">Troponin</button>
+            <button class="lab-btn" id="lab-Lipase" onclick="orderLab('Lipase')">Lipase</button>
+            <button class="lab-btn" id="lab-UA" onclick="orderLab('UA')">Urinalysis</button>
+            <button class="lab-btn" id="lab-ABG" onclick="orderLab('ABG')">ABG/VBG</button>
+            <button class="lab-btn" id="lab-Coags" onclick="orderLab('Coags')">Coags</button>
+            <button class="lab-btn" id="lab-Specialty" onclick="orderLab('Specialty')">SPECIALTY</button>
+        </div>
+
+        <div class="grid-buttons">
+            <button class="action-btn" id="btn-hx" onclick="getHint('hx', 10)">Add. History <span>-10 HP</span></button>
+            <button class="action-btn" id="btn-pe" onclick="getHint('pe', 15)">PE Findings <span>-15 HP</span></button>
+            <button class="action-btn" id="btn-lab" onclick="toggleLabGrid()">Order Labs <span>-5 ea</span></button>
+            <button class="action-btn" id="btn-img" onclick="getHint('img', 25)">Imaging <span>-25 HP</span></button>
+        </div>
+
+        <div id="ordered-labs-list" class="ordered-labs-list"></div>
+
+        <div id="submit-area" style="margin-top: 30px;">
+            <div class="search-container">
+                <input type="text" id="dx-input" placeholder="Search Diagnosis..." onkeyup="window.filterDiagnosis()">
+                <div id="dropdown" class="dropdown"></div>
+            </div>
+            <button class="submit-btn" onclick="window.checkDiagnosis()">SUBMIT DIAGNOSIS</button>
+        </div>
+    </div>
+
+    <div class="disclaimer">
+        Wardduel is for entertainment only and does not constitute medical advice. Consult a healthcare professional for health concerns.
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getFirestore, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBzVNM6yylE2LF_8SfqRluqdQVRBB6i6HI",
+            authDomain: "wardduel.firebaseapp.com",
+            projectId: "wardduel",
+            storageBucket: "wardduel.firebasestorage.app",
+            messagingSenderId: "45792689084",
+            appId: "1:45792689084:web:64d3e5843611b038c189b9"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        let currentCase = null, hp = 100, timeLeft = 300, timerId = null, gameActive = true;
+        let diagnosisPool = []; 
+        const unlockedHints = new Set();
+        const orderedLabs = new Set();
+
+        async function initGame() {
+            const dxRes = await fetch('diagnoses.json'); diagnosisPool = await dxRes.json(); diagnosisPool.sort();
+            const res = await fetch('cases.json'); const cases = await res.json();
+            const todayCST = new Intl.DateTimeFormat('en-CA', {timeZone: 'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date());
+            const urlParams = new URLSearchParams(window.location.search);
+            const archiveId = urlParams.get('caseId');
+
+            currentCase = cases.find(c => c.date === (archiveId || todayCST)) || cases[cases.length - 1];
+            document.getElementById('case-hx').innerText = currentCase.hx_brief;
+            
+            if(currentCase.specialty_name) {
+                document.getElementById('lab-Specialty').innerText = currentCase.specialty_name.toUpperCase();
+            }
+
+            startTimer();
+        }
+        initGame();
+
+        function startTimer() {
+            timerId = setInterval(() => {
+                if(!gameActive) return;
+                timeLeft--;
+                if (timeLeft % 10 === 0 && timeLeft < 300) { hp -= 1; updateHPVisuals(); }
+                let m = Math.floor(timeLeft / 60).toString().padStart(2, '0'), s = (timeLeft % 60).toString().padStart(2, '0');
+                document.getElementById('timer-display').innerText = `${m}:${s}`;
+                if(timeLeft <= 0) endGame(false, "TIME EXPIRED");
+            }, 1000);
+        }
+
+        function updateHPVisuals() {
+            if (hp < 0) hp = 0;
+            document.getElementById('hp-val').innerText = hp;
+            document.getElementById('hp-fill').style.width = hp + "%";
+            if(hp <= 0 && gameActive) endGame(false, "VITAL SIGNS LOST");
+        }
+
+        window.toggleLabGrid = () => {
+            const grid = document.getElementById('lab-grid');
+            grid.style.display = grid.style.display === 'grid' ? 'none' : 'grid';
+        };
+
+        window.orderLab = (labKey) => {
+            if (!gameActive || orderedLabs.has(labKey)) return;
+            
+            const result = currentCase.lab_results[labKey] || "Normal / No findings";
+            hp -= 5;
+            orderedLabs.add(labKey);
+            updateHPVisuals();
+
+            const list = document.getElementById('ordered-labs-list');
+            const row = document.createElement('div');
+            row.className = 'lab-result-row';
+            const label = (labKey === 'Specialty') ? currentCase.specialty_name : labKey;
+            row.innerHTML = `<strong>${label}:</strong> ${result}`;
+            list.appendChild(row);
+
+            document.getElementById(`lab-${labKey}`).classList.add('ordered');
+        };
+
+        window.getHint = (type, cost) => {
+            if (!unlockedHints.has(type) && gameActive) {
+                hp -= cost; unlockedHints.add(type);
+                document.getElementById(`btn-${type}`).classList.add('unlocked');
+                updateHPVisuals();
+            }
+            const display = document.getElementById('hint-display');
+            display.style.display = "block"; display.innerText = currentCase.hints[type];
+        };
+
+        window.filterDiagnosis = () => {
+            let input = document.getElementById('dx-input').value.toUpperCase(), div = document.getElementById('dropdown');
+            div.innerHTML = '';
+            if (!input) { div.style.display = 'none'; return; }
+            let matches = diagnosisPool.filter(dz => dz.toUpperCase().includes(input)).slice(0, 10);
+            if (matches.length > 0) {
+                div.style.display = 'block';
+                matches.forEach(m => {
+                    let item = document.createElement('div'); item.innerText = m;
+                    item.onclick = () => { document.getElementById('dx-input').value = m; div.style.display = 'none'; };
+                    div.appendChild(item);
+                });
+            } else { div.style.display = 'none'; }
+        };
+
+        window.checkDiagnosis = async () => {
+            if(!gameActive) return;
+            let val = document.getElementById('dx-input').value;
+            if (val === currentCase.answer) {
+                endGame(true, `DIAGNOSIS CONFIRMED (+${hp} PTS)`);
+            } else {
+                hp -= 10; updateHPVisuals();
+                showToast("INCORRECT DIAGNOSIS -10 HP", "var(--danger)");
+            }
+        };
+
+        function showToast(msg, color) {
+            const t = document.getElementById('toast');
+            t.innerText = msg; t.style.background = color; t.style.display = 'block';
+            t.style.animation = 'none'; t.offsetHeight; t.style.animation = 'fadeInOut 2s ease-in-out';
+            setTimeout(() => { t.style.display = 'none'; }, 2000);
+        }
+
+        function endGame(success, reason) {
+            gameActive = false; clearInterval(timerId);
+            if(!success) { hp = 0; updateHPVisuals(); }
+            document.getElementById('submit-area').innerHTML = `<h2 style="color:${success?'var(--success)':'var(--danger)'}; text-align:center;">${reason}<br><small style="color:white">Correct Answer: ${currentCase.answer}</small></h2>`;
+        }
+
+        window.processAuth = async () => {
+            const username = document.getElementById('username-input').value;
+            const userEmail = username + "@wardduel.com", pass = document.getElementById('password-input').value;
+            try { await signInWithEmailAndPassword(auth, userEmail, pass); document.getElementById('authModal').style.display='none'; } 
+            catch (e) { alert("Login failed."); }
+        };
+
+        onAuthStateChanged(auth, async (user) => {
+            if(user) {
+                const userDoc = await getDoc(doc(db, "users", user.uid));
+                document.getElementById('auth-ui').innerHTML = `<b style="color:var(--accent)">DR. ${userDoc.data().username.toUpperCase()}</b>`;
+            }
+        });
+    </script>
+</body>
+</html>
