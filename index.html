@@ -65,11 +65,11 @@
             padding: 10px 5px; font-size: 0.75rem; cursor: pointer; border-radius: 4px; font-weight: bold;
         }
         .lab-btn:hover { border-color: var(--accent); background: #2d3a4f; }
-        .lab-btn.ordered { border-color: var(--success); color: var(--success); cursor: default; }
+        .lab-btn.ordered { border-color: var(--success) !important; color: var(--success) !important; cursor: default; background: #064e3b; }
 
         .grid-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
         .action-btn { background: #1e293b; border: 1px solid #475569; color: white; padding: 15px; cursor: pointer; border-radius: 6px; font-weight: bold; }
-        .action-btn.unlocked { border-color: var(--success); }
+        .action-btn.unlocked { border-color: var(--success); background: #064e3b; }
         .action-btn span { float: right; color: var(--danger); font-size: 0.8rem; }
 
         .ordered-labs-list { margin-top: 15px; border-top: 1px solid #334155; padding-top: 15px; }
@@ -83,7 +83,7 @@
 
         .submit-btn { width: 100%; padding: 15px; margin-top: 20px; background: var(--danger); color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 8px; }
 
-        #toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); padding: 15px 30px; border-radius: 8px; font-weight: bold; z-index: 2000; display: none; animation: fadeInOut 2s ease-in-out; }
+        #toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); padding: 15px 30px; border-radius: 8px; font-weight: bold; z-index: 2000; display: none; }
         @keyframes fadeInOut { 0% { opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; } }
 
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
@@ -128,15 +128,15 @@
         <div id="hint-display" class="hint-output"></div>
 
         <div id="lab-grid" class="lab-grid">
-            <button class="lab-btn" onclick="orderLab('CBC')">CBC</button>
-            <button class="lab-btn" onclick="orderLab('CMP')">CMP</button>
-            <button class="lab-btn" onclick="orderLab('EKG')">EKG</button>
-            <button class="lab-btn" onclick="orderLab('Trop')">Troponin</button>
-            <button class="lab-btn" onclick="orderLab('Lipase')">Lipase</button>
-            <button class="lab-btn" onclick="orderLab('UA')">Urinalysis</button>
-            <button class="lab-btn" onclick="orderLab('ABG')">ABG/VBG</button>
-            <button class="lab-btn" onclick="orderLab('Coags')">Coags</button>
-            <button class="lab-btn" id="specialty-lab-btn" onclick="orderLab('Specialty')">SPECIALTY</button>
+            <button class="lab-btn" id="lab-CBC" onclick="orderLab('CBC')">CBC</button>
+            <button class="lab-btn" id="lab-CMP" onclick="orderLab('CMP')">CMP</button>
+            <button class="lab-btn" id="lab-EKG" onclick="orderLab('EKG')">EKG</button>
+            <button class="lab-btn" id="lab-Trop" onclick="orderLab('Trop')">Troponin</button>
+            <button class="lab-btn" id="lab-Lipase" onclick="orderLab('Lipase')">Lipase</button>
+            <button class="lab-btn" id="lab-UA" onclick="orderLab('UA')">Urinalysis</button>
+            <button class="lab-btn" id="lab-ABG" onclick="orderLab('ABG')">ABG/VBG</button>
+            <button class="lab-btn" id="lab-Coags" onclick="orderLab('Coags')">Coags</button>
+            <button class="lab-btn" id="lab-Specialty" onclick="orderLab('Specialty')">SPECIALTY</button>
         </div>
 
         <div class="grid-buttons">
@@ -190,9 +190,8 @@
             currentCase = cases.find(c => c.date === (archiveId || todayCST)) || cases[cases.length - 1];
             document.getElementById('case-hx').innerText = currentCase.hx_brief;
             
-            // Set Specialty Button Name if exists
             if(currentCase.specialty_name) {
-                document.getElementById('specialty-lab-btn').innerText = currentCase.specialty_name.toUpperCase();
+                document.getElementById('lab-Specialty').innerText = currentCase.specialty_name.toUpperCase();
             }
 
             startTimer();
@@ -233,14 +232,12 @@
             const list = document.getElementById('ordered-labs-list');
             const row = document.createElement('div');
             row.className = 'lab-result-row';
-            // Show actual lab name or specialty name
             const label = (labKey === 'Specialty') ? currentCase.specialty_name : labKey;
             row.innerHTML = `<strong>${label}:</strong> ${result}`;
             list.appendChild(row);
 
-            // Mark button as ordered
-            const buttons = document.querySelectorAll('.lab-btn');
-            buttons.forEach(b => { if(b.innerText.includes(label)) b.classList.add('ordered'); });
+            // FIXED: Direct targeting of ID to ensure green state
+            document.getElementById(`lab-${labKey}`).classList.add('ordered');
         };
 
         window.getHint = (type, cost) => {
@@ -282,6 +279,7 @@
         function showToast(msg, color) {
             const t = document.getElementById('toast');
             t.innerText = msg; t.style.background = color; t.style.display = 'block';
+            t.style.animation = 'none'; t.offsetHeight; t.style.animation = 'fadeInOut 2s ease-in-out';
             setTimeout(() => { t.style.display = 'none'; }, 2000);
         }
 
@@ -294,10 +292,8 @@
         window.processAuth = async () => {
             const username = document.getElementById('username-input').value;
             const userEmail = username + "@wardduel.com", pass = document.getElementById('password-input').value;
-            try {
-                await signInWithEmailAndPassword(auth, userEmail, pass);
-                document.getElementById('authModal').style.display='none';
-            } catch (e) { alert("Login failed."); }
+            try { await signInWithEmailAndPassword(auth, userEmail, pass); document.getElementById('authModal').style.display='none'; } 
+            catch (e) { alert("Login failed."); }
         };
 
         onAuthStateChanged(auth, async (user) => {
