@@ -49,30 +49,41 @@
         .hx-box { font-size: 1.2rem; border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 25px; }
         .hint-output { background: #0f172a; padding: 15px; border-radius: 8px; margin-bottom: 15px; display: none; color: #94a3b8; border: 1px solid #334155; }
 
+        /* 3x3 LAB GRID */
+        .lab-grid { 
+            display: none; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 10px; 
+            background: #0f172a; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin-bottom: 20px; 
+            border: 1px solid var(--accent); 
+        }
+        .lab-btn { 
+            background: #1e293b; border: 1px solid #475569; color: white; 
+            padding: 10px 5px; font-size: 0.75rem; cursor: pointer; border-radius: 4px; font-weight: bold;
+        }
+        .lab-btn:hover { border-color: var(--accent); background: #2d3a4f; }
+        .lab-btn.ordered { border-color: var(--success); color: var(--success); cursor: default; }
+
         .grid-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
         .action-btn { background: #1e293b; border: 1px solid #475569; color: white; padding: 15px; cursor: pointer; border-radius: 6px; font-weight: bold; }
-        .action-btn.unlocked { border-color: var(--success); background: #064e3b; }
-        .action-btn span { float: right; color: var(--danger); }
-        .action-btn.unlocked span { color: var(--success); }
+        .action-btn.unlocked { border-color: var(--success); }
+        .action-btn span { float: right; color: var(--danger); font-size: 0.8rem; }
+
+        .ordered-labs-list { margin-top: 15px; border-top: 1px solid #334155; padding-top: 15px; }
+        .lab-result-row { margin-bottom: 8px; font-size: 0.9rem; color: var(--accent); font-family: monospace; }
 
         .search-container { position: relative; width: 100%; }
         input[type="text"] { width: 100%; padding: 15px; background: #0f172a; border: 1px solid #475569; color: white; border-radius: 8px; box-sizing: border-box; }
-        
-        .dropdown { 
-            position: absolute; width: 100%; background: #1e293b; border: 1px solid var(--accent); 
-            max-height: 200px; overflow-y: auto; z-index: 100; display: none; border-radius: 0 0 8px 8px;
-        }
+        .dropdown { position: absolute; width: 100%; background: #1e293b; border: 1px solid var(--accent); max-height: 200px; overflow-y: auto; z-index: 100; display: none; border-radius: 0 0 8px 8px; }
         .dropdown div { padding: 12px; cursor: pointer; border-bottom: 1px solid #334155; }
         .dropdown div:hover { background: var(--accent); color: var(--bg); }
 
-        #submit-area { margin-top: 20px; }
-        .submit-btn { width: 100%; padding: 15px; background: var(--danger); color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 8px; }
-        
-        #toast {
-            position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
-            padding: 15px 30px; border-radius: 8px; font-weight: bold; z-index: 2000;
-            display: none; animation: fadeInOut 2s ease-in-out;
-        }
+        .submit-btn { width: 100%; padding: 15px; margin-top: 20px; background: var(--danger); color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 8px; }
+
+        #toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); padding: 15px 30px; border-radius: 8px; font-weight: bold; z-index: 2000; display: none; animation: fadeInOut 2s ease-in-out; }
         @keyframes fadeInOut { 0% { opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; } }
 
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
@@ -99,7 +110,6 @@
             <input type="text" id="username-input" placeholder="Username" style="width:90%; padding:10px; margin-bottom:10px;">
             <input type="password" id="password-input" placeholder="Password" style="width:90%; padding:10px; margin-bottom:10px;">
             <button class="submit-btn" style="background:var(--success)" onclick="window.processAuth()">CONFIRM</button>
-            <p onclick="window.toggleAuthMode()" style="font-size:0.8rem; cursor:pointer; color:var(--accent); margin-top:15px;">Switch Auth Mode</p>
         </div>
     </div>
 
@@ -113,15 +123,32 @@
     </div>
 
     <div class="game-board">
-        <div class="hx-box" id="case-hx">Loading...</div>
+        <div class="hx-box" id="case-hx">Loading Clinical Case...</div>
+        
         <div id="hint-display" class="hint-output"></div>
+
+        <div id="lab-grid" class="lab-grid">
+            <button class="lab-btn" onclick="orderLab('CBC')">CBC</button>
+            <button class="lab-btn" onclick="orderLab('CMP')">CMP</button>
+            <button class="lab-btn" onclick="orderLab('EKG')">EKG</button>
+            <button class="lab-btn" onclick="orderLab('Trop')">Troponin</button>
+            <button class="lab-btn" onclick="orderLab('Lipase')">Lipase</button>
+            <button class="lab-btn" onclick="orderLab('UA')">Urinalysis</button>
+            <button class="lab-btn" onclick="orderLab('ABG')">ABG/VBG</button>
+            <button class="lab-btn" onclick="orderLab('Coags')">Coags</button>
+            <button class="lab-btn" id="specialty-lab-btn" onclick="orderLab('Specialty')">SPECIALTY</button>
+        </div>
+
         <div class="grid-buttons">
             <button class="action-btn" id="btn-hx" onclick="getHint('hx', 10)">Add. History <span>-10 HP</span></button>
             <button class="action-btn" id="btn-pe" onclick="getHint('pe', 15)">PE Findings <span>-15 HP</span></button>
-            <button class="action-btn" id="btn-lab" onclick="getHint('lab', 20)">Lab Results <span>-20 HP</span></button>
+            <button class="action-btn" id="btn-lab" onclick="toggleLabGrid()">Order Labs <span>-5 ea</span></button>
             <button class="action-btn" id="btn-img" onclick="getHint('img', 25)">Imaging <span>-25 HP</span></button>
         </div>
-        <div id="submit-area">
+
+        <div id="ordered-labs-list" class="ordered-labs-list"></div>
+
+        <div id="submit-area" style="margin-top: 30px;">
             <div class="search-container">
                 <input type="text" id="dx-input" placeholder="Search Diagnosis..." onkeyup="window.filterDiagnosis()">
                 <div id="dropdown" class="dropdown"></div>
@@ -132,8 +159,8 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-        import { getFirestore, doc, setDoc, updateDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getFirestore, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyBzVNM6yylE2LF_8SfqRluqdQVRBB6i6HI",
@@ -148,9 +175,10 @@
         const auth = getAuth(app);
         const db = getFirestore(app);
 
-        let currentCase = null, hp = 100, timeLeft = 300, isSignUp = true, timerId = null, gameActive = true;
-        const unlockedHints = new Set();
+        let currentCase = null, hp = 100, timeLeft = 300, timerId = null, gameActive = true;
         let diagnosisPool = []; 
+        const unlockedHints = new Set();
+        const orderedLabs = new Set();
 
         async function initGame() {
             const dxRes = await fetch('diagnoses.json'); diagnosisPool = await dxRes.json(); diagnosisPool.sort();
@@ -159,10 +187,14 @@
             const urlParams = new URLSearchParams(window.location.search);
             const archiveId = urlParams.get('caseId');
 
-            currentCase = cases.find(c => c.date === (archiveId || todayCST));
-            if (!currentCase) currentCase = cases[cases.length - 1];
-            
+            currentCase = cases.find(c => c.date === (archiveId || todayCST)) || cases[cases.length - 1];
             document.getElementById('case-hx').innerText = currentCase.hx_brief;
+            
+            // Set Specialty Button Name if exists
+            if(currentCase.specialty_name) {
+                document.getElementById('specialty-lab-btn').innerText = currentCase.specialty_name.toUpperCase();
+            }
+
             startTimer();
         }
         initGame();
@@ -181,33 +213,40 @@
         function updateHPVisuals() {
             if (hp < 0) hp = 0;
             document.getElementById('hp-val').innerText = hp;
-            const fill = document.getElementById('hp-fill');
-            fill.style.width = hp + "%";
-            if(hp > 60) fill.style.background = "var(--success)";
-            else if(hp > 30) fill.style.background = "#eab308";
-            else fill.style.background = "var(--danger)";
+            document.getElementById('hp-fill').style.width = hp + "%";
             if(hp <= 0 && gameActive) endGame(false, "VITAL SIGNS LOST");
         }
 
-        function showToast(msg, color) {
-            const t = document.getElementById('toast');
-            t.innerText = msg; t.style.background = color; t.style.display = 'block';
-            setTimeout(() => { t.style.display = 'none'; }, 2000);
-        }
+        window.toggleLabGrid = () => {
+            const grid = document.getElementById('lab-grid');
+            grid.style.display = grid.style.display === 'grid' ? 'none' : 'grid';
+        };
 
-        function endGame(success, reason) {
-            gameActive = false;
-            clearInterval(timerId);
-            if(!success) { hp = 0; updateHPVisuals(); }
-            document.getElementById('submit-area').innerHTML = `<h2 style="color:${success?'var(--success)':'var(--danger)'}; text-align:center;">${reason}<br><small style="color:white">Correct Answer: ${currentCase.answer}</small></h2>`;
-            showToast(success ? "MISSION ACCOMPLISHED" : "MISSION FAILED", success ? "var(--success)" : "var(--danger)");
-        }
+        window.orderLab = (labKey) => {
+            if (!gameActive || orderedLabs.has(labKey)) return;
+            
+            const result = currentCase.lab_results[labKey] || "Normal / No findings";
+            hp -= 5;
+            orderedLabs.add(labKey);
+            updateHPVisuals();
+
+            const list = document.getElementById('ordered-labs-list');
+            const row = document.createElement('div');
+            row.className = 'lab-result-row';
+            // Show actual lab name or specialty name
+            const label = (labKey === 'Specialty') ? currentCase.specialty_name : labKey;
+            row.innerHTML = `<strong>${label}:</strong> ${result}`;
+            list.appendChild(row);
+
+            // Mark button as ordered
+            const buttons = document.querySelectorAll('.lab-btn');
+            buttons.forEach(b => { if(b.innerText.includes(label)) b.classList.add('ordered'); });
+        };
 
         window.getHint = (type, cost) => {
             if (!unlockedHints.has(type) && gameActive) {
                 hp -= cost; unlockedHints.add(type);
-                const btn = document.getElementById(`btn-${type}`);
-                btn.classList.add('unlocked'); btn.querySelector('span').innerText = "UNLOCKED";
+                document.getElementById(`btn-${type}`).classList.add('unlocked');
                 updateHPVisuals();
             }
             const display = document.getElementById('hint-display');
@@ -235,28 +274,36 @@
             if (val === currentCase.answer) {
                 endGame(true, `DIAGNOSIS CONFIRMED (+${hp} PTS)`);
             } else {
-                hp -= 20; updateHPVisuals();
-                showToast("INCORRECT DIAGNOSIS -20 HP", "var(--danger)");
+                hp -= 10; updateHPVisuals();
+                showToast("INCORRECT DIAGNOSIS -10 HP", "var(--danger)");
             }
         };
 
-        window.toggleAuthMode = () => { isSignUp = !isSignUp; document.getElementById('auth-title').innerText = isSignUp ? "Sign Up" : "Log In"; };
+        function showToast(msg, color) {
+            const t = document.getElementById('toast');
+            t.innerText = msg; t.style.background = color; t.style.display = 'block';
+            setTimeout(() => { t.style.display = 'none'; }, 2000);
+        }
+
+        function endGame(success, reason) {
+            gameActive = false; clearInterval(timerId);
+            if(!success) { hp = 0; updateHPVisuals(); }
+            document.getElementById('submit-area').innerHTML = `<h2 style="color:${success?'var(--success)':'var(--danger)'}; text-align:center;">${reason}<br><small style="color:white">Correct Answer: ${currentCase.answer}</small></h2>`;
+        }
+
         window.processAuth = async () => {
             const username = document.getElementById('username-input').value;
             const userEmail = username + "@wardduel.com", pass = document.getElementById('password-input').value;
             try {
-                if(isSignUp) {
-                    const res = await createUserWithEmailAndPassword(auth, userEmail, pass);
-                    await setDoc(doc(db, "users", res.user.uid), { username: username, elo: 1000 });
-                } else { await signInWithEmailAndPassword(auth, userEmail, pass); }
+                await signInWithEmailAndPassword(auth, userEmail, pass);
                 document.getElementById('authModal').style.display='none';
-            } catch (e) { alert(e.message); }
+            } catch (e) { alert("Login failed."); }
         };
+
         onAuthStateChanged(auth, async (user) => {
             if(user) {
                 const userDoc = await getDoc(doc(db, "users", user.uid));
-                const userData = userDoc.data();
-                document.getElementById('auth-ui').innerHTML = `<b style="color:var(--accent)">DR. ${userData.username.toUpperCase()}</b>`;
+                document.getElementById('auth-ui').innerHTML = `<b style="color:var(--accent)">DR. ${userDoc.data().username.toUpperCase()}</b>`;
             }
         });
     </script>
