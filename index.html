@@ -49,7 +49,6 @@
         .hx-box { font-size: 1.2rem; border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 25px; }
         .hint-output { background: #0f172a; padding: 15px; border-radius: 8px; margin-bottom: 15px; display: none; color: #94a3b8; border: 1px solid #334155; }
 
-        /* 3x3 LAB GRID */
         .lab-grid { 
             display: none; 
             grid-template-columns: repeat(3, 1fr); 
@@ -82,6 +81,15 @@
         .dropdown div:hover { background: var(--accent); color: var(--bg); }
 
         .submit-btn { width: 100%; padding: 15px; margin-top: 20px; background: var(--danger); color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 8px; }
+
+        .disclaimer { 
+            margin-top: 40px; 
+            font-size: 0.7rem; 
+            color: #64748b; 
+            text-align: center; 
+            max-width: 600px;
+            padding: 20px;
+        }
 
         #toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); padding: 15px 30px; border-radius: 8px; font-weight: bold; z-index: 2000; display: none; }
         @keyframes fadeInOut { 0% { opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; } }
@@ -155,6 +163,10 @@
             </div>
             <button class="submit-btn" onclick="window.checkDiagnosis()">SUBMIT DIAGNOSIS</button>
         </div>
+    </div>
+
+    <div class="disclaimer">
+        Wardduel is for entertainment only and does not constitute medical advice. Consult a healthcare professional for health concerns.
     </div>
 
     <script type="module">
@@ -236,7 +248,6 @@
             row.innerHTML = `<strong>${label}:</strong> ${result}`;
             list.appendChild(row);
 
-            // FIXED: Direct targeting of ID to ensure green state
             document.getElementById(`lab-${labKey}`).classList.add('ordered');
         };
 
