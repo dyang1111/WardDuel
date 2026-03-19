@@ -108,39 +108,3 @@
       "CBC": "Normal", "CMP": "Normal", "EKG": "Deep narrow 'dagger' Q waves in lateral leads",
       "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Identified mutation in Sarcomere protein (Beta-myosin heavy chain)."
-    },
-    "answer": "Hypertrophic Cardiomyopathy (HCM)"
-  },
-  {
-    "date": "2026-03-23",
-    "hx_brief": "29yo female with fatigue, pale skin, and dark yellow urine.",
-    "hints": {
-      "hx": "Ate a Mediterranean salad with fava beans 48 hours ago. Starting UTI meds.",
-      "pe": "Mild scleral icterus. No hepatosplenomegaly noted.",
-      "img": "Smear: Polychromasia, 'Bite' cells, and oxidized hemoglobin inclusions (Heinz bodies)."
-    },
-    "specialty_name": "Bilirubin",
-    "lab_results": {
-      "CBC": "Hb 8.2; Reticulocytes 6% (High)", "CMP": "Normal", "EKG": "Normal",
-      "Trop": "Normal", "Lipase": "Normal", "UA": "Dark urine; Positive for Heme; Negative for RBCs", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Indirect (Unconjugated) hyperbilirubinemia."
-    },
-    "answer": "G6PD Deficiency"
-  },
-  {
-    "date": "2026-03-24",
-    "hx_brief": "72yo female with sudden 'worst headache of my life'.",
-    "hints": {
-      "hx": "Thunderclap onset. Patient has history of Autosomal Dominant Polycystic Kidney Disease.",
-      "pe": "Nuchal rigidity. Left eye is 'down and out' with pupillary dilation.",
-      "img": "CT Head: Hyperdensity within the subarachnoid space and basal cisterns."
-    },
-    "specialty_name": "LP (Lumbar Puncture)",
-    "lab_results": {
-      "CBC": "Normal", "CMP": "Normal", "EKG": "Deep, wide, inverted T-waves (Cerebral T-waves)",
-      "Trop": "Mildly elevated (0.09)", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Xanthochromia present in all four tubes."
-    },
-    "answer": "Subarachnoid Hemorrhage (SAH)"
-  }
-]
