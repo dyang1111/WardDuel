@@ -61,7 +61,7 @@
       "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Reduced Negative Inspiratory Force (NIF)", "Coags": "Normal",
       "Specialty": "Albuminocytologic dissociation (High Protein, Normal Cell Count)."
     },
-    "answer": "Guillain-Barre Syndrome"
+    "answer": "Guillain-Barre Syndrome (GBS)"
   },
   {
     "date": "2026-03-20",
@@ -109,7 +109,7 @@
       "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Identified mutation in Sarcomere protein (Beta-myosin heavy chain)."
     },
-    "answer": "Hypertrophic Cardiomyopathy"
+    "answer": "Hypertrophic Cardiomyopathy (HCM)"
   },
   {
     "date": "2026-03-23",
@@ -139,8 +139,4 @@
     "lab_results": {
       "CBC": "Normal", "CMP": "Normal", "EKG": "Deep, wide, inverted T-waves (Cerebral T-waves)",
       "Trop": "Mildly elevated (0.09)", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Xanthochromia present in all four tubes."
-    },
-    "answer": "Subarachnoid Hemorrhage"
-  }
-]
+      "Specialty": "Xanth
