@@ -139,4 +139,8 @@
     "lab_results": {
       "CBC": "Normal", "CMP": "Normal", "EKG": "Deep, wide, inverted T-waves (Cerebral T-waves)",
       "Trop": "Mildly elevated (0.09)", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Xanth
+      "Specialty": "Xanthochromia present in all four tubes."
+    },
+    "answer": "Subarachnoid Hemorrhage (SAH)"
+  }
+]
