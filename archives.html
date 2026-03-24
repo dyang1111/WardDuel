@@ -172,20 +172,19 @@ window.renderList = function() {
     });
 }
 
-// When user logs in, sync Firestore completed dates
+// Wait for auth state before loading so logged-in users get green on first render
 onAuthStateChanged(auth, async (user) => {
     if (user) {
         try {
             const snap = await getDoc(doc(db,'completed',user.uid));
             if (snap.exists()) {
                 snap.data().dates?.forEach(d => completedDates.add(d));
-                renderList(); // re-render with Firestore data
             }
         } catch(e) {}
     }
+    // Load archives after auth resolves either way
+    await loadArchives();
 });
-
-loadArchives();
 </script>
 </body>
 </html>
