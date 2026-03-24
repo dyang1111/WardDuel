@@ -739,7 +739,7 @@ function showStreakBadge(n) {
 }
 
 // ── PROFILE ───────────────────────────────────────────
-async function openProfile() {
+window.openProfile = async function openProfile() {
     if (!currentUser) return;
     document.getElementById('profileModal').style.display = 'block';
     try {
