@@ -7,147 +7,148 @@
     <style>
         *{box-sizing:border-box;margin:0;padding:0}
         :root{
-            --bg:#f0f0f0;
+            --bg:#f2f3ee;
             --surface:#ffffff;
-            --border:#e2e2e2;
-            --border-strong:#c8c8c8;
-            --text:#1a1a1a;
-            --text-muted:#666;
-            --text-subtle:#999;
-            --accent:#2563eb;
-            --accent-light:#eff6ff;
-            --accent-border:#bfdbfe;
-            --danger:#dc2626;
-            --danger-light:#fef2f2;
-            --success:#16a34a;
-            --success-light:#f0fdf4;
-            --warning:#d97706;
-            --radius:12px;
+            --border:#dde0d6;
+            --border-strong:#c8ccbf;
+            --text:#1c2218;
+            --text-muted:#7a8a72;
+            --text-subtle:#9aaa92;
+            --sage:#5a7a52;
+            --sage-light:#e2eade;
+            --sage-border:#b8d0b0;
+            --amber:#b07030;
+            --amber-light:#fffbeb;
+            --amber-border:#f5d080;
+            --danger:#922a1a;
+            --danger-light:#faeae6;
+            --danger-border:#e0a898;
+            --radius:11px;
             --radius-sm:8px;
-            --shadow:0 1px 3px rgba(0,0,0,0.07),0 1px 2px rgba(0,0,0,0.04);
+            --shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
             --shadow-md:0 4px 12px rgba(0,0,0,0.08);
         }
         body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}
 
-        /* TOP BAR */
-        .top-bar{width:100%;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
-        .logo{font-weight:800;font-size:1.1rem;letter-spacing:0.03em;color:var(--text);text-decoration:none}
-        .logo span{color:var(--accent)}
-        .nav-right{display:flex;align-items:center;gap:12px}
-        .nav-link{color:var(--text-muted);text-decoration:none;font-size:0.875rem;font-weight:500;transition:color .15s}
+        /* NAV */
+        .top-bar{width:100%;padding:13px 24px;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:var(--shadow)}
+        .logo{font-weight:800;font-size:15px;color:var(--text);text-decoration:none;letter-spacing:.02em}
+        .logo span{color:var(--sage)}
+        .nav-right{display:flex;align-items:center;gap:14px}
+        .nav-link{color:var(--text-muted);text-decoration:none;font-size:12px;font-weight:500;transition:color .15s}
         .nav-link:hover{color:var(--text)}
-        .login-btn{background:var(--text);color:#fff;border:none;padding:7px 16px;border-radius:8px;font-size:0.875rem;font-weight:600;cursor:pointer;transition:opacity .15s}
+        .login-btn{background:var(--text);color:var(--bg);border:none;padding:6px 14px;border-radius:7px;font-size:11px;font-weight:700;cursor:pointer;transition:opacity .15s}
         .login-btn:hover{opacity:.85}
 
         /* MAIN */
-        .main{width:100%;max-width:660px;padding:28px 16px 80px;display:flex;flex-direction:column;gap:14px}
+        .main{width:100%;max-width:620px;padding:24px 16px 72px;display:flex;flex-direction:column;gap:12px}
 
         /* HEADER ROW */
         .header-row{display:flex;justify-content:space-between;align-items:center}
-        .daily-label{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-subtle)}
-        .header-right{display:flex;align-items:center;gap:10px}
-        #timer-display{font-size:0.82rem;font-weight:700;font-family:'SF Mono','Fira Code',monospace;color:var(--text-muted);background:var(--border);padding:4px 10px;border-radius:6px;transition:all .3s}
-        #timer-display.urgent{background:var(--danger-light);color:var(--danger)}
-        .multiplier-badge{display:none;align-items:center;gap:5px;font-size:0.75rem;font-weight:700;color:var(--warning);background:#fffbeb;border:1px solid #fde68a;padding:4px 10px;border-radius:6px}
-        .streak-badge{display:none;align-items:center;gap:4px;font-size:0.75rem;font-weight:700;color:#ea580c;background:#fff7ed;border:1px solid #fed7aa;padding:4px 10px;border-radius:6px}
+        .daily-label{font-size:10px;font-weight:700;color:var(--text-subtle);letter-spacing:.12em;text-transform:uppercase}
+        .header-right{display:flex;align-items:center;gap:8px}
+        .streak-badge{display:none;align-items:center;gap:4px;font-size:11px;font-weight:700;color:var(--amber);background:var(--amber-light);border:1px solid var(--amber-border);padding:3px 9px;border-radius:5px}
+        .mult-badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:var(--sage);background:var(--sage-light);border:1px solid var(--sage-border);padding:3px 9px;border-radius:5px}
+        #timer-display{font-family:monospace;font-size:13px;font-weight:700;color:var(--text-muted);background:#e8ebe4;padding:3px 10px;border-radius:5px;transition:all .3s}
+        #timer-display.urgent{color:var(--danger);background:var(--danger-light)}
+
+        /* CARD BASE */
+        .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+        .card-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-subtle);margin-bottom:12px}
 
         /* HP */
-        .hp-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow)}
         .hp-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
         .hp-left{display:flex;align-items:center;gap:10px}
-        .hp-label{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-subtle)}
-        .hp-value{font-size:0.9rem;font-weight:800;color:var(--text)}
-        .hp-track{height:7px;background:var(--border);border-radius:99px;overflow:hidden}
-        #hp-fill{height:100%;width:100%;background:var(--success);border-radius:99px;transition:width .4s ease,background .4s ease}
-        .opponent-tag{display:flex;align-items:center;gap:7px;font-size:0.78rem;color:var(--text-muted);font-weight:500}
-        .opp-dot{width:7px;height:7px;border-radius:50%;background:var(--success);flex-shrink:0}
+        .hp-label{font-size:10px;font-weight:700;color:var(--text-subtle);text-transform:uppercase;letter-spacing:.1em}
+        #hp-val{font-size:13px;font-weight:800;color:var(--text)}
+        .vs-tag{font-size:11px;color:var(--text-subtle);display:flex;align-items:center;gap:6px}
+        .vs-dot{width:7px;height:7px;border-radius:50%;background:var(--sage);flex-shrink:0;transition:background .4s}
+        .hp-track{height:7px;background:#e8ebe4;border-radius:99px;overflow:hidden}
+        #hp-fill{height:100%;width:100%;background:var(--sage);border-radius:99px;transition:width .4s ease,background .4s ease}
 
-        /* CASE CARD */
-        .case-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
-        .case-tag{display:inline-flex;align-items:center;gap:6px;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);background:var(--accent-light);border:1px solid var(--accent-border);padding:4px 10px;border-radius:6px;margin-bottom:14px}
-        #case-hx{font-size:1rem;line-height:1.7;color:var(--text)}
-
-        /* HINTS */
-        .hint-card{background:var(--accent-light);border:1px solid var(--accent-border);border-radius:var(--radius-sm);padding:14px 16px;font-size:0.875rem;color:#1e40af;line-height:1.65;display:none;margin-top:14px}
-        .hint-type{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#3b82f6;margin-bottom:5px}
+        /* CASE */
+        .case-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--sage);background:var(--sage-light);border:1px solid var(--sage-border);padding:3px 10px;border-radius:5px;display:inline-block;margin-bottom:12px}
+        #case-hx{font-size:13px;line-height:1.7;color:var(--text)}
+        .hint-card{border-radius:var(--radius-sm);padding:12px 14px;margin-top:12px;display:none;background:var(--sage-light);border:1px solid var(--sage-border)}
+        .hint-type{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--sage);margin-bottom:5px}
+        #hint-text{font-size:12px;color:#2a3a28;line-height:1.65}
 
         /* ACTIONS */
-        .actions-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
-        .card-title{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-subtle);margin-bottom:13px}
-        .actions-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-        .action-btn{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:13px 14px;cursor:pointer;text-align:left;transition:all .15s;display:flex;justify-content:space-between;align-items:center}
+        .actions-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+        .action-btn{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 13px;cursor:pointer;text-align:left;transition:all .15s;display:flex;justify-content:space-between;align-items:center}
         .action-btn:hover:not(.used){border-color:var(--border-strong);background:#fff;box-shadow:var(--shadow)}
-        .action-btn.used{border-color:#bbf7d0;background:var(--success-light);cursor:default}
-        .ab-name{font-size:0.85rem;font-weight:600;color:var(--text)}
-        .action-btn.used .ab-name{color:var(--success)}
-        .ab-cost{font-size:0.68rem;font-weight:700;color:var(--danger);background:var(--danger-light);padding:2px 7px;border-radius:5px}
+        .action-btn.used{background:var(--amber-light);border-color:var(--amber-border);cursor:default}
+        .action-btn.used:hover{box-shadow:none}
+        .ab-name{font-size:12px;font-weight:600;color:var(--text)}
+        .action-btn.used .ab-name{color:var(--amber)}
+        .ab-cost{font-size:10px;font-weight:700;color:var(--danger);background:var(--danger-light);padding:2px 7px;border-radius:4px}
         .action-btn.used .ab-cost{display:none}
-        .ab-check{display:none;font-size:0.75rem;font-weight:700;color:var(--success)}
+        .ab-check{display:none;font-size:10px;font-weight:700;color:var(--amber)}
         .action-btn.used .ab-check{display:inline}
 
         /* LAB PANEL */
-        .lab-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow);display:none}
-        .lab-panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}
-        .lab-close{background:none;border:none;cursor:pointer;color:var(--text-subtle);font-size:1rem;line-height:1;padding:2px 4px;border-radius:4px}
-        .lab-close:hover{color:var(--text);background:var(--border)}
-        .lab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-        .lab-btn{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 6px;font-size:0.78rem;font-weight:600;cursor:pointer;color:var(--text);transition:all .15s;text-align:center}
-        .lab-btn:hover:not(.ordered){border-color:var(--accent);color:var(--accent);background:var(--accent-light)}
-        .lab-btn.ordered{border-color:#bbf7d0;background:var(--success-light);color:var(--success);cursor:default}
-        .lab-btn.locked-lab{opacity:.45;cursor:not-allowed;border-style:dashed}
-        .lab-btn.locked-lab:hover{border-color:var(--border);color:var(--text);background:var(--bg)}
+        .lab-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);display:none}
+        .lab-panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+        .lab-close{background:none;border:none;cursor:pointer;color:var(--text-subtle);font-size:1rem;padding:2px 5px;border-radius:4px;line-height:1}
+        .lab-close:hover{background:var(--border);color:var(--text)}
+        .lab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+        .lab-btn{background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:9px 5px;font-size:11px;font-weight:600;cursor:pointer;color:var(--text);transition:all .15s;text-align:center}
+        .lab-btn:hover:not(.ordered):not(.locked-lab){border-color:var(--sage);color:var(--sage);background:var(--sage-light)}
+        .lab-btn.ordered{background:var(--amber-light);border-color:var(--amber-border);color:var(--amber);cursor:default}
+        .lab-btn.locked-lab{opacity:.4;border-style:dashed;cursor:not-allowed;color:var(--text-subtle)}
+        .lab-btn.locked-lab:hover{background:var(--bg);border-color:var(--border);color:var(--text-subtle)}
 
         /* RESULTS */
         .results-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:none}
-        .results-header{padding:13px 20px;border-bottom:1px solid var(--border);font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-subtle)}
-        .lab-result-row{padding:11px 20px;border-bottom:1px solid var(--border);font-size:0.875rem;display:flex;gap:14px;align-items:baseline}
+        .results-header{padding:11px 16px;border-bottom:1px solid var(--border);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-subtle)}
+        .lab-result-row{padding:10px 16px;border-bottom:1px solid #f0f2ec;display:flex;gap:12px;font-size:12px;align-items:baseline}
         .lab-result-row:last-child{border-bottom:none}
-        .lrk{font-weight:700;color:var(--text);min-width:96px;font-size:0.82rem}
+        .lrk{font-weight:700;color:var(--text);min-width:86px;font-size:11px;flex-shrink:0}
         .lrv{color:var(--text-muted);line-height:1.5}
 
         /* DX */
-        .dx-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
+        .dx-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
         .search-wrap{position:relative}
-        #dx-input{width:100%;padding:12px 14px;border:1px solid var(--border-strong);border-radius:var(--radius-sm);font-size:0.9rem;background:var(--bg);color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}
-        #dx-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,.1);background:#fff}
+        #dx-input{width:100%;padding:11px 13px;border:1px solid var(--border-strong);border-radius:var(--radius-sm);font-size:13px;background:#f8f9f5;color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}
+        #dx-input:focus{border-color:var(--sage);box-shadow:0 0 0 3px rgba(90,122,82,.1);background:#fff}
         .dropdown{position:absolute;width:100%;background:var(--surface);border:1px solid var(--border-strong);border-top:none;border-radius:0 0 var(--radius-sm) var(--radius-sm);max-height:220px;overflow-y:auto;z-index:200;display:none;box-shadow:var(--shadow-md)}
-        .dropdown div{padding:11px 14px;cursor:pointer;font-size:0.875rem;border-bottom:1px solid var(--border);color:var(--text);transition:background .1s}
+        .dropdown div{padding:10px 13px;cursor:pointer;font-size:12px;border-bottom:1px solid var(--border);color:var(--text);transition:background .1s}
         .dropdown div:last-child{border-bottom:none}
-        .dropdown div:hover{background:var(--accent-light);color:var(--accent)}
-        .submit-btn{width:100%;padding:13px;margin-top:11px;background:var(--text);color:#fff;border:none;border-radius:var(--radius-sm);font-size:0.9rem;font-weight:700;cursor:pointer;letter-spacing:.02em;transition:opacity .15s}
+        .dropdown div:hover{background:var(--sage-light);color:var(--sage)}
+        .submit-btn{width:100%;padding:12px;margin-top:10px;background:var(--text);color:var(--bg);border:none;border-radius:var(--radius-sm);font-size:13px;font-weight:700;cursor:pointer;transition:opacity .15s}
         .submit-btn:hover{opacity:.85}
 
         /* ENDGAME */
-        .endgame-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:32px 24px;box-shadow:var(--shadow);text-align:center}
-        .endgame-icon{font-size:2.5rem;margin-bottom:12px}
-        .endgame-title{font-size:1.3rem;font-weight:800;margin-bottom:6px}
-        .endgame-sub{font-size:0.875rem;color:var(--text-muted);margin-bottom:20px}
-        .vs-row{display:flex;justify-content:center;align-items:center;gap:24px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px 20px;margin-bottom:16px}
+        .endgame-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px 20px;box-shadow:var(--shadow);text-align:center}
+        .endgame-icon{font-size:2.2rem;margin-bottom:10px}
+        .endgame-title{font-size:1.2rem;font-weight:800;margin-bottom:5px}
+        .endgame-sub{font-size:13px;color:var(--text-muted);margin-bottom:16px}
+        .vs-row{display:flex;justify-content:center;align-items:center;gap:22px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 20px;margin-bottom:14px}
         .vs-block{text-align:center}
-        .vs-num{font-size:2rem;font-weight:800;line-height:1}
-        .vs-lbl{font-size:0.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-subtle);margin-top:4px}
-        .vs-sep{font-size:0.8rem;font-weight:700;color:var(--text-subtle)}
-        .answer-pill{display:inline-block;background:var(--success-light);border:1px solid #bbf7d0;color:var(--success);font-size:0.875rem;font-weight:600;padding:8px 20px;border-radius:999px}
-        .result-win .vs-num{color:var(--success)}
-        .result-loss .vs-num{color:var(--danger)}
+        .vs-num{font-size:1.9rem;font-weight:800;line-height:1}
+        .vs-lbl{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-subtle);margin-top:3px}
+        .vs-sep{font-size:12px;font-weight:700;color:var(--text-subtle)}
+        .answer-pill{display:inline-block;font-size:12px;font-weight:600;padding:7px 18px;border-radius:999px}
+        .answer-win{background:var(--amber-light);border:1px solid var(--amber-border);color:#7a4a10}
+        .answer-loss{background:var(--danger-light);border:1px solid var(--danger-border);color:var(--danger)}
 
         /* TOAST */
-        #toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);padding:11px 22px;border-radius:10px;font-size:0.85rem;font-weight:600;z-index:3000;display:none;box-shadow:var(--shadow-md);white-space:nowrap}
+        #toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);padding:11px 22px;border-radius:9px;font-size:12px;font-weight:700;z-index:3000;display:none;box-shadow:var(--shadow-md);white-space:nowrap;color:#fff}
         @keyframes fadeInOut{0%{opacity:0;transform:translateX(-50%) translateY(6px)}15%{opacity:1;transform:translateX(-50%) translateY(0)}85%{opacity:1}100%{opacity:0}}
 
         /* MODAL */
-        .modal{display:none;position:fixed;z-index:1000;inset:0;background:rgba(0,0,0,.3);backdrop-filter:blur(4px)}
-        .modal-box{background:var(--surface);border:1px solid var(--border);border-radius:16px;width:340px;margin:15vh auto;padding:30px;box-shadow:0 20px 40px rgba(0,0,0,.1);position:relative}
-        .modal-title{font-size:1.05rem;font-weight:800;margin-bottom:5px}
-        .modal-sub{font-size:0.85rem;color:var(--text-muted);margin-bottom:20px}
+        .modal{display:none;position:fixed;z-index:1000;inset:0;background:rgba(0,0,0,.18);backdrop-filter:blur(4px)}
+        .modal-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;width:320px;margin:15vh auto;padding:26px;box-shadow:0 20px 40px rgba(0,0,0,.1);position:relative}
+        .modal-title{font-size:14px;font-weight:800;color:var(--text);margin-bottom:3px}
+        .modal-sub{font-size:12px;color:var(--text-muted);margin-bottom:16px}
         .modal-close{position:absolute;top:14px;right:16px;background:none;border:none;cursor:pointer;color:var(--text-subtle);font-size:1rem}
-        .modal input{width:100%;padding:11px 13px;border:1px solid var(--border-strong);border-radius:var(--radius-sm);font-size:0.875rem;margin-bottom:10px;outline:none;color:var(--text);background:var(--bg);transition:border-color .15s}
-        .modal input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
-        .modal-btn{width:100%;padding:12px;background:var(--text);color:#fff;border:none;border-radius:var(--radius-sm);font-weight:700;font-size:0.875rem;cursor:pointer;margin-top:4px}
-        .modal-toggle{text-align:center;margin-top:14px;font-size:0.8rem;color:var(--text-muted)}
-        .modal-toggle a{color:var(--accent);cursor:pointer;font-weight:600;text-decoration:none}
+        .modal input{width:100%;padding:10px 12px;border:1px solid var(--border-strong);border-radius:var(--radius-sm);font-size:13px;margin-bottom:9px;outline:none;color:var(--text);background:#f8f9f5;transition:border-color .15s}
+        .modal input:focus{border-color:var(--sage);box-shadow:0 0 0 3px rgba(90,122,82,.1)}
+        .modal-btn{width:100%;padding:11px;background:var(--text);color:var(--bg);border:none;border-radius:var(--radius-sm);font-weight:700;font-size:13px;cursor:pointer}
+        .modal-toggle{text-align:center;margin-top:12px;font-size:12px;color:var(--text-muted)}
+        .modal-toggle a{color:var(--sage);font-weight:600;cursor:pointer}
 
-        .disclaimer{font-size:0.68rem;color:var(--text-subtle);text-align:center;max-width:500px;padding:0 16px 48px;line-height:1.7}
+        .disclaimer{font-size:11px;color:var(--text-subtle);text-align:center;max-width:500px;padding:0 16px 48px;line-height:1.7}
     </style>
 </head>
 <body>
@@ -170,7 +171,7 @@
     </div>
 </div>
 
-<!-- TOP BAR -->
+<!-- NAV -->
 <div class="top-bar">
     <a href="index.html" class="logo">Ward<span>Duel</span></a>
     <div class="nav-right">
@@ -184,24 +185,25 @@
 <!-- MAIN -->
 <div class="main">
 
+    <!-- Header -->
     <div class="header-row">
         <div class="daily-label" id="date-label">Daily Case</div>
         <div class="header-right">
-            <span id="streak-badge" class="streak-badge">🔥 <span id="streak-val">0</span> day streak</span>
-            <span id="multiplier-display" class="multiplier-badge">⚡ <span id="mult-val">1.0</span>x</span>
+            <span id="streak-badge" class="streak-badge">🔥 <span id="streak-val">0</span> streak</span>
+            <span id="mult-badge" class="mult-badge">⚡ <span id="mult-val">3.0</span>x</span>
             <span id="timer-display">05:00</span>
         </div>
     </div>
 
     <!-- HP -->
-    <div class="hp-section">
+    <div class="card">
         <div class="hp-row">
             <div class="hp-left">
                 <span class="hp-label">HP</span>
-                <span id="hp-val" class="hp-value">100</span>
+                <span id="hp-val">100</span>
             </div>
-            <div class="opponent-tag">
-                <div class="opp-dot"></div>
+            <div class="vs-tag">
+                <div class="vs-dot" id="vs-dot"></div>
                 <span id="opponent-label">vs Admin</span>
             </div>
         </div>
@@ -209,7 +211,7 @@
     </div>
 
     <!-- Case -->
-    <div class="case-card">
+    <div class="card">
         <div class="case-tag">🩺 Chief Complaint</div>
         <div id="case-hx">Loading clinical case...</div>
         <div id="hint-display" class="hint-card">
@@ -219,7 +221,7 @@
     </div>
 
     <!-- Actions -->
-    <div class="actions-card">
+    <div class="card">
         <div class="card-title">Clinical Workup</div>
         <div class="actions-grid">
             <button class="action-btn" id="btn-hx" onclick="getHint('hx',8)">
@@ -260,7 +262,7 @@
         </div>
     </div>
 
-    <!-- Lab Results -->
+    <!-- Results -->
     <div id="results-card" class="results-card">
         <div class="results-header">Lab Results</div>
         <div id="results-list"></div>
@@ -298,57 +300,48 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// ── STATE ──────────────────────────────────────────────
 let currentCase = null, hp = 100, timeLeft = 300, timerId = null, gameActive = true;
 let diagnosisPool = [], currentUser = null, isSignUp = false;
 const unlockedHints = new Set(), orderedLabs = new Set();
-let wrongStreak = 0;
+let wrongStreak = 0, opponentScore = null, opponentName = null;
 
-// ── INIT ───────────────────────────────────────────────
+// ── INIT ──────────────────────────────────────────────
 async function initGame() {
     const [dxRes, caseRes] = await Promise.all([fetch('diagnoses.json'), fetch('cases.json')]);
     diagnosisPool = await dxRes.json();
     const cases = await caseRes.json();
 
     const todayCST = new Intl.DateTimeFormat('en-CA', {
-        timeZone: 'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'
+        timeZone:'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'
     }).format(new Date());
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const archiveId = urlParams.get('caseId');
+    const archiveId = new URLSearchParams(window.location.search).get('caseId');
     const targetDate = archiveId || todayCST;
 
     currentCase = cases.find(c => c.date === targetDate) || cases[cases.length - 1];
-
     document.getElementById('case-hx').innerText = currentCase.hx_brief;
     document.getElementById('date-label').innerText = archiveId ? `Archive — ${archiveId}` : 'Daily Case';
 
     if (currentCase.specialty_name) {
-        document.getElementById('lab-Specialty').innerText = currentCase.specialty_name;
+        document.getElementById('lab-Specialty').innerText = '🔒 ' + currentCase.specialty_name;
     }
 
-    // Load opponent score for this case date
     await loadOpponent(currentCase.date);
     startTimer();
     updateMultiplier();
 }
+initGame();
 
-// ── OPPONENT ───────────────────────────────────────────
-let opponentScore = null, opponentName = null;
-
+// ── OPPONENT ──────────────────────────────────────────
 async function loadOpponent(caseDate) {
     try {
-        const scoresRef = collection(db, 'scores');
-        const q = query(scoresRef, where('caseDate','==', caseDate), orderBy('timestamp','asc'), limit(10));
+        const q = query(collection(db,'scores'), where('caseDate','==',caseDate), orderBy('timestamp','asc'), limit(10));
         const snap = await getDocs(q);
         const docs = snap.docs.map(d => d.data()).filter(d => d.username !== (currentUser?.displayName || ''));
-
         if (docs.length === 0) {
-            // First player: vs Admin benchmark
             opponentScore = currentCase.adminScore || 75;
             opponentName = 'Admin';
         } else {
-            // Random opponent from today's completions
             const pick = docs[Math.floor(Math.random() * docs.length)];
             opponentScore = pick.score;
             opponentName = 'Dr. ' + pick.username;
@@ -357,54 +350,67 @@ async function loadOpponent(caseDate) {
     } catch(e) {
         opponentScore = currentCase.adminScore || 75;
         opponentName = 'Admin';
-        document.getElementById('opponent-label').innerText = `vs Admin`;
     }
 }
 
-// ── TIMER + MULTIPLIER ─────────────────────────────────
+// ── TIMER ─────────────────────────────────────────────
 function startTimer() {
     timerId = setInterval(() => {
         if (!gameActive) return;
         timeLeft--;
-        // Passive HP drain every 10s after first minute
         if (timeLeft < 240 && timeLeft % 10 === 0) { hp -= 1; updateHP(); }
-
         const m = Math.floor(timeLeft/60).toString().padStart(2,'0');
         const s = (timeLeft%60).toString().padStart(2,'0');
         const el = document.getElementById('timer-display');
         el.innerText = `${m}:${s}`;
         el.classList.toggle('urgent', timeLeft <= 60);
-
         updateMultiplier();
         if (timeLeft <= 0) endGame(false, 'Time Expired');
     }, 1000);
 }
 
+// ── MULTIPLIER ────────────────────────────────────────
 function updateMultiplier() {
-    let mult = 1.0;
-    if (timeLeft > 240) mult = 3.0;
-    else if (timeLeft > 180) mult = 2.5;
-    else if (timeLeft > 120) mult = 2.0;
-    else if (timeLeft > 60) mult = 1.5;
-    else mult = 1.0;
-
-    const badge = document.getElementById('multiplier-display');
-    badge.style.display = 'inline-flex';
+    let mult = timeLeft > 240 ? 3.0 : timeLeft > 180 ? 2.5 : timeLeft > 120 ? 2.0 : timeLeft > 60 ? 1.5 : 1.0;
     document.getElementById('mult-val').innerText = mult.toFixed(1);
-    badge.style.color = mult >= 2 ? '#16a34a' : mult >= 1.5 ? '#d97706' : '#666';
+    const badge = document.getElementById('mult-badge');
+    if (timeLeft <= 60) {
+        badge.style.color = 'var(--danger)';
+        badge.style.background = 'var(--danger-light)';
+        badge.style.borderColor = 'var(--danger-border)';
+    } else if (timeLeft <= 120) {
+        badge.style.color = 'var(--amber)';
+        badge.style.background = 'var(--amber-light)';
+        badge.style.borderColor = 'var(--amber-border)';
+    } else {
+        badge.style.color = 'var(--sage)';
+        badge.style.background = 'var(--sage-light)';
+        badge.style.borderColor = 'var(--sage-border)';
+    }
 }
 
-// ── HP ─────────────────────────────────────────────────
+// ── HP ────────────────────────────────────────────────
 function updateHP() {
     if (hp < 0) hp = 0;
     document.getElementById('hp-val').innerText = hp;
     const fill = document.getElementById('hp-fill');
+    const dot = document.getElementById('vs-dot');
     fill.style.width = hp + '%';
-    fill.style.background = hp > 60 ? 'var(--success)' : hp > 30 ? '#f59e0b' : 'var(--danger)';
+    if (hp > 60) {
+        fill.style.background = 'var(--sage)';
+        dot.style.background = 'var(--sage)';
+    } else if (hp > 30) {
+        fill.style.background = 'var(--amber)';
+        dot.style.background = 'var(--amber)';
+    } else {
+        fill.style.background = 'var(--danger)';
+        dot.style.background = 'var(--danger)';
+    }
+    document.getElementById('hp-val').style.color = hp > 60 ? 'var(--text)' : hp > 30 ? 'var(--amber)' : 'var(--danger)';
     if (hp <= 0 && gameActive) endGame(false, 'HP Depleted');
 }
 
-// ── HINTS ──────────────────────────────────────────────
+// ── HINTS ─────────────────────────────────────────────
 window.getHint = (type, cost) => {
     if (!gameActive) return;
     if (!unlockedHints.has(type)) {
@@ -412,14 +418,13 @@ window.getHint = (type, cost) => {
         document.getElementById(`btn-${type}`).classList.add('used');
         updateHP();
     }
-    const labels = { hx: 'Additional History', pe: 'Physical Exam', img: 'Imaging' };
+    const labels = { hx:'Additional History', pe:'Physical Exam', img:'Imaging' };
     document.getElementById('hint-type-label').innerText = labels[type] || type;
     document.getElementById('hint-text').innerText = currentCase.hints[type];
-    const hintCard = document.getElementById('hint-display');
-    hintCard.style.display = 'block';
+    document.getElementById('hint-display').style.display = 'block';
 };
 
-// ── LABS ───────────────────────────────────────────────
+// ── LABS ──────────────────────────────────────────────
 window.toggleLabPanel = () => {
     const panel = document.getElementById('lab-panel');
     const open = panel.style.display === 'block';
@@ -430,14 +435,13 @@ window.toggleLabPanel = () => {
 window.orderLab = (key) => {
     if (!gameActive || orderedLabs.has(key)) return;
     if (key === 'Specialty') {
-        const nonSpecialtyOrdered = [...orderedLabs].filter(k => k !== 'Specialty').length;
-        if (nonSpecialtyOrdered < 2) { showToast('Order 2 labs first to unlock Specialty', '#666'); return; }
+        const nonSpec = [...orderedLabs].filter(k => k !== 'Specialty').length;
+        if (nonSpec < 2) { showToast('Order 2 labs first to unlock Specialty', '#5a7a52'); return; }
     }
     hp -= 8; orderedLabs.add(key); updateHP();
 
-    // Unlock specialty button after 2 non-specialty labs
-    const nonSpecialtyOrdered = [...orderedLabs].filter(k => k !== 'Specialty').length;
-    if (nonSpecialtyOrdered >= 2) {
+    const nonSpec = [...orderedLabs].filter(k => k !== 'Specialty').length;
+    if (nonSpec >= 2) {
         const specBtn = document.getElementById('lab-Specialty');
         specBtn.disabled = false;
         specBtn.classList.remove('locked-lab');
@@ -448,7 +452,6 @@ window.orderLab = (key) => {
     const label = key === 'Specialty' ? (currentCase.specialty_name || 'Specialty') : key;
 
     document.getElementById(`lab-${key}`).classList.add('ordered');
-
     const card = document.getElementById('results-card');
     card.style.display = 'block';
     const row = document.createElement('div');
@@ -457,7 +460,7 @@ window.orderLab = (key) => {
     document.getElementById('results-list').appendChild(row);
 };
 
-// ── DIAGNOSIS SEARCH ───────────────────────────────────
+// ── DIAGNOSIS ─────────────────────────────────────────
 window.filterDiagnosis = () => {
     const input = document.getElementById('dx-input').value.toUpperCase();
     const div = document.getElementById('dropdown');
@@ -472,32 +475,30 @@ window.filterDiagnosis = () => {
             item.onclick = () => { document.getElementById('dx-input').value = m; div.style.display='none'; };
             div.appendChild(item);
         });
-    } else { div.style.display='none'; }
+    } else div.style.display = 'none';
 };
 
 document.addEventListener('click', e => {
     if (!e.target.closest('.search-wrap')) document.getElementById('dropdown').style.display='none';
 });
 
-// ── CHECK DIAGNOSIS ────────────────────────────────────
+// ── CHECK DX ──────────────────────────────────────────
 window.checkDiagnosis = async () => {
     if (!gameActive) return;
     const val = document.getElementById('dx-input').value.trim();
-    if (!val) { showToast('Enter a diagnosis first', '#666'); return; }
-
+    if (!val) { showToast('Enter a diagnosis first', '#5a7a52'); return; }
     if (val === currentCase.answer) {
         const mult = parseFloat(document.getElementById('mult-val').innerText);
-        const finalScore = Math.round(hp * mult);
-        endGame(true, finalScore);
+        endGame(true, Math.round(hp * mult));
     } else {
         wrongStreak++;
         const penalty = wrongStreak >= 3 ? 20 : 10;
         hp -= penalty; updateHP();
-        showToast(`Incorrect${wrongStreak >= 3 ? ' — escalating penalty!' : ''} −${penalty} HP`, 'var(--danger)');
+        showToast(`Incorrect${wrongStreak >= 3 ? ' — escalating!' : ''} −${penalty} HP`, 'var(--danger)');
     }
 };
 
-// ── END GAME ───────────────────────────────────────────
+// ── END GAME ──────────────────────────────────────────
 async function endGame(success, payload) {
     gameActive = false; clearInterval(timerId);
     if (!success) hp = 0;
@@ -505,83 +506,69 @@ async function endGame(success, payload) {
 
     const finalScore = success ? payload : 0;
     const won = success && finalScore >= opponentScore;
-
     const icon = success ? (won ? '🏆' : '📋') : '💀';
+    const titleColor = success ? (won ? 'var(--amber)' : 'var(--text)') : 'var(--danger)';
     const title = success ? (won ? 'Diagnosis Confirmed' : 'Correct — But Outpaced') : (typeof payload === 'string' ? payload : 'Game Over');
     const sub = success
         ? (won ? `You outscored ${opponentName}!` : `${opponentName} had a better run today.`)
-        : `The answer was: ${currentCase.answer}`;
+        : `Better luck tomorrow, Doctor.`;
 
     document.getElementById('dx-card').innerHTML = `
         <div class="endgame-card">
             <div class="endgame-icon">${icon}</div>
-            <div class="endgame-title ${won?'result-win':'result-loss'}">${title}</div>
+            <div class="endgame-title" style="color:${titleColor}">${title}</div>
             <div class="endgame-sub">${sub}</div>
             <div class="vs-row">
                 <div class="vs-block">
-                    <div class="vs-num ${won?'result-win':'result-loss'}">${finalScore}</div>
+                    <div class="vs-num" style="color:${won?'var(--amber)':'var(--danger)'}">${finalScore}</div>
                     <div class="vs-lbl">Your Score</div>
                 </div>
                 <div class="vs-sep">vs</div>
                 <div class="vs-block">
-                    <div class="vs-num">${opponentScore ?? '—'}</div>
+                    <div class="vs-num" style="color:var(--text)">${opponentScore ?? '—'}</div>
                     <div class="vs-lbl">${opponentName ?? 'Opponent'}</div>
                 </div>
             </div>
-            <div class="answer-pill">✓ ${currentCase.answer}</div>
+            <div class="answer-pill ${won ? 'answer-win' : 'answer-loss'}">${won ? '✓' : '✗'} ${currentCase.answer}</div>
         </div>`;
 
-    // Save score to Firestore
     if (currentUser && success) {
         try {
-            await addDoc(collection(db, 'scores'), {
+            await addDoc(collection(db,'scores'), {
                 uid: currentUser.uid,
                 username: currentUser.displayName || 'Anonymous',
                 score: finalScore,
                 caseDate: currentCase.date,
                 timestamp: Date.now()
             });
-            // Update streak
             await updateStreak();
         } catch(e) { console.error('Score save failed', e); }
     }
 }
 
-// ── STREAK ─────────────────────────────────────────────
+// ── STREAK ────────────────────────────────────────────
 async function updateStreak() {
     if (!currentUser) return;
     try {
-        const ref = doc(db, 'users', currentUser.uid);
+        const ref = doc(db,'users',currentUser.uid);
         const snap = await getDoc(ref);
         const data = snap.exists() ? snap.data() : {};
-
-        const todayCST = new Intl.DateTimeFormat('en-CA', {
-            timeZone:'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'
-        }).format(new Date());
-
-        const yesterday = new Date(Date.now() - 86400000);
-        const yestCST = new Intl.DateTimeFormat('en-CA', {
-            timeZone:'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'
-        }).format(yesterday);
-
-        let streak = data.streak || 0;
-        const lastPlayed = data.lastPlayed || '';
-
-        if (lastPlayed === todayCST) return; // already played today
-        streak = lastPlayed === yestCST ? streak + 1 : 1;
-
+        const todayCST = new Intl.DateTimeFormat('en-CA', {timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+        const yestCST = new Intl.DateTimeFormat('en-CA', {timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(Date.now()-86400000));
+        if (data.lastPlayed === todayCST) return;
+        const streak = data.lastPlayed === yestCST ? (data.streak || 0) + 1 : 1;
         await updateDoc(ref, { streak, lastPlayed: todayCST });
-        showStreak(streak);
+        showStreakBadge(streak);
     } catch(e) {}
 }
 
-function showStreak(n) {
+function showStreakBadge(n) {
     const badge = document.getElementById('streak-badge');
     document.getElementById('streak-val').innerText = n;
     badge.style.display = 'inline-flex';
 }
 
-// ── AUTH ───────────────────────────────────────────────
+// ── AUTH ──────────────────────────────────────────────
 window.toggleAuthMode = () => {
     isSignUp = !isSignUp;
     document.getElementById('auth-title').innerText = isSignUp ? 'Create Account' : 'Welcome back';
@@ -597,11 +584,12 @@ window.processAuth = async () => {
     try {
         if (isSignUp) {
             const cred = await createUserWithEmailAndPassword(auth, email, pass);
-            await setDoc(doc(db, 'users', cred.user.uid), { username, streak: 0, lastPlayed: '' });
+            await setDoc(doc(db,'users',cred.user.uid), { username, streak:0, lastPlayed:'' });
         } else {
             await signInWithEmailAndPassword(auth, email, pass);
         }
         document.getElementById('authModal').style.display = 'none';
+        showToast('Welcome, Dr. ' + username.toUpperCase(), 'var(--sage)');
     } catch(e) {
         showToast(isSignUp ? 'Sign up failed. Try a different username.' : 'Login failed. Check credentials.', 'var(--danger)');
     }
@@ -610,25 +598,23 @@ window.processAuth = async () => {
 onAuthStateChanged(auth, async (user) => {
     currentUser = user;
     if (user) {
-        const snap = await getDoc(doc(db, 'users', user.uid));
+        const snap = await getDoc(doc(db,'users',user.uid));
         const data = snap.exists() ? snap.data() : {};
-        const name = data.username || user.email?.replace('@wardduel.com','') || 'Doctor';
-        document.getElementById('auth-ui').innerHTML = `<span style="font-size:.85rem;font-weight:700;color:var(--text)">Dr. ${name.toUpperCase()}</span>`;
-        if (data.streak > 1) showStreak(data.streak);
+        const name = data.username || 'Doctor';
+        document.getElementById('auth-ui').innerHTML = `<span style="font-size:12px;font-weight:700;color:var(--text)">Dr. ${name.toUpperCase()}</span>`;
+        if ((data.streak || 0) > 1) showStreakBadge(data.streak);
     }
 });
 
-// ── TOAST ──────────────────────────────────────────────
-function showToast(msg, color='#333') {
+// ── TOAST ─────────────────────────────────────────────
+function showToast(msg, bg='#5a7a52') {
     const t = document.getElementById('toast');
-    t.innerText = msg; t.style.background = color; t.style.color = '#fff';
+    t.innerText = msg; t.style.background = bg;
     t.style.display = 'block';
     t.style.animation = 'none'; t.offsetHeight;
-    t.style.animation = 'fadeInOut 2.2s ease-in-out';
-    setTimeout(() => t.style.display='none', 2200);
+    t.style.animation = 'fadeInOut 2.4s ease-in-out';
+    setTimeout(() => t.style.display='none', 2400);
 }
-
-initGame();
 </script>
 </body>
 </html>
