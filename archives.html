@@ -7,148 +7,73 @@
     <style>
         *{box-sizing:border-box;margin:0;padding:0}
         :root{
-            --bg:#f0f0f0;
+            --bg:#f2f3ee;
             --surface:#ffffff;
-            --border:#e2e2e2;
-            --border-strong:#c8c8c8;
-            --text:#1a1a1a;
-            --text-muted:#666;
-            --text-subtle:#999;
-            --accent:#2563eb;
-            --accent-light:#eff6ff;
-            --accent-border:#bfdbfe;
-            --success:#16a34a;
-            --success-light:#f0fdf4;
-            --danger:#dc2626;
-            --radius:12px;
+            --border:#dde0d6;
+            --border-strong:#c8ccbf;
+            --text:#1c2218;
+            --text-muted:#7a8a72;
+            --text-subtle:#9aaa92;
+            --sage:#5a7a52;
+            --sage-light:#e2eade;
+            --sage-border:#b8d0b0;
+            --amber:#b07030;
+            --amber-light:#fffbeb;
+            --amber-border:#f5d080;
+            --danger:#922a1a;
+            --danger-light:#faeae6;
+            --radius:11px;
             --radius-sm:8px;
-            --shadow:0 1px 3px rgba(0,0,0,0.07),0 1px 2px rgba(0,0,0,0.04);
+            --shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md:0 4px 12px rgba(0,0,0,0.08);
         }
         body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}
 
-        /* TOP BAR */
-        .top-bar{width:100%;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
-        .logo{font-weight:800;font-size:1.1rem;letter-spacing:.03em;color:var(--text);text-decoration:none}
-        .logo span{color:var(--accent)}
-        .back-link{color:var(--text-muted);text-decoration:none;font-size:0.875rem;font-weight:500;display:flex;align-items:center;gap:6px;transition:color .15s}
+        /* NAV */
+        .top-bar{width:100%;padding:13px 24px;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:var(--shadow)}
+        .logo{font-weight:800;font-size:15px;color:var(--text);text-decoration:none;letter-spacing:.02em}
+        .logo span{color:var(--sage)}
+        .back-link{color:var(--text-muted);text-decoration:none;font-size:12px;font-weight:500;display:flex;align-items:center;gap:5px;transition:color .15s}
         .back-link:hover{color:var(--text)}
 
         /* MAIN */
-        .main{width:100%;max-width:660px;padding:32px 16px 80px;display:flex;flex-direction:column;gap:20px}
+        .main{width:100%;max-width:620px;padding:28px 16px 80px;display:flex;flex-direction:column;gap:14px}
 
         /* PAGE HEADER */
-        .page-header{display:flex;flex-direction:column;gap:4px}
-        .page-title{font-size:1.4rem;font-weight:800;color:var(--text)}
-        .page-sub{font-size:0.875rem;color:var(--text-muted)}
+        .page-title{font-size:1.3rem;font-weight:800;color:var(--text);margin-bottom:3px}
+        .page-sub{font-size:13px;color:var(--text-muted)}
+
+        /* TODAY CARD */
+        .today-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow)}
+        .today-icon{font-size:1.6rem;flex-shrink:0}
+        .today-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
+        .today-sub{font-size:11px;color:var(--text-muted)}
+        .today-btn{margin-left:auto;background:var(--sage);color:#fff;border:none;padding:8px 16px;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s}
+        .today-btn:hover{opacity:.85}
 
         /* SEARCH */
-        .search-bar{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 14px;font-size:0.875rem;color:var(--text);width:100%;outline:none;transition:border-color .15s,box-shadow .15s}
-        .search-bar:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+        .search-input{width:100%;padding:11px 13px;border:1px solid var(--border-strong);border-radius:var(--radius-sm);font-size:13px;background:#f8f9f5;color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}
+        .search-input:focus{border-color:var(--sage);box-shadow:0 0 0 3px rgba(90,122,82,.1);background:#fff}
+
+        /* SECTION LABEL */
+        .section-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-subtle)}
 
         /* ARCHIVE LIST */
-        .archive-list{display:flex;flex-direction:column;gap:10px}
+        .archive-list{display:flex;flex-direction:column;gap:9px}
+        .case-row{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all .15s;box-shadow:var(--shadow);text-decoration:none}
+        .case-row:hover{border-color:var(--border-strong);box-shadow:var(--shadow-md);transform:translateY(-1px)}
+        .date-badge{background:var(--sage-light);border:1px solid var(--sage-border);color:#3a5a34;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:4px 10px;border-radius:5px;white-space:nowrap;min-width:76px;text-align:center;flex-shrink:0}
+        .case-row-info{flex:1;min-width:0}
+        .case-row-hx{font-size:12px;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .case-row-meta{font-size:11px;color:var(--text-subtle)}
+        .replay-btn{background:var(--text);color:var(--bg);border:none;padding:6px 13px;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s}
+        .replay-btn:hover{opacity:.85}
 
-        .case-row{
-            background:var(--surface);
-            border:1px solid var(--border);
-            border-radius:var(--radius);
-            padding:18px 20px;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-            cursor:pointer;
-            transition:all .15s;
-            text-decoration:none;
-            box-shadow:var(--shadow);
-        }
-        .case-row:hover{border-color:var(--border-strong);box-shadow:0 4px 12px rgba(0,0,0,.08);transform:translateY(-1px)}
-
-        .case-row-left{display:flex;align-items:center;gap:16px}
-        .case-date-badge{
-            background:var(--accent-light);
-            border:1px solid var(--accent-border);
-            color:var(--accent);
-            font-size:0.7rem;
-            font-weight:700;
-            text-transform:uppercase;
-            letter-spacing:.06em;
-            padding:5px 10px;
-            border-radius:6px;
-            white-space:nowrap;
-            min-width:88px;
-            text-align:center;
-        }
-        .case-row-info{}
-        .case-row-hx{font-size:0.875rem;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:3px}
-        .case-row-meta{font-size:0.75rem;color:var(--text-subtle);display:flex;align-items:center;gap:8px}
-        .difficulty-pip{display:inline-block;width:7px;height:7px;border-radius:50%}
-        .diff-easy{background:#16a34a}
-        .diff-medium{background:#d97706}
-        .diff-hard{background:#dc2626}
-
-        .case-row-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
-        .play-btn{
-            background:var(--text);
-            color:#fff;
-            border:none;
-            padding:7px 16px;
-            border-radius:8px;
-            font-size:0.8rem;
-            font-weight:600;
-            cursor:pointer;
-            transition:opacity .15s;
-            white-space:nowrap;
-        }
-        .play-btn:hover{opacity:.85}
-
-        /* ADMIN SCORE BADGE */
-        .admin-score{
-            font-size:0.72rem;
-            font-weight:600;
-            color:var(--text-muted);
-            background:var(--bg);
-            border:1px solid var(--border);
-            padding:4px 9px;
-            border-radius:6px;
-            white-space:nowrap;
-        }
-
-        /* EMPTY STATE */
-        .empty{text-align:center;padding:48px 20px;color:var(--text-subtle);font-size:0.9rem}
+        /* EMPTY */
+        .empty{text-align:center;padding:48px 20px;color:var(--text-subtle);font-size:13px}
         .empty-icon{font-size:2rem;margin-bottom:10px}
 
-        /* TODAY LOCKED CARD */
-        .today-card{
-            background:var(--surface);
-            border:1px solid var(--border);
-            border-radius:var(--radius);
-            padding:20px;
-            display:flex;
-            align-items:center;
-            gap:16px;
-            box-shadow:var(--shadow);
-        }
-        .today-icon{font-size:1.8rem;flex-shrink:0}
-        .today-text-title{font-size:0.95rem;font-weight:700;margin-bottom:3px}
-        .today-text-sub{font-size:0.8rem;color:var(--text-muted)}
-        .today-play-btn{
-            margin-left:auto;
-            background:var(--accent);
-            color:#fff;
-            border:none;
-            padding:9px 18px;
-            border-radius:8px;
-            font-size:0.85rem;
-            font-weight:700;
-            cursor:pointer;
-            white-space:nowrap;
-            flex-shrink:0;
-        }
-        .today-play-btn:hover{opacity:.9}
-
-        .section-label{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-subtle)}
-
-        .disclaimer{font-size:0.68rem;color:var(--text-subtle);text-align:center;max-width:500px;padding:0 16px 48px;line-height:1.7}
+        .disclaimer{font-size:11px;color:var(--text-subtle);text-align:center;max-width:500px;padding:0 16px 48px;line-height:1.7}
     </style>
 </head>
 <body>
@@ -160,22 +85,21 @@
 
 <div class="main">
 
-    <div class="page-header">
+    <div>
         <div class="page-title">Clinical Archives</div>
         <div class="page-sub">Replay past cases and sharpen your diagnostic skills.</div>
     </div>
 
-    <!-- Today's Case Callout -->
     <div id="today-card" class="today-card" style="display:none">
         <div class="today-icon">🩺</div>
         <div>
-            <div class="today-text-title">Today's Case is Live</div>
-            <div class="today-text-sub" id="today-date-sub">—</div>
+            <div class="today-title">Today's Case is Live</div>
+            <div class="today-sub" id="today-sub">—</div>
         </div>
-        <button class="today-play-btn" onclick="window.location.href='index.html'">Play Now →</button>
+        <button class="today-btn" onclick="window.location.href='index.html'">Play Now →</button>
     </div>
 
-    <input class="search-bar" id="search-bar" placeholder="Search by date or diagnosis hint..." oninput="renderList()">
+    <input class="search-input" id="search-input" placeholder="Search by date or keyword..." oninput="renderList()">
 
     <div class="section-label">Past Cases</div>
     <div id="archive-list" class="archive-list"></div>
@@ -185,26 +109,36 @@
 <div class="disclaimer">WardDuel is for educational entertainment only and does not constitute medical advice.</div>
 
 <script>
+function formatDate(d) {
+    const [y,m,day] = d.split('-');
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return `${months[parseInt(m)-1]} ${parseInt(day)}, ${y}`;
+}
+
+function formatDateShort(d) {
+    const [y,m,day] = d.split('-');
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return `${months[parseInt(m)-1]} ${parseInt(day)}`;
+}
+
 async function loadArchives() {
     try {
         const res = await fetch('cases.json');
         const cases = await res.json();
 
         const todayCST = new Intl.DateTimeFormat('en-CA', {
-            timeZone: 'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'
+            timeZone:'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'
         }).format(new Date());
 
-        // Show today card
         const todayCase = cases.find(c => c.date === todayCST);
         if (todayCase) {
             document.getElementById('today-card').style.display = 'flex';
-            document.getElementById('today-date-sub').innerText = formatDate(todayCST) + ' — ' + todayCase.hx_brief.substring(0, 60) + '…';
+            document.getElementById('today-sub').innerText = `${formatDate(todayCST)} — ${todayCase.hx_brief.substring(0,58)}…`;
         }
 
-        // Past cases only, newest first
         window._allCases = cases
             .filter(c => c.date < todayCST)
-            .sort((a, b) => b.date.localeCompare(a.date));
+            .sort((a,b) => b.date.localeCompare(a.date));
 
         renderList();
     } catch(e) {
@@ -212,26 +146,13 @@ async function loadArchives() {
     }
 }
 
-function getDifficulty(adminScore) {
-    if (adminScore >= 80) return { label: 'Accessible', cls: 'diff-easy' };
-    if (adminScore >= 65) return { label: 'Moderate', cls: 'diff-medium' };
-    return { label: 'Challenging', cls: 'diff-hard' };
-}
-
-function formatDate(dateStr) {
-    const [y, m, d] = dateStr.split('-');
-    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    return `${months[parseInt(m)-1]} ${parseInt(d)}, ${y}`;
-}
-
 function renderList() {
-    const query = (document.getElementById('search-bar').value || '').toLowerCase();
+    const q = (document.getElementById('search-input').value || '').toLowerCase();
     const cases = (window._allCases || []).filter(c =>
-        !query || c.date.includes(query) || c.hx_brief.toLowerCase().includes(query)
+        !q || c.date.includes(q) || c.hx_brief.toLowerCase().includes(q)
     );
 
     const list = document.getElementById('archive-list');
-
     if (cases.length === 0) {
         list.innerHTML = '<div class="empty"><div class="empty-icon">🗂️</div>No past cases yet — check back tomorrow!</div>';
         return;
@@ -239,22 +160,15 @@ function renderList() {
 
     list.innerHTML = '';
     cases.forEach(c => {
-        const diff = getDifficulty(c.adminScore || 70);
         const row = document.createElement('div');
         row.className = 'case-row';
         row.innerHTML = `
-            <div class="case-row-left">
-                <div class="case-date-badge">${formatDate(c.date)}</div>
-                <div class="case-row-info">
-                    <div class="case-row-hx">${c.hx_brief}</div>
-                    <div class="case-row-meta">
-                        <span>Admin benchmark: ${c.adminScore ?? '—'} pts</span>
-                    </div>
-                </div>
+            <div class="date-badge">${formatDateShort(c.date)}</div>
+            <div class="case-row-info">
+                <div class="case-row-hx">${c.hx_brief}</div>
+                <div class="case-row-meta">Admin benchmark: ${c.adminScore ?? '—'} pts</div>
             </div>
-            <div class="case-row-right">
-                <button class="play-btn">Replay →</button>
-            </div>`;
+            <button class="replay-btn">Replay →</button>`;
         row.onclick = () => window.location.href = `index.html?caseId=${c.date}`;
         list.appendChild(row);
     });
