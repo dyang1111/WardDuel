@@ -110,5 +110,117 @@
       "Specialty": "Identified mutation in Sarcomere protein (Beta-myosin heavy chain)."
     },
     "answer": "Hypertrophic Cardiomyopathy (HCM)"
+  },
+  {
+    "date": "2026-03-23",
+    "hx_brief": "28yo female with a 3-month history of progressive exertional dyspnea and Raynaud phenomenon.",
+    "hints": {
+      "hx": "No history of smoking or asthma. Recent onset of tight, shiny skin over her fingers (sclerodactyly).",
+      "pe": "Lungs are clear to auscultation. Precordial heave and a loud S2 (pulmonic component) at the left upper sternal border.",
+      "img": "Right Heart Cath: Mean Pulmonary Artery Pressure (mPAP) is 30 mmHg at rest (Normal <20)."
+    },
+    "specialty_name": "Anticenteromere",
+    "lab_results": {
+      "CBC": "Normal", "CMP": "Normal", "EKG": "Right Axis Deviation; RVH", "Trop": "Negative", 
+      "Lipase": "Normal", "UA": "Normal", "ABG": "Mild hypoxemia", "Coags": "Normal",
+      "Specialty": "Positive Anti-centromere antibodies (1:640 titer)."
+    },
+    "answer": "Pulmonary Hypertension"
+  },
+  {
+    "date": "2026-03-24",
+    "hx_brief": "42yo male with 2 weeks of worsening thirst, frequent urination, and deep, aching bone pain.",
+    "hints": {
+      "hx": "Patient has a history of 'neck surgery' 5 years ago for a thyroid nodule. Constipation and abdominal moans.",
+      "pe": "Decreased deep tendon reflexes. Mild muscle weakness. No palpable neck masses.",
+      "img": "X-ray: Subperiosteal bone resorption in the phalanges; 'Salt and pepper' skull."
+    },
+    "specialty_name": "PTH Level",
+    "lab_results": {
+      "CBC": "Normal", "CMP": "Calcium: 13.5 (High); Phosphorus: 2.1 (Low)", "EKG": "Shortened QT interval", 
+      "Trop": "Normal", "Lipase": "Normal", "UA": "Hypercalciuria", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Parathyroid Hormone (PTH) is 450 pg/mL (Severely High)."
+    },
+    "answer": "Hyperparathyroidism (Primary)"
+  },
+  {
+    "date": "2026-03-25",
+    "hx_brief": "52yo male with 'recurrent pneumonia' and persistent hemoptysis for 4 months.",
+    "hints": {
+      "hx": "30-pack-year smoker. Reports a new 'whistling' sound when breathing. Recently noted his shirts feel tight around the neck.",
+      "pe": "Dullness to percussion in right upper lobe. Right arm is noticeably more edematous than the left.",
+      "img": "CT Chest: Central hilar mass causing narrowing of the right mainstem bronchus."
+    },
+    "specialty_name": "Biopsy",
+    "lab_results": {
+      "CBC": "Normal", "CMP": "Calcium: 12.8 (High—Paraneoplastic)", "EKG": "Normal", "Trop": "Normal", 
+      "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Histology: Intercellular bridges and Keratin pearls."
+    },
+    "answer": "Squamous Cell Carcinoma"
+  },
+  {
+    "date": "2026-03-26",
+    "hx_brief": "31yo female with acute onset of severe abdominal pain and dark urine after a night of drinking.",
+    "hints": {
+      "hx": "Patient has had similar episodes of abdominal pain but no cause was found. Denies any rashes or joint pain.",
+      "pe": "Abdomen is soft, non-tender, and non-distended despite '10/10' pain. No rebound or guarding.",
+      "img": "CT Abdomen: Completely unremarkable (Negative for appendicitis/gallstones)."
+    },
+    "specialty_name": "Ehrlich Test",
+    "lab_results": {
+      "CBC": "Normal", "CMP": "Hyponatremia (Na: 126)", "EKG": "Sinus Tachycardia", "Trop": "Normal", 
+      "Lipase": "Normal", "UA": "Negative for blood; Turns purple/dark after standing in light.", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Elevated urinary Porphobilinogen (PBG)."
+    },
+    "answer": "Acute Intermittent Porphyria"
+  },
+  {
+    "date": "2026-03-27",
+    "hx_brief": "65yo male presents with 3 days of localized back pain and sudden onset urinary incontinence.",
+    "hints": {
+      "hx": "History of prostate cancer (Gleason 8). He describes 'electric-like' pains shooting down both legs.",
+      "pe": "Tenderness over T10-T12 vertebrae. Decreased anal sphincter tone. Hyperreflexia in lower extremities.",
+      "img": "MRI Spine: Epidural mass compressing the spinal cord at the thoracic level."
+    },
+    "specialty_name": "PSA Level",
+    "lab_results": {
+      "CBC": "Normal", "CMP": "Alkaline Phosphatase: 400 (Very High)", "EKG": "Normal", "Trop": "Normal", 
+      "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Prostate Specific Antigen (PSA): 85 ng/mL."
+    },
+    "answer": "Prostate Cancer"
+  },
+  {
+    "date": "2026-03-28",
+    "hx_brief": "14yo boy with sudden onset of high fever, petechial rash on ankles, and severe headache.",
+    "hints": {
+      "hx": "Just returned from a summer camping trip in North Carolina. Denies neck stiffness.",
+      "pe": "Maculopapular rash on wrists and ankles, some lesions are starting to become petechial.",
+      "img": "CXR: Normal. CT Head: Normal (Negative for hemorrhage/mass)."
+    },
+    "specialty_name": "Serology",
+    "lab_results": {
+      "CBC": "Thrombocytopenia (Plts: 90k); Hyponatremia (Na: 130)", "CMP": "Elevated ALT/AST", "EKG": "Normal", 
+      "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Indirect Immunofluorescence for Rickettsia rickettsii (Pending)."
+    },
+    "answer": "Rocky Mountain Spotted Fever"
+  },
+  {
+    "date": "2026-03-29",
+    "hx_brief": "38yo female with 2 weeks of 'crushing' fatigue, diffuse bone pain, and gum bleeding.",
+    "hints": {
+      "hx": "Patient feels 'unusually cold' lately. Denies travel or recent infections.",
+      "pe": "Pale conjunctiva. Petechiae on the trunk. Gingival hyperplasia (swollen gums).",
+      "img": "Bone Marrow: Hypercellular marrow with >20% myeloblasts."
+    },
+    "specialty_name": "MPO Stain",
+    "lab_results": {
+      "CBC": "WBC 60,000; Hb 7.2; Plts 30k", "CMP": "Normal", "EKG": "Normal", "Trop": "Normal", 
+      "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Elevated PT/PTT; Low Fibrinogen (DIC signs)",
+      "Specialty": "Myeloperoxidase (MPO) positive; Auer rods visualized in cytoplasm."
+    },
+    "answer": "Acute Myeloid Leukemia (AML)"
   }
 ]
