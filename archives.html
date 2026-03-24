@@ -3,80 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WARDDUEL | Archives</title>
+    <title>WardDuel | Archives</title>
     <style>
-        :root { --bg: #0b1120; --panel: #1a2235; --accent: #00f2ff; --text: #e2e8f0; }
-        body { background-color: var(--bg); color: var(--text); font-family: sans-serif; margin: 0; display: flex; flex-direction: column; align-items: center; }
-        .top-bar { width: 100%; padding: 15px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #334155; box-sizing: border-box; }
-        .logo { font-weight: bold; font-size: 1.5rem; color: var(--accent); text-decoration: none; }
-        
-        .archive-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            width: 90%;
-            max-width: 800px;
-            margin-top: 40px;
-            padding-bottom: 50px;
+        *{box-sizing:border-box;margin:0;padding:0}
+        :root{
+            --bg:#f0f0f0;
+            --surface:#ffffff;
+            --border:#e2e2e2;
+            --border-strong:#c8c8c8;
+            --text:#1a1a1a;
+            --text-muted:#666;
+            --text-subtle:#999;
+            --accent:#2563eb;
+            --accent-light:#eff6ff;
+            --accent-border:#bfdbfe;
+            --success:#16a34a;
+            --success-light:#f0fdf4;
+            --danger:#dc2626;
+            --radius:12px;
+            --radius-sm:8px;
+            --shadow:0 1px 3px rgba(0,0,0,0.07),0 1px 2px rgba(0,0,0,0.04);
+        }
+        body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}
+
+        /* TOP BAR */
+        .top-bar{width:100%;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+        .logo{font-weight:800;font-size:1.1rem;letter-spacing:.03em;color:var(--text);text-decoration:none}
+        .logo span{color:var(--accent)}
+        .back-link{color:var(--text-muted);text-decoration:none;font-size:0.875rem;font-weight:500;display:flex;align-items:center;gap:6px;transition:color .15s}
+        .back-link:hover{color:var(--text)}
+
+        /* MAIN */
+        .main{width:100%;max-width:660px;padding:32px 16px 80px;display:flex;flex-direction:column;gap:20px}
+
+        /* PAGE HEADER */
+        .page-header{display:flex;flex-direction:column;gap:4px}
+        .page-title{font-size:1.4rem;font-weight:800;color:var(--text)}
+        .page-sub{font-size:0.875rem;color:var(--text-muted)}
+
+        /* SEARCH */
+        .search-bar{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 14px;font-size:0.875rem;color:var(--text);width:100%;outline:none;transition:border-color .15s,box-shadow .15s}
+        .search-bar:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+
+        /* ARCHIVE LIST */
+        .archive-list{display:flex;flex-direction:column;gap:10px}
+
+        .case-row{
+            background:var(--surface);
+            border:1px solid var(--border);
+            border-radius:var(--radius);
+            padding:18px 20px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            cursor:pointer;
+            transition:all .15s;
+            text-decoration:none;
+            box-shadow:var(--shadow);
+        }
+        .case-row:hover{border-color:var(--border-strong);box-shadow:0 4px 12px rgba(0,0,0,.08);transform:translateY(-1px)}
+
+        .case-row-left{display:flex;align-items:center;gap:16px}
+        .case-date-badge{
+            background:var(--accent-light);
+            border:1px solid var(--accent-border);
+            color:var(--accent);
+            font-size:0.7rem;
+            font-weight:700;
+            text-transform:uppercase;
+            letter-spacing:.06em;
+            padding:5px 10px;
+            border-radius:6px;
+            white-space:nowrap;
+            min-width:88px;
+            text-align:center;
+        }
+        .case-row-info{}
+        .case-row-hx{font-size:0.875rem;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:3px}
+        .case-row-meta{font-size:0.75rem;color:var(--text-subtle);display:flex;align-items:center;gap:8px}
+        .difficulty-pip{display:inline-block;width:7px;height:7px;border-radius:50%}
+        .diff-easy{background:#16a34a}
+        .diff-medium{background:#d97706}
+        .diff-hard{background:#dc2626}
+
+        .case-row-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+        .play-btn{
+            background:var(--text);
+            color:#fff;
+            border:none;
+            padding:7px 16px;
+            border-radius:8px;
+            font-size:0.8rem;
+            font-weight:600;
+            cursor:pointer;
+            transition:opacity .15s;
+            white-space:nowrap;
+        }
+        .play-btn:hover{opacity:.85}
+
+        /* ADMIN SCORE BADGE */
+        .admin-score{
+            font-size:0.72rem;
+            font-weight:600;
+            color:var(--text-muted);
+            background:var(--bg);
+            border:1px solid var(--border);
+            padding:4px 9px;
+            border-radius:6px;
+            white-space:nowrap;
         }
 
-        .date-box {
-            background: var(--panel);
-            padding: 30px 10px;
-            text-align: center;
-            border-radius: 12px;
-            border: 1px solid #334155;
-            cursor: pointer;
-            transition: 0.2s;
-            font-weight: bold;
+        /* EMPTY STATE */
+        .empty{text-align:center;padding:48px 20px;color:var(--text-subtle);font-size:0.9rem}
+        .empty-icon{font-size:2rem;margin-bottom:10px}
+
+        /* TODAY LOCKED CARD */
+        .today-card{
+            background:var(--surface);
+            border:1px solid var(--border);
+            border-radius:var(--radius);
+            padding:20px;
+            display:flex;
+            align-items:center;
+            gap:16px;
+            box-shadow:var(--shadow);
         }
+        .today-icon{font-size:1.8rem;flex-shrink:0}
+        .today-text-title{font-size:0.95rem;font-weight:700;margin-bottom:3px}
+        .today-text-sub{font-size:0.8rem;color:var(--text-muted)}
+        .today-play-btn{
+            margin-left:auto;
+            background:var(--accent);
+            color:#fff;
+            border:none;
+            padding:9px 18px;
+            border-radius:8px;
+            font-size:0.85rem;
+            font-weight:700;
+            cursor:pointer;
+            white-space:nowrap;
+            flex-shrink:0;
+        }
+        .today-play-btn:hover{opacity:.9}
 
-        .date-box:hover { border-color: var(--accent); transform: scale(1.05); }
-        .date-box span { display: block; font-size: 0.8rem; color: var(--accent); margin-bottom: 5px; }
+        .section-label{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-subtle)}
 
-        @media (max-width: 600px) { .archive-grid { grid-template-columns: 1fr 1fr; } }
+        .disclaimer{font-size:0.68rem;color:var(--text-subtle);text-align:center;max-width:500px;padding:0 16px 48px;line-height:1.7}
     </style>
 </head>
 <body>
-    <div class="top-bar">
-        <a href="index.html" class="logo">WARDDUEL</a>
-        <a href="index.html" style="color: var(--accent); text-decoration: none; font-weight: bold;">← BACK</a>
+
+<div class="top-bar">
+    <a href="index.html" class="logo">Ward<span>Duel</span></a>
+    <a href="index.html" class="back-link">← Back to today</a>
+</div>
+
+<div class="main">
+
+    <div class="page-header">
+        <div class="page-title">Clinical Archives</div>
+        <div class="page-sub">Replay past cases and sharpen your diagnostic skills.</div>
     </div>
 
-    <h1>Clinical Archives</h1>
-    <div id="archive-grid" class="archive-grid"></div>
+    <!-- Today's Case Callout -->
+    <div id="today-card" class="today-card" style="display:none">
+        <div class="today-icon">🩺</div>
+        <div>
+            <div class="today-text-title">Today's Case is Live</div>
+            <div class="today-text-sub" id="today-date-sub">—</div>
+        </div>
+        <button class="today-play-btn" onclick="window.location.href='index.html'">Play Now →</button>
+    </div>
 
-    <script>
-        async function loadArchives() {
-            try {
-                const response = await fetch('cases.json');
-                const cases = await response.json();
-                const grid = document.getElementById('archive-grid');
-                
-                // Get Today's Date in Central Time (CST)
-                const options = { timeZone: 'America/Chicago', year: 'numeric', month: '2-digit', day: '2-digit' };
-                const formatter = new Intl.DateTimeFormat('en-CA', options);
-                const todayCST = formatter.format(new Date());
+    <input class="search-bar" id="search-bar" placeholder="Search by date or diagnosis hint..." oninput="renderList()">
 
-                // Sort: Newest first
-                cases.sort((a, b) => b.date.localeCompare(a.date));
+    <div class="section-label">Past Cases</div>
+    <div id="archive-list" class="archive-list"></div>
 
-                // Filter & Display: Only show if date is LESS THAN today (Past cases only)
-                cases.forEach(c => {
-                    if (c.date < todayCST) {
-                        const box = document.createElement('div');
-                        box.className = 'date-box';
-                        box.innerHTML = `<span>CASE DATE</span>${c.date}`;
-                        box.onclick = () => window.location.href = `index.html?caseId=${c.date}`;
-                        grid.appendChild(box);
-                    }
-                });
-            } catch (e) {
-                console.error("Archive failure:", e);
-                document.getElementById('archive-grid').innerHTML = "<p>Error loading archives.</p>";
-            }
+</div>
+
+<div class="disclaimer">WardDuel is for educational entertainment only and does not constitute medical advice.</div>
+
+<script>
+async function loadArchives() {
+    try {
+        const res = await fetch('cases.json');
+        const cases = await res.json();
+
+        const todayCST = new Intl.DateTimeFormat('en-CA', {
+            timeZone: 'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'
+        }).format(new Date());
+
+        // Show today card
+        const todayCase = cases.find(c => c.date === todayCST);
+        if (todayCase) {
+            document.getElementById('today-card').style.display = 'flex';
+            document.getElementById('today-date-sub').innerText = formatDate(todayCST) + ' — ' + todayCase.hx_brief.substring(0, 60) + '…';
         }
-        loadArchives();
-    </script>
+
+        // Past cases only, newest first
+        window._allCases = cases
+            .filter(c => c.date < todayCST)
+            .sort((a, b) => b.date.localeCompare(a.date));
+
+        renderList();
+    } catch(e) {
+        document.getElementById('archive-list').innerHTML = '<div class="empty"><div class="empty-icon">⚠️</div>Failed to load archives.</div>';
+    }
+}
+
+function getDifficulty(adminScore) {
+    if (adminScore >= 80) return { label: 'Accessible', cls: 'diff-easy' };
+    if (adminScore >= 65) return { label: 'Moderate', cls: 'diff-medium' };
+    return { label: 'Challenging', cls: 'diff-hard' };
+}
+
+function formatDate(dateStr) {
+    const [y, m, d] = dateStr.split('-');
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return `${months[parseInt(m)-1]} ${parseInt(d)}, ${y}`;
+}
+
+function renderList() {
+    const query = (document.getElementById('search-bar').value || '').toLowerCase();
+    const cases = (window._allCases || []).filter(c =>
+        !query || c.date.includes(query) || c.hx_brief.toLowerCase().includes(query)
+    );
+
+    const list = document.getElementById('archive-list');
+
+    if (cases.length === 0) {
+        list.innerHTML = '<div class="empty"><div class="empty-icon">🗂️</div>No past cases yet — check back tomorrow!</div>';
+        return;
+    }
+
+    list.innerHTML = '';
+    cases.forEach(c => {
+        const diff = getDifficulty(c.adminScore || 70);
+        const row = document.createElement('div');
+        row.className = 'case-row';
+        row.innerHTML = `
+            <div class="case-row-left">
+                <div class="case-date-badge">${formatDate(c.date)}</div>
+                <div class="case-row-info">
+                    <div class="case-row-hx">${c.hx_brief}</div>
+                    <div class="case-row-meta">
+                        <span class="difficulty-pip ${diff.cls}"></span>
+                        <span>${diff.label}</span>
+                        <span>·</span>
+                        <span>Admin benchmark: ${c.adminScore ?? '—'} pts</span>
+                    </div>
+                </div>
+            </div>
+            <div class="case-row-right">
+                <button class="play-btn">Replay →</button>
+            </div>`;
+        row.onclick = () => window.location.href = `index.html?caseId=${c.date}`;
+        list.appendChild(row);
+    });
+}
+
+loadArchives();
+</script>
 </body>
 </html>
