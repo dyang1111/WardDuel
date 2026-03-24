@@ -1,6 +1,7 @@
 [
   {
     "date": "2026-03-16",
+    "adminScore": 80,
     "hx_brief": "62yo male with sudden onset tearing chest pain radiating to the back.",
     "hints": {
       "hx": "Pain is 'tearing' and 10/10. Patient has long-standing untreated HTN.",
@@ -17,6 +18,7 @@
   },
   {
     "date": "2026-03-17",
+    "adminScore": 85,
     "hx_brief": "24yo female with periumbilical pain that migrated to the RLQ.",
     "hints": {
       "hx": "Started as dull midline pain; now sharp in the RLQ. Nausea and anorexia present.",
@@ -33,6 +35,7 @@
   },
   {
     "date": "2026-03-18",
+    "adminScore": 70,
     "hx_brief": "55yo female with sudden severe 'pounding' headache and blurry vision.",
     "hints": {
       "hx": "Pain is orbital. Patient mentions seeing 'rainbow halos' around the light bulbs.",
@@ -49,6 +52,7 @@
   },
   {
     "date": "2026-03-19",
+    "adminScore": 60,
     "hx_brief": "32yo male with 2 days of progressive weakness in his legs moving upward.",
     "hints": {
       "hx": "Recently recovered from a 'stomach flu' with bloody diarrhea 2 weeks ago.",
@@ -65,6 +69,7 @@
   },
   {
     "date": "2026-03-20",
+    "adminScore": 75,
     "hx_brief": "68yo male with painless gross hematuria for three weeks.",
     "hints": {
       "hx": "Ex-smoker. Patient mentions working in a dye manufacturing plant for 25 years.",
@@ -81,10 +86,11 @@
   },
   {
     "date": "2026-03-21",
+    "adminScore": 85,
     "hx_brief": "45yo obese female with RUQ pain radiating to the right shoulder.",
     "hints": {
       "hx": "Pain occurs roughly 30 minutes after eating fatty foods. Nausea is severe.",
-      "pe": "Positive Murphy’s sign. Patient stops breathing mid-inspiration during RUQ palpation.",
+      "pe": "Positive Murphy's sign. Patient stops breathing mid-inspiration during RUQ palpation.",
       "img": "HIDA Scan: Non-visualization of the gallbladder after tracer injection."
     },
     "specialty_name": "LFTs",
@@ -97,6 +103,7 @@
   },
   {
     "date": "2026-03-22",
+    "adminScore": 65,
     "hx_brief": "19yo male athlete collapses and dies during a basketball game.",
     "hints": {
       "hx": "Patient was previously healthy but his father died of 'heart issues' at age 30.",
@@ -113,6 +120,7 @@
   },
   {
     "date": "2026-03-23",
+    "adminScore": 65,
     "hx_brief": "28yo female with a 3-month history of progressive exertional dyspnea and Raynaud phenomenon.",
     "hints": {
       "hx": "No history of smoking or asthma. Recent onset of tight, shiny skin over her fingers (sclerodactyly).",
@@ -121,7 +129,7 @@
     },
     "specialty_name": "Anticenteromere",
     "lab_results": {
-      "CBC": "Normal", "CMP": "Normal", "EKG": "Right Axis Deviation; RVH", "Trop": "Negative", 
+      "CBC": "Normal", "CMP": "Normal", "EKG": "Right Axis Deviation; RVH", "Trop": "Negative",
       "Lipase": "Normal", "UA": "Normal", "ABG": "Mild hypoxemia", "Coags": "Normal",
       "Specialty": "Positive Anti-centromere antibodies (1:640 titer)."
     },
@@ -129,6 +137,7 @@
   },
   {
     "date": "2026-03-24",
+    "adminScore": 70,
     "hx_brief": "42yo male with 2 weeks of worsening thirst, frequent urination, and deep, aching bone pain.",
     "hints": {
       "hx": "Patient has a history of 'neck surgery' 5 years ago for a thyroid nodule. Constipation and abdominal moans.",
@@ -137,7 +146,7 @@
     },
     "specialty_name": "PTH Level",
     "lab_results": {
-      "CBC": "Normal", "CMP": "Calcium: 13.5 (High); Phosphorus: 2.1 (Low)", "EKG": "Shortened QT interval", 
+      "CBC": "Normal", "CMP": "Calcium: 13.5 (High); Phosphorus: 2.1 (Low)", "EKG": "Shortened QT interval",
       "Trop": "Normal", "Lipase": "Normal", "UA": "Hypercalciuria", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Parathyroid Hormone (PTH) is 450 pg/mL (Severely High)."
     },
@@ -145,6 +154,7 @@
   },
   {
     "date": "2026-03-25",
+    "adminScore": 72,
     "hx_brief": "52yo male with 'recurrent pneumonia' and persistent hemoptysis for 4 months.",
     "hints": {
       "hx": "30-pack-year smoker. Reports a new 'whistling' sound when breathing. Recently noted his shirts feel tight around the neck.",
@@ -153,7 +163,7 @@
     },
     "specialty_name": "Biopsy",
     "lab_results": {
-      "CBC": "Normal", "CMP": "Calcium: 12.8 (High—Paraneoplastic)", "EKG": "Normal", "Trop": "Normal", 
+      "CBC": "Normal", "CMP": "Calcium: 12.8 (High—Paraneoplastic)", "EKG": "Normal", "Trop": "Normal",
       "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Histology: Intercellular bridges and Keratin pearls."
     },
@@ -161,6 +171,7 @@
   },
   {
     "date": "2026-03-26",
+    "adminScore": 55,
     "hx_brief": "31yo female with acute onset of severe abdominal pain and dark urine after a night of drinking.",
     "hints": {
       "hx": "Patient has had similar episodes of abdominal pain but no cause was found. Denies any rashes or joint pain.",
@@ -169,7 +180,7 @@
     },
     "specialty_name": "Ehrlich Test",
     "lab_results": {
-      "CBC": "Normal", "CMP": "Hyponatremia (Na: 126)", "EKG": "Sinus Tachycardia", "Trop": "Normal", 
+      "CBC": "Normal", "CMP": "Hyponatremia (Na: 126)", "EKG": "Sinus Tachycardia", "Trop": "Normal",
       "Lipase": "Normal", "UA": "Negative for blood; Turns purple/dark after standing in light.", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Elevated urinary Porphobilinogen (PBG)."
     },
@@ -177,6 +188,7 @@
   },
   {
     "date": "2026-03-27",
+    "adminScore": 78,
     "hx_brief": "65yo male presents with 3 days of localized back pain and sudden onset urinary incontinence.",
     "hints": {
       "hx": "History of prostate cancer (Gleason 8). He describes 'electric-like' pains shooting down both legs.",
@@ -185,7 +197,7 @@
     },
     "specialty_name": "PSA Level",
     "lab_results": {
-      "CBC": "Normal", "CMP": "Alkaline Phosphatase: 400 (Very High)", "EKG": "Normal", "Trop": "Normal", 
+      "CBC": "Normal", "CMP": "Alkaline Phosphatase: 400 (Very High)", "EKG": "Normal", "Trop": "Normal",
       "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Prostate Specific Antigen (PSA): 85 ng/mL."
     },
@@ -193,6 +205,7 @@
   },
   {
     "date": "2026-03-28",
+    "adminScore": 68,
     "hx_brief": "14yo boy with sudden onset of high fever, petechial rash on ankles, and severe headache.",
     "hints": {
       "hx": "Just returned from a summer camping trip in North Carolina. Denies neck stiffness.",
@@ -201,7 +214,7 @@
     },
     "specialty_name": "Serology",
     "lab_results": {
-      "CBC": "Thrombocytopenia (Plts: 90k); Hyponatremia (Na: 130)", "CMP": "Elevated ALT/AST", "EKG": "Normal", 
+      "CBC": "Thrombocytopenia (Plts: 90k); Hyponatremia (Na: 130)", "CMP": "Elevated ALT/AST", "EKG": "Normal",
       "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Indirect Immunofluorescence for Rickettsia rickettsii (Pending)."
     },
@@ -209,6 +222,7 @@
   },
   {
     "date": "2026-03-29",
+    "adminScore": 62,
     "hx_brief": "38yo female with 2 weeks of 'crushing' fatigue, diffuse bone pain, and gum bleeding.",
     "hints": {
       "hx": "Patient feels 'unusually cold' lately. Denies travel or recent infections.",
@@ -217,7 +231,7 @@
     },
     "specialty_name": "MPO Stain",
     "lab_results": {
-      "CBC": "WBC 60,000; Hb 7.2; Plts 30k", "CMP": "Normal", "EKG": "Normal", "Trop": "Normal", 
+      "CBC": "WBC 60,000; Hb 7.2; Plts 30k", "CMP": "Normal", "EKG": "Normal", "Trop": "Normal",
       "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Elevated PT/PTT; Low Fibrinogen (DIC signs)",
       "Specialty": "Myeloperoxidase (MPO) positive; Auer rods visualized in cytoplasm."
     },
