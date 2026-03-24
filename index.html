@@ -39,6 +39,8 @@
         .nav-link:hover{color:var(--text)}
         .login-btn{background:var(--text);color:var(--bg);border:none;padding:6px 14px;border-radius:7px;font-size:11px;font-weight:700;cursor:pointer;transition:opacity .15s}
         .login-btn:hover{opacity:.85}
+        .user-btn{background:none;border:none;cursor:pointer;font-size:12px;font-weight:700;color:var(--text);padding:6px 10px;border-radius:7px;transition:background .15s}
+        .user-btn:hover{background:var(--sage-light)}
 
         /* MAIN */
         .main{width:100%;max-width:620px;padding:24px 16px 72px;display:flex;flex-direction:column;gap:12px}
@@ -52,7 +54,7 @@
         #timer-display{font-family:monospace;font-size:13px;font-weight:700;color:var(--text-muted);background:#e8ebe4;padding:3px 10px;border-radius:5px;transition:all .3s}
         #timer-display.urgent{color:var(--danger);background:var(--danger-light)}
 
-        /* CARD BASE */
+        /* CARD */
         .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
         .card-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-subtle);margin-bottom:12px}
 
@@ -78,7 +80,6 @@
         .action-btn{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 13px;cursor:pointer;text-align:left;transition:all .15s;display:flex;justify-content:space-between;align-items:center}
         .action-btn:hover:not(.used){border-color:var(--border-strong);background:#fff;box-shadow:var(--shadow)}
         .action-btn.used{background:var(--amber-light);border-color:var(--amber-border);cursor:default}
-        .action-btn.used:hover{box-shadow:none}
         .ab-name{font-size:12px;font-weight:600;color:var(--text)}
         .action-btn.used .ab-name{color:var(--amber)}
         .ab-cost{font-size:10px;font-weight:700;color:var(--danger);background:var(--danger-light);padding:2px 7px;border-radius:4px}
@@ -97,6 +98,9 @@
         .lab-btn.ordered{background:var(--amber-light);border-color:var(--amber-border);color:var(--amber);cursor:default}
         .lab-btn.locked-lab{opacity:.4;border-style:dashed;cursor:not-allowed;color:var(--text-subtle)}
         .lab-btn.locked-lab:hover{background:var(--bg);border-color:var(--border);color:var(--text-subtle)}
+        /* post-game: all labs available */
+        .lab-btn.postgame{opacity:1;border-style:solid;cursor:pointer;color:var(--text);background:var(--bg);border-color:var(--border)}
+        .lab-btn.postgame:hover{border-color:var(--sage);color:var(--sage);background:var(--sage-light)}
 
         /* RESULTS */
         .results-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:none}
@@ -131,13 +135,22 @@
         .answer-pill{display:inline-block;font-size:12px;font-weight:600;padding:7px 18px;border-radius:999px}
         .answer-win{background:var(--amber-light);border:1px solid var(--amber-border);color:#7a4a10}
         .answer-loss{background:var(--danger-light);border:1px solid var(--danger-border);color:var(--danger)}
+        .pts-earned{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;color:var(--sage);background:var(--sage-light);border:1px solid var(--sage-border);padding:5px 14px;border-radius:999px}
+
+        /* ALREADY PLAYED */
+        .played-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px 20px;box-shadow:var(--shadow);text-align:center}
+        .played-icon{font-size:2rem;margin-bottom:10px}
+        .played-title{font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:6px}
+        .played-sub{font-size:13px;color:var(--text-muted);margin-bottom:16px}
 
         /* TOAST */
         #toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);padding:11px 22px;border-radius:9px;font-size:12px;font-weight:700;z-index:3000;display:none;box-shadow:var(--shadow-md);white-space:nowrap;color:#fff}
         @keyframes fadeInOut{0%{opacity:0;transform:translateX(-50%) translateY(6px)}15%{opacity:1;transform:translateX(-50%) translateY(0)}85%{opacity:1}100%{opacity:0}}
 
-        /* MODAL */
+        /* MODAL BASE */
         .modal{display:none;position:fixed;z-index:1000;inset:0;background:rgba(0,0,0,.18);backdrop-filter:blur(4px)}
+
+        /* AUTH MODAL */
         .modal-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;width:320px;margin:15vh auto;padding:26px;box-shadow:0 20px 40px rgba(0,0,0,.1);position:relative}
         .modal-title{font-size:14px;font-weight:800;color:var(--text);margin-bottom:3px}
         .modal-sub{font-size:12px;color:var(--text-muted);margin-bottom:16px}
@@ -147,6 +160,29 @@
         .modal-btn{width:100%;padding:11px;background:var(--text);color:var(--bg);border:none;border-radius:var(--radius-sm);font-weight:700;font-size:13px;cursor:pointer}
         .modal-toggle{text-align:center;margin-top:12px;font-size:12px;color:var(--text-muted)}
         .modal-toggle a{color:var(--sage);font-weight:600;cursor:pointer}
+
+        /* PROFILE MODAL */
+        .profile-modal-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;width:340px;margin:10vh auto;padding:0;box-shadow:0 20px 40px rgba(0,0,0,.1);position:relative;overflow:hidden}
+        .profile-header{background:var(--sage-light);border-bottom:1px solid var(--sage-border);padding:22px 24px 18px}
+        .profile-avatar{width:48px;height:48px;border-radius:50%;background:var(--sage);display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:10px}
+        .profile-name{font-size:16px;font-weight:800;color:var(--text);margin-bottom:2px}
+        .profile-since{font-size:11px;color:var(--text-muted)}
+        .profile-level-row{display:flex;align-items:center;justify-content:space-between;margin-top:12px;margin-bottom:6px}
+        .profile-level-name{font-size:11px;font-weight:700;color:var(--sage)}
+        .profile-level-pts{font-size:11px;color:var(--text-muted)}
+        .profile-xp-track{height:7px;background:rgba(90,122,82,.2);border-radius:99px;overflow:hidden}
+        .profile-xp-fill{height:100%;background:var(--sage);border-radius:99px;transition:width .5s ease}
+        .profile-body{padding:18px 24px}
+        .profile-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+        .stat-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px}
+        .stat-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-subtle);margin-bottom:3px}
+        .stat-val{font-size:1.3rem;font-weight:800;color:var(--text)}
+        .stat-sub{font-size:10px;color:var(--text-muted)}
+        .total-pts-box{background:var(--amber-light);border:1px solid var(--amber-border);border-radius:var(--radius-sm);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+        .total-pts-label{font-size:11px;font-weight:700;color:var(--amber)}
+        .total-pts-val{font-size:1.5rem;font-weight:800;color:var(--amber)}
+        .logout-btn{width:100%;padding:11px;background:var(--danger-light);color:var(--danger);border:1px solid var(--danger-border);border-radius:var(--radius-sm);font-weight:700;font-size:13px;cursor:pointer;transition:opacity .15s}
+        .logout-btn:hover{opacity:.85}
 
         .disclaimer{font-size:11px;color:var(--text-subtle);text-align:center;max-width:500px;padding:0 16px 48px;line-height:1.7}
     </style>
@@ -171,6 +207,64 @@
     </div>
 </div>
 
+<!-- PROFILE MODAL -->
+<div id="profileModal" class="modal">
+    <div class="profile-modal-box">
+        <button class="modal-close" style="position:absolute;top:14px;right:16px;background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:1rem;z-index:1" onclick="document.getElementById('profileModal').style.display='none'">✕</button>
+        <div class="profile-header">
+            <div class="profile-avatar" id="profile-avatar">DR</div>
+            <div class="profile-name" id="profile-name">Dr. —</div>
+            <div class="profile-since" id="profile-since">Attending since —</div>
+            <div class="profile-level-row">
+                <span class="profile-level-name" id="profile-level-name">MS1</span>
+                <span class="profile-level-pts" id="profile-level-pts">0 / 3,000 pts</span>
+            </div>
+            <div class="profile-xp-track">
+                <div class="profile-xp-fill" id="profile-xp-fill" style="width:0%"></div>
+            </div>
+        </div>
+        <div class="profile-body">
+            <div class="total-pts-box">
+                <span class="total-pts-label">🏆 Total Points</span>
+                <span class="total-pts-val" id="profile-total-pts">0</span>
+            </div>
+            <div class="profile-stats">
+                <div class="stat-box">
+                    <div class="stat-label">Streak</div>
+                    <div class="stat-val" id="profile-streak">0 🔥</div>
+                    <div class="stat-sub">days</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Cases Done</div>
+                    <div class="stat-val" id="profile-cases">0</div>
+                    <div class="stat-sub">total</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Avg Score</div>
+                    <div class="stat-val" id="profile-avg">—</div>
+                    <div class="stat-sub">per case</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Best Score</div>
+                    <div class="stat-val" id="profile-best">—</div>
+                    <div class="stat-sub">all time</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Win Rate</div>
+                    <div class="stat-val" id="profile-winrate">—</div>
+                    <div class="stat-sub">vs opponents</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">W / L</div>
+                    <div class="stat-val" id="profile-wl">0 / 0</div>
+                    <div class="stat-sub">record</div>
+                </div>
+            </div>
+            <button class="logout-btn" onclick="window.doLogout()">Sign Out</button>
+        </div>
+    </div>
+</div>
+
 <!-- NAV -->
 <div class="top-bar">
     <a href="index.html" class="logo">Ward<span>Duel</span></a>
@@ -185,7 +279,6 @@
 <!-- MAIN -->
 <div class="main">
 
-    <!-- Header -->
     <div class="header-row">
         <div class="daily-label" id="date-label">Daily Case</div>
         <div class="header-right">
@@ -195,7 +288,6 @@
         </div>
     </div>
 
-    <!-- HP -->
     <div class="card">
         <div class="hp-row">
             <div class="hp-left">
@@ -210,7 +302,6 @@
         <div class="hp-track"><div id="hp-fill"></div></div>
     </div>
 
-    <!-- Case -->
     <div class="card">
         <div class="case-tag">🩺 Chief Complaint</div>
         <div id="case-hx">Loading clinical case...</div>
@@ -220,7 +311,6 @@
         </div>
     </div>
 
-    <!-- Actions -->
     <div class="card">
         <div class="card-title">Clinical Workup</div>
         <div class="actions-grid">
@@ -243,7 +333,6 @@
         </div>
     </div>
 
-    <!-- Lab Panel -->
     <div id="lab-panel" class="lab-panel">
         <div class="lab-panel-header">
             <span class="card-title" style="margin-bottom:0">Select Lab / Study</span>
@@ -262,13 +351,11 @@
         </div>
     </div>
 
-    <!-- Results -->
     <div id="results-card" class="results-card">
         <div class="results-header">Lab Results</div>
         <div id="results-list"></div>
     </div>
 
-    <!-- Diagnosis -->
     <div id="dx-card" class="dx-card">
         <div class="card-title">Submit Diagnosis</div>
         <div class="search-wrap">
@@ -280,11 +367,11 @@
 
 </div>
 
-<div class="disclaimer">WardDuel is for educational entertainment only and does not constitute medical advice. Always consult a qualified healthcare professional for medical decisions.</div>
+<div class="disclaimer">WardDuel is for educational entertainment only and does not constitute medical advice.</div>
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 import { getFirestore, doc, getDoc, setDoc, updateDoc, collection, query, where, getDocs, addDoc, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -300,10 +387,28 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+const POINTS_PER_LEVEL = 3000;
+const LEVELS = ['MS1','MS2','MS3/MS4','Resident','Attending'];
+
 let currentCase = null, hp = 100, timeLeft = 300, timerId = null, gameActive = true;
 let diagnosisPool = [], currentUser = null, isSignUp = false;
 const unlockedHints = new Set(), orderedLabs = new Set();
 let wrongStreak = 0, opponentScore = null, opponentName = null;
+let isArchive = false;
+
+// ── HELPERS ───────────────────────────────────────────
+function getTodayCST() {
+    return new Intl.DateTimeFormat('en-CA', {
+        timeZone:'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'
+    }).format(new Date());
+}
+
+function getLevelInfo(totalPts) {
+    const lvlIdx = Math.min(Math.floor(totalPts / POINTS_PER_LEVEL), LEVELS.length - 1);
+    const ptsInLevel = totalPts % POINTS_PER_LEVEL;
+    const pct = Math.min((ptsInLevel / POINTS_PER_LEVEL) * 100, 100);
+    return { name: LEVELS[lvlIdx], idx: lvlIdx, ptsInLevel, pct };
+}
 
 // ── INIT ──────────────────────────────────────────────
 async function initGame() {
@@ -311,19 +416,24 @@ async function initGame() {
     diagnosisPool = await dxRes.json();
     const cases = await caseRes.json();
 
-    const todayCST = new Intl.DateTimeFormat('en-CA', {
-        timeZone:'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'
-    }).format(new Date());
-
+    const todayCST = getTodayCST();
     const archiveId = new URLSearchParams(window.location.search).get('caseId');
+    isArchive = !!archiveId;
     const targetDate = archiveId || todayCST;
 
     currentCase = cases.find(c => c.date === targetDate) || cases[cases.length - 1];
     document.getElementById('case-hx').innerText = currentCase.hx_brief;
-    document.getElementById('date-label').innerText = archiveId ? `Archive — ${archiveId}` : 'Daily Case';
+    document.getElementById('date-label').innerText = isArchive ? `Archive — ${archiveId}` : 'Daily Case';
 
     if (currentCase.specialty_name) {
         document.getElementById('lab-Specialty').innerText = '🔒 ' + currentCase.specialty_name;
+    }
+
+    // Check if already played today (only for daily case)
+    if (!isArchive) {
+        const playedKey = `wardduel_played_${todayCST}`;
+        const anonPlayed = localStorage.getItem(playedKey);
+        if (anonPlayed) { showAlreadyPlayed(JSON.parse(anonPlayed)); return; }
     }
 
     await loadOpponent(currentCase.date);
@@ -332,12 +442,27 @@ async function initGame() {
 }
 initGame();
 
+// ── ALREADY PLAYED ────────────────────────────────────
+function showAlreadyPlayed(data) {
+    gameActive = false;
+    document.getElementById('dx-card').innerHTML = `
+        <div class="played-card">
+            <div class="played-icon">✅</div>
+            <div class="played-title">Already played today</div>
+            <div class="played-sub">You scored <strong>${data.score}</strong> pts${data.won ? ' and won' : ''}.<br>Come back tomorrow for a new case.</div>
+            <a href="archives.html" style="display:inline-block;margin-top:14px;font-size:12px;font-weight:700;color:var(--sage);text-decoration:none">Browse Archives →</a>
+        </div>`;
+    // Still show the case for review
+    document.getElementById('lab-panel').style.display = 'block';
+    unlockAllLabs();
+}
+
 // ── OPPONENT ──────────────────────────────────────────
 async function loadOpponent(caseDate) {
     try {
         const q = query(collection(db,'scores'), where('caseDate','==',caseDate), orderBy('timestamp','asc'), limit(10));
         const snap = await getDocs(q);
-        const docs = snap.docs.map(d => d.data()).filter(d => d.username !== (currentUser?.displayName || ''));
+        const docs = snap.docs.map(d => d.data()).filter(d => d.username !== (currentUser?.displayName||''));
         if (docs.length === 0) {
             opponentScore = currentCase.adminScore || 75;
             opponentName = 'Admin';
@@ -374,19 +499,9 @@ function updateMultiplier() {
     let mult = timeLeft > 240 ? 3.0 : timeLeft > 180 ? 2.5 : timeLeft > 120 ? 2.0 : timeLeft > 60 ? 1.5 : 1.0;
     document.getElementById('mult-val').innerText = mult.toFixed(1);
     const badge = document.getElementById('mult-badge');
-    if (timeLeft <= 60) {
-        badge.style.color = 'var(--danger)';
-        badge.style.background = 'var(--danger-light)';
-        badge.style.borderColor = 'var(--danger-border)';
-    } else if (timeLeft <= 120) {
-        badge.style.color = 'var(--amber)';
-        badge.style.background = 'var(--amber-light)';
-        badge.style.borderColor = 'var(--amber-border)';
-    } else {
-        badge.style.color = 'var(--sage)';
-        badge.style.background = 'var(--sage-light)';
-        badge.style.borderColor = 'var(--sage-border)';
-    }
+    if (timeLeft <= 60) { badge.style.color='var(--danger)'; badge.style.background='var(--danger-light)'; badge.style.borderColor='var(--danger-border)'; }
+    else if (timeLeft <= 120) { badge.style.color='var(--amber)'; badge.style.background='var(--amber-light)'; badge.style.borderColor='var(--amber-border)'; }
+    else { badge.style.color='var(--sage)'; badge.style.background='var(--sage-light)'; badge.style.borderColor='var(--sage-border)'; }
 }
 
 // ── HP ────────────────────────────────────────────────
@@ -396,17 +511,9 @@ function updateHP() {
     const fill = document.getElementById('hp-fill');
     const dot = document.getElementById('vs-dot');
     fill.style.width = hp + '%';
-    if (hp > 60) {
-        fill.style.background = 'var(--sage)';
-        dot.style.background = 'var(--sage)';
-    } else if (hp > 30) {
-        fill.style.background = 'var(--amber)';
-        dot.style.background = 'var(--amber)';
-    } else {
-        fill.style.background = 'var(--danger)';
-        dot.style.background = 'var(--danger)';
-    }
-    document.getElementById('hp-val').style.color = hp > 60 ? 'var(--text)' : hp > 30 ? 'var(--amber)' : 'var(--danger)';
+    const col = hp > 60 ? 'var(--sage)' : hp > 30 ? 'var(--amber)' : 'var(--danger)';
+    fill.style.background = col; dot.style.background = col;
+    document.getElementById('hp-val').style.color = hp > 60 ? 'var(--text)' : col;
     if (hp <= 0 && gameActive) endGame(false, 'HP Depleted');
 }
 
@@ -429,28 +536,31 @@ window.toggleLabPanel = () => {
     const panel = document.getElementById('lab-panel');
     const open = panel.style.display === 'block';
     panel.style.display = open ? 'none' : 'block';
+    if (!gameActive) return; // post-game, don't toggle used state
     document.getElementById('btn-lab').classList.toggle('used', !open);
 };
 
 window.orderLab = (key) => {
-    if (!gameActive || orderedLabs.has(key)) return;
-    if (key === 'Specialty') {
-        const nonSpec = [...orderedLabs].filter(k => k !== 'Specialty').length;
-        if (nonSpec < 2) { showToast('Order 2 labs first to unlock Specialty', '#5a7a52'); return; }
+    if (orderedLabs.has(key)) return;
+    if (gameActive) {
+        if (key === 'Specialty') {
+            const nonSpec = [...orderedLabs].filter(k => k !== 'Specialty').length;
+            if (nonSpec < 2) { showToast('Order 2 labs first to unlock Specialty', '#5a7a52'); return; }
+        }
+        hp -= 8; updateHP();
     }
-    hp -= 8; orderedLabs.add(key); updateHP();
+    orderedLabs.add(key);
 
     const nonSpec = [...orderedLabs].filter(k => k !== 'Specialty').length;
     if (nonSpec >= 2) {
         const specBtn = document.getElementById('lab-Specialty');
         specBtn.disabled = false;
-        specBtn.classList.remove('locked-lab');
+        specBtn.classList.remove('locked-lab', 'postgame');
         specBtn.innerText = currentCase.specialty_name || 'Specialty';
     }
 
     const result = (currentCase.lab_results && currentCase.lab_results[key]) || 'Normal / No findings';
     const label = key === 'Specialty' ? (currentCase.specialty_name || 'Specialty') : key;
-
     document.getElementById(`lab-${key}`).classList.add('ordered');
     const card = document.getElementById('results-card');
     card.style.display = 'block';
@@ -459,6 +569,23 @@ window.orderLab = (key) => {
     row.innerHTML = `<span class="lrk">${label}</span><span class="lrv">${result}</span>`;
     document.getElementById('results-list').appendChild(row);
 };
+
+function unlockAllLabs() {
+    const allKeys = ['CBC','CMP','EKG','Trop','Lipase','UA','ABG','Coags','Specialty'];
+    allKeys.forEach(k => {
+        const btn = document.getElementById(`lab-${k}`);
+        if (!btn) return;
+        if (!orderedLabs.has(k)) {
+            btn.disabled = false;
+            btn.classList.remove('locked-lab');
+            btn.classList.add('postgame');
+            if (k === 'Specialty') btn.innerText = currentCase.specialty_name || 'Specialty';
+        }
+    });
+    // show the panel
+    document.getElementById('lab-panel').style.display = 'block';
+    document.getElementById('btn-lab').classList.add('used');
+}
 
 // ── DIAGNOSIS ─────────────────────────────────────────
 window.filterDiagnosis = () => {
@@ -504,14 +631,18 @@ async function endGame(success, payload) {
     if (!success) hp = 0;
     updateHP();
 
+    // Unlock all labs for post-game review
+    unlockAllLabs();
+
     const finalScore = success ? payload : 0;
     const won = success && finalScore >= opponentScore;
     const icon = success ? (won ? '🏆' : '📋') : '💀';
     const titleColor = success ? (won ? 'var(--amber)' : 'var(--text)') : 'var(--danger)';
     const title = success ? (won ? 'Diagnosis Confirmed' : 'Correct — But Outpaced') : (typeof payload === 'string' ? payload : 'Game Over');
-    const sub = success
-        ? (won ? `You outscored ${opponentName}!` : `${opponentName} had a better run today.`)
-        : `Better luck tomorrow, Doctor.`;
+    const sub = success ? (won ? `You outscored ${opponentName}!` : `${opponentName} had a better run today.`) : `Better luck tomorrow, Doctor.`;
+
+    // Points only for daily case wins
+    const ptsEarned = (!isArchive && won) ? finalScore : 0;
 
     document.getElementById('dx-card').innerHTML = `
         <div class="endgame-card">
@@ -529,43 +660,114 @@ async function endGame(success, payload) {
                     <div class="vs-lbl">${opponentName ?? 'Opponent'}</div>
                 </div>
             </div>
-            <div class="answer-pill ${won ? 'answer-win' : 'answer-loss'}">${won ? '✓' : '✗'} ${currentCase.answer}</div>
+            <div class="answer-pill ${won?'answer-win':'answer-loss'}">${won?'✓':'✗'} ${currentCase.answer}</div>
+            ${ptsEarned > 0 ? `<div class="pts-earned">+${ptsEarned} pts earned</div>` : ''}
         </div>`;
 
-    if (currentUser && success) {
+    // Lock for today (answer revealed = committed)
+    if (!isArchive) {
+        const playedKey = `wardduel_played_${getTodayCST()}`;
+        localStorage.setItem(playedKey, JSON.stringify({ score: finalScore, won }));
+        // Mark in archives
+        const playedCases = JSON.parse(localStorage.getItem('wardduel_completed') || '[]');
+        if (!playedCases.includes(currentCase.date)) {
+            playedCases.push(currentCase.date);
+            localStorage.setItem('wardduel_completed', JSON.stringify(playedCases));
+        }
+    }
+
+    if (currentUser) {
         try {
+            // Save score
             await addDoc(collection(db,'scores'), {
                 uid: currentUser.uid,
                 username: currentUser.displayName || 'Anonymous',
                 score: finalScore,
+                won,
                 caseDate: currentCase.date,
+                isArchive,
                 timestamp: Date.now()
             });
-            await updateStreak();
-        } catch(e) { console.error('Score save failed', e); }
+            // Update user doc
+            const ref = doc(db,'users',currentUser.uid);
+            const snap = await getDoc(ref);
+            const data = snap.exists() ? snap.data() : {};
+            const todayCST = getTodayCST();
+            const yestCST = new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(Date.now()-86400000));
+
+            let streak = data.streak || 0;
+            if (!isArchive) {
+                if (data.lastPlayed !== todayCST) {
+                    streak = data.lastPlayed === yestCST ? streak + 1 : 1;
+                }
+            }
+
+            const totalPts = (data.totalPts || 0) + ptsEarned;
+            const totalWins = (data.totalWins || 0) + (won ? 1 : 0);
+            const totalLosses = (data.totalLosses || 0) + (won ? 0 : 1);
+            const allScores = [...(data.allScores || []), finalScore];
+            const avgScore = Math.round(allScores.reduce((a,b)=>a+b,0) / allScores.length);
+            const bestScore = Math.max(...allScores);
+
+            const updates = { totalPts, totalWins, totalLosses, allScores, avgScore, bestScore };
+            if (!isArchive) { updates.streak = streak; updates.lastPlayed = todayCST; }
+
+            await updateDoc(ref, updates);
+
+            if ((data.streak || 0) < streak) showStreakBadge(streak);
+            if (ptsEarned > 0) showToast(`+${ptsEarned} pts earned!`, 'var(--sage)');
+
+            // Mark completed in Firestore
+            if (!isArchive) {
+                const completedRef = doc(db, 'completed', currentUser.uid);
+                const cSnap = await getDoc(completedRef);
+                const cData = cSnap.exists() ? cSnap.data() : { dates: [] };
+                if (!cData.dates.includes(currentCase.date)) {
+                    cData.dates.push(currentCase.date);
+                    await setDoc(completedRef, cData);
+                }
+            }
+        } catch(e) { console.error('Save failed', e); }
     }
 }
 
 // ── STREAK ────────────────────────────────────────────
-async function updateStreak() {
-    if (!currentUser) return;
-    try {
-        const ref = doc(db,'users',currentUser.uid);
-        const snap = await getDoc(ref);
-        const data = snap.exists() ? snap.data() : {};
-        const todayCST = new Intl.DateTimeFormat('en-CA', {timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-        const yestCST = new Intl.DateTimeFormat('en-CA', {timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(Date.now()-86400000));
-        if (data.lastPlayed === todayCST) return;
-        const streak = data.lastPlayed === yestCST ? (data.streak || 0) + 1 : 1;
-        await updateDoc(ref, { streak, lastPlayed: todayCST });
-        showStreakBadge(streak);
-    } catch(e) {}
-}
-
 function showStreakBadge(n) {
     const badge = document.getElementById('streak-badge');
     document.getElementById('streak-val').innerText = n;
     badge.style.display = 'inline-flex';
+}
+
+// ── PROFILE ───────────────────────────────────────────
+async function openProfile() {
+    if (!currentUser) return;
+    document.getElementById('profileModal').style.display = 'block';
+    try {
+        const snap = await getDoc(doc(db,'users',currentUser.uid));
+        const d = snap.exists() ? snap.data() : {};
+        const name = d.username || 'Doctor';
+        const totalPts = d.totalPts || 0;
+        const lvl = getLevelInfo(totalPts);
+        const wins = d.totalWins || 0;
+        const losses = d.totalLosses || 0;
+        const total = wins + losses;
+        const winRate = total > 0 ? Math.round((wins/total)*100) + '%' : '—';
+        const joined = d.createdAt ? new Date(d.createdAt).toLocaleDateString('en-US',{month:'long',year:'numeric'}) : '—';
+
+        document.getElementById('profile-avatar').innerText = name.substring(0,2).toUpperCase();
+        document.getElementById('profile-name').innerText = `Dr. ${name.toUpperCase()}`;
+        document.getElementById('profile-since').innerText = `Attending since ${joined}`;
+        document.getElementById('profile-level-name').innerText = lvl.name;
+        document.getElementById('profile-level-pts').innerText = `${lvl.ptsInLevel.toLocaleString()} / 3,000 pts`;
+        document.getElementById('profile-xp-fill').style.width = lvl.pct + '%';
+        document.getElementById('profile-total-pts').innerText = totalPts.toLocaleString();
+        document.getElementById('profile-streak').innerText = (d.streak || 0) + ' 🔥';
+        document.getElementById('profile-cases').innerText = total;
+        document.getElementById('profile-avg').innerText = d.avgScore || '—';
+        document.getElementById('profile-best').innerText = d.bestScore || '—';
+        document.getElementById('profile-winrate').innerText = winRate;
+        document.getElementById('profile-wl').innerText = `${wins} / ${losses}`;
+    } catch(e) { console.error('Profile load failed', e); }
 }
 
 // ── AUTH ──────────────────────────────────────────────
@@ -584,15 +786,26 @@ window.processAuth = async () => {
     try {
         if (isSignUp) {
             const cred = await createUserWithEmailAndPassword(auth, email, pass);
-            await setDoc(doc(db,'users',cred.user.uid), { username, streak:0, lastPlayed:'' });
+            await setDoc(doc(db,'users',cred.user.uid), {
+                username, streak:0, lastPlayed:'', totalPts:0,
+                totalWins:0, totalLosses:0, allScores:[], avgScore:0, bestScore:0,
+                createdAt: Date.now()
+            });
         } else {
             await signInWithEmailAndPassword(auth, email, pass);
         }
         document.getElementById('authModal').style.display = 'none';
         showToast('Welcome, Dr. ' + username.toUpperCase(), 'var(--sage)');
     } catch(e) {
-        showToast(isSignUp ? 'Sign up failed. Try a different username.' : 'Login failed. Check credentials.', 'var(--danger)');
+        showToast(isSignUp ? 'Sign up failed. Try a different username.' : 'Login failed.', 'var(--danger)');
     }
+};
+
+window.doLogout = async () => {
+    await signOut(auth);
+    document.getElementById('profileModal').style.display = 'none';
+    document.getElementById('auth-ui').innerHTML = `<button class="login-btn" onclick="document.getElementById('authModal').style.display='block'">Sign In</button>`;
+    showToast('Signed out', '#5a7a52');
 };
 
 onAuthStateChanged(auth, async (user) => {
@@ -601,8 +814,31 @@ onAuthStateChanged(auth, async (user) => {
         const snap = await getDoc(doc(db,'users',user.uid));
         const data = snap.exists() ? snap.data() : {};
         const name = data.username || 'Doctor';
-        document.getElementById('auth-ui').innerHTML = `<span style="font-size:12px;font-weight:700;color:var(--text)">Dr. ${name.toUpperCase()}</span>`;
+        const lvl = getLevelInfo(data.totalPts || 0);
+
+        document.getElementById('auth-ui').innerHTML = `
+            <button class="user-btn" onclick="openProfile()">
+                Dr. ${name.toUpperCase()} · <span style="color:var(--sage)">${lvl.name}</span>
+            </button>`;
+
         if ((data.streak || 0) > 1) showStreakBadge(data.streak);
+
+        // Check Firestore for already played today
+        if (!isArchive) {
+            try {
+                const completedRef = doc(db,'completed',user.uid);
+                const cSnap = await getDoc(completedRef);
+                if (cSnap.exists() && cSnap.data().dates?.includes(currentCase?.date)) {
+                    // Get their score for today
+                    const q = query(collection(db,'scores'), where('uid','==',user.uid), where('caseDate','==',currentCase?.date));
+                    const sSnap = await getDocs(q);
+                    if (!sSnap.empty) {
+                        const d = sSnap.docs[0].data();
+                        showAlreadyPlayed({ score: d.score, won: d.won });
+                    }
+                }
+            } catch(e) {}
+        }
     }
 });
 
