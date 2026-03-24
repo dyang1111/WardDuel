@@ -703,11 +703,13 @@ async function endGame(success, payload) {
             }
 
             const totalPts = (data.totalPts || 0) + ptsEarned;
-            const totalWins = (data.totalWins || 0) + (won ? 1 : 0);
-            const totalLosses = (data.totalLosses || 0) + (won ? 0 : 1);
-            const allScores = [...(data.allScores || []), finalScore];
-            const avgScore = Math.round(allScores.reduce((a,b)=>a+b,0) / allScores.length);
-            const bestScore = Math.max(...allScores);
+
+            // Only count daily case for competitive stats
+            const totalWins = (data.totalWins || 0) + (!isArchive && won ? 1 : 0);
+            const totalLosses = (data.totalLosses || 0) + (!isArchive && !won ? 1 : 0);
+            const allScores = !isArchive ? [...(data.allScores || []), finalScore] : (data.allScores || []);
+            const avgScore = allScores.length > 0 ? Math.round(allScores.reduce((a,b)=>a+b,0) / allScores.length) : 0;
+            const bestScore = allScores.length > 0 ? Math.max(...allScores) : 0;
 
             const updates = { totalPts, totalWins, totalLosses, allScores, avgScore, bestScore };
             if (!isArchive) { updates.streak = streak; updates.lastPlayed = todayCST; }
@@ -717,15 +719,13 @@ async function endGame(success, payload) {
             if ((data.streak || 0) < streak) showStreakBadge(streak);
             if (ptsEarned > 0) showToast(`+${ptsEarned} pts earned!`, 'var(--sage)');
 
-            // Mark completed in Firestore
-            if (!isArchive) {
-                const completedRef = doc(db, 'completed', currentUser.uid);
-                const cSnap = await getDoc(completedRef);
-                const cData = cSnap.exists() ? cSnap.data() : { dates: [] };
-                if (!cData.dates.includes(currentCase.date)) {
-                    cData.dates.push(currentCase.date);
-                    await setDoc(completedRef, cData);
-                }
+            // Mark completed in Firestore (both daily and archive)
+            const completedRef = doc(db, 'completed', currentUser.uid);
+            const cSnap = await getDoc(completedRef);
+            const cData = cSnap.exists() ? cSnap.data() : { dates: [] };
+            if (!cData.dates.includes(currentCase.date)) {
+                cData.dates.push(currentCase.date);
+                await setDoc(completedRef, cData);
             }
         } catch(e) { console.error('Save failed', e); }
     }
