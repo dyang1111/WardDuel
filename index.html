@@ -21,7 +21,7 @@
 
         /* NAV */
         .top-bar{width:100%;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:var(--shadow)}
-        .logo{font-weight:800;font-size:15px;color:var(--text);text-decoration:none;letter-spacing:.02em;display:flex;align-items:center;gap:8px}
+        .logo{font-weight:800;font-size:18px;color:var(--text);text-decoration:none;letter-spacing:.01em;display:flex;align-items:center;gap:8px}
         .logo span{color:var(--sage)}
         .logo-icon{flex-shrink:0}
         .nav-right{display:flex;align-items:center;gap:12px}
@@ -294,7 +294,6 @@
             <circle cx="36" cy="36" r="2" fill="#5a7a52"/>
         </svg>
         Ward<span>Duel</span>
-    </a>
     <div class="nav-right">
         <a href="archives.html" class="nav-link">Archives</a>
         <div id="auth-ui">
@@ -310,7 +309,7 @@
     <div class="hp-bar-side">
         <div class="hp-num" id="hp-val">100</div>
         <div class="hp-track-vert">
-            <div class="hp-fill-vert" id="hp-fill" style="height:100%"></div>
+            <div class="hp-fill-vert" id="hp-fill" style="height:100%;background:var(--sage)"></div>
         </div>
         <div class="hp-label-vert">HP</div>
     </div>
@@ -614,9 +613,10 @@ function updateHP(){
     document.getElementById('hp-val').innerText=hp;
     const fill=document.getElementById('hp-fill');
     fill.style.height=hp+'%';
+    // Always green at full, shifts amber then danger as it drops
     const col=hp>60?'var(--sage)':hp>30?'var(--amber)':'var(--danger)';
     fill.style.background=col;
-    document.getElementById('hp-val').style.color=hp>60?'var(--text)':col;
+    document.getElementById('hp-val').style.color=hp>=100?'var(--text)':col;
     if(hp<=0&&gameActive) endGame(false,'HP Depleted');
 }
 
@@ -807,11 +807,10 @@ window.openProfile=async function(){
 function buildIconPicker(levelIdx){
     const opts = document.getElementById('icon-opts');
     const ICON_OPTS = [
-        {id:'logo',  label:'WardDuel', svg: logoIconSVG(44)},
-        {id:'heart', label:'Heart',    svg: heartIconSVG(44)},
-        {id:'bones', label:'Bones',    svg: bonesIconSVG(44)},
-        {id:'cross', label:'Med Cross',svg: crossIconSVG(44)},
-        {id:'character',label:'Character',svg: renderIcon(userPrefs.animalIdx,userPrefs.colorIdx,userPrefs.specIdx,levelIdx,44)},
+        {id:'logo',      label:'WardDuel',  svg: logoIconSVG(44)},
+        {id:'heart',     label:'Heart',     svg: heartIconSVG(44)},
+        {id:'bones',     label:'Bones',     svg: bonesIconSVG(44)},
+        {id:'character', label:'Character', svg: renderIcon(userPrefs.animalIdx,userPrefs.colorIdx,userPrefs.specIdx,levelIdx,44)},
     ];
     opts.innerHTML='';
     ICON_OPTS.forEach(o=>{
@@ -831,14 +830,27 @@ function buildIconPicker(levelIdx){
     // Character builder
     const cbw=document.getElementById('char-builder-wrap');
     cbw.style.display=userPrefs.iconType==='character'?'block':'none';
+
+    // Work out what's unlocked based on level
+    const scrubsUnlocked = levelIdx >= 1;   // MS2 = level index 1
+    const specUnlocked   = levelIdx >= 3;   // Resident = level index 3
+
     cbw.innerHTML=`
         <div class="char-builder">
             <div class="section-title" style="margin-bottom:8px">Animal</div>
             <div class="animal-grid" id="cb-animals"></div>
-            <div class="section-title" style="margin-bottom:8px">Scrub Color</div>
-            <div class="color-row" id="cb-colors"></div>
-            <div class="section-title" style="margin-bottom:8px">Specialty</div>
-            <div class="spec-grid" id="cb-specs"></div>
+
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                <div class="section-title" style="margin-bottom:0">Scrub Color</div>
+                ${!scrubsUnlocked ? `<span style="font-size:10px;font-weight:600;color:var(--amber);background:var(--amber-light);border:1px solid var(--amber-border);padding:2px 8px;border-radius:5px">🔒 Unlocks at MS2 (3,000 pts)</span>` : ''}
+            </div>
+            <div class="color-row" id="cb-colors" style="opacity:${scrubsUnlocked?1:0.35};pointer-events:${scrubsUnlocked?'auto':'none'}"></div>
+
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;margin-top:4px">
+                <div class="section-title" style="margin-bottom:0">Specialty</div>
+                ${!specUnlocked ? `<span style="font-size:10px;font-weight:600;color:var(--amber);background:var(--amber-light);border:1px solid var(--amber-border);padding:2px 8px;border-radius:5px">🔒 Unlocks at Resident (9,000 pts)</span>` : ''}
+            </div>
+            <div class="spec-grid" id="cb-specs" style="opacity:${specUnlocked?1:0.35};pointer-events:${specUnlocked?'auto':'none'}"></div>
         </div>`;
 
     const ag=document.getElementById('cb-animals');
@@ -856,7 +868,10 @@ function buildIconPicker(levelIdx){
         d.className='color-sw'+(userPrefs.colorIdx===i?' sel':'');
         d.style.background=c.v;
         d.title=c.n;
-        d.onclick=()=>{userPrefs.colorIdx=i;document.querySelectorAll('.color-sw').forEach((e,j)=>e.classList.toggle('sel',j===i));savePrefs();refreshCharBuilder(levelIdx);};
+        d.onclick=()=>{
+            if(!scrubsUnlocked)return;
+            userPrefs.colorIdx=i;document.querySelectorAll('.color-sw').forEach((e,j)=>e.classList.toggle('sel',j===i));savePrefs();refreshCharBuilder(levelIdx);
+        };
         cr.appendChild(d);
     });
 
@@ -865,7 +880,10 @@ function buildIconPicker(levelIdx){
         const d=document.createElement('div');
         d.className='spec-opt'+(userPrefs.specIdx===i?' sel':'');
         d.innerHTML=`<div class="spec-ico" style="background:${s.c}22;border:1px solid ${s.c}44;color:${s.c}">${s.i}</div><span class="spec-nm">${s.n}</span>`;
-        d.onclick=()=>{userPrefs.specIdx=i;document.querySelectorAll('.spec-opt').forEach((e,j)=>e.classList.toggle('sel',j===i));savePrefs();refreshCharBuilder(levelIdx);};
+        d.onclick=()=>{
+            if(!specUnlocked)return;
+            userPrefs.specIdx=i;document.querySelectorAll('.spec-opt').forEach((e,j)=>e.classList.toggle('sel',j===i));savePrefs();refreshCharBuilder(levelIdx);
+        };
         sg.appendChild(d);
     });
 }
