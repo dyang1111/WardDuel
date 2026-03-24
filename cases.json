@@ -2,119 +2,119 @@
   {
     "date": "2026-03-16",
     "adminScore": 80,
-    "hx_brief": "62yo male with sudden onset tearing chest pain radiating to the back.",
+    "hx_brief": "62yo male with severe chest pain that started suddenly while lifting groceries. He says it feels different from anything he's had before.",
     "hints": {
-      "hx": "Pain is 'tearing' and 10/10. Patient has long-standing untreated HTN.",
-      "pe": "Blood pressure discrepancy of >20mmHg between arms. New early diastolic murmur.",
-      "img": "CTA Chest: Clearly visualized intimal tear with a 'true' and 'false' lumen."
+      "hx": "He describes it as a deep, intense pain that seems to move. Has been on no medications despite knowing his blood pressure runs high for years.",
+      "pe": "You notice his blood pressure readings are oddly different between his arms. A faint murmur is audible at the aortic area.",
+      "img": "CTA Chest: A linear density is visualized within the aortic lumen separating two distinct flow channels."
     },
     "specialty_name": "D-Dimer",
     "lab_results": {
-      "CBC": "Normal", "CMP": "Cr 1.4 (Mildly Elevated)", "EKG": "Left Axis Deviation",
+      "CBC": "Normal", "CMP": "Creatinine mildly elevated at 1.4", "EKG": "Left axis deviation, no ST changes",
       "Trop": "Negative x2", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Significantly elevated (3,500 ng/mL); non-specific for origin."
+      "Specialty": "Markedly elevated at 3,500 ng/mL — nonspecific, does not localize origin."
     },
     "answer": "Aortic Dissection"
   },
   {
     "date": "2026-03-17",
     "adminScore": 85,
-    "hx_brief": "24yo female with periumbilical pain that migrated to the RLQ.",
+    "hx_brief": "24yo female with 2 days of abdominal pain and one episode of vomiting. She hasn't had much of an appetite since it started.",
     "hints": {
-      "hx": "Started as dull midline pain; now sharp in the RLQ. Nausea and anorexia present.",
-      "pe": "Positive Psoas sign and Rovsing sign. Guarding in the right lower quadrant.",
-      "img": "CT Abdomen: Dilated appendix >7mm with wall thickening and fat stranding."
+      "hx": "The pain started near her belly button and has since shifted. She rates it 7/10 and says movement makes it worse. No recent travel or sick contacts.",
+      "pe": "Tenderness localizes to the right lower quadrant. Palpating the left lower quadrant reproduces her pain on the right. Passive extension of the right hip worsens it.",
+      "img": "CT Abdomen/Pelvis: A blind-ending tubular structure in the RLQ measuring 8.5mm in diameter with surrounding inflammatory fat stranding."
     },
     "specialty_name": "CRP",
     "lab_results": {
-      "CBC": "WBC 15.5 (Shift to the left)", "CMP": "Normal", "EKG": "Normal",
-      "Trop": "Normal", "Lipase": "Normal", "UA": "Negative for hematuria/nitrites", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Elevated inflammatory markers (40 mg/L)."
+      "CBC": "WBC 15.2 with neutrophil predominance", "CMP": "Normal", "EKG": "Normal",
+      "Trop": "Normal", "Lipase": "Normal", "UA": "Few WBCs, no nitrites, no casts", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "CRP 42 mg/L (elevated)."
     },
     "answer": "Appendicitis"
   },
   {
     "date": "2026-03-18",
     "adminScore": 70,
-    "hx_brief": "55yo female with sudden severe 'pounding' headache and blurry vision.",
+    "hx_brief": "55yo female with a severe headache and blurry vision that came on suddenly an hour ago. She feels nauseated and the light is bothering her.",
     "hints": {
-      "hx": "Pain is orbital. Patient mentions seeing 'rainbow halos' around the light bulbs.",
-      "pe": "Right eye: Steamy/cloudy cornea. Pupil is mid-dilated and non-reactive to light.",
-      "img": "Slit-lamp: Total occlusion of the iridocorneal angle."
+      "hx": "She says the pain is worst around her right eye. She noticed colored rings around lights earlier today before the headache started. No prior headache history.",
+      "pe": "Right eye appears hazy on inspection. The pupil on that side is mid-dilated and does not react to light. The cornea has a ground-glass appearance.",
+      "img": "Slit-lamp exam: Anterior chamber is shallow. Gonioscopy confirms complete closure of the iridocorneal drainage angle."
     },
     "specialty_name": "Tonometry",
     "lab_results": {
       "CBC": "Normal", "CMP": "Normal", "EKG": "Normal",
       "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Intraocular pressure is 58 mmHg (Normal: 10-21)."
+      "Specialty": "IOP right eye: 61 mmHg. Left eye: 14 mmHg. (Normal: 10–21 mmHg)"
     },
     "answer": "Acute Angle-Closure Glaucoma"
   },
   {
     "date": "2026-03-19",
     "adminScore": 60,
-    "hx_brief": "32yo male with 2 days of progressive weakness in his legs moving upward.",
+    "hx_brief": "32yo male brought in by his roommate for progressive difficulty walking over the past 3 days. He keeps saying his legs feel heavy.",
     "hints": {
-      "hx": "Recently recovered from a 'stomach flu' with bloody diarrhea 2 weeks ago.",
-      "pe": "Lower extremity strength 1/5. Absent patellar and Achilles reflexes.",
-      "img": "MRI Spine: Enhancement of the cauda equina nerve roots."
+      "hx": "He had a GI illness about 2 weeks ago with crampy diarrhea that resolved on its own. The weakness started in his feet and has been creeping upward since.",
+      "pe": "Bilateral lower extremity weakness, worse distally. Deep tendon reflexes are absent at the knees and ankles. Sensation is mildly reduced in a stocking distribution.",
+      "img": "MRI Spine: No cord compression or intrinsic cord signal change. Subtle enhancement of the ventral nerve roots of the cauda equina."
     },
     "specialty_name": "CSF Analysis",
     "lab_results": {
       "CBC": "Normal", "CMP": "Normal", "EKG": "Normal",
-      "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Reduced Negative Inspiratory Force (NIF)", "Coags": "Normal",
-      "Specialty": "Albuminocytologic dissociation (High Protein, Normal Cell Count)."
+      "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "NIF (Negative Inspiratory Force) reduced at -22 cmH2O", "Coags": "Normal",
+      "Specialty": "CSF: Protein 310 mg/dL (high), WBC 3 cells/µL (normal). Classic albuminocytologic dissociation."
     },
     "answer": "Guillain-Barre Syndrome (GBS)"
   },
   {
     "date": "2026-03-20",
     "adminScore": 75,
-    "hx_brief": "68yo male with painless gross hematuria for three weeks.",
+    "hx_brief": "68yo male noticed blood in his urine on and off for the past month. He has no pain and feels otherwise well.",
     "hints": {
-      "hx": "Ex-smoker. Patient mentions working in a dye manufacturing plant for 25 years.",
-      "pe": "No palpable masses. Non-tender abdomen. Normal DRE.",
-      "img": "Cystoscopy: Multiple exophytic, cauliflower-like lesions on the trigone."
+      "hx": "He smoked a pack a day for 30 years, quit 10 years ago. He worked in industrial manufacturing for most of his career. No UTI symptoms, no flank pain.",
+      "pe": "Abdomen is soft and non-tender. No costovertebral angle tenderness. DRE is normal. No palpable lymphadenopathy.",
+      "img": "Cystoscopy: Multiple raised, irregular lesions visualized near the trigone. Lesions have a papillary, frond-like architecture."
     },
     "specialty_name": "Urine Cytology",
     "lab_results": {
-      "CBC": "Hb 10.8 (Anemia of chronic disease)", "CMP": "Normal", "EKG": "Normal",
-      "Trop": "Normal", "Lipase": "Normal", "UA": "Numerous RBCs; No casts; No dysmorphic RBCs", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "High-grade pleomorphic urothelial cells detected."
+      "CBC": "Hemoglobin 10.6 — normocytic anemia", "CMP": "Normal", "EKG": "Normal",
+      "Trop": "Normal", "Lipase": "Normal", "UA": "3+ blood, no casts, no dysmorphic RBCs, no nitrites", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Atypical urothelial cells with high nuclear-to-cytoplasmic ratio — suspicious for high-grade malignancy."
     },
     "answer": "Bladder Cancer"
   },
   {
     "date": "2026-03-21",
     "adminScore": 85,
-    "hx_brief": "45yo obese female with RUQ pain radiating to the right shoulder.",
+    "hx_brief": "45yo female with recurring episodes of right-sided abdominal pain. Today's episode is the worst one yet and she's been vomiting.",
     "hints": {
-      "hx": "Pain occurs roughly 30 minutes after eating fatty foods. Nausea is severe.",
-      "pe": "Positive Murphy's sign. Patient stops breathing mid-inspiration during RUQ palpation.",
-      "img": "HIDA Scan: Non-visualization of the gallbladder after tracer injection."
+      "hx": "The pain typically comes on about 30–40 minutes after eating and lasts a few hours before resolving. Today it hasn't gone away. She also feels feverish.",
+      "pe": "She winces and stops inhaling when you deeply palpate the right upper quadrant. Mild jaundice is not present. Low-grade fever at 38.2°C.",
+      "img": "HIDA scan: Tracer is taken up by the liver normally but the gallbladder is never visualized even on delayed imaging."
     },
     "specialty_name": "LFTs",
     "lab_results": {
-      "CBC": "WBC 14.0", "CMP": "Normal Albumin/Protein", "EKG": "Normal",
-      "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Mildly elevated AST/ALT; Normal Total Bilirubin."
+      "CBC": "WBC 13.8 with left shift", "CMP": "Normal BMP, normal albumin", "EKG": "Normal",
+      "Trop": "Normal", "Lipase": "Mildly elevated but <3x ULN", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "AST 52, ALT 61 (mildly elevated). Total bilirubin normal. ALP mildly elevated."
     },
     "answer": "Acute Cholecystitis"
   },
   {
     "date": "2026-03-22",
     "adminScore": 65,
-    "hx_brief": "19yo male athlete collapses and dies during a basketball game.",
+    "hx_brief": "19yo male athlete is brought to the ED after collapsing on the court during a basketball game. Bystander CPR was initiated. He did not survive.",
     "hints": {
-      "hx": "Patient was previously healthy but his father died of 'heart issues' at age 30.",
-      "pe": "4/6 Crescendo-decrescendo murmur at LLSB. Murmur softens when squatting.",
-      "img": "Echo: Marked ventricular septal thickening; Systolic Anterior Motion (SAM) of mitral valve."
+      "hx": "His parents state he had no known medical conditions, though he occasionally complained of feeling lightheaded during intense exercise. His father passed away unexpectedly at 32.",
+      "pe": "On prior sports physical (chart review): A harsh systolic murmur was noted at the left sternal border. It was documented as louder when standing and softer when squatting.",
+      "img": "Echocardiogram (post-mortem review): Asymmetric septal hypertrophy with a septal-to-posterior wall ratio >1.5. Systolic anterior motion of the mitral valve leaflet observed."
     },
     "specialty_name": "Genetic Panel",
     "lab_results": {
-      "CBC": "Normal", "CMP": "Normal", "EKG": "Deep narrow 'dagger' Q waves in lateral leads",
-      "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Identified mutation in Sarcomere protein (Beta-myosin heavy chain)."
+      "CBC": "Normal", "CMP": "Normal", "EKG": "Deep narrow Q waves in leads I, aVL, and V5–V6. Increased voltage.",
+      "Trop": "Elevated — consistent with demand ischemia peri-arrest", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Pathogenic variant identified in MYH7 gene encoding beta-myosin heavy chain."
     },
     "answer": "Hypertrophic Cardiomyopathy (HCM)"
   },
@@ -155,85 +155,85 @@
   {
     "date": "2026-03-25",
     "adminScore": 72,
-    "hx_brief": "52yo male with 'recurrent pneumonia' and persistent hemoptysis for 4 months.",
+    "hx_brief": "52yo male with 4 months of cough that won't go away and one episode of coughing up blood last week.",
     "hints": {
-      "hx": "30-pack-year smoker. Reports a new 'whistling' sound when breathing. Recently noted his shirts feel tight around the neck.",
-      "pe": "Dullness to percussion in right upper lobe. Right arm is noticeably more edematous than the left.",
-      "img": "CT Chest: Central hilar mass causing narrowing of the right mainstem bronchus."
+      "hx": "30 pack-year smoking history. He's noticed a new high-pitched wheeze when breathing. His right arm has been swelling more than the left over the past few weeks.",
+      "pe": "Dullness to percussion over the right upper lobe. Decreased breath sounds on the right. Prominent neck veins on the right side.",
+      "img": "CT Chest with contrast: A spiculated central mass in the right hilum causing luminal narrowing of the right mainstem bronchus. Mediastinal lymphadenopathy present."
     },
     "specialty_name": "Biopsy",
     "lab_results": {
-      "CBC": "Normal", "CMP": "Calcium: 12.8 (High—Paraneoplastic)", "EKG": "Normal", "Trop": "Normal",
-      "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Histology: Intercellular bridges and Keratin pearls."
+      "CBC": "Normal", "CMP": "Calcium 12.8 — elevated", "EKG": "Normal", "Trop": "Normal",
+      "Lipase": "Normal", "UA": "Normal", "ABG": "Mild hypoxia on room air", "Coags": "Normal",
+      "Specialty": "Histopathology: Polygonal cells with intercellular bridges and keratin pearl formation."
     },
     "answer": "Squamous Cell Carcinoma"
   },
   {
     "date": "2026-03-26",
     "adminScore": 55,
-    "hx_brief": "31yo female with acute onset of severe abdominal pain and dark urine after a night of drinking.",
+    "hx_brief": "31yo female presenting with severe abdominal pain and confusion that started last night after a social event where she had a few drinks.",
     "hints": {
-      "hx": "Patient has had similar episodes of abdominal pain but no cause was found. Denies any rashes or joint pain.",
-      "pe": "Abdomen is soft, non-tender, and non-distended despite '10/10' pain. No rebound or guarding.",
-      "img": "CT Abdomen: Completely unremarkable (Negative for appendicitis/gallstones)."
+      "hx": "She has had 3 similar episodes of abdominal pain in the past 2 years — each time workup was unremarkable. She also noticed her urine looked darker than usual this morning.",
+      "pe": "Despite reporting 10/10 abdominal pain, her abdomen is completely soft with no guarding, rigidity, or rebound tenderness. Mild tachycardia.",
+      "img": "CT Abdomen/Pelvis: No acute intra-abdominal pathology. No free air, no obstruction, no appendiceal or gallbladder abnormality."
     },
     "specialty_name": "Ehrlich Test",
     "lab_results": {
-      "CBC": "Normal", "CMP": "Hyponatremia (Na: 126)", "EKG": "Sinus Tachycardia", "Trop": "Normal",
-      "Lipase": "Normal", "UA": "Negative for blood; Turns purple/dark after standing in light.", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Elevated urinary Porphobilinogen (PBG)."
+      "CBC": "Normal", "CMP": "Sodium 126 (hyponatremia)", "EKG": "Sinus tachycardia at 108 bpm", "Trop": "Normal",
+      "Lipase": "Normal", "UA": "No blood on dipstick; sample left in light turns dark purple", "ABG": "Normal", "Coags": "Normal",
+      "Specialty": "Urine porphobilinogen (PBG): markedly elevated. Watson-Schwartz test positive."
     },
     "answer": "Acute Intermittent Porphyria"
   },
   {
     "date": "2026-03-27",
     "adminScore": 78,
-    "hx_brief": "65yo male presents with 3 days of localized back pain and sudden onset urinary incontinence.",
+    "hx_brief": "65yo male with 3 days of worsening back pain who now can't control his bladder. His wife says he's been tripping over his own feet.",
     "hints": {
-      "hx": "History of prostate cancer (Gleason 8). He describes 'electric-like' pains shooting down both legs.",
-      "pe": "Tenderness over T10-T12 vertebrae. Decreased anal sphincter tone. Hyperreflexia in lower extremities.",
-      "img": "MRI Spine: Epidural mass compressing the spinal cord at the thoracic level."
+      "hx": "He was diagnosed with prostate cancer 2 years ago and completed radiation therapy. He describes shooting electric pains down both legs that started before the back pain.",
+      "pe": "Point tenderness over the lower thoracic spine. Bilateral lower extremity hyperreflexia. Reduced anal sphincter tone on rectal exam.",
+      "img": "MRI Spine with contrast: Epidural soft tissue mass at T11 causing significant cord compression. Marrow replacement signal in multiple vertebral bodies."
     },
     "specialty_name": "PSA Level",
     "lab_results": {
-      "CBC": "Normal", "CMP": "Alkaline Phosphatase: 400 (Very High)", "EKG": "Normal", "Trop": "Normal",
+      "CBC": "Normal", "CMP": "Alkaline phosphatase 412 — markedly elevated", "EKG": "Normal", "Trop": "Normal",
       "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Prostate Specific Antigen (PSA): 85 ng/mL."
+      "Specialty": "PSA: 85 ng/mL (severely elevated)."
     },
     "answer": "Prostate Cancer"
   },
   {
     "date": "2026-03-28",
     "adminScore": 68,
-    "hx_brief": "14yo boy with sudden onset of high fever, petechial rash on ankles, and severe headache.",
+    "hx_brief": "14yo male brought in by his parents with 2 days of fever, headache, and a rash that started on his wrists.",
     "hints": {
-      "hx": "Just returned from a summer camping trip in North Carolina. Denies neck stiffness.",
-      "pe": "Maculopapular rash on wrists and ankles, some lesions are starting to become petechial.",
-      "img": "CXR: Normal. CT Head: Normal (Negative for hemorrhage/mass)."
+      "hx": "The family returned from a camping trip in rural North Carolina 8 days ago. The rash has been spreading and some spots look darker than others. He has no neck stiffness.",
+      "pe": "Maculopapular rash present on wrists, ankles, and palms — some lesions are becoming petechial. Temperature 39.4°C. No meningismus.",
+      "img": "CT Head: No hemorrhage, no mass, no edema. CXR: Clear lung fields bilaterally."
     },
     "specialty_name": "Serology",
     "lab_results": {
-      "CBC": "Thrombocytopenia (Plts: 90k); Hyponatremia (Na: 130)", "CMP": "Elevated ALT/AST", "EKG": "Normal",
+      "CBC": "Platelets 88k (low), WBC mildly low, hyponatremia Na 129", "CMP": "AST 68, ALT 72 — mildly elevated", "EKG": "Normal",
       "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Indirect Immunofluorescence for Rickettsia rickettsii (Pending)."
+      "Specialty": "IFA for Rickettsia rickettsii: pending (do not wait for results before treating)."
     },
     "answer": "Rocky Mountain Spotted Fever"
   },
   {
     "date": "2026-03-29",
     "adminScore": 62,
-    "hx_brief": "38yo female with 2 weeks of 'crushing' fatigue, diffuse bone pain, and gum bleeding.",
+    "hx_brief": "38yo female presenting with 2 weeks of profound fatigue, easy bruising, and pain throughout her body. Her gums have been bleeding when she brushes her teeth.",
     "hints": {
-      "hx": "Patient feels 'unusually cold' lately. Denies travel or recent infections.",
-      "pe": "Pale conjunctiva. Petechiae on the trunk. Gingival hyperplasia (swollen gums).",
-      "img": "Bone Marrow: Hypercellular marrow with >20% myeloblasts."
+      "hx": "She has felt unusually cold and short of breath climbing stairs. No recent infections, no travel, no family history of blood disorders. She noticed her gums look swollen.",
+      "pe": "Conjunctival pallor. Scattered petechiae on the trunk and lower extremities. Gingival hyperplasia noted on oral exam. No hepatosplenomegaly appreciated.",
+      "img": "Bone marrow biopsy: Hypercellular marrow with sheets of immature blasts comprising >20% of nucleated cells. Normal architecture is effaced."
     },
     "specialty_name": "MPO Stain",
     "lab_results": {
-      "CBC": "WBC 60,000; Hb 7.2; Plts 30k", "CMP": "Normal", "EKG": "Normal", "Trop": "Normal",
-      "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Elevated PT/PTT; Low Fibrinogen (DIC signs)",
-      "Specialty": "Myeloperoxidase (MPO) positive; Auer rods visualized in cytoplasm."
+      "CBC": "WBC 58,000 (markedly elevated), Hgb 7.0, Platelets 28k", "CMP": "Normal", "EKG": "Sinus tachycardia", "Trop": "Normal",
+      "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "PT/PTT prolonged, fibrinogen low — consistent with DIC",
+      "Specialty": "MPO stain: strongly positive. Auer rods identified on peripheral smear."
     },
     "answer": "Acute Myeloid Leukemia (AML)"
   }
