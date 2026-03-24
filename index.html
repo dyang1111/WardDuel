@@ -94,6 +94,8 @@
         .lab-btn{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 6px;font-size:0.78rem;font-weight:600;cursor:pointer;color:var(--text);transition:all .15s;text-align:center}
         .lab-btn:hover:not(.ordered){border-color:var(--accent);color:var(--accent);background:var(--accent-light)}
         .lab-btn.ordered{border-color:#bbf7d0;background:var(--success-light);color:var(--success);cursor:default}
+        .lab-btn.locked-lab{opacity:.45;cursor:not-allowed;border-style:dashed}
+        .lab-btn.locked-lab:hover{border-color:var(--border);color:var(--text);background:var(--bg)}
 
         /* RESULTS */
         .results-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:none}
@@ -220,21 +222,21 @@
     <div class="actions-card">
         <div class="card-title">Clinical Workup</div>
         <div class="actions-grid">
-            <button class="action-btn" id="btn-hx" onclick="getHint('hx',10)">
+            <button class="action-btn" id="btn-hx" onclick="getHint('hx',8)">
                 <span class="ab-name">Add. History</span>
-                <span class="ab-cost">−10 HP</span><span class="ab-check">✓ Revealed</span>
+                <span class="ab-cost">−8 HP</span><span class="ab-check">✓ Revealed</span>
             </button>
-            <button class="action-btn" id="btn-pe" onclick="getHint('pe',15)">
+            <button class="action-btn" id="btn-pe" onclick="getHint('pe',12)">
                 <span class="ab-name">PE Findings</span>
-                <span class="ab-cost">−15 HP</span><span class="ab-check">✓ Revealed</span>
+                <span class="ab-cost">−12 HP</span><span class="ab-check">✓ Revealed</span>
             </button>
             <button class="action-btn" id="btn-lab" onclick="toggleLabPanel()">
                 <span class="ab-name">Order Labs</span>
-                <span class="ab-cost">−5 ea</span><span class="ab-check">✓ Open</span>
+                <span class="ab-cost">−8 ea</span><span class="ab-check">✓ Open</span>
             </button>
-            <button class="action-btn" id="btn-img" onclick="getHint('img',25)">
+            <button class="action-btn" id="btn-img" onclick="getHint('img',20)">
                 <span class="ab-name">Imaging</span>
-                <span class="ab-cost">−25 HP</span><span class="ab-check">✓ Revealed</span>
+                <span class="ab-cost">−20 HP</span><span class="ab-check">✓ Revealed</span>
             </button>
         </div>
     </div>
@@ -254,7 +256,7 @@
             <button class="lab-btn" id="lab-UA" onclick="orderLab('UA')">Urinalysis</button>
             <button class="lab-btn" id="lab-ABG" onclick="orderLab('ABG')">ABG/VBG</button>
             <button class="lab-btn" id="lab-Coags" onclick="orderLab('Coags')">Coags</button>
-            <button class="lab-btn" id="lab-Specialty" onclick="orderLab('Specialty')">Specialty</button>
+            <button class="lab-btn locked-lab" id="lab-Specialty" onclick="orderLab('Specialty')" disabled>🔒 Specialty</button>
         </div>
     </div>
 
@@ -427,7 +429,20 @@ window.toggleLabPanel = () => {
 
 window.orderLab = (key) => {
     if (!gameActive || orderedLabs.has(key)) return;
-    hp -= 5; orderedLabs.add(key); updateHP();
+    if (key === 'Specialty') {
+        const nonSpecialtyOrdered = [...orderedLabs].filter(k => k !== 'Specialty').length;
+        if (nonSpecialtyOrdered < 2) { showToast('Order 2 labs first to unlock Specialty', '#666'); return; }
+    }
+    hp -= 8; orderedLabs.add(key); updateHP();
+
+    // Unlock specialty button after 2 non-specialty labs
+    const nonSpecialtyOrdered = [...orderedLabs].filter(k => k !== 'Specialty').length;
+    if (nonSpecialtyOrdered >= 2) {
+        const specBtn = document.getElementById('lab-Specialty');
+        specBtn.disabled = false;
+        specBtn.classList.remove('locked-lab');
+        specBtn.innerText = currentCase.specialty_name || 'Specialty';
+    }
 
     const result = (currentCase.lab_results && currentCase.lab_results[key]) || 'Normal / No findings';
     const label = key === 'Specialty' ? (currentCase.specialty_name || 'Specialty') : key;
