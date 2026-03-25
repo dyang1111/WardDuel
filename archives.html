@@ -7,45 +7,136 @@
     <style>
         *{box-sizing:border-box;margin:0;padding:0}
         :root{
-            --bg:#f2f3ee; --surface:#ffffff; --border:#dde0d6; --border-strong:#c8ccbf;
-            --text:#1c2218; --text-muted:#7a8a72; --text-subtle:#9aaa92;
-            --sage:#5a7a52; --sage-light:#e2eade; --sage-border:#b8d0b0;
-            --amber:#b07030; --amber-light:#fffbeb; --amber-border:#f5d080;
-            --radius:11px; --radius-sm:8px;
-            --shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
-            --shadow-md:0 4px 12px rgba(0,0,0,0.08);
+            --bg:#f7f9fc;
+            --surface:#ffffff;
+            --border:#dde3ed;
+            --border-strong:#c4cdd9;
+            --text:#0f172a;
+            --text-muted:#475569;
+            --text-subtle:#94a3b8;
+            --accent:#3b82f6;
+            --accent-light:#eff6ff;
+            --accent-border:#bfdbfe;
+            --success:#16a34a;
+            --success-light:#f0fdf4;
+            --success-border:#bbf7d0;
+            --amber:#d97706;
+            --amber-light:#fffbeb;
+            --amber-border:#fde68a;
+            --radius:11px;
+            --radius-sm:8px;
+            --shadow:0 1px 3px rgba(15,23,42,.07),0 1px 2px rgba(15,23,42,.04);
+            --shadow-md:0 4px 12px rgba(15,23,42,.10);
         }
         body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}
+
         .top-bar{width:100%;padding:13px 24px;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:var(--shadow)}
         .logo{font-weight:800;font-size:15px;color:var(--text);text-decoration:none;letter-spacing:.02em}
-        .logo span{color:var(--sage)}
+        .logo span{color:var(--accent)}
         .back-link{color:var(--text-muted);text-decoration:none;font-size:12px;font-weight:500;display:flex;align-items:center;gap:5px;transition:color .15s}
         .back-link:hover{color:var(--text)}
+
         .main{width:100%;max-width:620px;padding:28px 16px 80px;display:flex;flex-direction:column;gap:14px}
         .page-title{font-size:1.3rem;font-weight:800;color:var(--text);margin-bottom:3px}
         .page-sub{font-size:13px;color:var(--text-muted)}
+
+        /* TODAY CARD */
         .today-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow)}
         .today-icon{font-size:1.6rem;flex-shrink:0}
         .today-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
         .today-sub{font-size:11px;color:var(--text-muted)}
-        .today-btn{margin-left:auto;background:var(--sage);color:#fff;border:none;padding:8px 16px;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s}
+        .today-btn{margin-left:auto;background:var(--accent);color:#fff;border:none;padding:8px 16px;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s}
         .today-btn:hover{opacity:.85}
-        .search-input{width:100%;padding:11px 13px;border:1px solid var(--border-strong);border-radius:var(--radius-sm);font-size:13px;background:#f8f9f5;color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}
-        .search-input:focus{border-color:var(--sage);box-shadow:0 0 0 3px rgba(90,122,82,.1);background:#fff}
+
+        /* SEARCH */
+        .search-input{width:100%;padding:11px 13px;border:1px solid var(--border-strong);border-radius:var(--radius-sm);font-size:13px;background:var(--bg);color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}
+        .search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.12);background:#fff}
+
         .section-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-subtle)}
         .archive-list{display:flex;flex-direction:column;gap:9px}
-        .case-row{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all .15s;box-shadow:var(--shadow)}
+
+        /* CASE ROW — default */
+        .case-row{
+            background:var(--surface);
+            border:1px solid var(--border);
+            border-radius:var(--radius);
+            padding:14px 16px;
+            display:flex;
+            align-items:center;
+            gap:14px;
+            cursor:pointer;
+            transition:all .15s;
+            box-shadow:var(--shadow);
+        }
         .case-row:hover{border-color:var(--border-strong);box-shadow:var(--shadow-md);transform:translateY(-1px)}
-        .case-row.completed{border-color:var(--sage-border);background:var(--sage-light)}
-        .case-row.completed:hover{border-color:var(--sage)}
-        .date-badge{background:var(--sage-light);border:1px solid var(--sage-border);color:#3a5a34;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:4px 10px;border-radius:5px;white-space:nowrap;min-width:76px;text-align:center;flex-shrink:0}
-        .case-row.completed .date-badge{background:var(--sage);border-color:var(--sage);color:#fff}
+
+        /* COMPLETED STATE — soft blue tint */
+        .case-row.completed{
+            background:#f0f7ff;
+            border-color:var(--accent-border);
+        }
+        .case-row.completed:hover{
+            border-color:var(--accent);
+            background:#e8f2ff;
+        }
+
+        /* DATE BADGE */
+        .date-badge{
+            background:var(--accent-light);
+            border:1px solid var(--accent-border);
+            color:#1d4ed8;
+            font-size:10px;
+            font-weight:700;
+            text-transform:uppercase;
+            letter-spacing:.06em;
+            padding:4px 10px;
+            border-radius:5px;
+            white-space:nowrap;
+            min-width:74px;
+            text-align:center;
+            flex-shrink:0;
+        }
+        .case-row.completed .date-badge{
+            background:var(--accent);
+            border-color:var(--accent);
+            color:#fff;
+        }
+
         .case-row-info{flex:1;min-width:0}
-        .case-row-hx{font-size:12px;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-        .case-row-meta{font-size:11px;color:var(--text-subtle);display:flex;align-items:center;gap:6px}
-        .completed-badge{font-size:10px;font-weight:700;color:var(--sage);background:#fff;border:1px solid var(--sage-border);padding:1px 7px;border-radius:4px}
-        .replay-btn{background:var(--text);color:var(--bg);border:none;padding:6px 13px;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s}
+        .case-row-hx{font-size:12px;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .case-row-meta{font-size:11px;color:var(--text-subtle);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+
+        /* COMPLETED BADGE */
+        .completed-badge{
+            font-size:10px;
+            font-weight:700;
+            color:var(--accent);
+            background:#fff;
+            border:1px solid var(--accent-border);
+            padding:1px 7px;
+            border-radius:4px;
+        }
+
+        /* WIN / LOSS BADGE */
+        .win-badge{
+            font-size:10px;font-weight:700;
+            color:var(--success);
+            background:var(--success-light);
+            border:1px solid var(--success-border);
+            padding:1px 7px;border-radius:4px;
+        }
+        .loss-badge{
+            font-size:10px;font-weight:700;
+            color:#dc2626;
+            background:#fef2f2;
+            border:1px solid #fecaca;
+            padding:1px 7px;border-radius:4px;
+        }
+
+        .replay-btn{background:var(--text);color:#fff;border:none;padding:6px 13px;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s}
         .replay-btn:hover{opacity:.85}
+        .case-row.completed .replay-btn{background:var(--accent)}
+
         .empty{text-align:center;padding:48px 20px;color:var(--text-subtle);font-size:13px}
         .empty-icon{font-size:2rem;margin-bottom:10px}
         .disclaimer{font-size:11px;color:var(--text-subtle);text-align:center;max-width:500px;padding:0 16px 48px;line-height:1.7}
@@ -83,20 +174,28 @@
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc, collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBzVNM6yylE2LF_8SfqRluqdQVRBB6i6HI",
-    authDomain: "wardduel.firebaseapp.com",
-    projectId: "wardduel",
-    storageBucket: "wardduel.firebasestorage.app",
-    messagingSenderId: "45792689084",
-    appId: "1:45792689084:web:64d3e5843611b038c189b9"
+    apiKey:"AIzaSyBzVNM6yylE2LF_8SfqRluqdQVRBB6i6HI",
+    authDomain:"wardduel.firebaseapp.com",
+    projectId:"wardduel",
+    storageBucket:"wardduel.firebasestorage.app",
+    messagingSenderId:"45792689084",
+    appId:"1:45792689084:web:64d3e5843611b038c189b9"
 };
-
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+
+let completedDates = new Set();
+let wonDates = new Set();
+
+// Load localStorage anon completions
+try {
+    const local = JSON.parse(localStorage.getItem('wardduel_completed') || '[]');
+    local.forEach(d => completedDates.add(d));
+} catch(e) {}
 
 function formatDate(d) {
     const [y,m,day] = d.split('-');
@@ -108,15 +207,6 @@ function formatDateShort(d) {
     const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     return `${months[parseInt(m)-1]} ${parseInt(day)}`;
 }
-
-// Get completed dates from localStorage (anon) or Firestore (logged in)
-let completedDates = new Set();
-
-// Load localStorage completed first (anon fallback)
-try {
-    const local = JSON.parse(localStorage.getItem('wardduel_completed') || '[]');
-    local.forEach(d => completedDates.add(d));
-} catch(e) {}
 
 async function loadArchives() {
     try {
@@ -155,6 +245,7 @@ window.renderList = function() {
     list.innerHTML = '';
     cases.forEach(c => {
         const done = completedDates.has(c.date);
+        const won = wonDates.has(c.date);
         const row = document.createElement('div');
         row.className = 'case-row' + (done ? ' completed' : '');
         row.innerHTML = `
@@ -162,8 +253,8 @@ window.renderList = function() {
             <div class="case-row-info">
                 <div class="case-row-hx">${c.hx_brief}</div>
                 <div class="case-row-meta">
-                    <span>Admin benchmark: ${c.adminScore ?? '—'} pts</span>
-                    ${done ? '<span class="completed-badge">✓ Completed</span>' : ''}
+                    <span>Benchmark: ${c.adminScore ?? '—'} pts</span>
+                    ${done ? `<span class="${won ? 'win-badge' : 'loss-badge'}">${won ? '✓ Won' : '✗ Lost'}</span>` : ''}
                 </div>
             </div>
             <button class="replay-btn">${done ? 'Replay →' : 'Play →'}</button>`;
@@ -172,17 +263,23 @@ window.renderList = function() {
     });
 }
 
-// Wait for auth state before loading so logged-in users get green on first render
 onAuthStateChanged(auth, async (user) => {
     if (user) {
         try {
+            // Completed dates from Firestore
             const snap = await getDoc(doc(db,'completed',user.uid));
-            if (snap.exists()) {
-                snap.data().dates?.forEach(d => completedDates.add(d));
-            }
+            if (snap.exists()) snap.data().dates?.forEach(d => completedDates.add(d));
+
+            // Load win/loss data from scores collection
+            const scoresSnap = await getDocs(
+                query(collection(db,'scores'), where('uid','==',user.uid), where('isArchive','==',false))
+            );
+            scoresSnap.forEach(d => {
+                const data = d.data();
+                if (data.won) wonDates.add(data.caseDate);
+            });
         } catch(e) {}
     }
-    // Load archives after auth resolves either way
     await loadArchives();
 });
 </script>
