@@ -498,10 +498,23 @@ async function initGame(){
     document.getElementById('date-label').innerText=isArchive?`Archive — ${archiveId}`:'Daily Case';
     if(currentCase.specialty_name) document.getElementById('lab-Specialty').innerText='🔒 '+currentCase.specialty_name;
     document.getElementById('opp-icon-wrap').innerHTML=logoIconSVG(32);
-    if(!isArchive && !currentUser){
-        const playedKey=`wardduel_played_${todayCST}`;
-        const anonPlayed=localStorage.getItem(playedKey);
-        if(anonPlayed){showAlreadyPlayed(JSON.parse(anonPlayed));return;}
+    if(!isArchive){
+        if(currentUser){
+            // Logged in — check Firestore only
+            try{
+                const completedRef=doc(db,'completed',currentUser.uid);
+                const cSnap=await getDoc(completedRef);
+                if(cSnap.exists()&&cSnap.data().dates?.includes(currentCase.date)){
+                    const q=query(collection(db,'scores'),where('uid','==',currentUser.uid),where('caseDate','==',currentCase.date));
+                    const sSnap=await getDocs(q);
+                    if(!sSnap.empty){const dd=sSnap.docs[0].data();showAlreadyPlayed({score:dd.score,won:dd.won});return;}
+                }
+            }catch(e){}
+        } else {
+            // Anonymous — check localStorage only
+            const anonPlayed=localStorage.getItem(`wardduel_played_${todayCST}`);
+            if(anonPlayed){showAlreadyPlayed(JSON.parse(anonPlayed));return;}
+        }
     }
     await loadOpponent(currentCase.date);
     startTimer();updateMultiplier();
