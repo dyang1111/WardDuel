@@ -858,6 +858,8 @@ window.processAuth=async()=>{
             await signInWithEmailAndPassword(auth,email,pass);
         }
         document.getElementById('authModal').style.display='none';
+        // Wipe all anon localStorage data on login
+        Object.keys(localStorage).filter(k=>k.startsWith('wardduel_')).forEach(k=>localStorage.removeItem(k));
         showToast('Welcome, Dr. '+username.toUpperCase(),'var(--accent)');
     }catch(e){showToast(isSignUp?'Sign up failed. Try a different username.':'Login failed.','var(--danger)');}
 };
