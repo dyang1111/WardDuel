@@ -8,21 +8,22 @@
     <style>
         *{box-sizing:border-box;margin:0;padding:0}
         :root{
-            --bg:#f2f3ee;--surface:#fff;--border:#dde0d6;--border-strong:#c8ccbf;
-            --text:#1c2218;--text-muted:#7a8a72;--text-subtle:#9aaa92;
-            --sage:#5a7a52;--sage-light:#e2eade;--sage-border:#b8d0b0;
-            --amber:#b07030;--amber-light:#fffbeb;--amber-border:#f5d080;
-            --danger:#922a1a;--danger-light:#faeae6;--danger-border:#e0a898;
+            --bg:#e8ebe2;--surface:#f4f5ef;--border:#c8ccbe;--border-strong:#a8ad9c;
+            --text:#1a1f14;--text-muted:#5a6650;--text-subtle:#8a9880;
+            --sage:#3d6b35;--sage-light:#d4e8ce;--sage-border:#90bb86;
+            --amber:#9a5e10;--amber-light:#fdf0d8;--amber-border:#e8b870;
+            --danger:#8a1e10;--danger-light:#fce8e4;--danger-border:#d89088;
             --radius:11px;--radius-sm:8px;
-            --shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
-            --shadow-md:0 4px 12px rgba(0,0,0,.08);
+            --shadow:0 1px 4px rgba(0,0,0,.10),0 1px 2px rgba(0,0,0,.06);
+            --shadow-md:0 4px 14px rgba(0,0,0,.12);
         }
         body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}
 
         /* NAV */
         .top-bar{width:100%;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:var(--shadow)}
         .logo{font-weight:800;font-size:18px;color:var(--text);text-decoration:none;letter-spacing:.01em;display:flex;align-items:center;gap:8px}
-        .logo span{color:var(--sage)}
+        .logo .word1{color:var(--text)}
+        .logo .word2{color:var(--sage)}
         .logo-icon{flex-shrink:0}
         .nav-right{display:flex;align-items:center;gap:12px}
         .nav-link{color:var(--text-muted);text-decoration:none;font-size:12px;font-weight:500;transition:color .15s}
@@ -293,7 +294,7 @@
             <circle cx="36" cy="36" r="4" fill="#1c2218"/>
             <circle cx="36" cy="36" r="2" fill="#5a7a52"/>
         </svg>
-        Ward<span>Duel</span>
+        Ward<span class="word2"> Duel</span>
     <div class="nav-right">
         <a href="archives.html" class="nav-link">Archives</a>
         <div id="auth-ui">
