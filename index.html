@@ -36,7 +36,8 @@
 
         /* NAV */
         .top-bar{width:100%;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:var(--shadow)}
-        .logo{font-weight:900;font-size:20px;color:var(--text);text-decoration:none;letter-spacing:-.01em}
+        .logo{font-weight:900;font-size:20px;color:var(--text);text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center;gap:0}
+        .logo svg{margin-right:8px}
         .logo-word2{color:var(--accent)}
         .nav-right{display:flex;align-items:center;gap:12px}
         .nav-link{color:var(--text-muted);text-decoration:none;font-size:12px;font-weight:500;transition:color .15s}
@@ -283,7 +284,7 @@
 
 <!-- NAV -->
 <div class="top-bar">
-    <a href="index.html" class="logo">Ward<span class="logo-word2">Duel</span></a>
+    <a href="index.html" class="logo"><svg width="28" height="28" viewBox="0 0 100 100" style="flex-shrink:0;display:block"><rect width="100" height="100" rx="24" fill="#eff6ff"/><path d="M30,20 Q30,45 50,55 Q70,45 70,20" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round"/><rect x="26" y="15" width="8" height="12" rx="4" fill="#0f172a"/><rect x="66" y="15" width="8" height="12" rx="4" fill="#0f172a"/><path d="M50,55 L50,70" fill="none" stroke="#3b82f6" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="78" r="18" fill="#3b82f6"/><circle cx="50" cy="78" r="14" fill="#0f172a"/><path d="M38,68 L32,60 L42,66 Z" fill="#3b82f6"/><path d="M62,68 L68,60 L58,66 Z" fill="#3b82f6"/><circle cx="45" cy="76" r="2" fill="#f7f9fc"/><circle cx="55" cy="76" r="2" fill="#f7f9fc"/><path d="M47,82 Q50,85 53,82" fill="none" stroke="#f7f9fc" stroke-width="1.5" stroke-linecap="round"/></svg>Ward<span class="logo-word2">Duel</span></a>
     <div class="nav-right">
         <a href="archives.html" class="nav-link">Archives</a>
         <div id="auth-ui">
@@ -447,7 +448,7 @@ function renderIcon(aIdx,cIdx,sIdx,lvl,size=44){
 }
 
 function logoIconSVG(size=44){
-    return `<svg width="${size}" height="${size}" viewBox="0 0 72 72" style="border-radius:50%;border:2px solid #bfdbfe;background:#eff6ff;overflow:hidden;display:block"><rect x="22" y="26" width="26" height="9" rx="4.5" fill="#0f172a" transform="rotate(45 35 30.5)"/><rect x="10" y="10" width="7" height="4" rx="2" fill="#0f172a" transform="rotate(45 13.5 12)"/><line x1="14" y1="14" x2="20" y2="20" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/><rect x="26" y="22" width="28" height="7" rx="3.5" fill="#93c5fd" transform="rotate(-45 40 25.5)"/><path d="M18,48 L14,58 Q14,60 16,59 L26,52 Q26,46 22,44 Z" fill="#94a3b8"/><circle cx="22" cy="46" r="3" fill="#64748b"/><circle cx="36" cy="36" r="4" fill="#eff6ff"/><circle cx="36" cy="36" r="2" fill="#3b82f6"/></svg>`;
+    return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" style="border-radius:50%;border:2px solid #bfdbfe;background:#eff6ff;overflow:hidden;display:block"><path d="M30,20 Q30,45 50,55 Q70,45 70,20" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round"/><rect x="26" y="15" width="8" height="12" rx="4" fill="#0f172a"/><rect x="66" y="15" width="8" height="12" rx="4" fill="#0f172a"/><path d="M50,55 L50,70" fill="none" stroke="#3b82f6" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="78" r="18" fill="#3b82f6"/><circle cx="50" cy="78" r="14" fill="#0f172a"/><path d="M38,68 L32,60 L42,66 Z" fill="#3b82f6"/><path d="M62,68 L68,60 L58,66 Z" fill="#3b82f6"/><circle cx="45" cy="76" r="2" fill="#f7f9fc"/><circle cx="55" cy="76" r="2" fill="#f7f9fc"/><path d="M47,82 Q50,85 53,82" fill="none" stroke="#f7f9fc" stroke-width="1.5" stroke-linecap="round"/></svg>`;
 }
 function heartIconSVG(size=44){
     const s=size;
