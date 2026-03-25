@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WardDuel | Clinical 1v1</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'%3E%3Crect width='72' height='72' rx='16' fill='%230f172a'/%3E%3Crect x='22' y='26' width='26' height='9' rx='4.5' fill='%23f1f5f9' transform='rotate(45 35 30.5)'/%3E%3Crect x='26' y='22' width='28' height='7' rx='3.5' fill='%2393c5fd' transform='rotate(-45 40 25.5)'/%3E%3Cpath d='M18,48 L14,58 Q14,60 16,59 L26,52 Q26,46 22,44 Z' fill='%2394a3b8'/%3E%3Ccircle cx='36' cy='36' r='4' fill='%230f172a'/%3E%3Ccircle cx='36' cy='36' r='2' fill='%233b82f6'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23eff6ff'/%3E%3Cpath d='M30,20 Q30,45 50,55 Q70,45 70,20' fill='none' stroke='%23475569' stroke-width='6' stroke-linecap='round'/%3E%3Crect x='26' y='15' width='8' height='12' rx='4' fill='%230f172a'/%3E%3Crect x='66' y='15' width='8' height='12' rx='4' fill='%230f172a'/%3E%3Cpath d='M50,55 L50,70' fill='none' stroke='%233b82f6' stroke-width='7' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='78' r='18' fill='%233b82f6'/%3E%3Ccircle cx='50' cy='78' r='14' fill='%230f172a'/%3E%3Cpath d='M38,68 L32,60 L42,66 Z' fill='%233b82f6'/%3E%3Cpath d='M62,68 L68,60 L58,66 Z' fill='%233b82f6'/%3E%3Ccircle cx='45' cy='76' r='2' fill='%23f7f9fc'/%3E%3Ccircle cx='55' cy='76' r='2' fill='%23f7f9fc'/%3E%3Cpath d='M47,82 Q50,85 53,82' fill='none' stroke='%23f7f9fc' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E">
     <style>
         *{box-sizing:border-box;margin:0;padding:0}
         :root{
@@ -528,7 +528,7 @@ async function loadOpponent(caseDate){
     try{
         const q=query(collection(db,'scores'),where('caseDate','==',caseDate),orderBy('timestamp','asc'),limit(10));
         const snap=await getDocs(q);
-        const docs=snap.docs.map(d=>d.data()).filter(d=>d.username!==(currentUser?.displayName||''));
+        const docs=snap.docs.map(d=>d.data()).filter(d=>d.uid!==(currentUser?.uid||''));
         if(docs.length===0){opponentScore=currentCase.adminScore||75;opponentName='Admin';}
         else{const pick=docs[Math.floor(Math.random()*docs.length)];opponentScore=pick.score;opponentName='Dr. '+pick.username;}
         document.getElementById('opponent-label').innerText=opponentName.replace('Dr. ','');
