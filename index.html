@@ -498,7 +498,7 @@ async function initGame(){
     document.getElementById('date-label').innerText=isArchive?`Archive — ${archiveId}`:'Daily Case';
     if(currentCase.specialty_name) document.getElementById('lab-Specialty').innerText='🔒 '+currentCase.specialty_name;
     document.getElementById('opp-icon-wrap').innerHTML=logoIconSVG(32);
-    if(!isArchive){
+    if(!isArchive && !currentUser){
         const playedKey=`wardduel_played_${todayCST}`;
         const anonPlayed=localStorage.getItem(playedKey);
         if(anonPlayed){showAlreadyPlayed(JSON.parse(anonPlayed));return;}
@@ -674,7 +674,7 @@ async function endGame(success,payload){
             <div class="answer-pill ${won?'answer-win':'answer-loss'}">${won?'✓':'✗'} ${currentCase.answer}</div>
             ${ptsEarned>0?`<div class="pts-earned">+${ptsEarned} pts earned</div>`:''}
         </div>`;
-    if(!isArchive){
+    if(!isArchive && !currentUser){
         const key=`wardduel_played_${getTodayCST()}`;
         localStorage.setItem(key,JSON.stringify({score:finalScore,won}));
     }
