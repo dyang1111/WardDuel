@@ -391,7 +391,7 @@
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-import { getFirestore, doc, getDoc, setDoc, updateDoc, collection, query, where, getDocs, addDoc, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc, setDoc, updateDoc, collection, query, where, getDocs, addDoc, limit } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey:"AIzaSyBzVNM6yylE2LF_8SfqRluqdQVRBB6i6HI",authDomain:"wardduel.firebaseapp.com",
@@ -549,16 +549,69 @@ function showAlreadyPlayed(data){
 }
 
 async function loadOpponent(caseDate){
+    // Archives always vs Admin
+    if(isArchive){
+        opponentScore=currentCase.adminScore||75;
+        opponentName='Admin';
+        document.getElementById('opponent-label').innerText='Admin';
+        document.getElementById('opp-hp-num').innerText=opponentScore;
+        document.getElementById('opp-hp-fill').style.height=Math.min((opponentScore/200)*100,100)+'%';
+        return;
+    }
+
+    // Logged in — check if opponent already locked in for today
+    if(currentUser){
+        const todayCST=getTodayCST();
+        const oppKey=`wardduel_opp_${currentUser.uid}_${todayCST}`;
+        const cached=localStorage.getItem(oppKey);
+        if(cached){
+            const c=JSON.parse(cached);
+            opponentScore=c.score; opponentName=c.name;
+            document.getElementById('opponent-label').innerText=opponentName.replace('Dr. ','');
+            document.getElementById('opp-hp-num').innerText=opponentScore;
+            document.getElementById('opp-hp-fill').style.height=Math.min((opponentScore/200)*100,100)+'%';
+            return;
+        }
+    }
+
+    // Query scores — no orderBy to avoid needing composite index
     try{
-        const q=query(collection(db,'scores'),where('caseDate','==',caseDate),orderBy('timestamp','asc'),limit(10));
+        const q=query(
+            collection(db,'scores'),
+            where('caseDate','==',caseDate),
+            where('isArchive','==',false),
+            limit(20)
+        );
         const snap=await getDocs(q);
-        const docs=snap.docs.map(d=>d.data()).filter(d=>d.uid!==(currentUser?.uid||''));
-        if(docs.length===0){opponentScore=currentCase.adminScore||75;opponentName='Admin';}
-        else{const pick=docs[Math.floor(Math.random()*docs.length)];opponentScore=pick.score;opponentName='Dr. '+pick.username;}
+        const docs=snap.docs.map(d=>d.data()).filter(d=>d.uid!==(currentUser?.uid||'__anon__'));
+
+        if(docs.length===0){
+            opponentScore=currentCase.adminScore||75;
+            opponentName='Admin';
+        } else {
+            const pick=docs[Math.floor(Math.random()*docs.length)];
+            opponentScore=pick.score;
+            opponentName='Dr. '+pick.username;
+        }
+
+        // Lock in opponent for logged-in users
+        if(currentUser){
+            const todayCST=getTodayCST();
+            const oppKey=`wardduel_opp_${currentUser.uid}_${todayCST}`;
+            localStorage.setItem(oppKey,JSON.stringify({score:opponentScore,name:opponentName}));
+        }
+
         document.getElementById('opponent-label').innerText=opponentName.replace('Dr. ','');
         document.getElementById('opp-hp-num').innerText=opponentScore;
         document.getElementById('opp-hp-fill').style.height=Math.min((opponentScore/200)*100,100)+'%';
-    }catch(e){opponentScore=currentCase.adminScore||75;opponentName='Admin';}
+    }catch(e){
+        console.error('loadOpponent error:',e);
+        opponentScore=currentCase.adminScore||75;
+        opponentName='Admin';
+        document.getElementById('opponent-label').innerText='Admin';
+        document.getElementById('opp-hp-num').innerText=opponentScore;
+        document.getElementById('opp-hp-fill').style.height=Math.min((opponentScore/200)*100,100)+'%';
+    }
 }
 
 function startTimer(){
