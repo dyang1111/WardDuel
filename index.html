@@ -488,12 +488,12 @@ function getLevelInfo(pts){
 function getTodayCST(){
     return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 }
-function renderNavAvatar(prefs,lvl){
-    if(prefs.iconType==='character') return renderIcon(prefs.animalIdx,prefs.colorIdx,prefs.specIdx,lvl,30);
-    if(prefs.iconType==='heart') return heartIconSVG(30);
-    if(prefs.iconType==='bones') return bonesIconSVG(30);
-    if(prefs.iconType==='cross') return crossIconSVG(30);
-    return logoIconSVG(30);
+function renderNavAvatar(prefs,lvl,size=30){
+    if(prefs.iconType==='character') return renderIcon(prefs.animalIdx,prefs.colorIdx,prefs.specIdx,lvl,size);
+    if(prefs.iconType==='heart') return heartIconSVG(size);
+    if(prefs.iconType==='bones') return bonesIconSVG(size);
+    if(prefs.iconType==='cross') return crossIconSVG(size);
+    return logoIconSVG(size);
 }
 
 async function initGame(){
@@ -549,7 +549,7 @@ function showAlreadyPlayed(data){
 }
 
 function renderOpponent(){
-    document.getElementById('opponent-label').innerText=opponentName.replace('Dr. ','');
+            document.getElementById('opponent-label').innerText='Dr. '+opponentName.replace('Dr. ','');
     document.getElementById('opp-hp-num').innerText=opponentRawHp??opponentScore;
     document.getElementById('opp-hp-fill').style.height=Math.min(((opponentRawHp??opponentScore)/100)*100,100)+'%';
     // Render icon
@@ -894,7 +894,7 @@ window.openProfile=async function(){
         if(d.animalIdx!==undefined)userPrefs.animalIdx=d.animalIdx;
         if(d.colorIdx!==undefined)userPrefs.colorIdx=d.colorIdx;
         if(d.specIdx!==undefined)userPrefs.specIdx=d.specIdx;
-        document.getElementById('profile-avatar-wrap').innerHTML=renderIcon(userPrefs.animalIdx,userPrefs.colorIdx,userPrefs.specIdx,lvl.idx,56);
+        document.getElementById('profile-avatar-wrap').innerHTML=renderNavAvatar(userPrefs,lvl.idx,56);
         document.getElementById('profile-name').innerText=`Dr. ${name.toUpperCase()}`;
         document.getElementById('profile-since').innerText=`Attending since ${joined}`;
         document.getElementById('profile-level-name').innerText=lvl.name;
@@ -928,6 +928,9 @@ function buildIconPicker(levelIdx){
             userPrefs.iconType=o.id;
             document.querySelectorAll('.icon-opt').forEach((el,j)=>el.classList.toggle('selected',j===oi));
             document.getElementById('char-builder-wrap').style.display=o.id==='character'?'block':'none';
+            // Update profile avatar immediately for all icon types
+            document.getElementById('profile-avatar-wrap').innerHTML=renderNavAvatar(userPrefs,levelIdx,56);
+            updateNavAvatar(levelIdx);
             savePrefs();
         };
         opts.appendChild(d);
