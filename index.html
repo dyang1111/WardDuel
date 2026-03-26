@@ -554,7 +554,8 @@ function renderExp(answer,success){
         <div class="exp-row ${r.clr}">
             <div class="exp-row-icon">${r.icon}</div>
             <div><div class="exp-row-label">${r.label}</div><div class="exp-row-val">${r.val}</div></div>
-        </div>`).join('');
+        </div>`).join('')
+        + '<div style="text-align:center;padding:14px 0 4px;font-size:10px;color:var(--text-subtle);opacity:.5">Explanations are AI-generated and for educational purposes only.</div>';
 }
 
 window.openExp=function(){
@@ -637,9 +638,11 @@ function showAlreadyPlayed(data){
             </div>
             <div style="font-size:13px;color:var(--text-muted);margin-bottom:14px">You scored <strong>${data.score}</strong> pts${data.won?' and won':''}.<br>Come back tomorrow for a new case.</div>
             <a href="archives.html" style="display:inline-block;font-size:12px;font-weight:700;color:var(--accent);text-decoration:none">Browse Archives →</a>
+            <button class="exp-reopen-inline visible" id="exp-reopen-inline" onclick="window.openExp()" style="margin-top:14px">📋 View Explanation</button>
         </div>`;
     document.getElementById('lab-panel').style.display='block';
     unlockAllLabs();
+    showExpAfterGame(currentCase.answer, data.won);
 }
 
 function renderOpponent(){
