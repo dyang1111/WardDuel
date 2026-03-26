@@ -475,7 +475,7 @@ let currentUsername='Anonymous';
 let currentCase=null,hp=100,timeLeft=300,timerId=null,gameActive=true;
 let diagnosisPool=[],currentUser=null,isSignUp=false,isArchive=false;
 const unlockedHints=new Set(),orderedLabs=new Set();
-let wrongStreak=0,opponentScore=null,opponentName=null;
+let wrongStreak=0,opponentScore=null,opponentName=null,opponentRawHp=null,opponentIcon=null;
 const wrongAnswers=new Set();
 let selectedDropdownIndex=-1;
 let userPrefs={iconType:'logo',animalIdx:0,colorIdx:0,specIdx:0};
@@ -548,14 +548,33 @@ function showAlreadyPlayed(data){
     unlockAllLabs();
 }
 
+function renderOpponent(){
+    document.getElementById('opponent-label').innerText=opponentName.replace('Dr. ','');
+    document.getElementById('opp-hp-num').innerText=opponentRawHp??opponentScore;
+    document.getElementById('opp-hp-fill').style.height=Math.min(((opponentRawHp??opponentScore)/100)*100,100)+'%';
+    // Render icon
+    const wrap=document.getElementById('opp-icon-wrap');
+    if(opponentIcon && opponentIcon.iconType==='character'){
+        wrap.innerHTML=renderIcon(opponentIcon.animalIdx||0,opponentIcon.colorIdx||0,opponentIcon.specIdx||0,opponentIcon.levelIdx||0,32);
+    } else if(opponentIcon && opponentIcon.iconType==='heart'){
+        wrap.innerHTML=heartIconSVG(32);
+    } else if(opponentIcon && opponentIcon.iconType==='bones'){
+        wrap.innerHTML=bonesIconSVG(32);
+    } else if(opponentIcon && opponentIcon.iconType==='cross'){
+        wrap.innerHTML=crossIconSVG(32);
+    } else {
+        wrap.innerHTML=logoIconSVG(32);
+    }
+}
+
 async function loadOpponent(caseDate){
     // Archives always vs Admin
     if(isArchive){
         opponentScore=currentCase.adminScore||75;
+        opponentRawHp=currentCase.adminScore||75;
         opponentName='Admin';
-        document.getElementById('opponent-label').innerText='Admin';
-        document.getElementById('opp-hp-num').innerText=opponentScore;
-        document.getElementById('opp-hp-fill').style.height=Math.min((opponentScore/200)*100,100)+'%';
+        opponentIcon=null;
+        renderOpponent();
         return;
     }
 
@@ -566,10 +585,8 @@ async function loadOpponent(caseDate){
         const cached=localStorage.getItem(oppKey);
         if(cached){
             const c=JSON.parse(cached);
-            opponentScore=c.score; opponentName=c.name;
-            document.getElementById('opponent-label').innerText=opponentName.replace('Dr. ','');
-            document.getElementById('opp-hp-num').innerText=opponentScore;
-            document.getElementById('opp-hp-fill').style.height=Math.min((opponentScore/200)*100,100)+'%';
+            opponentScore=c.score; opponentRawHp=c.rawHp||c.score; opponentName=c.name; opponentIcon=c.iconPrefs||null;
+            renderOpponent();
             return;
         }
     }
@@ -588,29 +605,31 @@ async function loadOpponent(caseDate){
         if(docs.length===0){
             opponentScore=currentCase.adminScore||75;
             opponentName='Admin';
+            opponentRawHp=currentCase.adminScore||75;
+            opponentIcon=null;
         } else {
             const pick=docs[Math.floor(Math.random()*docs.length)];
             opponentScore=pick.score;
+            opponentRawHp=pick.rawHp||pick.score;
             opponentName='Dr. '+pick.username;
+            opponentIcon=pick.iconPrefs||null;
         }
 
         // Lock in opponent for logged-in users
         if(currentUser){
             const todayCST=getTodayCST();
             const oppKey=`wardduel_opp_${currentUser.uid}_${todayCST}`;
-            localStorage.setItem(oppKey,JSON.stringify({score:opponentScore,name:opponentName}));
+            localStorage.setItem(oppKey,JSON.stringify({score:opponentScore,rawHp:opponentRawHp,name:opponentName,iconPrefs:opponentIcon}));
         }
 
-        document.getElementById('opponent-label').innerText=opponentName.replace('Dr. ','');
-        document.getElementById('opp-hp-num').innerText=opponentScore;
-        document.getElementById('opp-hp-fill').style.height=Math.min((opponentScore/200)*100,100)+'%';
+        renderOpponent();
     }catch(e){
         console.error('loadOpponent error:',e);
         opponentScore=currentCase.adminScore||75;
+        opponentRawHp=currentCase.adminScore||75;
         opponentName='Admin';
-        document.getElementById('opponent-label').innerText='Admin';
-        document.getElementById('opp-hp-num').innerText=opponentScore;
-        document.getElementById('opp-hp-fill').style.height=Math.min((opponentScore/200)*100,100)+'%';
+        opponentIcon=null;
+        renderOpponent();
     }
 }
 
@@ -811,7 +830,7 @@ async function endGame(success,payload){
     }
     if(currentUser){
         try{
-            await addDoc(collection(db,'scores'),{uid:currentUser.uid,username:currentUsername,score:finalScore,won,caseDate:currentCase.date,isArchive,timestamp:Date.now()});
+            await addDoc(collection(db,'scores'),{uid:currentUser.uid,username:currentUsername,score:finalScore,rawHp:hp,won,caseDate:currentCase.date,isArchive,timestamp:Date.now(),iconPrefs:{iconType:userPrefs.iconType,animalIdx:userPrefs.animalIdx,colorIdx:userPrefs.colorIdx,specIdx:userPrefs.specIdx,levelIdx:getLevelInfo((await getDoc(doc(db,'users',currentUser.uid))).data()?.totalPts||0).idx}});
             const ref=doc(db,'users',currentUser.uid);
             const snap=await getDoc(ref);
             const d=snap.exists()?snap.data():{};
