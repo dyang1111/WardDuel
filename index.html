@@ -480,24 +480,7 @@ const wrongAnswers=new Set();
 let selectedDropdownIndex=-1;
 let userPrefs={iconType:'logo',animalIdx:0,colorIdx:0,specIdx:0};
 
-const BANNED = [
-    'fuck','shit','cunt','bitch','cock','pussy','dick','asshole','motherfucker','fucker','bullshit','jackass','dumbass','dipshit','shithead','fuckhead',
-    'nigger','nigga','faggot','chink','spic','kike','gook','wetback','towelhead','cracker','honky','beaner','zipperhead',
-    'dyke','tranny','retard','whore','slut','skank',
-    'nazi','kkk','isis','jihad','aryan','hitler','stalin',
-    'porn','penis','vagina','dildo','blowjob','handjob','cumshot','hardcore','onlyfans','fetish','hentai',
-    'rape','murder','genocide','terrorist','suicide','shooter',
-    'poop','fart','boobs','tits','booty','wiener','butthole'
-];
-
-function validateUsername(u){
-    if(u.length < 3) return 'Username must be at least 3 characters.';
-    if(u.length > 16) return 'Username must be 16 characters or less.';
-    if(!/^[a-zA-Z0-9_]+$/.test(u)) return 'Only letters, numbers, and underscores allowed.';
-    const lower=u.toLowerCase();
-    for(const w of BANNED){ if(lower.includes(w)) return 'That username is not allowed.'; }
-    return null;
-}
+function getLevelInfo(pts){
     const idx=Math.min(Math.floor(pts/POINTS_PER_LEVEL),LEVELS.length-1);
     const inLvl=pts%POINTS_PER_LEVEL;
     return{name:LEVELS[idx],idx,inLvl,pct:Math.min((inLvl/POINTS_PER_LEVEL)*100,100)};
@@ -1031,11 +1014,6 @@ window.toggleAuthMode=()=>{
 window.processAuth=async()=>{
     const username=document.getElementById('username-input').value.trim();
     const pass=document.getElementById('password-input').value;
-    if(isSignUp){
-        const err=validateUsername(username);
-        if(err){showToast(err,'var(--danger)');return;}
-        if(pass.length<6){showToast('Password must be at least 6 characters.','var(--danger)');return;}
-    }
     const email=username+'@wardduel.com';
     try{
         if(isSignUp){
