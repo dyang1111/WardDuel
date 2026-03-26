@@ -1,0 +1,650 @@
+{
+  "Aortic Dissection": {
+    "who_gets_it": "Older men with HTN; younger patients with Marfan/Ehlers-Danlos.",
+    "risk_factors": "Chronic HTN, Bicuspid aortic valve, Cocaine use.",
+    "typical_presentation": "Sudden onset 'tearing' chest pain radiating to the back.",
+    "moa": "Intimal tear creates a false lumen in the aortic wall.",
+    "step1_buzzwords": "Tearing/Ripping pain, BP discrepancy between arms, Mediastinal widening.",
+    "lab_buzzwords": "Markedly elevated D-Dimer (rules out if negative).",
+    "treatment": "IV Beta-blockers (Labetalol), Surgery (Type A)."
+  },
+  "Appendicitis": {
+    "who_gets_it": "Most common in ages 10-30.",
+    "risk_factors": "Fecalith (adults), Lymphoid hyperplasia (kids).",
+    "typical_presentation": "Periumbilical pain migrating to RLQ, fever, anorexia.",
+    "moa": "Obstruction of appendiceal lumen leads to bacterial overgrowth.",
+    "step1_buzzwords": "McBurney's point, Rovsing sign, Psoas sign, Obturator sign.",
+    "lab_buzzwords": "Leukocytosis with Left Shift.",
+    "treatment": "Appendectomy, Perioperative antibiotics."
+  },
+  "Acute Angle-Closure Glaucoma": {
+    "who_gets_it": "Elderly, females, Asian descent, hyperopes (farsighted).",
+    "risk_factors": "Mydriatics (pupil dilation), dark rooms, Sulfa drugs.",
+    "typical_presentation": "Sudden eye pain, blurry vision, 'halos' around lights, nausea.",
+    "moa": "Iris blocks trabecular meshwork; rapid intraocular pressure rise.",
+    "step1_buzzwords": "Steamy cornea, Mid-dilated fixed pupil, Rock-hard eye.",
+    "lab_buzzwords": "IOP >30 mmHg (Tonometry).",
+    "treatment": "Pilocarpine, Acetazolamide, Laser iridotomy."
+  },
+  "Guillain-Barre Syndrome (GBS)": {
+    "who_gets_it": "Any age, usually 1-2 weeks after an infection.",
+    "risk_factors": "Campylobacter jejuni, CMV, EBV, vaccinations.",
+    "typical_presentation": "Symmetric ascending muscle weakness and loss of reflexes.",
+    "moa": "Autoimmune demyelination of peripheral nerves via molecular mimicry.",
+    "step1_buzzwords": "Ascending paralysis, Autonomic instability, Campylobacter.",
+    "lab_buzzwords": "Albuminocytologic dissociation (High protein/Normal WBC in CSF).",
+    "treatment": "IVIG or Plasmapheresis. Avoid steroids."
+  },
+  "Bladder Cancer": {
+    "who_gets_it": "Older males (avg age 70+).",
+    "risk_factors": "Smoking, Aniline dyes, Cyclophosphamide, Phenacetin.",
+    "typical_presentation": "Painless gross hematuria.",
+    "moa": "Malignant transformation of transitional epithelium (urothelium).",
+    "step1_buzzwords": "Industrial worker, Schistosoma haematobium (Squamous subtype).",
+    "lab_buzzwords": "Atypical urothelial cells on cytology.",
+    "treatment": "TURBT, Intravesical BCG, Cystectomy."
+  },
+  "Acute Cholecystitis": {
+    "who_gets_it": "The 4 F's: Female, Fat, Fertile, Forty.",
+    "risk_factors": "Gallstones (cholelithiasis), TPN, stasis.",
+    "typical_presentation": "Constant RUQ pain, right shoulder radiation, fever, vomiting.",
+    "moa": "Gallstone obstruction of the cystic duct causing inflammation.",
+    "step1_buzzwords": "Murphy sign, HIDA scan non-visualization.",
+    "lab_buzzwords": "Elevated ALP, Leukocytosis.",
+    "treatment": "Cholecystectomy."
+  },
+  "Hypertrophic Cardiomyopathy (HCM)": {
+    "who_gets_it": "Younger patients, often hereditary.",
+    "risk_factors": "Autosomal Dominant; beta-myosin heavy chain mutations.",
+    "typical_presentation": "Dyspnea on exertion, syncope, sudden death in athletes.",
+    "moa": "Asymmetric septal hypertrophy causing LVOT obstruction.",
+    "step1_buzzwords": "Systolic Anterior Motion (SAM), S4, Murmur softer with squatting.",
+    "lab_buzzwords": "MYH7 or MYBPC3 gene variants.",
+    "treatment": "Beta-blockers, ICD, avoidance of dehydration."
+  },
+  "Pulmonary Hypertension": {
+    "who_gets_it": "Young females (Primary); patients with COPD/Scleroderma (Secondary).",
+    "risk_factors": "BMPR2 mutation, Connective tissue disease, Left heart failure.",
+    "typical_presentation": "Progressive exertional dyspnea, Raynaud's, precordial heave.",
+    "moa": "Proliferation of pulmonary artery smooth muscle; plexiform lesions.",
+    "step1_buzzwords": "Loud S2, Plexiform lesions, Right ventricular heave.",
+    "lab_buzzwords": "Positive Anti-centromere (CREST syndrome).",
+    "treatment": "Bosentan, Sildenafil, Epoprostenol."
+  },
+  "Hyperparathyroidism (Primary)": {
+    "who_gets_it": "Postmenopausal women; MEN 1 and MEN 2A families.",
+    "risk_factors": "Parathyroid adenoma (80%), Lithium use.",
+    "typical_presentation": "Stones (renal), Bones (pain), Groans (GI), Psychic overtones.",
+    "moa": "Overproduction of PTH leading to excessive bone resorption.",
+    "step1_buzzwords": "Osteitis fibrosa cystica, Salt and pepper skull, Subperiosteal resorption.",
+    "lab_buzzwords": "High PTH, High Calcium, Low Phosphorus.",
+    "treatment": "Parathyroidectomy."
+  },
+  "Squamous Cell Lung Carcinoma": {
+    "who_gets_it": "Smokers.",
+    "risk_factors": "Tobacco use, Radon exposure.",
+    "typical_presentation": "Cough, hemoptysis, hilar mass, right arm edema (SVC syndrome).",
+    "moa": "Malignant transformation of bronchial squamous metaplasia.",
+    "step1_buzzwords": "Hilar mass, Keratin pearls, Intercellular bridges.",
+    "lab_buzzwords": "PTHrP induced hypercalcemia.",
+    "treatment": "Surgical resection (if early), Chemo/Radiation."
+  },
+  "Acute Intermittent Porphyria": {
+    "who_gets_it": "Younger females (20s-30s).",
+    "risk_factors": "Alcohol, Sulfa drugs, starvation, Cytochrome P450 inducers.",
+    "typical_presentation": "Abdominal pain (no tenderness), confusion, dark urine.",
+    "moa": "Deficiency in Porphobilinogen Deaminase.",
+    "step1_buzzwords": "5 P's: Painful abdomen, Port-wine urine, Polyneuropathy, Psychological distress, Precipitated by drugs.",
+    "lab_buzzwords": "Elevated Urine PBG and ALA.",
+    "treatment": "Hematin and Glucose (inhibits ALA synthase)."
+  },
+  "Prostate Cancer": {
+    "who_gets_it": "Older males (usually >65).",
+    "risk_factors": "Age, African American race, High-fat diet.",
+    "typical_presentation": "Often asymptomatic; back pain and incontinence (if metastatic).",
+    "moa": "Adenocarcinoma of the posterior lobe (peripheral zone).",
+    "step1_buzzwords": "Peripheral zone mass, Blastic bone lesions, Increased ALP.",
+    "lab_buzzwords": "Elevated PSA, Elevated Acid Phosphatase.",
+    "treatment": "Prostatectomy, Radiation, Leuprolide/Flutamide."
+  },
+  "Rocky Mountain Spotted Fever": {
+    "who_gets_it": "Hikers/Campers in NC, TN, OK, AR.",
+    "risk_factors": "Dermacentor tick bite.",
+    "typical_presentation": "High fever, headache, rash on wrists/palms moving inward.",
+    "moa": "Rickettsia rickettsii obligate intracellular infection of endothelial cells.",
+    "step1_buzzwords": "Centripetal rash (outer to inner), Palms and Soles rash.",
+    "lab_buzzwords": "Hyponatremia, Thrombocytopenia.",
+    "treatment": "Doxycycline (regardless of age)."
+  },
+  "Acute Myeloid Leukemia (AML)": {
+    "who_gets_it": "Adults (median age 65).",
+    "risk_factors": "Prior radiation, Alkylating chemo, Down Syndrome.",
+    "typical_presentation": "Fatigue, easy bruising, bleeding gums, bone pain.",
+    "moa": "Proliferation of immature myeloid cells (blasts).",
+    "step1_buzzwords": "Auer rods, MPO positive, Gingival hyperplasia (M5).",
+    "lab_buzzwords": "Blast count >20%, DIC (in APML/M3).",
+    "treatment": "Chemotherapy (7+3 regimen), ATRA (for APML)."
+  },
+  "Hepatitis A": {
+    "who_gets_it": "Travelers, child-care workers, institutionalized patients.",
+    "risk_factors": "Fecal-oral route, contaminated water/shellfish.",
+    "typical_presentation": "Jaundice, RUQ pain, fever, nausea after travel.",
+    "moa": "Picornavirus causing acute hepatocyte swelling and necrosis.",
+    "step1_buzzwords": "Councilman bodies, Atypical lymphocytes, Shellfish.",
+    "lab_buzzwords": "ALT > AST, IgM anti-HAV.",
+    "treatment": "Supportive (self-limiting)."
+  },
+  "Hypothyroidism": {
+    "who_gets_it": "Older females (Hashimoto's); Iodine deficient regions.",
+    "risk_factors": "Autoimmunity, Radioactive Iodine treatment.",
+    "typical_presentation": "Cold intolerance, weight gain, fatigue, dry skin, constipation.",
+    "moa": "Insufficient thyroid hormone (T4/T3).",
+    "step1_buzzwords": "Delayed reflex relaxation, Hurthle cells (Hashimoto's), Puffy face.",
+    "lab_buzzwords": "High TSH, Low T4, Anti-TPO antibodies.",
+    "treatment": "Levothyroxine."
+  },
+  "Pheochromocytoma": {
+    "who_gets_it": "Adults 30-50; MEN 2A/2B, VHL, NF1.",
+    "risk_factors": "Genetics (10% rule).",
+    "typical_presentation": "Episodic 5 P's: Pressure (HTN), Pain (Headache), Perspiration, Palpitations, Pallor.",
+    "moa": "Tumor of chromaffin cells in adrenal medulla.",
+    "step1_buzzwords": "Chromaffin cells, VMA, Phenoxybenzamine (alpha-block before beta).",
+    "lab_buzzwords": "Elevated urinary Metanephrines and Catecholamines.",
+    "treatment": "Alpha-blocker followed by Beta-blocker, then surgical resection."
+  },
+  "Esophageal Squamous Cell Carcinoma": {
+    "who_gets_it": "Older males.",
+    "risk_factors": "Alcohol, Smoking, Achalasia, Caustic injury, Hot liquids.",
+    "typical_presentation": "Progressive dysphagia (solids then liquids), weight loss.",
+    "moa": "Malignant growth in upper/middle 1/3 of esophagus.",
+    "step1_buzzwords": "Upper 2/3 of esophagus, Alcohol/Tobacco triad.",
+    "lab_buzzwords": "Biopsy: Squamous cells with keratin pearls.",
+    "treatment": "Esophagectomy, Chemo/Radiation."
+  },
+  "Subarachnoid Hemorrhage (SAH)": {
+    "who_gets_it": "Adults, often associated with Berry aneurysms.",
+    "risk_factors": "ADPKD, Ehlers-Danlos, HTN, Smoking.",
+    "typical_presentation": "Sudden onset 'worst headache of life' (Thunderclap).",
+    "moa": "Rupture of an aneurysm in the subarachnoid space.",
+    "step1_buzzwords": "Worst headache of life, Berry aneurysm, Xanthochromia.",
+    "lab_buzzwords": "Xanthochromia (yellow CSF) on lumbar puncture.",
+    "treatment": "Nimodipine (prevents vasospasm), Coiling/Clipping."
+  },
+  "Systemic Lupus Erythematosus (SLE)": {
+    "who_gets_it": "Females of reproductive age; African American/Hispanic.",
+    "risk_factors": "UV light, genetics, Drug-induced (SHIPP).",
+    "typical_presentation": "Malar rash, joint pain, photosensitivity, renal issues.",
+    "moa": "Type III hypersensitivity; autoantibodies against nuclear antigens.",
+    "step1_buzzwords": "Malar/Butterfly rash, Wire-loop lesions (kidney), Libman-Sacks endocarditis.",
+    "lab_buzzwords": "ANA (screening), Anti-dsDNA (specific), Anti-Smith (specific).",
+    "treatment": "NSAIDs, Steroids, Hydroxychloroquine."
+  },
+  "Stable Angina": {
+    "who_gets_it": "Older adults with CAD risk factors.",
+    "risk_factors": "Smoking, HTN, Diabetes, Hyperlipidemia.",
+    "typical_presentation": "Chest pain on exertion relieved by rest or nitroglycerin.",
+    "moa": "Atherosclerosis causing >70% narrowing of coronary arteries.",
+    "step1_buzzwords": "Exertional pain, ST depression on EKG.",
+    "lab_buzzwords": "Normal serial Troponins.",
+    "treatment": "Nitroglycerin, Beta-blockers, Aspirin."
+  },
+  "Prerenal Acute Kidney Injury (NSAID-Induced)": {
+    "who_gets_it": "Elderly on 'Triple Whammy' (ACEi, Diuretic, NSAID).",
+    "risk_factors": "Dehydration, CHF, NSAID use.",
+    "typical_presentation": "Decreased urine output, confusion, dry mucous membranes.",
+    "moa": "NSAIDs inhibit prostaglandins, causing afferent arteriole constriction.",
+    "step1_buzzwords": "BUN:Cr > 20:1, FeNa < 1%, Afferent vasoconstriction.",
+    "lab_buzzwords": "Hyaline casts, FeNa < 1%.",
+    "treatment": "Discontinue NSAID, IV Fluids."
+  },
+  "Uncomplicated Cystitis (E. coli)": {
+    "who_gets_it": "Sexually active females.",
+    "risk_factors": "Sexual intercourse, Spermicide use.",
+    "typical_presentation": "Dysuria, frequency, urgency, suprapubic pain.",
+    "moa": "Ascending infection of the bladder by fecal flora.",
+    "step1_buzzwords": "Positive Nitrites, Positive Leukocyte Esterase.",
+    "lab_buzzwords": "E. coli (Gram-negative rod) in culture.",
+    "treatment": "Nitrofurantoin, TMP-SMX, Fosfomycin."
+  },
+  "Multiple Myeloma": {
+    "who_gets_it": "Elderly (65+).",
+    "risk_factors": "Monoclonal Gammopathy (MGUS).",
+    "typical_presentation": "Bone pain, fractures, infections, fatigue, renal failure.",
+    "moa": "Monoclonal plasma cell proliferation in the bone marrow.",
+    "step1_buzzwords": "CRAB: Calcium high, Renal failure, Anemia, Bone lesions.",
+    "lab_buzzwords": "Rouleaux formation, M-spike, Bence-Jones proteins.",
+    "treatment": "Chemo, Autologous Stem Cell Transplant."
+  },
+  "Myasthenia Gravis": {
+    "who_gets_it": "Younger females or older males.",
+    "risk_factors": "Thymoma, Thymic hyperplasia.",
+    "typical_presentation": "Ptosis, diplopia, muscle weakness that worsens with use.",
+    "moa": "Autoantibodies against post-synaptic ACh receptors.",
+    "step1_buzzwords": "Fatigable weakness, Thymoma, Diplopia.",
+    "lab_buzzwords": "AChR antibodies, Positive Edrophonium (Tensilon) test.",
+    "treatment": "Pyridostigmine, Thymectomy."
+  },
+  "Ischemic Stroke": {
+    "who_gets_it": "Elderly with HTN, AFib, or CAD.",
+    "risk_factors": "Atrial Fibrillation, Carotid stenosis, Smoking.",
+    "typical_presentation": "Sudden focal neurologic deficit (weakness, slurring).",
+    "moa": "Embolic or thrombotic occlusion of a cerebral artery.",
+    "step1_buzzwords": "Contralateral weakness, Aphasia, AFib.",
+    "lab_buzzwords": "Normal CT head (initially), DWI MRI positive.",
+    "treatment": "tPA (if <4.5 hrs), Thrombectomy, Aspirin."
+  },
+  "Hodgkin Lymphoma": {
+    "who_gets_it": "Bimodal: 20s and 60s.",
+    "risk_factors": "EBV infection.",
+    "typical_presentation": "Painless lymphadenopathy, B-symptoms (sweats, weight loss).",
+    "moa": "Malignant B-cells with Reed-Sternberg morphology.",
+    "step1_buzzwords": "Reed-Sternberg cells, Owl-eye nuclei, CD15/CD30+.",
+    "lab_buzzwords": "Atypical large binucleated cells.",
+    "treatment": "ABVD Chemotherapy, Radiation."
+  },
+  "Alzheimer Disease": {
+    "who_gets_it": "Elderly; Down Syndrome (early onset).",
+    "risk_factors": "Age, ApoE-4 allele, APP gene.",
+    "typical_presentation": "Slowly progressive memory loss, disorientation, paranoia.",
+    "moa": "Beta-amyloid plaques and Tau neurofibrillary tangles.",
+    "step1_buzzwords": "Amyloid plaques, Neurofibrillary tangles, Hippocampal atrophy.",
+    "lab_buzzwords": "CSF: Low Abeta-42, High Tau.",
+    "treatment": "Donepezil, Memantine."
+  },
+  "Bacterial Meningitis": {
+    "who_gets_it": "Children, college students, elderly.",
+    "risk_factors": "Dormitories (N. meningitidis), lack of vaccination.",
+    "typical_presentation": "Fever, headache, stiff neck, altered mental status.",
+    "moa": "Infection of the leptomeninges by bacteria.",
+    "step1_buzzwords": "Kernig/Brudzinski signs, Petechial rash (Neisseria).",
+    "lab_buzzwords": "CSF: Low Glucose, High Protein, High PMNs (neutrophils).",
+    "treatment": "Ceftriaxone, Vancomycin, Dexamethasone."
+  },
+  "Congestive Heart Failure (CHF)": {
+    "who_gets_it": "Elderly; patients with prior MI.",
+    "risk_factors": "HTN, Ischemic heart disease, Valvular disease.",
+    "typical_presentation": "Dyspnea, orthopnea, PND, bilateral leg edema.",
+    "moa": "Heart fails to pump blood efficiently; backward failure.",
+    "step1_buzzwords": "Paroxysmal Nocturnal Dyspnea, S3, Kerley B lines.",
+    "lab_buzzwords": "Elevated BNP/NT-proBNP.",
+    "treatment": "ACEi/ARB, Beta-blockers, Diuretics (Lasix)."
+  },
+  "Urolithiasis (Kidney Stones)": {
+    "who_gets_it": "Males > Females; 20s-50s.",
+    "risk_factors": "Dehydration, High protein/salt diet, Hypercalciuria.",
+    "typical_presentation": "Sudden flank pain radiating to groin (colicky).",
+    "moa": "Supersaturation of urine leading to crystal formation.",
+    "step1_buzzwords": "Colicky pain, Hematuria, Calcium oxalate.",
+    "lab_buzzwords": "Envelope-shaped crystals (oxalate).",
+    "treatment": "Fluids, Alpha-blockers (Tamsulosin), Lithotripsy."
+  },
+  "Carcinoid Syndrome": {
+    "who_gets_it": "Patients with metastatic neuroendocrine tumors.",
+    "risk_factors": "Neuroendocrine tumor (usually ileum).",
+    "typical_presentation": "Diarrhea, Flushing, Wheezing, Right-heart valve lesions.",
+    "moa": "Tumor secretes Serotonin after metastasizing to liver.",
+    "step1_buzzwords": "Serotonin, 5-HIAA, Right-sided heart failure.",
+    "lab_buzzwords": "High 24-hr urinary 5-HIAA.",
+    "treatment": "Octreotide, Surgical resection."
+  },
+  "Testicular Torsion": {
+    "who_gets_it": "Adolescents (12-18).",
+    "risk_factors": "Bell-clapper deformity.",
+    "typical_presentation": "Acute severe testicular pain, high-riding testis, nausea.",
+    "moa": "Twisting of the spermatic cord cutting off blood supply.",
+    "step1_buzzwords": "Absent cremasteric reflex, High-riding testis.",
+    "lab_buzzwords": "Absent Doppler flow on Ultrasound.",
+    "treatment": "Immediate surgical detorsion (within 6 hrs)."
+  },
+  "Celiac Disease": {
+    "who_gets_it": "All ages; associated with Down Syndrome, Type 1 DM.",
+    "risk_factors": "HLA-DQ2, HLA-DQ8.",
+    "typical_presentation": "Diarrhea, bloating, dermatitis herpetiformis, iron deficiency.",
+    "moa": "Immune-mediated damage to small bowel villi due to gluten.",
+    "step1_buzzwords": "Villous atrophy, Crypt hyperplasia, Anti-tTG.",
+    "lab_buzzwords": "Anti-Tissue Transglutaminase, Anti-Endomysial antibodies.",
+    "treatment": "Gluten-free diet."
+  },
+  "Pseudomonas Corneal Ulcer (Contact Lens-Associated)": {
+    "who_gets_it": "Contact lens wearers.",
+    "risk_factors": "Overnight lens use, poor hygiene.",
+    "typical_presentation": "Eye pain, redness, blurry vision, hypopyon.",
+    "moa": "Bacterial infection of the corneal stroma.",
+    "step1_buzzwords": "Contact lens, Pseudomonas, Green-pigment culture.",
+    "lab_buzzwords": "Gram-negative rods on scraping.",
+    "treatment": "Topical Fluoroquinolones (Fortified antibiotics)."
+  },
+  "Chronic Myeloid Leukemia (CML)": {
+    "who_gets_it": "Adults age 40-60.",
+    "risk_factors": "Ionizing radiation.",
+    "typical_presentation": "Fatigue, weight loss, massive splenomegaly, early satiety.",
+    "moa": "t(9;22) BCR-ABL fusion creates a constitutive tyrosine kinase.",
+    "step1_buzzwords": "Philadelphia chromosome, Tyrosine kinase, Basophilia.",
+    "lab_buzzwords": "Low LAP score (differentiates from leukemoid reaction).",
+    "treatment": "Imatinib (Tyrosine Kinase Inhibitor)."
+  },
+  "Peripartum Cardiomyopathy": {
+    "who_gets_it": "Pregnant/Postpartum women.",
+    "risk_factors": "Last month of pregnancy or first 5 months postpartum.",
+    "typical_presentation": "Dyspnea, edema, orthopnea shortly after delivery.",
+    "moa": "Dilated cardiomyopathy of unknown etiology in late pregnancy.",
+    "step1_buzzwords": "Postpartum heart failure, Dilated LV.",
+    "lab_buzzwords": "Echo: EF < 45%.",
+    "treatment": "Heart failure meds (standard), avoid future pregnancy."
+  },
+  "Urosepsis (Obstructive Pyelonephritis)": {
+    "who_gets_it": "Elderly, patients with stones or BPH.",
+    "risk_factors": "Urinary obstruction, Neurogenic bladder.",
+    "typical_presentation": "Fever, flank pain, confusion, hypotension.",
+    "moa": "Infection above an obstruction entering the bloodstream.",
+    "step1_buzzwords": "Hydronephrosis, Pyuria, WBC casts.",
+    "lab_buzzwords": "WBC casts in urine (localizes to kidney).",
+    "treatment": "Urinary decompression (stent/nephrostomy), IV antibiotics."
+  },
+  "Acute Pancreatitis": {
+    "who_gets_it": "Adults.",
+    "risk_factors": "Gallstones, Alcohol, Hypertriglyceridemia, ERCP.",
+    "typical_presentation": "Epigastric pain radiating to back, nausea, vomiting.",
+    "moa": "Autodigestion of pancreas by premature activation of trypsin.",
+    "step1_buzzwords": "Radiates to back, Cullen sign, Grey Turner sign.",
+    "lab_buzzwords": "Lipase > 3x ULN, Hypocalcemia (saponification).",
+    "treatment": "NPO, Aggressive IV fluids, Pain control."
+  },
+  "Sarcoidosis": {
+    "who_gets_it": "African American females.",
+    "risk_factors": "Unknown etiology (immune-mediated).",
+    "typical_presentation": "Dry cough, dyspnea, erythema nodosum, uveitis.",
+    "moa": "Non-caseating granulomas in multiple organs.",
+    "step1_buzzwords": "Bilateral hilar lymphadenopathy, Erythema nodosum, ACE level.",
+    "lab_buzzwords": "High Calcium, High ACE, High Vitamin D.",
+    "treatment": "Steroids (if symptomatic)."
+  },
+  "Peritonsillar Abscess": {
+    "who_gets_it": "Adolescents and young adults.",
+    "risk_factors": "Untreated streptococcal pharyngitis.",
+    "typical_presentation": "Severe sore throat, muffled 'hot potato' voice, trismus.",
+    "moa": "Collection of pus between tonsillar capsule and pharyngeal constrictors.",
+    "step1_buzzwords": "Hot potato voice, Uvular deviation, Trismus.",
+    "lab_buzzwords": "Group A Strep in culture.",
+    "treatment": "Incision and Drainage (I&D), Antibiotics."
+  },
+  "Rheumatoid Arthritis (RA)": {
+    "who_gets_it": "Females 30-50.",
+    "risk_factors": "HLA-DR4, Smoking.",
+    "typical_presentation": "Morning stiffness > 1hr, symmetric joint swelling (MCP/PIP).",
+    "moa": "Pannus formation and destruction of cartilage/bone.",
+    "step1_buzzwords": "Morning stiffness, Ulnar deviation, Pannus.",
+    "lab_buzzwords": "Anti-CCP (highly specific), RF (sensitive).",
+    "treatment": "Methotrexate (DMARDs), NSAIDs, Steroids."
+  },
+  "Osteomyelitis": {
+    "who_gets_it": "IV drug users, diabetics, sickle cell patients.",
+    "risk_factors": "S. aureus (most common), Salmonella (Sickle cell).",
+    "typical_presentation": "Bone pain, fever, localized swelling/weakness.",
+    "moa": "Hematogenous or contiguous spread of infection to bone.",
+    "step1_buzzwords": "IV drug user, S. aureus, Sequestrum.",
+    "lab_buzzwords": "Elevated ESR/CRP, Positive Blood Cultures.",
+    "treatment": "Long-term IV antibiotics, debridement."
+  },
+  "Anorexia Nervosa": {
+    "who_gets_it": "Adolescent girls/Young women.",
+    "risk_factors": "Social/Cultural pressure, anxiety.",
+    "typical_presentation": "Low BMI, amenorrhea, lanugo, fear of weight gain.",
+    "moa": "Severe caloric restriction and distorted body image.",
+    "step1_buzzwords": "BMI < 18.5, Lanugo, Parotid enlargement (purging).",
+    "lab_buzzwords": "Hypokalemia, Alkalosis, Low LH/FSH.",
+    "treatment": "Nutritional rehab, CBT."
+  },
+  "Normal Pressure Hydrocephalus": {
+    "who_gets_it": "Elderly.",
+    "risk_factors": "Prior SAH, Meningitis, Trauma.",
+    "typical_presentation": "Wet, Wacky, and Wobbly (Incontinence, Dementia, Ataxia).",
+    "moa": "Impaired CSF absorption; ventriculomegaly without high pressure.",
+    "step1_buzzwords": "Magnetic gait, Wet/Wacky/Wobbly.",
+    "lab_buzzwords": "Gait improvement after Large Volume Tap.",
+    "treatment": "Ventriculoperitoneal (VP) shunt."
+  },
+  "Dermatomyositis": {
+    "who_gets_it": "Females; associated with malignancy.",
+    "risk_factors": "Paraneoplastic syndrome (Lung/Gastric cancer).",
+    "typical_presentation": "Proximal muscle weakness, eyelid rash, knuckle rash.",
+    "moa": "Perifascicular inflammation and atrophy.",
+    "step1_buzzwords": "Heliotrope rash, Gottron papules, Shawl sign.",
+    "lab_buzzwords": "Anti-Jo-1, Anti-Mi-2, High CK.",
+    "treatment": "Steroids."
+  },
+  "Myocardial Infarction (Heart Attack)": {
+    "who_gets_it": "Older adults; smokers, diabetics.",
+    "risk_factors": "HTN, Hyperlipidemia, Tobacco.",
+    "typical_presentation": "Crushing substernal chest pain, jaw/arm radiation, diaphoresis.",
+    "moa": "Coronary artery occlusion causing myocyte necrosis.",
+    "step1_buzzwords": "ST elevation, Coagulative necrosis, Jaw radiation.",
+    "lab_buzzwords": "Elevated Troponin I/T, CK-MB.",
+    "treatment": "Aspirin, Heparin, PCI (Stenting)."
+  },
+  "Ulcerative Colitis (UC)": {
+    "who_gets_it": "Young adults (15-30).",
+    "risk_factors": "Family history, smoking (is protective!).",
+    "typical_presentation": "Bloody diarrhea, tenesmus, LLQ pain.",
+    "moa": "Continuous mucosal inflammation starting in the rectum.",
+    "step1_buzzwords": "Lead pipe colon, Crypt abscesses, Rectal involvement.",
+    "lab_buzzwords": "p-ANCA positive, Fecal calprotectin high.",
+    "treatment": "5-ASA (Mesalamine), Infliximab, Colectomy."
+  },
+  "Disseminated Gonococcal Infection (Septic Arthritis)": {
+    "who_gets_it": "Sexually active young adults.",
+    "risk_factors": "Unprotected sex, C5-C9 deficiency.",
+    "typical_presentation": "Migratory arthritis, tenosynovitis, skin pustules.",
+    "moa": "Systemic spread of N. gonorrhoeae from mucosal site.",
+    "step1_buzzwords": "Sexually active, Pustular rash, Tenosynovitis.",
+    "lab_buzzwords": "NAAT positive, Purulent joint fluid.",
+    "treatment": "Ceftriaxone + Azithromycin."
+  },
+  "Parkinson Disease": {
+    "who_gets_it": "Elderly (60+).",
+    "risk_factors": "Age, MPTP exposure.",
+    "typical_presentation": "Resting tremor, bradykinesia, rigidity, postural instability.",
+    "moa": "Loss of dopaminergic neurons in the Substantia Nigra.",
+    "step1_buzzwords": "Lewy bodies, Alpha-synuclein, Pill-rolling tremor.",
+    "lab_buzzwords": "Nigrostriatal loss on DaTscan.",
+    "treatment": "Levodopa/Carbidopa, Bromocriptine."
+  },
+  "Gilbert Syndrome": {
+    "who_gets_it": "Common in healthy young adults.",
+    "risk_factors": "Stress, fasting, illness.",
+    "typical_presentation": "Mild intermittent jaundice during stress.",
+    "moa": "Decreased UGT1A1 activity (low conjugation).",
+    "step1_buzzwords": "Unconjugated hyperbilirubinemia, Provoked by stress.",
+    "lab_buzzwords": "Normal LFTs, Isolated high indirect bilirubin.",
+    "treatment": "None needed (benign)."
+  },
+  "Alcoholic Cardiomyopathy": {
+    "who_gets_it": "Chronic heavy drinkers.",
+    "risk_factors": "Long-term ethanol abuse.",
+    "typical_presentation": "Heart failure (SOB, edema) in an alcoholic.",
+    "moa": "Direct toxic effect of ethanol on myocardium (Dilated CM).",
+    "step1_buzzwords": "Dilated heart, Thiamine deficiency, AST:ALT > 2.",
+    "lab_buzzwords": "High GGT, Macrocytic anemia.",
+    "treatment": "Alcohol cessation, standard HF meds."
+  },
+  "Retinal Detachment": {
+    "who_gets_it": "Older adults, highly myopic patients.",
+    "risk_factors": "Myopia, trauma, intraocular surgery.",
+    "typical_presentation": "Gray curtain over vision, flashes (photopsia), floaters.",
+    "moa": "Separation of neurosensory retina from pigment epithelium.",
+    "step1_buzzwords": "Curtain descending, Flashes and floaters.",
+    "lab_buzzwords": "Billowing retina on Fundoscopy.",
+    "treatment": "Surgical repair (Laser/Cryotherapy)."
+  },
+  "Pulmonary Embolism (PE)": {
+    "who_gets_it": "Immobile patients, post-op, cancer patients.",
+    "risk_factors": "Virchow Triad: Stasis, Hypercoagulability, Endothelial injury.",
+    "typical_presentation": "Sudden dyspnea, pleuritic chest pain, tachycardia.",
+    "moa": "Thrombus (usually from DVT) lodges in pulmonary artery.",
+    "step1_buzzwords": "S1Q3T3, Hampton hump, Westermark sign.",
+    "lab_buzzwords": "High D-Dimer, Respiratory Alkalosis (low CO2).",
+    "treatment": "Heparin, Warfarin, Thrombolytics (if massive)."
+  },
+  "Post-Streptococcal Glomerulonephritis": {
+    "who_gets_it": "Children (2-12 years).",
+    "risk_factors": "Recent Group A Strep infection (Pharyngitis or Impetigo).",
+    "typical_presentation": "Cola-colored urine, periorbital edema, HTN.",
+    "moa": "Type III hypersensitivity; immune complex deposition.",
+    "step1_buzzwords": "Subepithelial humps, Lumpy-bumpy appearance.",
+    "lab_buzzwords": "Low C3, High ASO titer.",
+    "treatment": "Supportive, Penicillin (to prevent Rheumatic fever)."
+  },
+  "Zenker Diverticulum": {
+    "who_gets_it": "Elderly males.",
+    "risk_factors": "Cricopharyngeal incoordination.",
+    "typical_presentation": "Halitosis, regurgitation of undigested food, dysphagia.",
+    "moa": "Killian triangle herniation (pharyngeal mucosa).",
+    "step1_buzzwords": "Halitosis, Hot potato voice (if huge), Killian triangle.",
+    "lab_buzzwords": "Barium swallow diagnosis.",
+    "treatment": "Surgical repair (Diverticulectomy)."
+  },
+  "C. Difficile Infection": {
+    "who_gets_it": "Hospitalized patients on antibiotics.",
+    "risk_factors": "Clindamycin, Fluoroquinolones, PPIs.",
+    "typical_presentation": "Profuse watery diarrhea, abdominal pain, fever.",
+    "moa": "Toxin A (brush border) and Toxin B (cytoskeleton) damage.",
+    "step1_buzzwords": "Pseudomembranes, Toxin B, Clindamycin.",
+    "lab_buzzwords": "PCR for Toxin B, Leukocytosis.",
+    "treatment": "Oral Vancomycin or Fidaxomicin."
+  },
+  "Primary Biliary Cholangitis": {
+    "who_gets_it": "Middle-aged females.",
+    "risk_factors": "Autoimmune associations (Sjogren's, RA).",
+    "typical_presentation": "Pruritus (itching), jaundice, fatigue, xanthomas.",
+    "moa": "Autoimmune destruction of intrahepatic bile ducts.",
+    "step1_buzzwords": "Anti-mitochondrial antibody (AMA), Pruritus.",
+    "lab_buzzwords": "High ALP, Positive AMA.",
+    "treatment": "Ursodeoxycholic acid (UDCA)."
+  },
+  "Cauda Equina Syndrome": {
+    "who_gets_it": "Adults with disc disease or tumors.",
+    "risk_factors": "Large central disc herniation.",
+    "typical_presentation": "Saddle anesthesia, bowel/bladder dysfunction, leg weakness.",
+    "moa": "Compression of multiple lumbosacral nerve roots.",
+    "step1_buzzwords": "Saddle anesthesia, Urinary retention.",
+    "lab_buzzwords": "High Post-void residual volume.",
+    "treatment": "Emergency surgical decompression."
+  },
+  "Pelvic Inflammatory Disease (Chlamydia-Associated)": {
+    "who_gets_it": "Young sexually active females.",
+    "risk_factors": "Multiple partners, lack of barrier protection.",
+    "typical_presentation": "Cervical motion tenderness, adnexal pain, discharge.",
+    "moa": "Ascending infection of the upper genital tract.",
+    "step1_buzzwords": "Chandelier sign, Fitz-Hugh-Curtis syndrome.",
+    "lab_buzzwords": "Positive NAAT for Chlamydia.",
+    "treatment": "Ceftriaxone + Doxycycline + Metronidazole."
+  },
+  "Aortic Stenosis": {
+    "who_gets_it": "Elderly (calcific) or younger (bicuspid).",
+    "risk_factors": "Bicuspid aortic valve, Chronic wear/tear.",
+    "typical_presentation": "SAD triad: Syncope, Angina, Dyspnea.",
+    "moa": "Narrowing of the aortic valve orifice.",
+    "step1_buzzwords": "Crescendo-decrescendo, Pulsus parvus et tardus.",
+    "lab_buzzwords": "AVA < 1.0 cm2 on Echo.",
+    "treatment": "Aortic Valve Replacement (TAVR/SAVR)."
+  },
+  "Adult-Onset Still Disease": {
+    "who_gets_it": "Young adults (16-35).",
+    "risk_factors": "Unknown (inflammatory).",
+    "typical_presentation": "Daily spiking fevers, evanescent salmon rash, arthritis.",
+    "moa": "Systemic autoinflammatory disorder.",
+    "step1_buzzwords": "Salmon-colored rash, Spiking fevers.",
+    "lab_buzzwords": "Extremely high Ferritin.",
+    "treatment": "NSAIDs, Steroids, IL-1 inhibitors."
+  },
+  "Gout": {
+    "who_gets_it": "Middle-aged males, postmenopausal females.",
+    "risk_factors": "Alcohol, Diuretics (HCTZ), High-purine diet.",
+    "typical_presentation": "Podagra (acute great toe pain), tophi.",
+    "moa": "Precipitation of monosodium urate crystals in joints.",
+    "step1_buzzwords": "Podagra, Negatively birefringent crystals, Tophi.",
+    "lab_buzzwords": "Needle-shaped crystals under polarized light.",
+    "treatment": "NSAIDs/Colchicine (acute); Allopurinol (chronic)."
+  },
+  "Anti-MDA5 Dermatomyositis": {
+    "who_gets_it": "Adults; specifically seen in East Asian populations.",
+    "risk_factors": "Autoimmunity.",
+    "typical_presentation": "Knuckle rash, skin ulcers, rapidly progressive lung disease.",
+    "moa": "Autoimmune attack on skin and lung vasculature.",
+    "step1_buzzwords": "Rapidly progressive ILD, Gottron papules.",
+    "lab_buzzwords": "Positive Anti-MDA5 antibody.",
+    "treatment": "High-dose steroids, Cyclophosphamide."
+  },
+  "Zollinger-Ellison Syndrome (Gastrinoma)": {
+    "who_gets_it": "Adults; MEN 1 association.",
+    "risk_factors": "Multiple Endocrine Neoplasia Type 1.",
+    "typical_presentation": "Refractory peptic ulcers, chronic diarrhea.",
+    "moa": "Gastrin-secreting tumor causing hyperchlorhydria.",
+    "step1_buzzwords": "Rugae thickening, Secretin stimulation test.",
+    "lab_buzzwords": "Fasting Gastrin > 1000.",
+    "treatment": "High-dose PPIs, surgical resection."
+  },
+  "Aortic Dissection (Marfan Syndrome)": {
+    "who_gets_it": "Tall, thin young adults.",
+    "risk_factors": "FBN1 mutation.",
+    "typical_presentation": "Tearing chest pain, lens dislocation, hypermobility.",
+    "moa": "Cystic medial necrosis of the aorta.",
+    "step1_buzzwords": "Cystic medial necrosis, Fibrillin-1.",
+    "lab_buzzwords": "FBN1 gene mutation.",
+    "treatment": "Beta-blockers, surgical repair."
+  },
+  "Malignant Pleural Mesothelioma": {
+    "who_gets_it": "Older males with occupational exposure.",
+    "risk_factors": "Asbestos exposure.",
+    "typical_presentation": "Dyspnea, chest pain, weight loss, pleural effusions.",
+    "moa": "Malignant tumor of mesothelial cells.",
+    "step1_buzzwords": "Psammoma bodies, Calretinin positive, Asbestos.",
+    "lab_buzzwords": "Calretinin and WT-1 positive staining.",
+    "treatment": "Surgery, Pemetrexed/Cisplatin."
+  },
+  "Anti-NMDA Receptor Encephalitis": {
+    "who_gets_it": "Young females.",
+    "risk_factors": "Ovarian Teratoma.",
+    "typical_presentation": "Psychosis, seizures, dyskinesias, autonomic instability.",
+    "moa": "Autoantibodies against the GluN1 subunit of NMDA receptor.",
+    "step1_buzzwords": "Ovarian teratoma, Orofacial dyskinesias.",
+    "lab_buzzwords": "Anti-NMDA antibodies in CSF.",
+    "treatment": "Steroids, IVIG, Teratoma removal."
+  },
+  "Disseminated Histoplasmosis": {
+    "who_gets_it": "Residents of Ohio/Mississippi river valleys; HIV patients.",
+    "risk_factors": "Bat/Bird droppings, soil excavation.",
+    "typical_presentation": "Fever, weight loss, cough, hepatosplenomegaly.",
+    "moa": "Intracellular yeast within macrophages.",
+    "step1_buzzwords": "Histo hides in macrophages, Ohio River Valley.",
+    "lab_buzzwords": "Urine Histoplasma antigen positive.",
+    "treatment": "Amphotericin B (severe), Itraconazole (mild)."
+  },
+  "Irritable Bowel Syndrome (IBS)": {
+    "who_gets_it": "Females in 20s-40s.",
+    "risk_factors": "Stress, History of physical/sexual abuse.",
+    "typical_presentation": "Abdominal pain relieved by defecation, bloating.",
+    "moa": "Altered gut motility and visceral hypersensitivity.",
+    "step1_buzzwords": "Relieved by defecation, Normal workup.",
+    "lab_buzzwords": "Normal Fecal Calprotectin (rules out IBD).",
+    "treatment": "Dietary fiber, SSRIs, Loperamide."
+  },
+  "Amyotrophic Lateral Sclerosis (ALS)": {
+    "who_gets_it": "Adults age 40-60.",
+    "risk_factors": "SOD1 mutation (familial).",
+    "typical_presentation": "Mixed UMN and LMN signs, fasciculations, normal sensation.",
+    "moa": "Degeneration of upper and lower motor neurons.",
+    "step1_buzzwords": "Fasciculations, UMN and LMN, Riluzole.",
+    "lab_buzzwords": "EMG: Widespread denervation/reinnervation.",
+    "treatment": "Riluzole (blocks glutamate), Edaravone."
+  },
+  "Infectious Mononucleosis": {
+    "who_gets_it": "Adolescents/Young adults.",
+    "risk_factors": "Saliva contact (kissing).",
+    "typical_presentation": "Fever, pharyngitis, posterior cervical lymphadenopathy.",
+    "moa": "EBV infects B-cells via CD21.",
+    "step1_buzzwords": "Atypical lymphocytes, Monospot, Ampicillin rash.",
+    "lab_buzzwords": "Heterophile antibodies (Monospot), >10% atypical lymphocytes.",
+    "treatment": "Supportive, avoid contact sports (spleen rupture)."
+  }
+}
