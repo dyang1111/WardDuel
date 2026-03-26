@@ -227,11 +227,11 @@
         .disclaimer{font-size:11px;color:var(--text-subtle);text-align:center;max-width:500px;padding:0 16px 48px;line-height:1.7}
 
         /* EXPLANATION MODAL */
-        .exp-overlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(15,23,42,.35);backdrop-filter:blur(6px);align-items:flex-end;justify-content:center}
+        .exp-overlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(15,23,42,.35);backdrop-filter:blur(6px);align-items:flex-start;justify-content:center;padding-top:60px}
         .exp-overlay.open{display:flex}
-        .exp-sheet{background:var(--surface);border-radius:20px 20px 0 0;width:100%;max-width:680px;max-height:88vh;overflow-y:auto;box-shadow:0 -8px 40px rgba(15,23,42,.18);transform:translateY(100%);transition:transform .35s cubic-bezier(.32,1,.23,1);padding-bottom:env(safe-area-inset-bottom)}
+        .exp-sheet{background:var(--surface);border-radius:0 0 20px 20px;width:100%;max-width:680px;max-height:82vh;overflow-y:auto;box-shadow:0 8px 40px rgba(15,23,42,.18);transform:translateY(-100%);transition:transform .35s cubic-bezier(.32,1,.23,1)}
         .exp-overlay.open .exp-sheet{transform:translateY(0)}
-        .exp-handle-row{display:flex;justify-content:space-between;align-items:center;padding:16px 20px 12px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--surface);z-index:1;border-radius:20px 20px 0 0}
+        .exp-handle-row{display:flex;justify-content:space-between;align-items:center;padding:16px 20px 12px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--surface);z-index:1}
         .exp-dz-name{font-size:15px;font-weight:900;color:var(--text);letter-spacing:-.01em}
         .exp-close{background:none;border:none;cursor:pointer;color:var(--text-subtle);font-size:1.1rem;padding:4px 8px;border-radius:6px;transition:all .15s;line-height:1}
         .exp-close:hover{background:var(--danger-light);color:var(--danger)}
@@ -251,9 +251,9 @@
         .exp-row.clr-slate{background:#f8fafc;border:1px solid #e2e8f0}.exp-row.clr-slate .exp-row-label{color:#475569}
         .exp-row.clr-teal{background:#f0fdfa;border:1px solid #99f6e4}.exp-row.clr-teal .exp-row-label{color:#0f766e}
         .exp-no-data{text-align:center;padding:32px 20px;color:var(--text-subtle);font-size:13px}
-        #exp-reopen-btn{display:none;position:fixed;bottom:24px;right:20px;z-index:1500;background:var(--text);color:#fff;border:none;border-radius:12px;padding:10px 16px;font-size:12px;font-weight:700;cursor:pointer;box-shadow:var(--shadow-md);gap:6px;align-items:center;transition:opacity .2s}
-        #exp-reopen-btn.visible{display:flex}
-        #exp-reopen-btn:hover{opacity:.85}
+        .exp-reopen-inline{display:none;margin-top:12px;width:100%;padding:10px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:12px;font-weight:700;color:var(--text-muted);cursor:pointer;transition:all .15s}
+        .exp-reopen-inline:hover{border-color:var(--border-strong);color:var(--text);background:#fff}
+        .exp-reopen-inline.visible{display:block}
 
         @media(max-width:500px){
             .main{grid-template-columns:20px 1fr 20px;gap:7px}
@@ -275,7 +275,6 @@
         <div class="exp-body" id="exp-body"></div>
     </div>
 </div>
-<button id="exp-reopen-btn" onclick="window.openExp()">📋 Explanation</button>
 
 <!-- AUTH MODAL -->
 <div id="authModal" class="modal">
@@ -560,11 +559,13 @@ function renderExp(answer,success){
 
 window.openExp=function(){
     document.getElementById('expOverlay').classList.add('open');
-    document.getElementById('exp-reopen-btn').classList.remove('visible');
+    const inlineBtn=document.getElementById('exp-reopen-inline');
+    if(inlineBtn)inlineBtn.classList.remove('visible');
 };
 window.closeExpBtn=function(){
     document.getElementById('expOverlay').classList.remove('open');
-    document.getElementById('exp-reopen-btn').classList.add('visible');
+    const inlineBtn=document.getElementById('exp-reopen-inline');
+    if(inlineBtn)inlineBtn.classList.add('visible');
 };
 window.closeExp=function(e){
     if(e.target===document.getElementById('expOverlay'))window.closeExpBtn();
@@ -908,6 +909,7 @@ async function endGame(success,payload){
             </div>
             <div class="answer-pill ${won?'answer-win':'answer-loss'}">${won?'✓':'✗'} ${currentCase.answer}</div>
             ${ptsEarned>0?`<div class="pts-earned">+${ptsEarned} pts earned</div>`:''}
+            <button class="exp-reopen-inline" id="exp-reopen-inline" onclick="window.openExp()">📋 View Explanation</button>
         </div>`;
     showExpAfterGame(currentCase.answer, success);
 
