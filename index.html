@@ -113,7 +113,9 @@
         .lab-btn{background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:9px 5px;font-size:11px;font-weight:600;cursor:pointer;color:var(--text);transition:all .15s;text-align:center}
         .lab-btn:hover:not(.ordered):not(.locked-lab){border-color:var(--accent);color:var(--accent);background:var(--accent-light)}
         .lab-btn.ordered{background:var(--success-light);border-color:var(--success-border);color:var(--success);cursor:default}
-        .lab-btn.locked-lab{opacity:.4;border-style:dashed;cursor:not-allowed;color:var(--text-subtle)}
+        .lab-btn.locked-lab{opacity:.55;border-style:dashed;cursor:not-allowed;color:var(--text-subtle)}
+        .lab-btn.locked-lab:hover::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--text);color:#fff;font-size:10px;font-weight:600;padding:4px 8px;border-radius:5px;white-space:nowrap;pointer-events:none;z-index:50}
+        .lab-btn{position:relative}
         .lab-btn.postgame{opacity:1;border-style:solid;cursor:pointer;color:var(--text);background:var(--bg);border-color:var(--border)}
         .lab-btn.postgame:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-light)}
 
@@ -130,12 +132,17 @@
         .search-wrap{position:relative}
         #dx-input{width:100%;padding:11px 13px;border:1px solid var(--border-strong);border-radius:var(--radius-sm);font-size:13px;background:var(--bg);color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}
         #dx-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.12);background:#fff}
+        .dropdown div.used-wrong{text-decoration:line-through;color:var(--danger);cursor:not-allowed}
+        .dropdown div.used-wrong:hover{background:var(--danger-light);color:var(--danger)}
         .dropdown{position:absolute;width:100%;background:var(--surface);border:1px solid var(--border-strong);border-top:none;border-radius:0 0 var(--radius-sm) var(--radius-sm);max-height:220px;overflow-y:auto;z-index:200;display:none;box-shadow:var(--shadow-md)}
         .dropdown div{padding:10px 13px;cursor:pointer;font-size:12px;border-bottom:1px solid var(--border);color:var(--text);transition:background .1s}
         .dropdown div:last-child{border-bottom:none}
         .dropdown div:hover{background:var(--accent-light);color:var(--accent)}
         .submit-btn{width:100%;padding:12px;margin-top:10px;background:var(--text);color:#fff;border:none;border-radius:var(--radius-sm);font-size:13px;font-weight:700;cursor:pointer;transition:opacity .15s}
-        .submit-btn:hover{opacity:.85}
+        .submit-btn:hover:not(:disabled){opacity:.85}
+        .submit-btn:disabled{opacity:.35;cursor:not-allowed}
+        .dx-used{text-decoration:line-through;color:var(--danger) !important}
+        .dx-used::after{content:' — incorrect';font-size:10px;font-weight:600}
 
         /* ENDGAME */
         .endgame-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px 20px;box-shadow:var(--shadow);text-align:center}
@@ -330,7 +337,7 @@
                 <button class="action-btn" id="btn-hx" onclick="getHint('hx',8)"><span class="ab-name">Add. History</span><span class="ab-cost">−8 HP</span><span class="ab-check">✓ Revealed</span></button>
                 <button class="action-btn" id="btn-pe" onclick="getHint('pe',12)"><span class="ab-name">PE Findings</span><span class="ab-cost">−12 HP</span><span class="ab-check">✓ Revealed</span></button>
                 <button class="action-btn" id="btn-lab" onclick="toggleLabPanel()"><span class="ab-name">Order Labs</span><span class="ab-cost">−8 ea</span><span class="ab-check">✓ Open</span></button>
-                <button class="action-btn" id="btn-img" onclick="getHint('img',20)"><span class="ab-name">Imaging</span><span class="ab-cost">−20 HP</span><span class="ab-check">✓ Revealed</span></button>
+                <button class="action-btn" id="btn-img" onclick="getHint('img',25)"><span class="ab-name">Imaging</span><span class="ab-cost">−25 HP</span><span class="ab-check">✓ Revealed</span></button>
             </div>
         </div>
 
@@ -348,7 +355,7 @@
                 <button class="lab-btn" id="lab-UA" onclick="orderLab('UA')">Urinalysis</button>
                 <button class="lab-btn" id="lab-ABG" onclick="orderLab('ABG')">ABG/VBG</button>
                 <button class="lab-btn" id="lab-Coags" onclick="orderLab('Coags')">Coags</button>
-                <button class="lab-btn locked-lab" id="lab-Specialty" onclick="orderLab('Specialty')" disabled>🔒 Specialty</button>
+                <button class="lab-btn locked-lab" id="lab-Specialty" onclick="orderLab('Specialty')" disabled data-tip="Order 2 labs first">🔒 Specialty</button>
             </div>
         </div>
 
@@ -363,7 +370,7 @@
                 <input type="text" id="dx-input" placeholder="Search diagnosis..." onkeyup="window.filterDiagnosis()" autocomplete="off">
                 <div id="dropdown" class="dropdown"></div>
             </div>
-            <button class="submit-btn" onclick="window.checkDiagnosis()">Submit Diagnosis</button>
+            <button class="submit-btn" onclick="window.checkDiagnosis()" disabled>Submit Diagnosis</button>
         </div>
     </div>
 
@@ -467,6 +474,8 @@ let currentCase=null,hp=100,timeLeft=300,timerId=null,gameActive=true;
 let diagnosisPool=[],currentUser=null,isSignUp=false,isArchive=false;
 const unlockedHints=new Set(),orderedLabs=new Set();
 let wrongStreak=0,opponentScore=null,opponentName=null;
+const wrongAnswers=new Set();
+let selectedDropdownIndex=-1;
 let userPrefs={iconType:'logo',animalIdx:0,colorIdx:0,specIdx:0};
 
 function getLevelInfo(pts){
@@ -640,12 +649,61 @@ function unlockAllLabs(){
 window.filterDiagnosis=()=>{
     const input=document.getElementById('dx-input').value.toUpperCase();
     const div=document.getElementById('dropdown');
+    const submitBtn=document.querySelector('.submit-btn');
     div.innerHTML='';
+    selectedDropdownIndex=-1;
+    // Enable submit only when something is typed
+    if(submitBtn) submitBtn.disabled=!document.getElementById('dx-input').value.trim();
     if(!input){div.style.display='none';return;}
     const matches=diagnosisPool.filter(d=>d.toUpperCase().includes(input)).slice(0,10);
-    if(matches.length){div.style.display='block';matches.forEach(m=>{const item=document.createElement('div');item.innerText=m;item.onclick=()=>{document.getElementById('dx-input').value=m;div.style.display='none';};div.appendChild(item);});}
-    else div.style.display='none';
+    if(matches.length){
+        div.style.display='block';
+        matches.forEach((m,i)=>{
+            const item=document.createElement('div');
+            const isWrong=wrongAnswers.has(m);
+            item.innerText=m;
+            if(isWrong) item.classList.add('used-wrong');
+            item.dataset.index=i;
+            item.onclick=()=>{
+                if(isWrong)return;
+                document.getElementById('dx-input').value=m;
+                div.style.display='none';
+                selectedDropdownIndex=-1;
+                if(submitBtn) submitBtn.disabled=false;
+            };
+            div.appendChild(item);
+        });
+    }else div.style.display='none';
 };
+
+// Keyboard navigation
+document.getElementById('dx-input').addEventListener('keydown',(e)=>{
+    const div=document.getElementById('dropdown');
+    const items=[...div.querySelectorAll('div:not(.used-wrong)')];
+    if(e.key==='ArrowDown'){
+        e.preventDefault();
+        selectedDropdownIndex=Math.min(selectedDropdownIndex+1,items.length-1);
+        items.forEach((el,i)=>el.style.background=i===selectedDropdownIndex?'var(--accent-light)':'');
+        if(items[selectedDropdownIndex]) document.getElementById('dx-input').value=items[selectedDropdownIndex].innerText;
+    } else if(e.key==='ArrowUp'){
+        e.preventDefault();
+        selectedDropdownIndex=Math.max(selectedDropdownIndex-1,-1);
+        items.forEach((el,i)=>el.style.background=i===selectedDropdownIndex?'var(--accent-light)':'');
+        if(selectedDropdownIndex>=0&&items[selectedDropdownIndex]) document.getElementById('dx-input').value=items[selectedDropdownIndex].innerText;
+    } else if(e.key==='Enter'){
+        e.preventDefault();
+        if(div.style.display==='block'&&selectedDropdownIndex>=0&&items[selectedDropdownIndex]){
+            document.getElementById('dx-input').value=items[selectedDropdownIndex].innerText;
+            div.style.display='none';
+            selectedDropdownIndex=-1;
+        } else {
+            window.checkDiagnosis();
+        }
+    } else if(e.key==='Escape'){
+        div.style.display='none';
+        selectedDropdownIndex=-1;
+    }
+});
 document.addEventListener('click',e=>{if(!e.target.closest('.search-wrap'))document.getElementById('dropdown').style.display='none';});
 
 window.checkDiagnosis=async()=>{
@@ -657,9 +715,14 @@ window.checkDiagnosis=async()=>{
         endGame(true,Math.round(hp*mult));
     }else{
         wrongStreak++;
+        wrongAnswers.add(val);
         const penalty=wrongStreak>=3?20:10;
         hp-=penalty;updateHP();
+        document.getElementById('dx-input').value='';
+        document.querySelector('.submit-btn').disabled=true;
         showToast(`Incorrect${wrongStreak>=3?' — escalating!':''} −${penalty} HP`,'var(--danger)');
+        // Re-render dropdown to show strikethrough
+        window.filterDiagnosis();
     }
 };
 
