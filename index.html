@@ -563,6 +563,11 @@ window.openExp=function(){
     const inlineBtn=document.getElementById('exp-reopen-inline');
     if(inlineBtn)inlineBtn.classList.remove('visible');
 };
+window.openExpAlreadyPlayed=async function(){
+    await loadExplanations();
+    renderExp(currentCase.answer, true);
+    window.openExp();
+};
 window.closeExpBtn=function(){
     document.getElementById('expOverlay').classList.remove('open');
     const inlineBtn=document.getElementById('exp-reopen-inline');
@@ -638,11 +643,11 @@ function showAlreadyPlayed(data){
             </div>
             <div style="font-size:13px;color:var(--text-muted);margin-bottom:14px">You scored <strong>${data.score}</strong> pts${data.won?' and won':''}.<br>Come back tomorrow for a new case.</div>
             <a href="archives.html" style="display:inline-block;font-size:12px;font-weight:700;color:var(--accent);text-decoration:none">Browse Archives →</a>
-            <button class="exp-reopen-inline visible" id="exp-reopen-inline" onclick="window.openExp()" style="margin-top:14px">📋 View Explanation</button>
+            <button class="exp-reopen-inline visible" id="exp-reopen-inline" onclick="window.openExpAlreadyPlayed()" style="margin-top:14px">📋 View Explanation</button>
         </div>`;
     document.getElementById('lab-panel').style.display='block';
     unlockAllLabs();
-    showExpAfterGame(currentCase.answer, data.won);
+    loadExplanations();
 }
 
 function renderOpponent(){
