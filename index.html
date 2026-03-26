@@ -764,8 +764,7 @@ function updateHP(){
 }
 
 window.getHint=(type,cost)=>{
-    if(!gameActive)return;
-    if(!unlockedHints.has(type)){hp-=cost;unlockedHints.add(type);document.getElementById(`btn-${type}`).classList.add('used');updateHP();}
+    if(gameActive&&!unlockedHints.has(type)){hp-=cost;unlockedHints.add(type);document.getElementById(`btn-${type}`).classList.add('used');updateHP();}
     const labels={hx:'Additional History',pe:'Physical Exam',img:'Imaging'};
     document.getElementById('hint-type-label').innerText=labels[type]||type;
     document.getElementById('hint-text').innerText=currentCase.hints[type];
@@ -1152,6 +1151,19 @@ onAuthStateChanged(auth,async(user)=>{
                 <div><div class="user-name">Dr. ${name.toUpperCase()}</div><div class="user-level">${lvl.name}</div></div>
             </button>`;
         if((d.streak||0)>1){document.getElementById('streak-val').innerText=d.streak;document.getElementById('streak-badge').style.display='inline-flex';}
+        // Re-render opponent after auth resolves — loadOpponent may have run before currentUser was set
+        if(gameInitialized&&currentCase&&!isArchive){
+            const todayCST=getTodayCST();
+            const oppKey=`wardduel_opp_${user.uid}_${todayCST}`;
+            const cached=localStorage.getItem(oppKey);
+            if(cached){
+                const c=JSON.parse(cached);
+                opponentScore=c.score; opponentRawHp=c.rawHp||c.score; opponentName=c.name; opponentIcon=c.iconPrefs||null;
+                renderOpponent();
+            } else {
+                await loadOpponent(currentCase.date);
+            }
+        }
     }
     if(!gameInitialized){
         gameInitialized=true;
