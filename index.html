@@ -620,7 +620,7 @@ async function initGame(){
                 if(cSnap.exists()&&cSnap.data().dates?.includes(currentCase.date)){
                     const q=query(collection(db,'scores'),where('uid','==',currentUser.uid),where('caseDate','==',currentCase.date));
                     const sSnap=await getDocs(q);
-                    if(!sSnap.empty){const dd=sSnap.docs[0].data();showAlreadyPlayed({score:dd.score,won:dd.won});return;}
+                    if(!sSnap.empty){const dd=sSnap.docs[0].data();await loadOpponent(currentCase.date);showAlreadyPlayed({score:dd.score,won:dd.won});return;}
                 }
             }catch(e){}
         } else {
@@ -1151,16 +1151,36 @@ onAuthStateChanged(auth,async(user)=>{
                 <div><div class="user-name">Dr. ${name.toUpperCase()}</div><div class="user-level">${lvl.name}</div></div>
             </button>`;
         if((d.streak||0)>1){document.getElementById('streak-val').innerText=d.streak;document.getElementById('streak-badge').style.display='inline-flex';}
-        // Re-render opponent after auth resolves — loadOpponent may have run before currentUser was set
+        // Auth resolved after initGame — re-check already-played and fix opponent
         if(gameInitialized&&currentCase&&!isArchive){
-            const todayCST=getTodayCST();
-            const oppKey=`wardduel_opp_${user.uid}_${todayCST}`;
-            const cached=localStorage.getItem(oppKey);
-            if(cached){
-                const c=JSON.parse(cached);
-                opponentScore=c.score; opponentRawHp=c.rawHp||c.score; opponentName=c.name; opponentIcon=c.iconPrefs||null;
-                renderOpponent();
-            } else {
+            try{
+                const completedRef=doc(db,'completed',user.uid);
+                const cSnap=await getDoc(completedRef);
+                if(cSnap.exists()&&cSnap.data().dates?.includes(currentCase.date)){
+                    // User already played — stop the timer, show already-played screen with correct opponent
+                    gameActive=false;
+                    clearInterval(timerId);
+                    const q=query(collection(db,'scores'),where('uid','==',user.uid),where('caseDate','==',currentCase.date));
+                    const sSnap=await getDocs(q);
+                    if(!sSnap.empty){
+                        const dd=sSnap.docs[0].data();
+                        await loadOpponent(currentCase.date);
+                        showAlreadyPlayed({score:dd.score,won:dd.won});
+                    }
+                } else {
+                    // Not yet played — just fix the opponent display
+                    const todayCST=getTodayCST();
+                    const oppKey=`wardduel_opp_${user.uid}_${todayCST}`;
+                    const cached=localStorage.getItem(oppKey);
+                    if(cached){
+                        const c=JSON.parse(cached);
+                        opponentScore=c.score; opponentRawHp=c.rawHp||c.score; opponentName=c.name; opponentIcon=c.iconPrefs||null;
+                        renderOpponent();
+                    } else {
+                        await loadOpponent(currentCase.date);
+                    }
+                }
+            }catch(e){
                 await loadOpponent(currentCase.date);
             }
         }
