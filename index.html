@@ -845,6 +845,7 @@ window.openProfile=async function(){
         const snap=await getDoc(doc(db,'users',currentUser.uid));
         const d=snap.exists()?snap.data():{};
         const name=d.username||'Doctor';
+        currentUsername=name; // set here so score saving always has the real username
         currentUsername = name; // save for score saving later
         const totalPts=d.totalPts||0;
         const lvl=getLevelInfo(totalPts);
