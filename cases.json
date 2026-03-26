@@ -14,7 +14,7 @@
       "Trop": "Negative x2", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Markedly elevated at 3,500 ng/mL — nonspecific, does not localize origin."
     },
-    "answer": "Aortic Dissection (Type A)"
+    "answer": "Aortic Dissection"
   },
   {
     "date": "2026-03-17",
@@ -80,9 +80,9 @@
     "lab_results": {
       "CBC": "Hemoglobin 10.6 — normocytic anemia", "CMP": "Normal", "EKG": "Normal",
       "Trop": "Normal", "Lipase": "Normal", "UA": "3+ blood, no casts, no dysmorphic RBCs, no nitrites", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Atypical urothelial cells with high nuclear-to-cytoplasmic ratio — high-grade urothelial carcinoma."
+      "Specialty": "Atypical urothelial cells with high nuclear-to-cytoplasmic ratio — suspicious for high-grade malignancy."
     },
-    "answer": "Bladder Cancer (High-Grade Urothelial Carcinoma)"
+    "answer": "Bladder Cancer"
   },
   {
     "date": "2026-03-21",
@@ -133,7 +133,7 @@
       "Lipase": "Normal", "UA": "Normal", "ABG": "Mild hypoxemia", "Coags": "Normal",
       "Specialty": "Positive Anti-centromere antibodies (1:640 titer)."
     },
-    "answer": "Pulmonary Arterial Hypertension (Group 1)"
+    "answer": "Pulmonary Hypertension"
   },
   {
     "date": "2026-03-24",
@@ -167,7 +167,7 @@
       "Lipase": "Normal", "UA": "Normal", "ABG": "Mild hypoxia on room air", "Coags": "Normal",
       "Specialty": "Histopathology: Polygonal cells with intercellular bridges and keratin pearl formation."
     },
-    "answer": "Squamous Cell Lung Carcinoma (Central)"
+    "answer": "Squamous Cell Lung Carcinoma"
   },
   {
     "date": "2026-03-26",
@@ -201,7 +201,7 @@
       "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "PSA: 85 ng/mL (severely elevated)."
     },
-    "answer": "Metastatic Prostate Cancer (Spinal Cord Compression)"
+    "answer": "Prostate Cancer"
   },
   {
     "date": "2026-03-28",
@@ -240,11 +240,11 @@
   {
     "date": "2026-03-30",
     "adminScore": 62,
-    "hx_brief": "17yo male brought in by his mother after she noticed his eyes looked yellow. He's been tired for weeks and hasn't been eating much.",
+    "hx_brief": "17yo male with yellowing eyes and fatigue after returning from a semester abroad. His mother says he hasn't been himself for two weeks.",
     "hints": {
-      "hx": "He recently returned from a semester abroad in Southeast Asia. Denies IV drug use. No prior liver issues. Ate a lot of street food during his trip.",
-      "pe": "Scleral icterus. Mild right upper quadrant tenderness. No splenomegaly. Low-grade fever at 38.0°C.",
-      "img": "RUQ Ultrasound: No biliary dilation. Liver is mildly enlarged with diffusely increased echogenicity. No focal lesions."
+      "hx": "He spent 4 months in Southeast Asia eating street food frequently. Denies IV drug use or alcohol. Had no vaccinations before the trip.",
+      "pe": "Scleral icterus. Mild RUQ tenderness on deep palpation. Low-grade fever 38.0°C. No splenomegaly.",
+      "img": "RUQ Ultrasound: Liver mildly enlarged with increased echogenicity. No biliary dilation. No focal lesions."
     },
     "specialty_name": "Hepatitis Panel",
     "lab_results": {
@@ -259,11 +259,11 @@
   {
     "date": "2026-03-31",
     "adminScore": 58,
-    "hx_brief": "44yo female with 3 weeks of progressively worsening fatigue, weight gain, and feeling cold all the time. Her husband says she seems more forgetful than usual.",
+    "hx_brief": "44yo female with 3 weeks of weight gain, fatigue, and feeling cold all the time. Her husband says she seems more forgetful than usual.",
     "hints": {
-      "hx": "She had radioactive iodine treatment for hyperthyroidism 8 months ago. Her periods have become heavier and irregular. She denies depression but her affect is noticeably flat.",
-      "pe": "Puffy face and periorbital edema. Skin is dry and cool. Diffuse hair thinning. Delayed relaxation phase of deep tendon reflexes bilaterally. HR 52.",
-      "img": "CXR: Mildly enlarged cardiac silhouette. Echocardiogram: Small pericardial effusion."
+      "hx": "Had radioactive iodine treatment 8 months ago for hyperthyroidism. Periods have become heavier and irregular. Affect is noticeably flat but she denies depression.",
+      "pe": "Puffy face and periorbital edema. Dry, cool skin. Diffuse hair thinning. Delayed relaxation of deep tendon reflexes bilaterally. HR 52.",
+      "img": "CXR: Mildly enlarged cardiac silhouette. Echo: Small pericardial effusion. EF preserved."
     },
     "specialty_name": "Thyroid Panel",
     "lab_results": {
@@ -273,15 +273,15 @@
       "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "TSH: 88 mIU/L (severely elevated). Free T4: 0.4 ng/dL (low). Anti-TPO antibodies: Positive."
     },
-    "answer": "Hypothyroidism (Post-Radioiodine)"
+    "answer": "Hypothyroidism"
   },
   {
     "date": "2026-04-01",
     "adminScore": 55,
-    "hx_brief": "29yo male with episodic severe headaches, sweating, and palpitations. He says the attacks last 15-20 minutes and leave him feeling drained.",
+    "hx_brief": "29yo male with episodic severe headaches, sweating, and palpitations. The attacks last 15–20 minutes and leave him drained.",
     "hints": {
-      "hx": "Episodes are triggered by stress, exercise, and certain foods. His BP during an episode was recorded at 210/130. He has a family history of endocrine tumors.",
-      "pe": "BP today is 148/92. Mild diaphoresis. No thyroid enlargement. Abdomen soft — no palpable mass.",
+      "hx": "Episodes triggered by stress, exercise, and certain foods. His BP during an episode reached 210/130. Family history of endocrine tumors.",
+      "pe": "BP today 148/92. Mild diaphoresis. No thyroid enlargement. Abdomen soft — no palpable mass.",
       "img": "MRI Abdomen: 4.2cm heterogeneous mass arising from the right adrenal gland with central necrosis."
     },
     "specialty_name": "24hr Urine Catecholamines",
@@ -299,9 +299,9 @@
     "adminScore": 60,
     "hx_brief": "67yo male with 6 months of progressive difficulty swallowing. It started with solids and has now progressed to liquids. He has lost 18 pounds.",
     "hints": {
-      "hx": "40 pack-year smoking history. Drinks 3-4 whiskeys nightly for 30 years. He describes food getting stuck mid-chest. No heartburn. No family history of GI cancer.",
-      "pe": "Cachectic appearance. Supraclavicular lymph node palpable on the left. No abdominal masses. Mild hoarseness noted.",
-      "img": "CT Chest/Abdomen: Irregular circumferential thickening of the mid-esophagus. Multiple mediastinal lymph nodes enlarged."
+      "hx": "40 pack-year smoking history. Drinks 3–4 whiskeys nightly for 30 years. Food gets stuck mid-chest. No heartburn. No family history of GI cancer.",
+      "pe": "Cachectic appearance. Left supraclavicular lymph node palpable. No abdominal masses. Mild hoarseness noted.",
+      "img": "CT Chest/Abdomen: Irregular circumferential thickening of the mid-esophagus. Multiple enlarged mediastinal lymph nodes."
     },
     "specialty_name": "EGD Biopsy",
     "lab_results": {
@@ -315,10 +315,10 @@
   {
     "date": "2026-04-03",
     "adminScore": 65,
-    "hx_brief": "52yo female with sudden onset of the worst headache of her life. She was watching TV when it hit and describes it as an explosion in her head.",
+    "hx_brief": "52yo female with the worst headache of her life that came on suddenly while watching TV. She vomited once and briefly lost consciousness.",
     "hints": {
-      "hx": "No prior headache history. She vomited once immediately after onset. Briefly lost consciousness. No fever. Neck stiffness developed within an hour.",
-      "pe": "Alert but distressed. Nuchal rigidity present. Photophobia. No focal neurological deficits. Papilledema on fundoscopy.",
+      "hx": "No prior headache history. Neck stiffness developed within an hour. Photophobia. No fever. No focal neurological deficits initially.",
+      "pe": "Alert but distressed. Nuchal rigidity present. Photophobia. Papilledema on fundoscopy. No focal deficits.",
       "img": "CT Head non-contrast: Hyperdense blood in the basal cisterns and sylvian fissures bilaterally."
     },
     "specialty_name": "LP",
@@ -328,21 +328,21 @@
       "Trop": "Mildly elevated", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "CSF: Xanthochromia present. RBCs that do not clear across tubes. Opening pressure 28 cmH2O."
     },
-    "answer": "Subarachnoid Hemorrhage (Ruptured Berry Aneurysm)"
+    "answer": "Subarachnoid Hemorrhage (SAH)"
   },
   {
     "date": "2026-04-04",
     "adminScore": 70,
     "hx_brief": "35yo female with 2 months of joint pain, a facial rash that gets worse in the sun, and persistent fatigue.",
     "hints": {
-      "hx": "The rash appeared after a beach vacation. She also reports oral ulcers, hair thinning, and occasional chest pain when taking a deep breath.",
+      "hx": "Rash appeared after a beach vacation. Oral ulcers, hair thinning, and occasional pleuritic chest pain. No prior rheumatologic diagnoses.",
       "pe": "Erythematous rash across both cheeks sparing the nasolabial folds. Painless oral ulcer. Mild bilateral wrist and MCP joint swelling.",
-      "img": "CXR: Small bilateral pleural effusions. Echocardiogram: Trace pericardial effusion."
+      "img": "CXR: Small bilateral pleural effusions. Echo: Trace pericardial effusion."
     },
     "specialty_name": "ANA Panel",
     "lab_results": {
       "CBC": "Leukopenia WBC 3.1. Mild thrombocytopenia Plts 98k. Hgb 10.4.",
-      "CMP": "Creatinine 1.3. Protein 3+ on urine dip.",
+      "CMP": "Creatinine 1.3.",
       "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal",
       "UA": "3+ protein, RBC casts present", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "ANA: Positive 1:640 homogeneous. Anti-dsDNA: Positive. Anti-Smith: Positive. Complement C3/C4: Low."
@@ -352,11 +352,11 @@
   {
     "date": "2026-04-05",
     "adminScore": 68,
-    "hx_brief": "58yo male with 4 months of progressive exertional chest tightness that resolves with rest. Today it came on while walking to his car.",
+    "hx_brief": "58yo male with 4 months of chest tightness with exertion that resolves with rest. Today it came on while walking to his car.",
     "hints": {
-      "hx": "Hypertension and type 2 diabetes for 10 years, poorly controlled. 25 pack-year smoker, quit 3 years ago. Father had a heart attack at 55. Pain radiates to his left arm.",
+      "hx": "Poorly controlled HTN and T2DM for 10 years. 25 pack-year smoking history, quit 3 years ago. Father had MI at 55. Pain radiates to left arm.",
       "pe": "BP 158/94. Mild S4 gallop. No murmurs. No peripheral edema. Pulses intact bilaterally.",
-      "img": "Nuclear stress test: Fixed perfusion defect in the LAD territory. No reversible ischemia."
+      "img": "Nuclear stress test: Fixed perfusion defect in the LAD territory. No reversible ischemia on stress imaging."
     },
     "specialty_name": "Coronary Angiography",
     "lab_results": {
@@ -366,16 +366,16 @@
       "Trop": "Normal x2", "Lipase": "Normal", "UA": "Microalbuminuria", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Angiography: 75% stenosis of proximal LAD. 60% stenosis of RCA."
     },
-    "answer": "Stable Angina (Obstructive CAD)"
+    "answer": "Stable Angina"
   },
   {
     "date": "2026-04-06",
     "adminScore": 63,
-    "hx_brief": "71yo male with 2 days of confusion and decreased urine output. His wife says he was fine until he started a new medication last week.",
+    "hx_brief": "71yo male with 2 days of confusion and decreased urine output after starting a new medication last week.",
     "hints": {
-      "hx": "Started an NSAID for back pain 8 days ago. History of CHF and CKD stage 2 at baseline. Also takes an ACE inhibitor and furosemide. No fevers, no dysuria.",
-      "pe": "BP 88/60. HR 112. Dry mucous membranes. No rales. JVP flat. Skin turgor decreased.",
-      "img": "Renal Ultrasound: Kidneys normal size bilaterally, no hydronephrosis."
+      "hx": "Started an NSAID for back pain 8 days ago. History of CHF and CKD stage 2 at baseline. Also on ACE inhibitor and furosemide. No fevers, no dysuria.",
+      "pe": "BP 88/60. HR 112. Dry mucous membranes. No rales. JVP flat. Decreased skin turgor.",
+      "img": "Renal Ultrasound: Kidneys normal size bilaterally. No hydronephrosis."
     },
     "specialty_name": "Urine Electrolytes",
     "lab_results": {
@@ -383,7 +383,7 @@
       "CMP": "Creatinine 4.8 (up from baseline 1.4). BUN 88. K 5.8.",
       "EKG": "Peaked T waves in precordial leads",
       "Trop": "Normal", "Lipase": "Normal",
-      "UA": "Hyaline casts. No RBC casts.", "ABG": "Metabolic acidosis: pH 7.28, HCO3 14", "Coags": "Normal",
+      "UA": "Hyaline casts only. No RBC casts.", "ABG": "Metabolic acidosis: pH 7.28, HCO3 14", "Coags": "Normal",
       "Specialty": "Urine Na: 8 mEq/L. FeNa: 0.4% — prerenal pattern."
     },
     "answer": "Prerenal Acute Kidney Injury (NSAID-Induced)"
@@ -393,7 +393,7 @@
     "adminScore": 72,
     "hx_brief": "23yo female with 3 days of burning with urination, frequency, and lower abdominal discomfort. She is otherwise healthy.",
     "hints": {
-      "hx": "Sexually active with one partner. Uses oral contraceptives. No vaginal discharge. No fever or flank pain.",
+      "hx": "Sexually active with one partner. On oral contraceptives. No vaginal discharge. No fever or flank pain.",
       "pe": "Mild suprapubic tenderness. No CVA tenderness. Normal pelvic exam. No cervical motion tenderness.",
       "img": "Renal Ultrasound: Normal. No hydronephrosis."
     },
@@ -408,10 +408,10 @@
   {
     "date": "2026-04-08",
     "adminScore": 55,
-    "hx_brief": "48yo male presents with several months of gradually worsening back pain, fatigue, and his wife mentions he seems more confused lately. He fractured his wrist last month stepping off a curb.",
+    "hx_brief": "48yo male with months of back pain, fatigue, and confusion. His wife says he fractured his wrist last month stepping off a curb.",
     "hints": {
-      "hx": "No history of osteoporosis and the fracture seemed disproportionate to the mechanism. Reports constant thirst and urinating more. Denies weight loss.",
-      "pe": "Pale conjunctiva. Mild bony tenderness along the spine. No focal neurologic deficits. No lymphadenopathy.",
+      "hx": "No history of osteoporosis — fracture seemed out of proportion to the mechanism. Reports new-onset thirst and polyuria. No weight loss.",
+      "pe": "Pale conjunctiva. Midline spinal tenderness. No focal neurologic deficits. No lymphadenopathy.",
       "img": "Skeletal survey: Multiple lytic punched-out lesions in the skull and vertebrae. No sclerotic lesions."
     },
     "specialty_name": "SPEP",
@@ -422,15 +422,15 @@
       "UA": "Protein 2+ — Bence Jones proteins on UPEP", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "SPEP: Monoclonal IgG kappa spike. Bone marrow: 35% plasma cells."
     },
-    "answer": "Multiple Myeloma (IgG Kappa)"
+    "answer": "Multiple Myeloma"
   },
   {
     "date": "2026-04-09",
     "adminScore": 67,
-    "hx_brief": "34yo female presents with 6 weeks of muscle weakness that is worse at the end of the day. She has been having difficulty chewing through meals and her eyelids droop by evening.",
+    "hx_brief": "34yo female with 6 weeks of muscle weakness that gets worse as the day goes on. Her eyelids droop by evening and she has trouble finishing meals.",
     "hints": {
-      "hx": "Symptoms improve dramatically in the morning and after rest. She noticed her speech becomes slurred after talking for a while. No pain. No rash.",
-      "pe": "Bilateral ptosis that worsens with sustained upward gaze. Fatigable proximal limb weakness. Normal sensation. Ice pack test: Ptosis improves after 2 minutes.",
+      "hx": "Symptoms improve dramatically in the morning and after rest. Speech becomes slurred after prolonged talking. No pain. No rash.",
+      "pe": "Bilateral ptosis that worsens with sustained upward gaze. Fatigable proximal limb weakness. Normal sensation. Ice pack test: ptosis improves after 2 minutes.",
       "img": "CT Chest: 3.1cm anterior mediastinal mass — thymoma suspected."
     },
     "specialty_name": "AChR Antibodies",
@@ -438,16 +438,16 @@
       "CBC": "Normal", "CMP": "Normal", "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Anti-AChR antibodies: Positive (elevated titer). Anti-MuSK: Negative."
     },
-    "answer": "Myasthenia Gravis (Thymoma-Associated)"
+    "answer": "Myasthenia Gravis"
   },
   {
     "date": "2026-04-10",
     "adminScore": 60,
     "hx_brief": "61yo male with sudden onset right-sided weakness and slurred speech that started 45 minutes ago. His wife called 911 immediately.",
     "hints": {
-      "hx": "History of atrial fibrillation, not on anticoagulation. HTN and hyperlipidemia. No prior strokes. Symptoms started acutely.",
+      "hx": "History of atrial fibrillation, not on anticoagulation. HTN and hyperlipidemia. No prior strokes. Symptoms started acutely at rest.",
       "pe": "BP 188/102. Right facial droop. Right arm strength 1/5, right leg 2/5. Expressive aphasia. NIHSS score 16.",
-      "img": "CT Head: No hemorrhage. CT Angiography: Occlusion of the left MCA M1 segment."
+      "img": "CT Head: No hemorrhage. CTA: Occlusion of the left MCA M1 segment."
     },
     "specialty_name": "Hypercoagulable Panel",
     "lab_results": {
@@ -456,14 +456,14 @@
       "Coags": "INR 1.1 (not anticoagulated)",
       "Specialty": "TEE: Thrombus in left atrial appendage — cardioembolic source confirmed."
     },
-    "answer": "Left MCA Ischemic Stroke (Cardioembolic)"
+    "answer": "Ischemic Stroke"
   },
   {
     "date": "2026-04-11",
     "adminScore": 58,
-    "hx_brief": "26yo male presents with 2 weeks of swollen lymph nodes in his neck and armpit, drenching night sweats, and an unintentional 12-pound weight loss.",
+    "hx_brief": "26yo male with 2 weeks of swollen lymph nodes in his neck and armpit, drenching night sweats, and an unintentional 12-pound weight loss.",
     "hints": {
-      "hx": "No recent infections. Non-smoker, social drinker. Intense itching all over his body without a rash. Intermittent fevers at home.",
+      "hx": "No recent infections. Non-smoker. Intense body-wide itching without a visible rash. Intermittent fevers. Occasional alcohol-induced lymph node pain.",
       "pe": "Firm, rubbery, non-tender lymphadenopathy in cervical, axillary, and inguinal regions. Spleen tip palpable.",
       "img": "CT Chest/Abdomen/Pelvis: Mediastinal and retroperitoneal lymphadenopathy. Splenomegaly."
     },
@@ -474,16 +474,16 @@
       "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Excisional biopsy: Reed-Sternberg cells — large binucleated cells with owl-eye nucleoli. CD15+, CD30+."
     },
-    "answer": "Classical Hodgkin Lymphoma (Nodular Sclerosis)"
+    "answer": "Hodgkin Lymphoma"
   },
   {
     "date": "2026-04-12",
     "adminScore": 65,
-    "hx_brief": "72yo female brought in by her son for progressive memory loss over the past 2 years. She got lost driving to the grocery store she has visited for 20 years.",
+    "hx_brief": "72yo female brought in by her son for 2 years of progressive memory loss. She got lost driving to a grocery store she has visited for 20 years.",
     "hints": {
-      "hx": "Her son reports she repeats herself constantly. She has been forgetting names of close family members. She has become increasingly paranoid and accuses family of stealing.",
+      "hx": "Repeats herself constantly. Forgetting names of close family members. Increasing paranoia — accuses family of stealing. Gradual onset, no acute events.",
       "pe": "MMSE 17/30 — impaired recall, orientation, and language. No focal deficits. No tremor. No gait abnormality.",
-      "img": "MRI Brain: Diffuse cortical atrophy most prominent in bilateral hippocampi and temporal lobes. No focal lesions."
+      "img": "MRI Brain: Diffuse cortical atrophy most prominent in bilateral hippocampi and temporal lobes."
     },
     "specialty_name": "PET Scan",
     "lab_results": {
@@ -495,9 +495,9 @@
   {
     "date": "2026-04-13",
     "adminScore": 70,
-    "hx_brief": "19yo female brought to the ED by her roommate after she became confused and started seizing in their dorm room. She had a headache and stiff neck for 2 days.",
+    "hx_brief": "19yo female brought to the ED by her roommate after she became confused and seized in their dorm room. She had a headache and stiff neck for 2 days.",
     "hints": {
-      "hx": "She just started college and lives in a dormitory. No prior seizure history. Not vaccinated against meningococcus. Denies drug use.",
+      "hx": "Just started college in a dormitory. No prior seizure history. Not vaccinated against meningococcus. Denies drug use.",
       "pe": "Temperature 39.8°C. HR 124. Kernig and Brudzinski signs positive. Non-blanching petechial rash on trunk and lower extremities.",
       "img": "CT Head: No mass lesion, no herniation — cleared for LP."
     },
@@ -509,16 +509,16 @@
       "Coags": "PT/PTT mildly prolonged — early DIC",
       "Specialty": "CSF: Cloudy. WBC 4,200 neutrophilic. Protein 280. Glucose 22. Gram stain: Gram-negative diplococci."
     },
-    "answer": "Bacterial Meningitis (Neisseria meningitidis)"
+    "answer": "Bacterial Meningitis"
   },
   {
     "date": "2026-04-14",
     "adminScore": 63,
-    "hx_brief": "55yo male with 3 months of progressive shortness of breath and bilateral leg swelling. He can no longer climb a single flight of stairs without stopping.",
+    "hx_brief": "55yo male with 3 months of worsening shortness of breath and bilateral leg swelling. He can no longer climb a single flight of stairs.",
     "hints": {
-      "hx": "History of two prior heart attacks, the last 4 years ago. Sleeps on 3 pillows and wakes up gasping at night. Denies chest pain currently.",
-      "pe": "BP 102/68. HR 98. JVP elevated at 12cm. Bilateral crackles at lung bases. S3 gallop. 3+ pitting edema to the thighs.",
-      "img": "Echocardiogram: EF 22%. Globally dilated LV. Moderate mitral regurgitation. Moderate pulmonary hypertension."
+      "hx": "Two prior MIs, last 4 years ago. Sleeps on 3 pillows. Wakes up gasping at night. No current chest pain.",
+      "pe": "BP 102/68. HR 98. JVP elevated 12cm. Bilateral basilar crackles. S3 gallop. 3+ pitting edema to thighs.",
+      "img": "Echo: EF 22%. Globally dilated LV. Moderate mitral regurgitation. Moderate pulmonary hypertension."
     },
     "specialty_name": "BNP",
     "lab_results": {
@@ -529,12 +529,12 @@
       "UA": "Normal", "ABG": "Mild hypoxia pO2 68.", "Coags": "Normal",
       "Specialty": "BNP: 2,840 pg/mL."
     },
-    "answer": "Ischemic Cardiomyopathy (HFrEF, EF 22%)"
+    "answer": "Congestive Heart Failure (CHF)"
   },
   {
     "date": "2026-04-15",
     "adminScore": 67,
-    "hx_brief": "41yo male with sudden onset right flank pain that radiates to the groin. The pain is colicky and he cannot find a comfortable position.",
+    "hx_brief": "41yo male with sudden onset right flank pain radiating to the groin. The pain is colicky and he cannot find a comfortable position.",
     "hints": {
       "hx": "No fever. Had one similar episode 2 years ago that resolved on its own. Nausea but no vomiting. Drinks very little water daily.",
       "pe": "Right CVA tenderness. Abdomen soft and non-tender. Patient is writhing in pain.",
@@ -546,14 +546,14 @@
       "UA": "Gross hematuria. No nitrites.", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Stone analysis: Calcium oxalate monohydrate (80%). Urine supersaturation for oxalate elevated."
     },
-    "answer": "Urolithiasis (Calcium Oxalate — Distal Ureteral)"
+    "answer": "Urolithiasis (Kidney Stones)"
   },
   {
     "date": "2026-04-16",
     "adminScore": 60,
-    "hx_brief": "33yo female with 4 months of episodic flushing, diarrhea, and wheezing. The episodes seem to come on randomly and last about 20 minutes.",
+    "hx_brief": "33yo female with 4 months of episodic flushing, diarrhea, and wheezing. Episodes come on randomly and last about 20 minutes.",
     "hints": {
-      "hx": "Episodes triggered by alcohol and stress. She has lost 8 pounds without trying. Primary care thought it was anxiety but medications haven't helped.",
+      "hx": "Episodes triggered by alcohol and stress. Lost 8 pounds without trying. Primary care thought it was anxiety but medications haven't helped.",
       "pe": "BP 148/88 during a flushing episode. Facial flushing present. Hepatomegaly on exam.",
       "img": "CT Abdomen: Multiple hepatic lesions. Primary mass in the distal ileum — 2.8cm with mesenteric lymphadenopathy."
     },
@@ -562,15 +562,15 @@
       "CBC": "Normal", "CMP": "Mildly elevated ALP.", "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "24hr urine 5-HIAA: 88 mg/24hr (normal <8). Chromogranin A: Elevated."
     },
-    "answer": "Carcinoid Syndrome (Metastatic Ileal Carcinoid)"
+    "answer": "Carcinoid Syndrome"
   },
   {
     "date": "2026-04-17",
     "adminScore": 72,
-    "hx_brief": "25yo male with acute onset of severe left testicular pain that woke him from sleep 3 hours ago. The pain is constant and he vomited twice.",
+    "hx_brief": "25yo male with acute onset severe left testicular pain that woke him from sleep 3 hours ago. He vomited twice.",
     "hints": {
-      "hx": "No trauma. No urinary symptoms. No fever. No prior episodes. Pain has not improved with ibuprofen.",
-      "pe": "Left testicle is high-riding and lies in a horizontal orientation. Exquisitely tender. Cremasteric reflex absent on the left. Scrotal erythema developing.",
+      "hx": "No trauma. No urinary symptoms. No fever. No prior episodes. Ibuprofen has not helped.",
+      "pe": "Left testicle is high-riding in a horizontal orientation. Exquisitely tender. Cremasteric reflex absent on the left.",
       "img": "Scrotal Doppler Ultrasound: Absent blood flow to the left testicle. Normal flow to the right."
     },
     "specialty_name": "Surgical Consult",
@@ -584,9 +584,9 @@
   {
     "date": "2026-04-18",
     "adminScore": 58,
-    "hx_brief": "47yo female with recurrent episodes of abdominal pain, diarrhea, and skin rashes on her elbows and knees for years. She thought she had IBS.",
+    "hx_brief": "47yo female with years of recurrent abdominal pain, diarrhea, and a rash on her elbows and knees. She has always thought she had IBS.",
     "hints": {
-      "hx": "Iron deficiency anemia that has never responded to oral iron supplements. Bloating after bread and pasta. Her sister has the same condition.",
+      "hx": "Iron deficiency anemia that never responds to oral supplements. Bloating after bread and pasta. Her sister has a similar condition.",
       "pe": "Pale. BMI 17.4. Oral aphthous ulcers. Abdomen distended with mild diffuse tenderness.",
       "img": "CT Abdomen: Diffuse small bowel wall thickening with mesenteric lymphadenopathy."
     },
@@ -603,10 +603,10 @@
   {
     "date": "2026-04-19",
     "adminScore": 65,
-    "hx_brief": "39yo male with 2 days of severe right eye pain, blurry vision, and redness. He wears contact lenses and sometimes sleeps in them.",
+    "hx_brief": "39yo male with 2 days of severe right eye pain, blurry vision, and redness. He wears contact lenses.",
     "hints": {
-      "hx": "Has been wearing the same pair of contacts for 3 weeks without removing them. No prior eye problems. No systemic symptoms. Pain worsens with light exposure.",
-      "pe": "Right eye: Marked conjunctival injection and ciliary flush. Fluorescein staining reveals a large central corneal ulcer. Hypopyon visible in the anterior chamber.",
+      "hx": "Has been wearing the same pair of contacts for 3 weeks without removing them. No prior eye problems. Pain worsens with light.",
+      "pe": "Right eye: Marked conjunctival injection and ciliary flush. Fluorescein staining: large central corneal ulcer. Hypopyon visible.",
       "img": "Slit-lamp: Dense corneal infiltrate with overlying epithelial defect. Anterior chamber reaction 3+."
     },
     "specialty_name": "Corneal Scraping Culture",
@@ -619,10 +619,10 @@
   {
     "date": "2026-04-20",
     "adminScore": 62,
-    "hx_brief": "66yo male with 3 months of fatigue, early satiety, and a dragging sensation in his left abdomen. His wife noticed his abdomen looks bigger on the left side.",
+    "hx_brief": "66yo male with 3 months of fatigue, early satiety, and a dragging sensation in his left abdomen. His wife noticed his abdomen looks bigger on the left.",
     "hints": {
-      "hx": "Reports drenching night sweats and has lost 14 pounds. No lymph node swelling. WBC was elevated on routine labs 6 months ago but he never followed up.",
-      "pe": "Massive splenomegaly — palpable 14cm below the left costal margin. Mild hepatomegaly. No peripheral lymphadenopathy.",
+      "hx": "Drenching night sweats and 14-pound weight loss. No lymph node swelling. WBC was elevated on routine labs 6 months ago — never followed up.",
+      "pe": "Massive splenomegaly — palpable 14cm below the left costal margin. Mild hepatomegaly. No lymphadenopathy.",
       "img": "CT Abdomen: Massive splenomegaly 26cm. Mild hepatomegaly. No significant lymphadenopathy."
     },
     "specialty_name": "BCR-ABL",
@@ -637,11 +637,11 @@
   {
     "date": "2026-04-21",
     "adminScore": 55,
-    "hx_brief": "31yo female with 3 weeks of progressive shortness of breath, bilateral leg swelling, and fatigue. She gave birth 5 weeks ago.",
+    "hx_brief": "31yo female with 3 weeks of progressive shortness of breath and bilateral leg swelling. She gave birth 5 weeks ago.",
     "hints": {
       "hx": "Uncomplicated vaginal delivery at 39 weeks. No prior cardiac history. No hypertension during pregnancy. Unable to lie flat since 2 weeks postpartum.",
-      "pe": "HR 108. BP 96/62. JVP elevated. S3 gallop. Bilateral crackles. Bilateral pitting edema to the knees.",
-      "img": "Echocardiogram: EF 28%, globally dilated cardiomyopathy. Moderate mitral regurgitation."
+      "pe": "HR 108. BP 96/62. JVP elevated. S3 gallop. Bilateral crackles. Bilateral pitting edema to knees.",
+      "img": "Echo: EF 28%. Globally dilated cardiomyopathy. Moderate mitral regurgitation."
     },
     "specialty_name": "BNP",
     "lab_results": {
@@ -659,7 +659,7 @@
     "hx_brief": "77yo male with 3 days of confusion, fever, and decreased urine output. His daughter found him disoriented at home.",
     "hints": {
       "hx": "History of BPH with poor urinary stream for years. Recently started a new antihistamine. No prior UTIs. Lives alone.",
-      "pe": "Temperature 38.9°C. BP 88/58. Confused. Suprapubic fullness and tenderness. CVA tenderness on the right.",
+      "pe": "Temperature 38.9°C. BP 88/58. Confused. Suprapubic fullness and tenderness. Right CVA tenderness.",
       "img": "Renal Ultrasound: Bilateral hydronephrosis. Bladder markedly distended at 800mL."
     },
     "specialty_name": "Urine Culture",
@@ -670,15 +670,15 @@
       "UA": "Pyuria, nitrite positive, WBC casts", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Urine culture: >100,000 CFU/mL E. coli — ESBL producing."
     },
-    "answer": "Urosepsis (Obstructive Pyelonephritis — BPH)"
+    "answer": "Urosepsis (Obstructive Pyelonephritis)"
   },
   {
     "date": "2026-04-23",
     "adminScore": 70,
-    "hx_brief": "52yo male with sudden onset of severe mid-epigastric pain radiating to his back. He rates it 9/10 and says leaning forward helps slightly.",
+    "hx_brief": "52yo male with sudden onset severe mid-epigastric pain radiating to his back after attending a wedding two days ago.",
     "hints": {
-      "hx": "Attended a wedding two days ago and drank heavily. History of hypertriglyceridemia, never treated. Vomiting x6 since onset.",
-      "pe": "Temperature 38.2°C. HR 118. BP 100/72. Diffuse epigastric tenderness with guarding. Grey Turner sign developing on flanks.",
+      "hx": "Drank heavily at the event. History of hypertriglyceridemia, never treated. Vomiting x6 since onset. Leaning forward provides slight relief.",
+      "pe": "Temperature 38.2°C. HR 118. BP 100/72. Diffuse epigastric guarding. Grey Turner sign developing on flanks.",
       "img": "CT Abdomen with contrast: Pancreatic edema with peripancreatic fat stranding and fluid collections. No organized necrosis."
     },
     "specialty_name": "Lipase Serial",
@@ -688,18 +688,18 @@
       "EKG": "Sinus tachycardia", "Trop": "Normal",
       "Lipase": "4,800 U/L (>3x ULN)", "UA": "Normal",
       "ABG": "pO2 72 — early ARDS pattern.", "Coags": "Normal",
-      "Specialty": "Repeat lipase at 24hrs: 6,200 U/L. Triglycerides: 1,840 mg/dL — hypertriglyceridemia-induced."
+      "Specialty": "Repeat lipase at 24hrs: 6,200 U/L. Triglycerides: 1,840 mg/dL."
     },
-    "answer": "Acute Pancreatitis (Hypertriglyceridemia-Induced)"
+    "answer": "Acute Pancreatitis"
   },
   {
     "date": "2026-04-24",
     "adminScore": 65,
-    "hx_brief": "44yo male with 6 weeks of progressively worsening shortness of breath, dry cough, and fatigue. He recently visited his doctor and was told it was asthma.",
+    "hx_brief": "44yo male with 6 weeks of worsening shortness of breath and dry cough. His doctor said it was asthma but no medications have helped.",
     "hints": {
-      "hx": "Non-smoker. Works as an HVAC technician. No asthma medications have helped. He also mentions blurry vision and skin bumps on his shins.",
-      "pe": "Low-grade fever 37.8°C. Bilateral fine crackles. Tender raised erythematous nodules on anterior shins. Bilateral anterior uveitis. Bilateral hilar dullness.",
-      "img": "CT Chest: Bilateral hilar lymphadenopathy and diffuse pulmonary infiltrates in a perilymphatic distribution."
+      "hx": "Non-smoker. Works as an HVAC technician. Also has blurry vision and raised bumps on his shins.",
+      "pe": "Low-grade fever. Bilateral fine crackles. Tender raised nodules on anterior shins. Bilateral anterior uveitis. Bilateral hilar dullness.",
+      "img": "CT Chest: Bilateral hilar lymphadenopathy with diffuse pulmonary infiltrates in a perilymphatic distribution."
     },
     "specialty_name": "Bronchoscopy BAL",
     "lab_results": {
@@ -709,15 +709,15 @@
       "UA": "Hypercalciuria", "ABG": "Mild hypoxia pO2 74", "Coags": "Normal",
       "Specialty": "BAL: CD4:CD8 ratio >3.5. Biopsy: Non-caseating granulomas without necrosis."
     },
-    "answer": "Pulmonary Sarcoidosis (Stage II)"
+    "answer": "Sarcoidosis"
   },
   {
     "date": "2026-04-25",
     "adminScore": 63,
-    "hx_brief": "28yo male with 4 days of fever, severe sore throat, and difficulty opening his mouth fully. His voice sounds like he has a hot potato in his mouth.",
+    "hx_brief": "28yo male with 4 days of worsening throat pain, difficulty opening his mouth, and a muffled voice. He can barely swallow liquids.",
     "hints": {
-      "hx": "He had a sore throat 10 days ago and took leftover antibiotics for 3 days. Now has worsening throat pain, drooling, and can barely swallow liquids.",
-      "pe": "Temperature 39.1°C. Muffled voice. Uvula deviated to the right. Bulging of the left peritonsillar area. Left tonsil displaced medially. Trismus present.",
+      "hx": "Had a sore throat 10 days ago and took leftover antibiotics for only 3 days. Now has drooling and the pain has shifted to one side.",
+      "pe": "Temperature 39.1°C. Muffled voice. Uvula deviated to the right. Left peritonsillar bulging with medial displacement of the left tonsil. Trismus present.",
       "img": "CT Neck with contrast: 2.8cm rim-enhancing fluid collection in the left peritonsillar space compressing the airway."
     },
     "specialty_name": "Throat Culture",
@@ -726,16 +726,16 @@
       "CMP": "Normal", "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Culture from abscess drainage: Group A Streptococcus and oral anaerobes."
     },
-    "answer": "Peritonsillar Abscess (Left)"
+    "answer": "Peritonsillar Abscess"
   },
   {
     "date": "2026-04-26",
     "adminScore": 60,
-    "hx_brief": "36yo female with 8 months of joint pain and stiffness that is worst in the morning and takes over an hour to loosen up. Her hands and wrists are swollen symmetrically.",
+    "hx_brief": "36yo female with 8 months of joint pain and stiffness that is worst in the morning. Her hands and wrists are swollen symmetrically.",
     "hints": {
-      "hx": "The stiffness improves as the day goes on. She also reports fatigue and a mild rash on her arms. No photosensitivity. Her mother has a similar condition.",
-      "pe": "Symmetric swelling and tenderness of MCPs, PIPs, and wrists bilaterally. Ulnar deviation of fingers early. No DIP involvement. Rheumatoid nodules on extensor surfaces of elbows.",
-      "img": "X-rays hands: Periarticular osteopenia and marginal erosions at MCP joints bilaterally."
+      "hx": "Morning stiffness lasts over an hour and improves as the day goes on. Fatigue and mild arm rash. No photosensitivity. Her mother has a similar condition.",
+      "pe": "Symmetric swelling of MCPs, PIPs, and wrists bilaterally. Early ulnar deviation. No DIP involvement. Rheumatoid nodules on extensor surfaces.",
+      "img": "X-ray hands: Periarticular osteopenia and marginal erosions at MCP joints bilaterally."
     },
     "specialty_name": "Anti-CCP",
     "lab_results": {
@@ -743,15 +743,15 @@
       "CMP": "Normal", "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal", "UA": "Trace protein", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Anti-CCP: 280 U/mL (strongly positive). RF: 180 IU/mL. CRP: 48 mg/L. ESR: 78."
     },
-    "answer": "Rheumatoid Arthritis (Seropositive, Erosive)"
+    "answer": "Rheumatoid Arthritis (RA)"
   },
   {
     "date": "2026-04-27",
     "adminScore": 68,
-    "hx_brief": "58yo male with sudden onset left-sided weakness and facial drooping that resolved completely after 25 minutes. He is now back to normal in the ED.",
+    "hx_brief": "58yo male with sudden onset left-sided weakness and facial drooping that resolved completely after 25 minutes. He is neurologically intact in the ED.",
     "hints": {
-      "hx": "History of hypertension and hyperlipidemia. Smokes half a pack daily. No prior neurological events. Symptoms resolved completely before arrival.",
-      "pe": "BP 172/96. Completely neurologically intact on arrival. Carotid bruit heard on the right.",
+      "hx": "HTN and hyperlipidemia. Smokes half a pack daily. No prior neurological events. Symptoms fully resolved before arrival.",
+      "pe": "BP 172/96. Completely neurologically intact. Carotid bruit heard on the right.",
       "img": "MRI Brain DWI: No acute infarct. MRA Neck: 75% stenosis of the right internal carotid artery."
     },
     "specialty_name": "Hypercoagulable Panel",
@@ -761,15 +761,15 @@
       "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Holter Monitor x24hr: No paroxysmal AF detected."
     },
-    "answer": "TIA (Right ICA Stenosis 75%)"
+    "answer": "Ischemic Stroke"
   },
   {
     "date": "2026-04-28",
     "adminScore": 66,
     "hx_brief": "45yo male with 2 months of progressive lower back pain and new onset bilateral leg weakness. He is a known IV drug user.",
     "hints": {
-      "hx": "Injecting heroin for 10 years. Had a dental procedure 3 months ago. Fevers and chills for 6 weeks. Back pain is constant and worse at night. Now struggles to walk.",
-      "pe": "Temperature 38.7°C. Point tenderness over L3-L4. Lower extremity weakness 3/5 bilaterally. Hyperreflexia and upgoing plantar response.",
+      "hx": "Injecting heroin for 10 years. Had dental work 3 months ago. Fevers and chills for 6 weeks. Back pain is constant and worse at night.",
+      "pe": "Temperature 38.7°C. Point tenderness over L3-L4. Lower extremity weakness 3/5 bilaterally. Hyperreflexia and upgoing plantar responses.",
       "img": "MRI Spine with contrast: Rim-enhancing epidural collection at L3-L4 compressing the thecal sac. Vertebral endplate erosion."
     },
     "specialty_name": "Blood Culture",
@@ -778,16 +778,16 @@
       "CMP": "Normal", "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Blood cultures x2: MSSA. Echo: 1.2cm vegetation on tricuspid valve."
     },
-    "answer": "Hematogenous Osteomyelitis (MSSA — IVDU)"
+    "answer": "Osteomyelitis"
   },
   {
     "date": "2026-04-29",
     "adminScore": 62,
-    "hx_brief": "19yo female brought in by her roommate after she fainted twice today. She has been restricting her eating for 6 months and exercises 3 hours daily.",
+    "hx_brief": "19yo female brought in by her roommate after fainting twice today. She has been restricting her eating for 6 months and exercises 3 hours daily.",
     "hints": {
-      "hx": "She denies there is a problem. Has lost 28 pounds in 6 months. Her periods stopped 4 months ago. She feels cold all the time and has been growing fine hair on her arms.",
-      "pe": "BMI 14.8. HR 42. BP 84/56. Lanugo on arms and back. Bilateral parotid enlargement. Dry skin. Peripheral edema.",
-      "img": "Echocardiogram: Mild pericardial effusion. EF preserved."
+      "hx": "Denies there is a problem. Lost 28 pounds in 6 months. Periods stopped 4 months ago. Feels cold all the time. Growing fine hair on her arms.",
+      "pe": "BMI 14.8. HR 42. BP 84/56. Lanugo on arms and back. Bilateral parotid enlargement. Peripheral edema.",
+      "img": "Echo: Mild pericardial effusion. EF preserved."
     },
     "specialty_name": "Bone Density",
     "lab_results": {
@@ -797,15 +797,15 @@
       "Trop": "Normal", "Lipase": "Normal", "UA": "Low specific gravity", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "DEXA: T-score -2.8 — osteoporosis. FSH/LH suppressed. Estradiol undetectable."
     },
-    "answer": "Anorexia Nervosa (Restrictive Type)"
+    "answer": "Anorexia Nervosa"
   },
   {
     "date": "2026-04-30",
     "adminScore": 65,
-    "hx_brief": "63yo male with 3 weeks of progressively worsening confusion, shuffling gait, and urinary incontinence. His wife says he used to be sharp and active.",
+    "hx_brief": "63yo male with 3 weeks of progressive confusion, shuffling gait, and urinary incontinence. His wife says he used to be sharp and active.",
     "hints": {
-      "hx": "He had a subarachnoid hemorrhage 4 months ago that was surgically managed. No prior dementia. He walks with very small steps and has fallen twice.",
-      "pe": "Alert but disoriented to date. Magnetic gait — feet appear stuck to floor. Wide-based. Frontal lobe release signs present.",
+      "hx": "Had a subarachnoid hemorrhage 4 months ago that was surgically managed. No prior dementia. Walking with very small steps and fallen twice.",
+      "pe": "Alert but disoriented to date. Magnetic gait — feet appear stuck to the floor. Wide-based. Frontal lobe release signs present.",
       "img": "MRI Brain: Markedly enlarged ventricles disproportionate to cortical atrophy. Periventricular T2 signal — transependymal CSF flow."
     },
     "specialty_name": "LP Tap Test",
@@ -813,14 +813,14 @@
       "CBC": "Normal", "CMP": "Normal", "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "LP: Opening pressure 22 cmH2O. After removal of 30mL CSF — gait improves significantly within 1 hour."
     },
-    "answer": "Normal Pressure Hydrocephalus (Post-SAH)"
+    "answer": "Normal Pressure Hydrocephalus"
   },
   {
     "date": "2026-05-01",
     "adminScore": 60,
-    "hx_brief": "42yo female presents with 3 months of muscle weakness, difficulty rising from chairs, and a violaceous rash on her eyelids. Her hands have been rough and cracked.",
+    "hx_brief": "42yo female with 3 months of proximal muscle weakness and a violaceous rash on her eyelids. Her hands have been rough and cracked.",
     "hints": {
-      "hx": "She noticed the rash before the weakness started. She works as a landscaper. The weakness is worse proximally. No joint pain. No sun sensitivity.",
+      "hx": "Rash appeared before the weakness. Works as a landscaper. Weakness is worse proximally — difficulty rising from chairs. No joint pain.",
       "pe": "Heliotrope rash on eyelids. Gottron papules over MCP and PIP joints. Proximal muscle strength 2/5 upper and lower extremities. Shawl sign.",
       "img": "MRI Thighs: Diffuse muscle edema and inflammation in proximal muscle groups bilaterally."
     },
@@ -830,16 +830,16 @@
       "UA": "Myoglobinuria", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "CK: 8,400 U/L. Anti-Jo-1: Positive. EMG: Myopathic pattern. Muscle biopsy: Perifascicular atrophy."
     },
-    "answer": "Dermatomyositis (Anti-Jo-1 Positive)"
+    "answer": "Dermatomyositis"
   },
   {
     "date": "2026-05-02",
     "adminScore": 70,
-    "hx_brief": "55yo male with 6 hours of severe central chest pain with radiation to his jaw. He is diaphoretic and pale.",
+    "hx_brief": "55yo male with 6 hours of severe central chest pain with jaw radiation. He is diaphoretic and pale.",
     "hints": {
-      "hx": "No prior cardiac history. Hypertension on amlodipine. The pain started at rest and has not changed with position or breathing. His brother had a heart attack at 48.",
+      "hx": "No prior cardiac history. HTN on amlodipine. Pain started at rest and has not changed with position or breathing. Brother had MI at 48.",
       "pe": "BP 92/64. HR 108. Diaphoretic. S4 gallop. No murmur. JVP not elevated. Clear lung fields.",
-      "img": "Urgent coronary angiography: 100% occlusion of the proximal left anterior descending artery — TIMI 0 flow."
+      "img": "Urgent coronary angiography: 100% occlusion of the proximal LAD — TIMI 0 flow."
     },
     "specialty_name": "Serial Troponins",
     "lab_results": {
@@ -849,15 +849,15 @@
       "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Post-PCI: TIMI 3 flow restored. EF 35% post-infarct."
     },
-    "answer": "Anterior STEMI (LAD Occlusion)"
+    "answer": "Myocardial Infarction (Heart Attack)"
   },
   {
     "date": "2026-05-03",
     "adminScore": 58,
-    "hx_brief": "38yo male with a 2-month history of recurrent bloody diarrhea, urgency, and crampy lower abdominal pain. He has had 8-10 bloody stools per day.",
+    "hx_brief": "38yo male with 2 months of recurrent bloody diarrhea and urgency. He has had 8–10 bloody stools per day.",
     "hints": {
-      "hx": "No recent travel, no antibiotics, no sick contacts. He has lost 11 pounds. He has been having joint pain in his knees and ankles. His eyes have been red and irritated.",
-      "pe": "Pale and uncomfortable. Mild tachycardia. Diffuse lower abdominal tenderness — worst in the left lower quadrant. No peritoneal signs. Oral aphthous ulcers.",
+      "hx": "No recent travel, no antibiotics, no sick contacts. Lost 11 pounds. Joint pain in knees and ankles. Eyes have been red and irritated.",
+      "pe": "Pale and uncomfortable. Mild tachycardia. Diffuse lower abdominal tenderness — worst in LLQ. No peritoneal signs. Oral aphthous ulcers.",
       "img": "CT Abdomen/Pelvis: Continuous colonic wall thickening from rectum to splenic flexure. No skip lesions. No free air."
     },
     "specialty_name": "Colonoscopy Biopsy",
@@ -875,8 +875,8 @@
     "adminScore": 65,
     "hx_brief": "27yo male with 3 weeks of fever, night sweats, and a painful swollen right knee. He is sexually active with multiple partners.",
     "hints": {
-      "hx": "He denies genital discharge but admits to unprotected sex 3 weeks ago. No prior joint problems. The knee became swollen over 2 days. He also has small painful pustular lesions on his palms.",
-      "pe": "Temperature 38.4°C. Right knee markedly swollen, warm, and tender — range of motion severely limited. Pustular skin lesions on palms and soles. No urethral discharge today.",
+      "hx": "Unprotected sex 3 weeks ago. No genital discharge currently. Knee became swollen over 2 days. Small painful pustular lesions on his palms.",
+      "pe": "Temperature 38.4°C. Right knee markedly swollen, warm, severely limited ROM. Pustular skin lesions on palms and soles.",
       "img": "X-ray right knee: Soft tissue swelling only. No bony erosions. MRI: Large joint effusion with synovial thickening."
     },
     "specialty_name": "Joint Fluid Culture",
@@ -890,26 +890,26 @@
   {
     "date": "2026-05-05",
     "adminScore": 62,
-    "hx_brief": "70yo male with progressive resting tremor in his right hand for 18 months. His wife says he moves much slower than he used to and his handwriting has become tiny.",
+    "hx_brief": "70yo male with 18 months of progressive resting tremor in his right hand. His wife says he moves much slower than he used to and his handwriting has become tiny.",
     "hints": {
-      "hx": "The tremor is worse at rest and improves with intentional movement. He has difficulty initiating steps. He sometimes feels like his feet are glued to the floor. No family history. Non-smoker.",
-      "pe": "Masked facies. Monotone voice. Cogwheel rigidity in bilateral upper extremities. Resting pill-rolling tremor right > left. Bradykinesia. Positive pull test — retropulsion.",
-      "img": "MRI Brain: No focal lesions. Mild generalized atrophy appropriate for age. DaTscan: Reduced dopamine transporter uptake in bilateral putamen."
+      "hx": "Tremor is worse at rest and improves with intentional movement. Difficulty initiating steps — feet feel glued to the floor. No family history.",
+      "pe": "Masked facies. Monotone voice. Cogwheel rigidity bilaterally. Resting pill-rolling tremor right > left. Bradykinesia. Positive pull test.",
+      "img": "MRI Brain: No focal lesions. DaTscan: Reduced dopamine transporter uptake in bilateral putamen."
     },
     "specialty_name": "DaTscan",
     "lab_results": {
       "CBC": "Normal", "CMP": "Normal", "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "DaTscan SPECT: Asymmetric reduced uptake in bilateral striatum — right > left. Consistent with nigrostriatal degeneration."
     },
-    "answer": "Parkinson Disease (Idiopathic)"
+    "answer": "Parkinson Disease"
   },
   {
     "date": "2026-05-06",
     "adminScore": 60,
-    "hx_brief": "33yo female with 2 years of intermittent right upper quadrant pain, fatigue, and jaundice. Her bilirubin is always elevated on routine labs.",
+    "hx_brief": "33yo female with 2 years of intermittent jaundice and fatigue. Her bilirubin is always elevated but she feels otherwise well.",
     "hints": {
-      "hx": "She has no history of alcohol use, no hepatitis exposures, no medications. No family history of liver disease. The jaundice worsens with fasting or illness. She has had similar episodes since childhood that resolved on their own.",
-      "pe": "Mild scleral icterus today. No hepatomegaly. No splenomegaly. No spider angiomas. No asterixis. Abdomen soft and non-tender.",
+      "hx": "No alcohol use, no hepatitis exposures, no medications. Similar episodes since childhood that resolved on their own. Jaundice worsens with fasting or illness.",
+      "pe": "Mild scleral icterus. No hepatomegaly. No splenomegaly. No spider angiomas. Abdomen soft and non-tender.",
       "img": "RUQ Ultrasound: Normal liver echogenicity. No biliary dilation. No gallstones."
     },
     "specialty_name": "UGT1A1 Genotype",
@@ -925,11 +925,11 @@
   {
     "date": "2026-05-07",
     "adminScore": 68,
-    "hx_brief": "49yo male with 3 weeks of progressive exertional dyspnea, orthopnea, and bilateral lower extremity swelling. He is an alcoholic.",
+    "hx_brief": "49yo male alcoholic with 3 weeks of progressive exertional dyspnea, orthopnea, and bilateral leg swelling.",
     "hints": {
-      "hx": "He drinks a fifth of vodka daily for 15 years. No prior cardiac history. No cocaine use. No hypertension. He cannot lie flat without becoming short of breath.",
-      "pe": "HR 116 irregularly irregular. BP 96/64. JVP elevated. Bilateral crackles. S3 gallop. 4+ pitting edema to the thighs. Hepatojugular reflux positive.",
-      "img": "Echocardiogram: EF 18%. Four-chamber dilation. Moderate-to-severe mitral and tricuspid regurgitation. No wall motion abnormalities."
+      "hx": "Drinks a fifth of vodka daily for 15 years. No prior cardiac history. Cannot lie flat without becoming short of breath.",
+      "pe": "HR 116 irregularly irregular. BP 96/64. JVP elevated. Bilateral crackles. S3 gallop. 4+ pitting edema to thighs.",
+      "img": "Echo: EF 18%. Four-chamber dilation. Moderate-to-severe mitral and tricuspid regurgitation. No wall motion abnormalities."
     },
     "specialty_name": "BNP",
     "lab_results": {
@@ -940,15 +940,15 @@
       "ABG": "pO2 68 on room air", "Coags": "PT mildly prolonged",
       "Specialty": "BNP: 4,100 pg/mL. Thiamine level: Undetectable."
     },
-    "answer": "Alcoholic Cardiomyopathy (HFrEF)"
+    "answer": "Alcoholic Cardiomyopathy"
   },
   {
     "date": "2026-05-08",
     "adminScore": 63,
-    "hx_brief": "24yo female with 3 days of sudden vision loss in her left eye. She describes it as a gray curtain descending from the top of her visual field.",
+    "hx_brief": "24yo highly myopic female with 3 days of sudden vision loss in her left eye, like a gray curtain descending from above.",
     "hints": {
-      "hx": "She is highly myopic (-9.00 diopters). No trauma. No prior eye problems. No systemic symptoms. She noticed flashing lights and floaters 2 days before the vision loss started.",
-      "pe": "Visual acuity: Left eye — hand motion only. Right eye — 20/20. Left eye fundoscopy: Elevated billowing retinal surface, loss of choroidal detail, retinal folds visible.",
+      "hx": "No trauma. No prior eye problems. Noticed flashing lights and floaters 2 days before the vision loss began.",
+      "pe": "Left eye visual acuity: hand motion only. Right eye: 20/20. Left fundoscopy: Elevated billowing retinal surface, loss of choroidal detail.",
       "img": "Ocular ultrasound B-scan: Highly echogenic membrane detached from the posterior pole, anchored at the optic disc."
     },
     "specialty_name": "Fluorescein Angiography",
@@ -956,15 +956,15 @@
       "CBC": "Normal", "CMP": "Normal", "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Fluorescein angiography: Large superotemporal retinal detachment involving the macula. Horseshoe tear identified at 11 o'clock."
     },
-    "answer": "Rhegmatogenous Retinal Detachment (Macula-Off)"
+    "answer": "Retinal Detachment"
   },
   {
     "date": "2026-05-09",
     "adminScore": 57,
-    "hx_brief": "55yo male with 4 months of worsening fatigue, bone pain in his back and hips, and recurrent infections. His primary care doctor found elevated calcium on routine labs.",
+    "hx_brief": "55yo male with 4 months of bone pain, fatigue, and recurrent infections. His primary care doctor found elevated calcium on routine labs.",
     "hints": {
-      "hx": "He has had 3 pneumonias in the past year. He reports back pain that wakes him at night. He has lost 16 pounds. No lymphadenopathy noticed. No night sweats.",
-      "pe": "Pale and cachectic. Diffuse bony tenderness to palpation over the spine and sternum. No hepatosplenomegaly. No peripheral lymphadenopathy.",
+      "hx": "Three pneumonias in the past year. Back pain that wakes him at night. Lost 16 pounds. No lymphadenopathy.",
+      "pe": "Pale and cachectic. Diffuse bony tenderness over the spine and sternum. No hepatosplenomegaly. No peripheral lymphadenopathy.",
       "img": "Whole body MRI: Diffuse bone marrow infiltration. Multiple focal lesions in the spine, pelvis, and ribs."
     },
     "specialty_name": "Bone Marrow Biopsy",
@@ -975,16 +975,16 @@
       "UA": "Bence Jones proteinuria", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Bone marrow: 60% plasma cells. FISH: del(17p) and t(4;14) — high-risk cytogenetics. IgA lambda M-spike on SPEP."
     },
-    "answer": "Multiple Myeloma (IgA Lambda — High Risk)"
+    "answer": "Multiple Myeloma"
   },
   {
     "date": "2026-05-10",
     "adminScore": 65,
-    "hx_brief": "40yo female with sudden onset severe chest pain and shortness of breath 4 days after returning from a 14-hour flight from Australia.",
+    "hx_brief": "40yo female with sudden onset severe chest pain and shortness of breath 4 days after returning from a 14-hour flight.",
     "hints": {
-      "hx": "She sat in a window seat and barely moved during the flight. She is on oral contraceptives. No prior clots. No family history of clotting disorders. Left leg has been swollen since the flight.",
-      "pe": "HR 118. BP 100/72. O2 sat 88% on room air. Left leg swollen with calf tenderness. JVP elevated. Right heart strain signs on exam.",
-      "img": "CT Pulmonary Angiography: Bilateral saddle pulmonary embolism with thrombus in the main pulmonary artery extending into bilateral main branches."
+      "hx": "Sat in a window seat and barely moved during the flight. On oral contraceptives. No prior clots. Left leg has been swollen since landing.",
+      "pe": "HR 118. BP 100/72. O2 sat 88% on room air. Left leg swollen with calf tenderness. JVP elevated.",
+      "img": "CT Pulmonary Angiography: Bilateral saddle pulmonary embolism — thrombus in the main pulmonary artery extending into both main branches."
     },
     "specialty_name": "Hypercoagulable Panel",
     "lab_results": {
@@ -997,15 +997,15 @@
       "Coags": "D-dimer: 8,400 ng/mL",
       "Specialty": "Echo: RV dilation and hypokinesis. McConnell sign present. Estimated RVSP 58 mmHg."
     },
-    "answer": "Massive Pulmonary Embolism (Saddle PE)"
+    "answer": "Pulmonary Embolism (PE)"
   },
   {
     "date": "2026-05-11",
     "adminScore": 67,
-    "hx_brief": "16yo male brought in by his mother after she noticed his urine was dark and he was urinating much less than usual. He had a sore throat 2 weeks ago.",
+    "hx_brief": "16yo male with dark urine and decreased urine output. His mother mentions he had a sore throat 2 weeks ago that was treated with antibiotics.",
     "hints": {
-      "hx": "He had an exudative pharyngitis that was treated with antibiotics — but he never completed the course. The dark urine started 3 days ago. He has puffiness around his eyes in the morning.",
-      "pe": "BP 148/92. Bilateral periorbital edema. 1+ pitting edema in bilateral lower extremities. No rash. Temperature normal.",
+      "hx": "He never completed the antibiotic course. Dark urine started 3 days ago. Puffiness around his eyes in the mornings.",
+      "pe": "BP 148/92. Bilateral periorbital edema. 1+ pitting edema in bilateral lower extremities. No rash. Afebrile.",
       "img": "Renal Ultrasound: Bilaterally enlarged kidneys with increased echogenicity. No hydronephrosis."
     },
     "specialty_name": "ASO Titer",
@@ -1022,11 +1022,11 @@
   {
     "date": "2026-05-12",
     "adminScore": 60,
-    "hx_brief": "62yo male with 2 months of progressive difficulty swallowing, regurgitation of undigested food, and halitosis. He has lost 14 pounds.",
+    "hx_brief": "62yo male with 2 months of difficulty swallowing, regurgitation of undigested food, and halitosis. He has lost 14 pounds.",
     "hints": {
-      "hx": "The regurgitation happens hours after eating and the food is undigested — not acidic. He gets relief by pressing on his neck. He never has heartburn. Symptoms are worse at night.",
-      "pe": "Mild halitosis. A soft compressible swelling is visible in the left posterior neck that gurgles on palpation. No lymphadenopathy. No neck masses.",
-      "img": "Barium swallow: Posterior outpouching at the pharyngoesophageal junction filling with contrast — located just above the cricopharyngeus muscle."
+      "hx": "Regurgitation happens hours after eating and the food is undigested — not acidic. He finds relief by pressing on his neck. No heartburn. Worse at night.",
+      "pe": "Mild halitosis. Soft compressible swelling in the left posterior neck that gurgles on palpation. No lymphadenopathy.",
+      "img": "Barium swallow: Posterior outpouching at the pharyngoesophageal junction — just above the cricopharyngeus muscle."
     },
     "specialty_name": "Esophageal Manometry",
     "lab_results": {
@@ -1040,10 +1040,10 @@
   {
     "date": "2026-05-13",
     "adminScore": 55,
-    "hx_brief": "32yo male with 3 days of severe watery diarrhea after finishing a course of clindamycin for a dental abscess. He has had up to 15 watery stools per day.",
+    "hx_brief": "32yo male with 3 days of severe watery diarrhea — up to 15 stools per day — after finishing a course of clindamycin.",
     "hints": {
-      "hx": "He completed a 10-day course of clindamycin 5 days ago. The diarrhea started on day 7 of the antibiotics. He has lower abdominal cramping and low-grade fever. No blood in stool.",
-      "pe": "Temperature 38.3°C. HR 102. Diffuse mild abdominal tenderness most prominent in the left lower quadrant. No peritoneal signs. Abdomen distended.",
+      "hx": "Completed a 10-day course of clindamycin for a dental abscess 5 days ago. Diarrhea started on day 7 of antibiotics. Lower abdominal cramping and low-grade fever.",
+      "pe": "Temperature 38.3°C. HR 102. Diffuse mild tenderness in the LLQ. No peritoneal signs. Abdomen distended.",
       "img": "CT Abdomen: Diffuse colonic wall thickening with thumbprinting pattern. Pericolonic fat stranding. No free air."
     },
     "specialty_name": "C. diff Toxin PCR",
@@ -1054,15 +1054,15 @@
       "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "C. difficile toxin PCR: Positive. GDH antigen: Positive. Toxin A/B EIA: Positive."
     },
-    "answer": "C. Difficile Infection (Severe)"
+    "answer": "C. Difficile Infection"
   },
   {
     "date": "2026-05-14",
     "adminScore": 63,
-    "hx_brief": "58yo female with 6 months of progressive fatigue, jaundice, and severe itching that is worse at night. She has no history of alcohol use.",
+    "hx_brief": "58yo female with 6 months of fatigue, jaundice, and severe itching that is worse at night. She does not drink alcohol.",
     "hints": {
-      "hx": "The itching started before the jaundice. She also has dry eyes and dry mouth. No prior liver disease. No hepatitis exposures. No medications. She has noticed dark urine and pale stools.",
-      "pe": "Mild scleral icterus. Xanthomas on eyelids. Excoriations from scratching. Hepatomegaly. No splenomegaly. No spider angiomas.",
+      "hx": "Itching started before the jaundice. Also has dry eyes and dry mouth. Dark urine and pale stools. No medications or hepatitis exposures.",
+      "pe": "Mild scleral icterus. Xanthomas on eyelids. Excoriations from scratching. Hepatomegaly. No spider angiomas.",
       "img": "MRCP: No biliary dilation. No stones. Normal bile duct caliber throughout."
     },
     "specialty_name": "AMA",
@@ -1071,18 +1071,18 @@
       "CMP": "ALP 620 (markedly elevated). GGT elevated. Bilirubin 4.8. AST/ALT mildly elevated. Albumin 3.2.",
       "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal",
       "UA": "Bilirubin positive", "ABG": "Normal", "Coags": "PT mildly prolonged",
-      "Specialty": "AMA (anti-mitochondrial antibody): Positive M2 titer 1:640. IgM elevated. Liver biopsy: Florid bile duct lesion — lymphocytic infiltrate."
+      "Specialty": "AMA (anti-mitochondrial antibody): Positive M2 titer 1:640. IgM elevated. Liver biopsy: Florid bile duct lesion."
     },
     "answer": "Primary Biliary Cholangitis"
   },
   {
     "date": "2026-05-15",
     "adminScore": 60,
-    "hx_brief": "45yo male with sudden onset severe lower back pain radiating to both legs. He also noticed he couldn't fully empty his bladder this morning.",
+    "hx_brief": "45yo male with sudden severe lower back pain radiating to both legs. He also noticed he couldn't fully empty his bladder this morning.",
     "hints": {
-      "hx": "No trauma. He had a lumbar disc herniation 3 years ago treated conservatively. The pain is different this time — more severe and bilateral. He has had difficulty starting urination for 2 days.",
-      "pe": "Decreased perianal sensation on pinprick. Reduced anal sphincter tone. Bilateral lower extremity weakness 3/5. Saddle anesthesia present. Bladder percussed to the umbilicus.",
-      "img": "MRI Lumbar Spine emergent: Large L4-L5 central disc herniation causing severe compression of the cauda equina nerve roots."
+      "hx": "No trauma. Had a lumbar disc herniation 3 years ago managed conservatively. This pain is different — more severe and bilateral. Difficulty starting urination for 2 days.",
+      "pe": "Decreased perianal sensation. Reduced anal sphincter tone. Bilateral lower extremity weakness 3/5. Saddle anesthesia present. Bladder percussed to the umbilicus.",
+      "img": "MRI Lumbar Spine: Large L4-L5 central disc herniation causing severe compression of the cauda equina nerve roots."
     },
     "specialty_name": "Post-void Residual",
     "lab_results": {
@@ -1090,15 +1090,15 @@
       "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Post-void residual: 650mL (severely elevated). Urodynamics: Neurogenic bladder pattern."
     },
-    "answer": "Cauda Equina Syndrome (L4-L5 Disc Herniation)"
+    "answer": "Cauda Equina Syndrome"
   },
   {
     "date": "2026-05-16",
     "adminScore": 68,
     "hx_brief": "21yo female with 5 days of painful urination, vaginal discharge, and lower abdominal pain. She is sexually active.",
     "hints": {
-      "hx": "New sexual partner 3 weeks ago. She uses condoms inconsistently. No prior STIs. She has had intermittent fever. The lower abdominal pain is bilateral and worsens with movement.",
-      "pe": "Temperature 38.1°C. Cervical motion tenderness on bimanual exam. Bilateral adnexal tenderness — right worse than left. Mucopurulent cervical discharge. No peritoneal signs.",
+      "hx": "New sexual partner 3 weeks ago. Inconsistent condom use. No prior STIs. Intermittent fevers. Lower abdominal pain is bilateral and worsens with movement.",
+      "pe": "Temperature 38.1°C. Cervical motion tenderness on bimanual exam. Bilateral adnexal tenderness — right worse than left. Mucopurulent cervical discharge.",
       "img": "Pelvic Ultrasound: Thickened, fluid-filled fallopian tubes bilaterally. Small amount of free pelvic fluid."
     },
     "specialty_name": "Cervical NAAT",
@@ -1113,11 +1113,11 @@
   {
     "date": "2026-05-17",
     "adminScore": 62,
-    "hx_brief": "67yo male with 4 months of progressive exertional dyspnea and a harsh systolic murmur noted by his primary care doctor. He has had two syncopal episodes.",
+    "hx_brief": "67yo male with 4 months of progressively worsening exertional dyspnea and two syncopal episodes during activity.",
     "hints": {
-      "hx": "Syncopal episodes occurred during exertion. He also has exertional chest pain that resolves with rest. History of a bicuspid aortic valve noted incidentally 20 years ago. Never followed up.",
-      "pe": "BP 110/80 with narrow pulse pressure. Harsh crescendo-decrescendo systolic murmur at right upper sternal border radiating to carotids. Pulsus parvus et tardus. Diminished S2.",
-      "img": "Echocardiogram: Bicuspid aortic valve with severe calcification. Peak gradient 88 mmHg. Mean gradient 52 mmHg. AVA 0.7 cm²."
+      "hx": "Syncope occurred during exertion. Exertional chest pain that resolves with rest. History of a bicuspid aortic valve noted incidentally 20 years ago. Never followed up.",
+      "pe": "BP 110/80 with narrow pulse pressure. Harsh crescendo-decrescendo systolic murmur at RUSB radiating to carotids. Pulsus parvus et tardus. Diminished S2.",
+      "img": "Echo: Bicuspid aortic valve with severe calcification. Peak gradient 88 mmHg. Mean gradient 52 mmHg. AVA 0.7 cm²."
     },
     "specialty_name": "Cardiac Catheterization",
     "lab_results": {
@@ -1127,15 +1127,15 @@
       "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Cath: Confirmed severe AS. EF 45% (mildly reduced). No significant CAD."
     },
-    "answer": "Severe Aortic Stenosis (Bicuspid Valve)"
+    "answer": "Aortic Stenosis"
   },
   {
     "date": "2026-05-18",
     "adminScore": 58,
-    "hx_brief": "36yo male with 6 weeks of progressive bilateral hand and wrist pain, morning stiffness lasting 2 hours, and extreme fatigue. He has developed a salmon-colored rash that comes and goes.",
+    "hx_brief": "36yo male with 6 weeks of daily high fevers, joint pain, and a rash that appears with his fever spikes and disappears when they resolve.",
     "hints": {
-      "hx": "The rash appears with fever spikes and fades when the fever breaks. He has had daily fevers to 39.5°C for 6 weeks. He has lost 10 pounds. Multiple joints are involved — symmetric.",
-      "pe": "Quotidian salmon-colored evanescent rash on trunk and arms. Splenomegaly. Lymphadenopathy in multiple regions. Symmetric synovitis of wrists, MCPs, and knees.",
+      "hx": "The rash is salmon-colored and evanescent — visible only during fevers. Has lost 10 pounds. Multiple joints involved symmetrically. Negative RF, ANA, and anti-CCP previously.",
+      "pe": "Quotidian salmon-colored rash on trunk during fever spike. Splenomegaly. Lymphadenopathy in multiple regions. Symmetric synovitis of wrists, MCPs, and knees.",
       "img": "CT Chest/Abdomen: Mediastinal lymphadenopathy and splenomegaly. No masses."
     },
     "specialty_name": "Ferritin",
@@ -1143,17 +1143,17 @@
       "CBC": "WBC 24,000. Hgb 9.2. Plts 620,000.",
       "CMP": "LDH 880. AST/ALT mildly elevated.",
       "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Ferritin: 48,000 ng/mL (markedly elevated — >5x ULN). RF: Negative. ANA: Negative. Anti-CCP: Negative."
+      "Specialty": "Ferritin: 48,000 ng/mL (markedly elevated). RF: Negative. ANA: Negative. Anti-CCP: Negative."
     },
     "answer": "Adult-Onset Still Disease"
   },
   {
     "date": "2026-05-19",
     "adminScore": 65,
-    "hx_brief": "52yo male with 3 months of episodic severe pain in his right great toe. The attacks come on suddenly, usually at night, and the toe becomes red, swollen, and unbearable to touch.",
+    "hx_brief": "52yo male with recurrent episodes of severe right great toe pain. Attacks come on suddenly at night and the toe becomes unbearable to touch.",
     "hints": {
-      "hx": "He drinks 4-5 beers nightly. He recently started hydrochlorothiazide for hypertension. He has had 3 prior episodes. He eats red meat and shellfish frequently.",
-      "pe": "Right first MTP joint is erythematous, warm, swollen, and exquisitely tender to light touch. Tophi visible on the right ear helix and left Achilles tendon. No other joint involvement.",
+      "hx": "Drinks 4–5 beers nightly. Recently started hydrochlorothiazide for hypertension. Three prior episodes. Eats red meat and shellfish frequently.",
+      "pe": "Right first MTP joint erythematous, warm, swollen, and exquisitely tender. Tophi on right ear helix and left Achilles tendon.",
       "img": "X-ray right foot: Soft tissue swelling at first MTP. Periarticular erosions with overhanging edges — rat-bite appearance."
     },
     "specialty_name": "Joint Aspiration",
@@ -1163,15 +1163,15 @@
       "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Joint fluid: Negatively birefringent needle-shaped monosodium urate crystals. WBC 42,000 — predominantly neutrophils."
     },
-    "answer": "Gout (Tophaceous, Chronic)"
+    "answer": "Gout"
   },
   {
     "date": "2026-05-20",
     "adminScore": 60,
-    "hx_brief": "29yo female with 3 months of progressive proximal muscle weakness, elevated liver enzymes, and an unusual rash on her knuckles.",
+    "hx_brief": "29yo female with 3 months of progressive proximal muscle weakness and a rash on her knuckles. She works outdoors and thought it was sun exposure.",
     "hints": {
-      "hx": "She works outdoors and thought the rash was from sun exposure. The weakness makes it difficult to climb stairs or raise her arms. No joint pain. No prior autoimmune history.",
-      "pe": "Scaly, erythematous papules over the MCP and PIP joints — Gottron papules. V-sign rash on anterior chest. Proximal muscle strength 2/5 upper and lower extremities. No heliotrope rash.",
+      "hx": "Weakness makes it difficult to climb stairs or raise her arms. No joint pain. No prior autoimmune history. New dry cough in the past 2 weeks.",
+      "pe": "Scaly erythematous papules over MCP and PIP joints. V-sign rash on anterior chest. Proximal muscle strength 2/5 upper and lower extremities. No heliotrope rash.",
       "img": "MRI Thighs: Diffuse muscle edema and inflammatory changes."
     },
     "specialty_name": "Anti-MDA5",
@@ -1182,16 +1182,16 @@
       "UA": "Myoglobinuria", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "CK: 12,400 U/L. Anti-MDA5: Positive. HRCT Chest: Interstitial lung disease — organizing pneumonia pattern."
     },
-    "answer": "Anti-MDA5 Dermatomyositis (ILD-Associated)"
+    "answer": "Anti-MDA5 Dermatomyositis"
   },
   {
     "date": "2026-05-21",
     "adminScore": 67,
-    "hx_brief": "44yo male presents with severe epigastric pain, nausea, and diarrhea. His symptoms have recurred despite multiple courses of PPI therapy over 2 years.",
+    "hx_brief": "44yo male with 2 years of recurrent peptic ulcers that keep coming back despite multiple courses of PPI therapy. He also has chronic diarrhea.",
     "hints": {
-      "hx": "He has had 4 peptic ulcers in 2 years — all in unusual locations, including the distal duodenum and jejunum. PPI therapy temporarily helps but symptoms always return. He has also had diarrhea for months.",
+      "hx": "Four ulcers in 2 years — all in unusual locations including the distal duodenum and jejunum. PPIs temporarily help but symptoms always return.",
       "pe": "Mild epigastric tenderness. No peritoneal signs. No palpable masses. Normal bowel sounds.",
-      "img": "CT Abdomen: Thickening of duodenal and jejunal folds. No discrete mass identified. Prominent gastric folds."
+      "img": "CT Abdomen: Thickening of duodenal and jejunal folds. Prominent gastric folds. No discrete mass."
     },
     "specialty_name": "Fasting Gastrin",
     "lab_results": {
@@ -1200,17 +1200,17 @@
       "EKG": "Normal", "Trop": "Normal",
       "Lipase": "Elevated — 480 U/L",
       "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Fasting serum gastrin: 1,840 pg/mL (normal <100). Secretin stimulation test: Gastrin rises >200 pg/mL — paradoxical increase. Somatostatin receptor scintigraphy: Pancreatic head lesion."
+      "Specialty": "Fasting serum gastrin: 1,840 pg/mL (normal <100). Secretin stimulation: Paradoxical gastrin rise >200 pg/mL. SRS: Pancreatic head lesion."
     },
     "answer": "Zollinger-Ellison Syndrome (Gastrinoma)"
   },
   {
     "date": "2026-05-22",
     "adminScore": 63,
-    "hx_brief": "38yo male with sudden onset of severe tearing chest pain that woke him from sleep. He is 6'4\" and very thin. He plays basketball recreationally.",
+    "hx_brief": "38yo very tall, thin male with sudden onset tearing chest pain that woke him from sleep. He plays basketball recreationally.",
     "hints": {
-      "hx": "He has had intermittent joint hypermobility and his lens dislocated once in his left eye as a teenager. He wears very thick glasses. His father died of a heart problem at age 42.",
-      "pe": "Tall, thin habitus. Arm span exceeds height. High-arched palate. Pectus excavatum. Murmur of aortic regurgitation at left sternal border. BP differential between arms.",
+      "hx": "A lens dislocated from his left eye as a teenager. Wears very thick glasses. His father died of a heart problem at 42. Intermittent joint hypermobility.",
+      "pe": "Tall thin habitus. Arm span exceeds height. High-arched palate. Pectus excavatum. Aortic regurgitation murmur. BP differential between arms.",
       "img": "CTA Chest: Type A aortic dissection with intimal flap extending from the aortic root. Aortic root diameter 6.2cm."
     },
     "specialty_name": "FBN1 Gene Testing",
@@ -1225,10 +1225,10 @@
   {
     "date": "2026-05-23",
     "adminScore": 65,
-    "hx_brief": "55yo male with 3 months of progressive shortness of breath, dry cough, and bilateral ankle swelling. He worked in shipbuilding for 30 years.",
+    "hx_brief": "55yo male with 3 months of progressive shortness of breath and bilateral ankle swelling. He worked in shipbuilding for 30 years.",
     "hints": {
-      "hx": "He was exposed to asbestos daily for decades without adequate protection. Non-smoker. No prior lung disease. The dyspnea has been worsening steadily — no acute episodes.",
-      "pe": "Decreased breath sounds at bilateral bases with dullness to percussion. No crackles. Mild clubbing. No lymphadenopathy.",
+      "hx": "Daily asbestos exposure for decades without adequate protection. Non-smoker. No prior lung disease. Dyspnea has been worsening steadily.",
+      "pe": "Decreased breath sounds at bilateral bases with dullness. No crackles. Mild clubbing. No lymphadenopathy.",
       "img": "CT Chest: Large bilateral pleural effusions. Pleural thickening and calcified pleural plaques. Pleural-based irregular soft tissue masses."
     },
     "specialty_name": "Pleural Biopsy",
@@ -1244,10 +1244,10 @@
   {
     "date": "2026-05-24",
     "adminScore": 58,
-    "hx_brief": "22yo male with 3 days of fever, confusion, and bizarre behavior. His family says he has been acting like a different person — aggressive and then withdrawn.",
+    "hx_brief": "22yo male with 3 days of fever, confusion, and bizarre behavior. His family says he has been acting like a different person.",
     "hints": {
-      "hx": "He had a mild cold-like illness 2 weeks ago. No prior psychiatric history. No drug use confirmed. He had one generalized seizure at home. He has been hallucinating and hypersexual.",
-      "pe": "Temperature 38.6°C. Confused and agitated — MMSE 14/30. Abnormal involuntary mouth movements. Autonomic instability — BP fluctuating. No focal deficits.",
+      "hx": "Had a mild viral illness 2 weeks ago. No prior psychiatric history. No confirmed drug use. Had a generalized seizure at home. Hallucinating and hypersexual.",
+      "pe": "Temperature 38.6°C. Confused and agitated — MMSE 14/30. Abnormal involuntary mouth movements. Autonomic instability. No focal deficits.",
       "img": "MRI Brain FLAIR: Bilateral medial temporal lobe T2 signal hyperintensity. No mass effect."
     },
     "specialty_name": "CSF Antibody Panel",
@@ -1256,17 +1256,17 @@
       "CMP": "Na 128. Otherwise normal.",
       "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal",
       "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "CSF: Anti-NMDA receptor antibodies: Strongly positive. Lymphocytic pleocytosis. CT Abdomen: No teratoma identified."
+      "Specialty": "CSF: Anti-NMDA receptor antibodies: Strongly positive. Lymphocytic pleocytosis. CT Abdomen: No teratoma."
     },
     "answer": "Anti-NMDA Receptor Encephalitis"
   },
   {
     "date": "2026-05-25",
     "adminScore": 70,
-    "hx_brief": "48yo male with 6 weeks of fatigue, weight loss, and a persistent cough. A chest X-ray at his primary care doctor showed an abnormality.",
+    "hx_brief": "48yo male with 6 weeks of fatigue, weight loss, and a persistent cough. A chest X-ray at his primary care showed an abnormality.",
     "hints": {
-      "hx": "He lived in the Ohio River Valley for 20 years before moving. Immunocompetent. Non-smoker. Works as a construction worker doing soil excavation. No sick contacts.",
-      "pe": "Low-grade fever 37.9°C. Mild hepatomegaly. Cervical lymphadenopathy. Fine crackles at right base. No skin lesions.",
+      "hx": "Lived in the Ohio River Valley for 20 years. Immunocompetent non-smoker. Works as a construction worker doing soil excavation. No sick contacts.",
+      "pe": "Low-grade fever 37.9°C. Mild hepatomegaly. Cervical lymphadenopathy. Fine crackles at right base.",
       "img": "CT Chest: Multiple bilateral pulmonary nodules and a right hilar mass. Mediastinal lymphadenopathy. CT Abdomen: Hepatic nodules."
     },
     "specialty_name": "Urine Antigen",
@@ -1281,43 +1281,43 @@
   {
     "date": "2026-05-26",
     "adminScore": 62,
-    "hx_brief": "31yo female with 2 months of recurrent abdominal pain, bloating, and alternating constipation and diarrhea. She rates the pain 6/10 and it improves after bowel movements.",
+    "hx_brief": "31yo female with 2 months of recurrent abdominal pain, bloating, and alternating constipation and diarrhea. Pain improves after bowel movements.",
     "hints": {
-      "hx": "Symptoms began during a particularly stressful period at work. She has had extensive workup previously — all normal. No blood in stool. No nocturnal symptoms. No weight loss. No family history of IBD or colon cancer.",
-      "pe": "Mild diffuse abdominal tenderness without guarding or rigidity. No organomegaly. Normal bowel sounds. Rectal exam normal.",
-      "img": "CT Abdomen: Completely normal. Colonoscopy: Normal mucosa throughout. Biopsies: Normal colonic mucosa."
+      "hx": "Symptoms began during a stressful period at work. Extensive prior workup — all normal. No blood in stool. No nocturnal symptoms. No weight loss.",
+      "pe": "Mild diffuse tenderness without guarding. No organomegaly. Normal bowel sounds. Normal rectal exam.",
+      "img": "CT Abdomen: Completely normal. Colonoscopy: Normal mucosa. Biopsies: Normal."
     },
     "specialty_name": "Fecal Calprotectin",
     "lab_results": {
       "CBC": "Normal", "CMP": "Normal", "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal",
       "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "Fecal calprotectin: 28 mcg/g (normal <50 — no mucosal inflammation). Fecal lactoferrin: Negative. Rome IV criteria met."
+      "Specialty": "Fecal calprotectin: 28 mcg/g (normal — no mucosal inflammation). Fecal lactoferrin: Negative. Rome IV criteria met."
     },
-    "answer": "Irritable Bowel Syndrome (IBS — Mixed Type)"
+    "answer": "Irritable Bowel Syndrome (IBS)"
   },
   {
     "date": "2026-05-27",
     "adminScore": 60,
-    "hx_brief": "59yo male with 4 months of progressive bilateral leg weakness, muscle fasciculations, and difficulty swallowing. He has also noticed his speech sounds more nasal.",
+    "hx_brief": "59yo male with 4 months of progressive bilateral leg weakness, muscle twitching, and difficulty swallowing. His speech has become more nasal.",
     "hints": {
-      "hx": "No family history of neuromuscular disease. Non-smoker. No toxic exposures. He has noticed muscle twitching throughout his body. His grip strength has declined significantly.",
-      "pe": "Fasciculations visible in bilateral thighs and upper arms. Tongue fasciculations. Hyperreflexia in all four extremities. Bilateral Babinski signs. Dysarthria. No sensory deficits.",
+      "hx": "No family history of neuromuscular disease. Muscle twitching throughout his body. Grip strength has declined significantly. No sensory symptoms.",
+      "pe": "Fasciculations in bilateral thighs and upper arms. Tongue fasciculations. Hyperreflexia in all extremities. Bilateral Babinski signs. Dysarthria. No sensory deficits.",
       "img": "MRI Brain and Spine: No compressive lesion. Mild corticospinal tract T2 signal in bilateral internal capsules."
     },
     "specialty_name": "EMG/NCS",
     "lab_results": {
       "CBC": "Normal", "CMP": "Normal", "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "EMG: Active denervation (fibrillations, positive sharp waves) and chronic reinnervation in 3 body regions. NCS: Normal sensory conductions. Confirms upper and lower motor neuron involvement."
+      "Specialty": "EMG: Active denervation and chronic reinnervation in 3 body regions. NCS: Normal sensory conductions. Confirms UMN and LMN involvement."
     },
     "answer": "Amyotrophic Lateral Sclerosis (ALS)"
   },
   {
     "date": "2026-05-28",
     "adminScore": 65,
-    "hx_brief": "26yo female with 2 weeks of fatigue, fever, severe sore throat, and swollen glands. She kissed someone at a party 3 weeks ago who later said he was ill.",
+    "hx_brief": "26yo female with 2 weeks of debilitating fatigue, fever, and swollen glands. She developed a diffuse rash after taking amoxicillin for a sore throat.",
     "hints": {
-      "hx": "The fatigue is debilitating — she cannot get out of bed. She had a brief rash after taking amoxicillin for what was thought to be strep throat. No prior similar episodes.",
-      "pe": "Temperature 38.8°C. Marked bilateral posterior cervical lymphadenopathy. Tonsillar exudates. Splenomegaly — palpable 4cm below costal margin. Maculopapular rash on trunk.",
+      "hx": "Kissed someone at a party 3 weeks ago who was later ill. The fatigue is so bad she cannot get out of bed. No prior similar episodes.",
+      "pe": "Temperature 38.8°C. Marked bilateral posterior cervical lymphadenopathy. Tonsillar exudates. Splenomegaly 4cm below costal margin.",
       "img": "CT Abdomen: Splenomegaly 16cm. No splenic laceration."
     },
     "specialty_name": "Monospot / EBV",
@@ -1327,6 +1327,6 @@
       "EKG": "Normal", "Trop": "Normal", "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
       "Specialty": "Monospot: Positive. EBV VCA IgM: Positive. EBV EA: Positive. EBNA: Negative — confirms acute primary infection."
     },
-    "answer": "Infectious Mononucleosis (Primary EBV)"
+    "answer": "Infectious Mononucleosis"
   }
 ]
