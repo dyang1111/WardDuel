@@ -549,7 +549,7 @@ function showAlreadyPlayed(data){
 }
 
 function renderOpponent(){
-            document.getElementById('opponent-label').innerText='Dr. '+opponentName.replace('Dr. ','');
+    document.getElementById('opponent-label').innerText=opponentName.replace('Dr. ','');
     document.getElementById('opp-hp-num').innerText=opponentRawHp??opponentScore;
     document.getElementById('opp-hp-fill').style.height=Math.min(((opponentRawHp??opponentScore)/100)*100,100)+'%';
     // Render icon
