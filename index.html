@@ -830,7 +830,26 @@ async function endGame(success,payload){
     }
     if(currentUser){
         try{
-            await addDoc(collection(db,'scores'),{uid:currentUser.uid,username:currentUsername,score:finalScore,rawHp:hp,won,caseDate:currentCase.date,isArchive,timestamp:Date.now(),iconPrefs:{iconType:userPrefs.iconType,animalIdx:userPrefs.animalIdx,colorIdx:userPrefs.colorIdx,specIdx:userPrefs.specIdx,levelIdx:getLevelInfo((await getDoc(doc(db,'users',currentUser.uid))).data()?.totalPts||0).idx}});
+            const userSnap=await getDoc(doc(db,'users',currentUser.uid));
+            const userData=userSnap.exists()?userSnap.data():{};
+            const levelIdx=getLevelInfo(userData.totalPts||0).idx;
+            await addDoc(collection(db,'scores'),{
+                uid:currentUser.uid,
+                username:currentUsername,
+                score:finalScore,
+                rawHp:hp,
+                won,
+                caseDate:currentCase.date,
+                isArchive,
+                timestamp:Date.now(),
+                iconPrefs:{
+                    iconType:userPrefs.iconType,
+                    animalIdx:userPrefs.animalIdx,
+                    colorIdx:userPrefs.colorIdx,
+                    specIdx:userPrefs.specIdx,
+                    levelIdx
+                }
+            });
             const ref=doc(db,'users',currentUser.uid);
             const snap=await getDoc(ref);
             const d=snap.exists()?snap.data():{};
@@ -960,6 +979,9 @@ function buildIconPicker(levelIdx){
 function refreshCharPreview(levelIdx){
     document.getElementById('profile-avatar-wrap').innerHTML=renderIcon(userPrefs.animalIdx,userPrefs.colorIdx,userPrefs.specIdx,levelIdx,56);
     updateNavAvatar(levelIdx);
+    // Also update the character option in the icon picker
+    const iconOpts=document.querySelectorAll('.icon-opt');
+    if(iconOpts[3]) iconOpts[3].querySelector('svg') && (iconOpts[3].innerHTML=renderIcon(userPrefs.animalIdx,userPrefs.colorIdx,userPrefs.specIdx,levelIdx,44)+`<span class="icon-opt-label">Character</span>`);
 }
 
 async function savePrefs(){
@@ -974,7 +996,8 @@ function updateNavAvatar(lvlIdx){
     if(!nameEl)return;
     const name=nameEl.innerText,lvlName=lvlEl?lvlEl.innerText:'MS1';
     const li=lvlIdx!==undefined?lvlIdx:LEVELS.indexOf(lvlName);
-    document.getElementById('auth-ui').innerHTML=`<button class="user-btn" onclick="openProfile()">${renderNavAvatar(userPrefs,li)}<div><div class="user-name">${name}</div><div class="user-level">${lvlName}</div></div></button>`;
+    const newHtml=`<button class="user-btn" onclick="openProfile()">${renderNavAvatar(userPrefs,li)}<div><div class="user-name">${name}</div><div class="user-level">${lvlName}</div></div></button>`;
+    document.getElementById('auth-ui').innerHTML=newHtml;
 }
 
 window.toggleAuthMode=()=>{
