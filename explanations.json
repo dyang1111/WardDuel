@@ -101,9 +101,9 @@
   "Prostate Cancer": {
     "who_gets_it": "Older males (usually >65).",
     "risk_factors": "Age, African American race, High-fat diet.",
-    "typical_presentation": "Often asymptomatic; back pain and incontinence (if metastatic).",
+    "typical_presentation": "Often asymptomatic early. Metastatic: back pain, neurologic deficits (spinal cord compression), urinary incontinence, blastic bone lesions.",
     "moa": "Adenocarcinoma of the posterior lobe (peripheral zone).",
-    "step1_buzzwords": "Peripheral zone mass, Blastic bone lesions, Increased ALP.",
+    "step1_buzzwords": "Peripheral zone, Blastic (sclerotic) bone mets, Elevated ALP, PSA, Gleason score.",
     "lab_buzzwords": "Elevated PSA, Elevated Acid Phosphatase.",
     "treatment": "Prostatectomy, Radiation, Leuprolide/Flutamide."
   },
@@ -646,5 +646,14 @@
     "step1_buzzwords": "Atypical lymphocytes, Monospot, Ampicillin rash.",
     "lab_buzzwords": "Heterophile antibodies (Monospot), >10% atypical lymphocytes.",
     "treatment": "Supportive, avoid contact sports (spleen rupture)."
+  },
+  "Small Cell Lung Cancer": {
+    "who_gets_it": "Heavy smokers (>30 pack-years); men > women.",
+    "risk_factors": "Tobacco use (nearly 100% association), Radon exposure.",
+    "typical_presentation": "Cough, hemoptysis, weight loss, SVC syndrome (facial swelling, arm edema), Horner syndrome.",
+    "moa": "Neuroendocrine tumor of Kulchitsky cells; early hematogenous spread.",
+    "step1_buzzwords": "Oat cells, Nuclear molding, SVC syndrome, SIADH, Lambert-Eaton, ACTH (Cushing).",
+    "lab_buzzwords": "Hyponatremia (SIADH), Synaptophysin/Chromogranin A positive on biopsy.",
+    "treatment": "Chemotherapy (Cisplatin + Etoposide) + Radiation. Surgery rarely indicated \u2014 too advanced at diagnosis."
   }
 }
