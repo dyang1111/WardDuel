@@ -187,22 +187,28 @@
     "answer": "Acute Intermittent Porphyria"
   },
   {
-    "date": "2026-03-27",
-    "adminScore": 78,
-    "hx_brief": "65yo male with 3 days of worsening back pain who now can't control his bladder. His wife says he's been tripping over his own feet.",
-    "hints": {
-      "hx": "He was diagnosed with prostate cancer 2 years ago and completed radiation therapy. He describes shooting electric pains down both legs that started before the back pain.",
-      "pe": "Point tenderness over the lower thoracic spine. Bilateral lower extremity hyperreflexia. Reduced anal sphincter tone on rectal exam.",
-      "img": "MRI Spine with contrast: Epidural soft tissue mass at T11 causing significant cord compression. Marrow replacement signal in multiple vertebral bodies."
-    },
-    "specialty_name": "PSA Level",
-    "lab_results": {
-      "CBC": "Normal", "CMP": "Alkaline phosphatase 412 — markedly elevated", "EKG": "Normal", "Trop": "Normal",
-      "Lipase": "Normal", "UA": "Normal", "ABG": "Normal", "Coags": "Normal",
-      "Specialty": "PSA: 85 ng/mL (severely elevated)."
-    },
-    "answer": "Prostate Cancer"
+  "date": "2026-03-27",
+  "adminScore": 72,
+  "hx_brief": "58yo male smoker presents with 6 weeks of progressively worsening fatigue, 15-pound weight loss, and new facial swelling that is worse in the morning. He also complains of his shirt collar feeling tight.",
+  "hints": {
+    "hx": "He works as a plumber. Over the past 2 weeks he has noticed his face and neck turning red-purple when he bends over. His arms feel heavy and he has had persistent headaches. He denies cough or chest pain.",
+    "pe": "Facial plethora and cyanosis. Bilateral conjunctival injection. Dilated, non-pulsatile neck veins bilaterally that do not collapse with inspiration. Upper extremity edema. No lower extremity edema. Horner syndrome on the right.",
+    "img": "CT Chest with contrast: Large right hilar mass with direct invasion into the mediastinum. Complete occlusion of the superior vena cava. Collateral venous drainage visible along the chest wall."
   },
+  "specialty_name": "Biopsy",
+  "lab_results": {
+    "CBC": "Normal Hgb. WBC 11.2. Platelets normal.",
+    "CMP": "Na 131 (mild hyponatremia). Otherwise normal.",
+    "EKG": "Normal sinus rhythm.",
+    "Trop": "Normal",
+    "Lipase": "Normal",
+    "UA": "Normal",
+    "ABG": "pO2 74 on room air — mild hypoxia.",
+    "Coags": "Normal",
+    "Specialty": "CT-guided biopsy: Small cells with scant cytoplasm, nuclear molding, and high mitotic index. Positive for synaptophysin and chromogranin A. TTF-1 positive."
+  },
+  "answer": "Small Cell Lung Cancer"
+},
   {
     "date": "2026-03-28",
     "adminScore": 68,
