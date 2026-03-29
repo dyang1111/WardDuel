@@ -197,6 +197,23 @@ let wonDates = new Set();
 let scoreMap = {}; // date → score
 let currentFilter = 'all';
 
+// Load anonymous plays from localStorage — saved as wardduel_played_YYYY-MM-DD
+try {
+    Object.keys(localStorage).forEach(key => {
+        if(key.startsWith('wardduel_played_')) {
+            const date = key.replace('wardduel_played_', '');
+            if(date.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                completedDates.add(date);
+                try {
+                    const data = JSON.parse(localStorage.getItem(key));
+                    if(data && data.won) wonDates.add(date);
+                    if(data && typeof data.score === 'number') scoreMap[date] = data.score;
+                } catch(e) {}
+            }
+        }
+    });
+} catch(e) {}
+
 function getTodayCST(){
     return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 }
