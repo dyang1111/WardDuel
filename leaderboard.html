@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WardDuel | Leaderboard</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0}
+        :root{
+            --bg:#f7f9fc;
+            --surface:#ffffff;
+            --border:#dde3ed;
+            --border-strong:#c4cdd9;
+            --text:#0f172a;
+            --text-muted:#475569;
+            --text-subtle:#94a3b8;
+            --accent:#3b82f6;
+            --accent-dark:#2563eb;
+            --accent-light:#eff6ff;
+            --accent-border:#bfdbfe;
+            --success:#16a34a;
+            --success-light:#f0fdf4;
+            --success-border:#bbf7d0;
+            --danger:#dc2626;
+            --amber:#d97706;
+            --amber-light:#fffbeb;
+            --amber-border:#fde68a;
+            --gold:#f59e0b;
+            --silver:#94a3b8;
+            --bronze:#b45309;
+            --radius:11px;
+            --radius-sm:8px;
+            --shadow:0 1px 3px rgba(15,23,42,.07),0 1px 2px rgba(15,23,42,.04);
+            --shadow-md:0 4px 14px rgba(15,23,42,.10);
+        }
+        body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}
+
+        /* NAV */
+        .top-bar{width:100%;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:var(--shadow)}
+        .logo{font-weight:900;font-size:20px;color:var(--text);text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center;gap:0}
+        .logo svg{margin-right:8px}
+        .logo-word2{color:var(--accent)}
+        .nav-right{display:flex;align-items:center;gap:14px}
+        .nav-link{color:var(--text-muted);text-decoration:none;font-size:12px;font-weight:500;transition:color .15s}
+        .nav-link:hover{color:var(--text)}
+        .nav-link.active{color:var(--accent);font-weight:700}
+
+        .main{width:100%;max-width:600px;padding:28px 16px 80px;display:flex;flex-direction:column;gap:14px}
+
+        /* PAGE HEADER */
+        .page-header{background:linear-gradient(135deg,#0f172a,#1e3a5f);border-radius:var(--radius);padding:24px 22px;color:#fff}
+        .page-header-eyebrow{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.45);margin-bottom:8px}
+        .page-header-title{font-size:22px;font-weight:900;letter-spacing:-.02em;margin-bottom:6px}
+        .page-header-sub{font-size:13px;color:rgba(255,255,255,.6);line-height:1.5}
+
+        /* TABS */
+        .tabs{display:flex;gap:0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:4px;box-shadow:var(--shadow)}
+        .tab{flex:1;padding:8px 12px;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer;border:none;background:none;color:var(--text-muted);transition:all .15s;text-align:center}
+        .tab.active{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(59,130,246,.3)}
+
+        /* YOUR RANK CARD */
+        .your-rank-card{background:linear-gradient(135deg,var(--accent-light),#e0f2fe);border:1px solid var(--accent-border);border-radius:var(--radius);padding:16px 18px;display:none;align-items:center;gap:14px}
+        .your-rank-card.show{display:flex}
+        .your-rank-num{font-size:28px;font-weight:900;color:var(--accent);min-width:40px;text-align:center}
+        .your-rank-info{flex:1}
+        .your-rank-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:3px}
+        .your-rank-name{font-size:14px;font-weight:800;color:var(--text)}
+        .your-rank-score{font-size:12px;color:var(--text-muted)}
+
+        /* LEADERBOARD TABLE */
+        .lb-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+        .lb-header{display:grid;grid-template-columns:40px 1fr 70px 60px;gap:0;padding:10px 16px;border-bottom:1px solid var(--border);background:var(--bg)}
+        .lb-header-cell{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-subtle)}
+        .lb-header-cell.right{text-align:right}
+
+        .lb-row{display:grid;grid-template-columns:40px 1fr 70px 60px;gap:0;padding:12px 16px;border-bottom:1px solid #f1f5f9;align-items:center;transition:background .1s}
+        .lb-row:last-child{border-bottom:none}
+        .lb-row:hover{background:#f8fafc}
+        .lb-row.me{background:var(--accent-light);border-left:3px solid var(--accent)}
+        .lb-row.me:hover{background:#e0ecff}
+        .lb-row.rank-1{background:linear-gradient(90deg,#fffbeb,#fff)}
+        .lb-row.rank-2{background:linear-gradient(90deg,#f8fafc,#fff)}
+        .lb-row.rank-3{background:linear-gradient(90deg,#fff7ed,#fff)}
+
+        .rank-cell{font-size:14px;font-weight:800;color:var(--text-subtle)}
+        .rank-cell.gold{color:var(--gold)}
+        .rank-cell.silver{color:var(--silver)}
+        .rank-cell.bronze{color:var(--bronze)}
+
+        .player-cell{display:flex;align-items:center;gap:10px;min-width:0}
+        .player-avatar{width:32px;height:32px;border-radius:50%;flex-shrink:0}
+        .player-info{min-width:0}
+        .player-name{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .player-level{font-size:10px;font-weight:600;color:var(--accent)}
+        .me-tag{font-size:9px;font-weight:800;background:var(--accent);color:#fff;padding:1px 5px;border-radius:3px;margin-left:5px;flex-shrink:0}
+
+        .streak-cell{text-align:center;font-size:12px;font-weight:700;color:var(--amber)}
+        .score-cell{text-align:right;font-size:14px;font-weight:800;color:var(--text)}
+
+        /* EMPTY / LOADING */
+        .lb-empty{padding:52px 24px;text-align:center}
+        .lb-empty-icon{font-size:2.4rem;margin-bottom:14px}
+        .lb-empty-title{font-size:15px;font-weight:800;color:var(--text);margin-bottom:6px}
+        .lb-empty-sub{font-size:13px;color:var(--text-muted);line-height:1.6;max-width:300px;margin:0 auto 20px}
+        .lb-empty-cta{background:var(--accent);color:#fff;border:none;padding:10px 24px;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;transition:opacity .15s}
+        .lb-empty-cta:hover{opacity:.85}
+
+        .loading-rows{display:flex;flex-direction:column;gap:0}
+        .loading-row{padding:12px 16px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px}
+        .skeleton{background:linear-gradient(90deg,#e2e8f0 25%,#f1f5f9 50%,#e2e8f0 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:5px}
+        @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+        .sk-circle{width:32px;height:32px;border-radius:50%;flex-shrink:0}
+        .sk-text{height:12px;flex:1;max-width:140px}
+        .sk-num{width:40px;height:14px;margin-left:auto}
+
+        /* PERIOD NOTE */
+        .period-note{font-size:11px;color:var(--text-subtle);text-align:center;padding:8px 0}
+
+        .disclaimer{font-size:11px;color:var(--text-subtle);text-align:center;max-width:500px;padding:0 16px 48px;line-height:1.7}
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <a href="index.html" class="logo">
+        <svg width="26" height="26" viewBox="0 0 100 100" style="flex-shrink:0;display:block"><rect width="100" height="100" rx="24" fill="#eff6ff"/><path d="M30,20 Q30,45 50,55 Q70,45 70,20" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round"/><rect x="26" y="15" width="8" height="12" rx="4" fill="#0f172a"/><rect x="66" y="15" width="8" height="12" rx="4" fill="#0f172a"/><path d="M50,55 L50,70" fill="none" stroke="#3b82f6" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="78" r="18" fill="#3b82f6"/><circle cx="50" cy="78" r="14" fill="#0f172a"/><path d="M38,68 L32,60 L42,66 Z" fill="#3b82f6"/><path d="M62,68 L68,60 L58,66 Z" fill="#3b82f6"/><circle cx="45" cy="76" r="2" fill="#f7f9fc"/><circle cx="55" cy="76" r="2" fill="#f7f9fc"/><path d="M47,82 Q50,85 53,82" fill="none" stroke="#f7f9fc" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Ward<span class="logo-word2">Duel</span>
+    </a>
+    <div class="nav-right">
+        <a href="index.html" class="nav-link">Today's Case</a>
+        <a href="leaderboard.html" class="nav-link active">Leaderboard</a>
+        <a href="archives.html" class="nav-link">Archives</a>
+    </div>
+</div>
+
+<div class="main">
+
+    <div class="page-header">
+        <div class="page-header-eyebrow">WardDuel</div>
+        <div class="page-header-title">Leaderboard</div>
+        <div class="page-header-sub">Top diagnosticians ranked by total points earned.</div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" id="tab-alltime" onclick="switchTab('alltime')">All Time</button>
+        <button class="tab" id="tab-weekly" onclick="switchTab('weekly')">This Week</button>
+        <button class="tab" id="tab-today" onclick="switchTab('today')">Today</button>
+    </div>
+
+    <div id="your-rank-card" class="your-rank-card">
+        <div class="your-rank-num" id="your-rank-num">#—</div>
+        <div class="your-rank-info">
+            <div class="your-rank-label">Your Ranking</div>
+            <div class="your-rank-name" id="your-rank-name">—</div>
+            <div class="your-rank-score" id="your-rank-score">—</div>
+        </div>
+    </div>
+
+    <div class="period-note" id="period-note"></div>
+
+    <div class="lb-card">
+        <div class="lb-header">
+            <div class="lb-header-cell">#</div>
+            <div class="lb-header-cell">Doctor</div>
+            <div class="lb-header-cell" style="text-align:center">Streak</div>
+            <div class="lb-header-cell right">Points</div>
+        </div>
+        <div id="lb-body">
+            <!-- skeleton loader -->
+            <div class="loading-rows" id="lb-loading">
+                ${[1,2,3,4,5].map(()=>`<div class="loading-row"><div class="skeleton sk-circle"></div><div class="skeleton sk-text"></div><div class="skeleton sk-num"></div></div>`).join('')}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="disclaimer">WardDuel is for educational entertainment only and does not constitute medical advice.</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { getFirestore, doc, getDoc, collection, query, where, getDocs, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey:"AIzaSyBzVNM6yylE2LF_8SfqRluqdQVRBB6i6HI",
+    authDomain:"wardduel.firebaseapp.com",
+    projectId:"wardduel",
+    storageBucket:"wardduel.firebasestorage.app",
+    messagingSenderId:"45792689084",
+    appId:"1:45792689084:web:64d3e5843611b038c189b9"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+const LEVELS = ['MS1','MS2','MS3/MS4','Resident','Attending'];
+const POINTS_PER_LEVEL = 3000;
+
+let currentUser = null;
+let currentTab = 'alltime';
+let allUsers = [];
+
+function getLevelName(pts){
+    return LEVELS[Math.min(Math.floor((pts||0)/POINTS_PER_LEVEL), LEVELS.length-1)];
+}
+
+function getTodayCST(){
+    return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+}
+
+function getWeekStart(){
+    const d = new Date();
+    const day = d.getDay(); // 0=Sun
+    const diff = d.getDate() - day;
+    const start = new Date(d.setDate(diff));
+    return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(start);
+}
+
+function logoSVG(size=32){
+    return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" style="border-radius:50%;border:2px solid #bfdbfe;background:#eff6ff;overflow:hidden;display:block"><path d="M30,20 Q30,45 50,55 Q70,45 70,20" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round"/><rect x="26" y="15" width="8" height="12" rx="4" fill="#0f172a"/><rect x="66" y="15" width="8" height="12" rx="4" fill="#0f172a"/><path d="M50,55 L50,70" fill="none" stroke="#3b82f6" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="78" r="18" fill="#3b82f6"/><circle cx="50" cy="78" r="14" fill="#0f172a"/><path d="M38,68 L32,60 L42,66 Z" fill="#3b82f6"/><path d="M62,68 L68,60 L58,66 Z" fill="#3b82f6"/><circle cx="45" cy="76" r="2" fill="#f7f9fc"/><circle cx="55" cy="76" r="2" fill="#f7f9fc"/><path d="M47,82 Q50,85 53,82" fill="none" stroke="#f7f9fc" stroke-width="1.5" stroke-linecap="round"/></svg>`;
+}
+
+async function loadAllTime(){
+    document.getElementById('period-note').innerText = 'Ranked by total points earned across all cases.';
+    const snap = await getDocs(query(collection(db,'users'), orderBy('totalPts','desc'), limit(25)));
+    return snap.docs.map(d=>({
+        uid: d.id,
+        name: d.data().username || 'Doctor',
+        pts: d.data().totalPts || 0,
+        streak: d.data().streak || 0,
+        level: getLevelName(d.data().totalPts || 0)
+    }));
+}
+
+async function loadWeekly(){
+    const weekStart = getWeekStart();
+    document.getElementById('period-note').innerText = `Points earned since ${weekStart.replace(/-/g,'/')} (this week).`;
+    const snap = await getDocs(query(
+        collection(db,'scores'),
+        where('caseDate','>=',weekStart),
+        where('isArchive','==',false)
+    ));
+    const userPts = {};
+    const userNames = {};
+    const userStreaks = {};
+    snap.forEach(d=>{
+        const data = d.data();
+        if(!data.uid) return;
+        userPts[data.uid] = (userPts[data.uid]||0) + (data.score||0);
+        userNames[data.uid] = data.username || 'Doctor';
+        userStreaks[data.uid] = data.streak || 0;
+    });
+    return Object.entries(userPts)
+        .map(([uid,pts])=>({uid,name:userNames[uid],pts,streak:userStreaks[uid]||0,level:''}))
+        .sort((a,b)=>b.pts-a.pts)
+        .slice(0,25);
+}
+
+async function loadToday(){
+    const today = getTodayCST();
+    document.getElementById('period-note').innerText = `Today's scores — ${today.replace(/-/g,'/')}.`;
+    const snap = await getDocs(query(
+        collection(db,'scores'),
+        where('caseDate','==',today),
+        where('isArchive','==',false)
+    ));
+    const rows = snap.docs.map(d=>({
+        uid: d.data().uid,
+        name: d.data().username || 'Doctor',
+        pts: d.data().score || 0,
+        streak: 0,
+        level: ''
+    })).sort((a,b)=>b.pts-a.pts).slice(0,25);
+    return rows;
+}
+
+async function loadAndRender(){
+    const body = document.getElementById('lb-body');
+    body.innerHTML = `<div class="loading-rows">${[1,2,3,4,5].map(()=>`<div class="loading-row"><div class="skeleton sk-circle"></div><div class="skeleton sk-text"></div><div class="skeleton sk-num"></div></div>`).join('')}</div>`;
+
+    try {
+        let rows = [];
+        if(currentTab==='alltime') rows = await loadAllTime();
+        else if(currentTab==='weekly') rows = await loadWeekly();
+        else rows = await loadToday();
+
+        if(rows.length === 0){
+            body.innerHTML = `
+                <div class="lb-empty">
+                    <div class="lb-empty-icon">🩺</div>
+                    <div class="lb-empty-title">No scores yet</div>
+                    <div class="lb-empty-sub">Be the first doctor on the board. Play today's case and stake your claim.</div>
+                    <button class="lb-empty-cta" onclick="window.location.href='index.html'">Play Today's Case →</button>
+                </div>`;
+            document.getElementById('your-rank-card').classList.remove('show');
+            return;
+        }
+
+        // Find current user rank
+        const myIdx = currentUser ? rows.findIndex(r=>r.uid===currentUser.uid) : -1;
+        if(myIdx >= 0 && currentUser){
+            const myRow = rows[myIdx];
+            document.getElementById('your-rank-card').classList.add('show');
+            document.getElementById('your-rank-num').innerText = `#${myIdx+1}`;
+            document.getElementById('your-rank-name').innerText = `Dr. ${myRow.name.toUpperCase()}`;
+            document.getElementById('your-rank-score').innerText = currentTab==='alltime'
+                ? `${myRow.pts.toLocaleString()} total pts · ${myRow.level}`
+                : `${myRow.pts.toLocaleString()} pts`;
+        } else {
+            document.getElementById('your-rank-card').classList.remove('show');
+        }
+
+        const rankEmoji = ['🥇','🥈','🥉'];
+        const rankClass = ['gold','silver','bronze'];
+        const rowClass = ['rank-1','rank-2','rank-3'];
+
+        body.innerHTML = rows.map((r,i)=>{
+            const isMe = currentUser && r.uid === currentUser.uid;
+            const rankDisplay = i < 3
+                ? `<span class="rank-cell ${rankClass[i]}">${rankEmoji[i]}</span>`
+                : `<span class="rank-cell">${i+1}</span>`;
+            const streakDisplay = r.streak > 0 ? `${r.streak} 🔥` : '—';
+            const ptsDisplay = currentTab==='alltime' ? r.pts.toLocaleString() : r.pts;
+            return `
+                <div class="lb-row ${rowClass[i]||''} ${isMe?'me':''}">
+                    ${rankDisplay}
+                    <div class="player-cell">
+                        ${logoSVG(32)}
+                        <div class="player-info">
+                            <div class="player-name">Dr. ${r.name.toUpperCase()}${isMe?'<span class="me-tag">YOU</span>':''}</div>
+                            ${r.level?`<div class="player-level">${r.level}</div>`:''}
+                        </div>
+                    </div>
+                    <div class="streak-cell">${streakDisplay}</div>
+                    <div class="score-cell">${ptsDisplay}</div>
+                </div>`;
+        }).join('');
+
+    } catch(e){
+        console.error(e);
+        body.innerHTML = `<div class="lb-empty"><div class="lb-empty-icon">⚠️</div><div class="lb-empty-title">Failed to load</div><div class="lb-empty-sub">Check your connection and try again.</div></div>`;
+    }
+}
+
+window.switchTab = function(tab){
+    currentTab = tab;
+    ['alltime','weekly','today'].forEach(t=>{
+        document.getElementById(`tab-${t}`).classList.toggle('active', t===tab);
+    });
+    loadAndRender();
+};
+
+onAuthStateChanged(auth, async(user)=>{
+    currentUser = user;
+    loadAndRender();
+});
+</script>
+</body>
+</html>
