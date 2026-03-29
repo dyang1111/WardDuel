@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WardDuel | Archives</title>
+    <title>WardDuel | Clinical Archives</title>
     <style>
         *{box-sizing:border-box;margin:0;padding:0}
         :root{
@@ -15,159 +15,162 @@
             --text-muted:#475569;
             --text-subtle:#94a3b8;
             --accent:#3b82f6;
+            --accent-dark:#2563eb;
             --accent-light:#eff6ff;
             --accent-border:#bfdbfe;
             --success:#16a34a;
             --success-light:#f0fdf4;
             --success-border:#bbf7d0;
+            --danger:#dc2626;
+            --danger-light:#fef2f2;
+            --danger-border:#fecaca;
             --amber:#d97706;
             --amber-light:#fffbeb;
             --amber-border:#fde68a;
             --radius:11px;
             --radius-sm:8px;
             --shadow:0 1px 3px rgba(15,23,42,.07),0 1px 2px rgba(15,23,42,.04);
-            --shadow-md:0 4px 12px rgba(15,23,42,.10);
+            --shadow-md:0 4px 14px rgba(15,23,42,.10);
         }
         body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}
 
-        .top-bar{width:100%;padding:13px 24px;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:var(--shadow)}
-        .logo{font-weight:900;font-size:18px;color:var(--text);text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center;gap:0}
+        /* NAV */
+        .top-bar{width:100%;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:var(--shadow)}
+        .logo{font-weight:900;font-size:20px;color:var(--text);text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center;gap:0}
         .logo svg{margin-right:8px}
-        .logo span{color:var(--accent)}
-        .back-link{color:var(--text-muted);text-decoration:none;font-size:12px;font-weight:500;display:flex;align-items:center;gap:5px;transition:color .15s}
-        .back-link:hover{color:var(--text)}
+        .logo-word2{color:var(--accent)}
+        .nav-right{display:flex;align-items:center;gap:14px}
+        .nav-link{color:var(--text-muted);text-decoration:none;font-size:12px;font-weight:500;transition:color .15s}
+        .nav-link:hover{color:var(--text)}
+        .nav-link.active{color:var(--accent);font-weight:700}
 
-        .main{width:100%;max-width:620px;padding:28px 16px 80px;display:flex;flex-direction:column;gap:14px}
-        .page-title{font-size:1.3rem;font-weight:800;color:var(--text);margin-bottom:3px}
-        .page-sub{font-size:13px;color:var(--text-muted)}
+        /* PAGE */
+        .main{width:100%;max-width:640px;padding:28px 16px 80px;display:flex;flex-direction:column;gap:14px}
+
+        /* PAGE HEADER */
+        .page-header{background:linear-gradient(135deg,#0f172a,#1e3a5f);border-radius:var(--radius);padding:24px 22px;color:#fff;margin-bottom:4px}
+        .page-header-eyebrow{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.45);margin-bottom:8px}
+        .page-header-title{font-size:22px;font-weight:900;letter-spacing:-.02em;margin-bottom:6px}
+        .page-header-sub{font-size:13px;color:rgba(255,255,255,.6);line-height:1.5}
 
         /* TODAY CARD */
-        .today-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow)}
+        .today-card{background:var(--accent);border-radius:var(--radius);padding:16px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 16px rgba(59,130,246,.3);display:none}
         .today-icon{font-size:1.6rem;flex-shrink:0}
-        .today-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
-        .today-sub{font-size:11px;color:var(--text-muted)}
-        .today-btn{margin-left:auto;background:var(--accent);color:#fff;border:none;padding:8px 16px;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s}
-        .today-btn:hover{opacity:.85}
+        .today-info{flex:1;min-width:0}
+        .today-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:2px}
+        .today-sub{font-size:11px;color:rgba(255,255,255,.7);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .today-btn{background:#fff;color:var(--accent);border:none;padding:8px 16px;border-radius:8px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s}
+        .today-btn:hover{opacity:.9}
 
-        /* SEARCH */
-        .search-input{width:100%;padding:11px 13px;border:1px solid var(--border-strong);border-radius:var(--radius-sm);font-size:13px;background:var(--bg);color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}
+        /* FILTERS */
+        .filters-row{display:flex;gap:8px;align-items:center}
+        .search-input{flex:1;padding:10px 13px;border:1px solid var(--border-strong);border-radius:var(--radius-sm);font-size:13px;background:var(--surface);color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}
         .search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.12);background:#fff}
+        .filter-btn{padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:11px;font-weight:700;color:var(--text-muted);background:var(--surface);cursor:pointer;transition:all .15s;white-space:nowrap}
+        .filter-btn:hover{border-color:var(--border-strong);color:var(--text)}
+        .filter-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
 
+        /* STATS ROW */
+        .stats-strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+        .stat-chip{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;text-align:center;box-shadow:var(--shadow)}
+        .stat-chip-val{font-size:18px;font-weight:800;color:var(--accent)}
+        .stat-chip-label{font-size:10px;font-weight:600;color:var(--text-subtle);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+
+        /* LIST */
         .section-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-subtle)}
-        .archive-list{display:flex;flex-direction:column;gap:9px}
+        .archive-list{display:flex;flex-direction:column;gap:8px}
 
-        /* CASE ROW — default */
-        .case-row{
-            background:var(--surface);
-            border:1px solid var(--border);
-            border-radius:var(--radius);
-            padding:14px 16px;
-            display:flex;
-            align-items:center;
-            gap:14px;
-            cursor:pointer;
-            transition:all .15s;
-            box-shadow:var(--shadow);
-        }
+        /* CASE ROW */
+        .case-row{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;display:flex;align-items:center;gap:13px;cursor:pointer;transition:all .15s;box-shadow:var(--shadow)}
         .case-row:hover{border-color:var(--border-strong);box-shadow:var(--shadow-md);transform:translateY(-1px)}
-
-        /* COMPLETED STATE — soft blue tint */
-        .case-row.completed{
-            background:#f0f7ff;
-            border-color:var(--accent-border);
-        }
-        .case-row.completed:hover{
-            border-color:var(--accent);
-            background:#e8f2ff;
-        }
+        .case-row.won{background:#f0fdf4;border-color:var(--success-border)}
+        .case-row.won:hover{border-color:var(--success);background:#e8faf0}
+        .case-row.lost{background:#fef2f2;border-color:var(--danger-border)}
+        .case-row.lost:hover{border-color:var(--danger);background:#fee2e2}
+        .case-row.played:not(.won):not(.lost){background:var(--accent-light);border-color:var(--accent-border)}
 
         /* DATE BADGE */
-        .date-badge{
-            background:var(--accent-light);
-            border:1px solid var(--accent-border);
-            color:#1d4ed8;
-            font-size:10px;
-            font-weight:700;
-            text-transform:uppercase;
-            letter-spacing:.06em;
-            padding:4px 10px;
-            border-radius:5px;
-            white-space:nowrap;
-            min-width:74px;
-            text-align:center;
-            flex-shrink:0;
-        }
-        .case-row.completed .date-badge{
-            background:var(--accent);
-            border-color:var(--accent);
-            color:#fff;
-        }
+        .date-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:6px 8px;min-width:44px;flex-shrink:0;text-align:center}
+        .date-badge-mon{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-subtle)}
+        .date-badge-day{font-size:16px;font-weight:800;color:var(--text);line-height:1}
+        .case-row.won .date-badge{background:var(--success-light);border-color:var(--success-border)}
+        .case-row.won .date-badge-day{color:var(--success)}
+        .case-row.lost .date-badge{background:var(--danger-light);border-color:var(--danger-border)}
+        .case-row.lost .date-badge-day{color:var(--danger)}
+        .case-row.played:not(.won):not(.lost) .date-badge{background:var(--accent-light);border-color:var(--accent-border)}
+        .case-row.played:not(.won):not(.lost) .date-badge-day{color:var(--accent)}
 
         .case-row-info{flex:1;min-width:0}
-        .case-row-hx{font-size:12px;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .case-row-hx{font-size:12px;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
         .case-row-meta{font-size:11px;color:var(--text-subtle);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+        .meta-badge{font-size:10px;font-weight:700;padding:1px 7px;border-radius:4px}
+        .meta-won{color:var(--success);background:var(--success-light);border:1px solid var(--success-border)}
+        .meta-lost{color:var(--danger);background:var(--danger-light);border:1px solid var(--danger-border)}
+        .meta-played{color:var(--accent);background:var(--accent-light);border:1px solid var(--accent-border)}
 
-        /* COMPLETED BADGE */
-        .completed-badge{
-            font-size:10px;
-            font-weight:700;
-            color:var(--accent);
-            background:#fff;
-            border:1px solid var(--accent-border);
-            padding:1px 7px;
-            border-radius:4px;
-        }
+        .play-btn{background:var(--text);color:#fff;border:none;padding:7px 14px;border-radius:7px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s}
+        .play-btn:hover{opacity:.82}
+        .case-row.won .play-btn{background:var(--success)}
+        .case-row.lost .play-btn{background:var(--danger)}
+        .case-row.played:not(.won):not(.lost) .play-btn{background:var(--accent)}
 
-        /* WIN / LOSS BADGE */
-        .win-badge{
-            font-size:10px;font-weight:700;
-            color:var(--success);
-            background:var(--success-light);
-            border:1px solid var(--success-border);
-            padding:1px 7px;border-radius:4px;
-        }
-        .loss-badge{
-            font-size:10px;font-weight:700;
-            color:#dc2626;
-            background:#fef2f2;
-            border:1px solid #fecaca;
-            padding:1px 7px;border-radius:4px;
-        }
+        /* EMPTY */
+        .empty{text-align:center;padding:52px 20px;color:var(--text-subtle)}
+        .empty-icon{font-size:2.2rem;margin-bottom:12px}
+        .empty-title{font-size:14px;font-weight:700;color:var(--text-muted);margin-bottom:4px}
+        .empty-sub{font-size:12px;line-height:1.6}
 
-        .replay-btn{background:var(--text);color:#fff;border:none;padding:6px 13px;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s}
-        .replay-btn:hover{opacity:.85}
-        .case-row.completed .replay-btn{background:var(--accent)}
-
-        .empty{text-align:center;padding:48px 20px;color:var(--text-subtle);font-size:13px}
-        .empty-icon{font-size:2rem;margin-bottom:10px}
         .disclaimer{font-size:11px;color:var(--text-subtle);text-align:center;max-width:500px;padding:0 16px 48px;line-height:1.7}
     </style>
 </head>
 <body>
 
 <div class="top-bar">
-    <a href="index.html" class="logo"><svg width="26" height="26" viewBox="0 0 100 100" style="flex-shrink:0;display:block"><rect width="100" height="100" rx="24" fill="#eff6ff"/><path d="M30,20 Q30,45 50,55 Q70,45 70,20" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round"/><rect x="26" y="15" width="8" height="12" rx="4" fill="#0f172a"/><rect x="66" y="15" width="8" height="12" rx="4" fill="#0f172a"/><path d="M50,55 L50,70" fill="none" stroke="#3b82f6" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="78" r="18" fill="#3b82f6"/><circle cx="50" cy="78" r="14" fill="#0f172a"/><path d="M38,68 L32,60 L42,66 Z" fill="#3b82f6"/><path d="M62,68 L68,60 L58,66 Z" fill="#3b82f6"/><circle cx="45" cy="76" r="2" fill="#f7f9fc"/><circle cx="55" cy="76" r="2" fill="#f7f9fc"/><path d="M47,82 Q50,85 53,82" fill="none" stroke="#f7f9fc" stroke-width="1.5" stroke-linecap="round"/></svg>Ward<span>Duel</span></a>
-    <a href="index.html" class="back-link">← Back to today</a>
+    <a href="index.html" class="logo">
+        <svg width="26" height="26" viewBox="0 0 100 100" style="flex-shrink:0;display:block"><rect width="100" height="100" rx="24" fill="#eff6ff"/><path d="M30,20 Q30,45 50,55 Q70,45 70,20" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round"/><rect x="26" y="15" width="8" height="12" rx="4" fill="#0f172a"/><rect x="66" y="15" width="8" height="12" rx="4" fill="#0f172a"/><path d="M50,55 L50,70" fill="none" stroke="#3b82f6" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="78" r="18" fill="#3b82f6"/><circle cx="50" cy="78" r="14" fill="#0f172a"/><path d="M38,68 L32,60 L42,66 Z" fill="#3b82f6"/><path d="M62,68 L68,60 L58,66 Z" fill="#3b82f6"/><circle cx="45" cy="76" r="2" fill="#f7f9fc"/><circle cx="55" cy="76" r="2" fill="#f7f9fc"/><path d="M47,82 Q50,85 53,82" fill="none" stroke="#f7f9fc" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Ward<span class="logo-word2">Duel</span>
+    </a>
+    <div class="nav-right">
+        <a href="index.html" class="nav-link">Today's Case</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+        <a href="archives.html" class="nav-link active">Archives</a>
+    </div>
 </div>
 
 <div class="main">
-    <div>
-        <div class="page-title">Clinical Archives</div>
-        <div class="page-sub">Replay past cases and sharpen your diagnostic skills.</div>
+
+    <div class="page-header">
+        <div class="page-header-eyebrow">WardDuel</div>
+        <div class="page-header-title">Clinical Archives</div>
+        <div class="page-header-sub">Every past case. Replay them, study the explanations, track your history.</div>
     </div>
 
-    <div id="today-card" class="today-card" style="display:none">
+    <div id="today-card" class="today-card">
         <div class="today-icon">🩺</div>
-        <div>
+        <div class="today-info">
             <div class="today-title">Today's Case is Live</div>
             <div class="today-sub" id="today-sub">—</div>
         </div>
         <button class="today-btn" onclick="window.location.href='index.html'">Play Now →</button>
     </div>
 
-    <input class="search-input" id="search-input" placeholder="Search by date or keyword..." oninput="renderList()">
-    <div class="section-label">Past Cases</div>
-    <div id="archive-list" class="archive-list"></div>
+    <div class="stats-strip" id="stats-strip" style="display:none">
+        <div class="stat-chip"><div class="stat-chip-val" id="stat-played">—</div><div class="stat-chip-label">Played</div></div>
+        <div class="stat-chip"><div class="stat-chip-val" id="stat-won">—</div><div class="stat-chip-label">Won</div></div>
+        <div class="stat-chip"><div class="stat-chip-val" id="stat-winrate">—</div><div class="stat-chip-label">Win Rate</div></div>
+    </div>
+
+    <div class="filters-row">
+        <input class="search-input" id="search-input" placeholder="Search by date, keyword..." oninput="renderList()">
+        <button class="filter-btn active" id="filter-all" onclick="setFilter('all')">All</button>
+        <button class="filter-btn" id="filter-played" onclick="setFilter('played')">Played</button>
+        <button class="filter-btn" id="filter-unplayed" onclick="setFilter('unplayed')">Unplayed</button>
+    </div>
+
+    <div class="section-label" id="list-label">Past Cases</div>
+    <div id="archive-list" class="archive-list">
+        <div class="empty"><div class="empty-icon">⏳</div><div class="empty-title">Loading cases...</div></div>
+    </div>
 </div>
 
 <div class="disclaimer">WardDuel is for educational entertainment only and does not constitute medical advice.</div>
@@ -191,95 +194,131 @@ const db = getFirestore(app);
 
 let completedDates = new Set();
 let wonDates = new Set();
+let scoreMap = {}; // date → score
+let currentFilter = 'all';
 
-// Load localStorage anon completions
-try {
-    const local = JSON.parse(localStorage.getItem('wardduel_completed') || '[]');
-    local.forEach(d => completedDates.add(d));
-} catch(e) {}
-
-function formatDate(d) {
-    const [y,m,day] = d.split('-');
-    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    return `${months[parseInt(m)-1]} ${parseInt(day)}, ${y}`;
-}
-function formatDateShort(d) {
-    const [y,m,day] = d.split('-');
-    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    return `${months[parseInt(m)-1]} ${parseInt(day)}`;
+function getTodayCST(){
+    return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 }
 
-async function loadArchives() {
-    try {
+function formatDateParts(d){
+    const [y,m,day]=d.split('-');
+    const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return {mon:months[parseInt(m)-1],day:parseInt(day),full:`${months[parseInt(m)-1]} ${parseInt(day)}, ${y}`};
+}
+
+window.setFilter = function(f){
+    currentFilter = f;
+    ['all','played','unplayed'].forEach(id=>{
+        document.getElementById(`filter-${id}`).classList.toggle('active', id===f);
+    });
+    renderList();
+};
+
+async function loadArchives(){
+    try{
         const res = await fetch('cases.json');
         const cases = await res.json();
-        const todayCST = new Intl.DateTimeFormat('en-CA', {
-            timeZone:'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'
-        }).format(new Date());
+        const todayCST = getTodayCST();
 
-        const todayCase = cases.find(c => c.date === todayCST);
-        if (todayCase) {
-            document.getElementById('today-card').style.display = 'flex';
-            document.getElementById('today-sub').innerText = `${formatDate(todayCST)} — ${todayCase.hx_brief.substring(0,58)}…`;
+        const todayCase = cases.find(c=>c.date===todayCST);
+        if(todayCase){
+            document.getElementById('today-card').style.display='flex';
+            const parts = formatDateParts(todayCST);
+            document.getElementById('today-sub').innerText=`${parts.full} — ${todayCase.hx_brief.substring(0,60)}…`;
         }
 
         window._allCases = cases
-            .filter(c => c.date < todayCST)
-            .sort((a,b) => b.date.localeCompare(a.date));
+            .filter(c=>c.date < todayCST)
+            .sort((a,b)=>b.date.localeCompare(a.date));
 
+        updateStats();
         renderList();
-    } catch(e) {
-        document.getElementById('archive-list').innerHTML = '<div class="empty"><div class="empty-icon">⚠️</div>Failed to load archives.</div>';
+    }catch(e){
+        document.getElementById('archive-list').innerHTML=`<div class="empty"><div class="empty-icon">⚠️</div><div class="empty-title">Failed to load</div><div class="empty-sub">Check your connection and try again.</div></div>`;
     }
 }
 
-window.renderList = function() {
-    const q = (document.getElementById('search-input').value || '').toLowerCase();
-    const cases = (window._allCases || []).filter(c =>
-        !q || c.date.includes(q) || c.hx_brief.toLowerCase().includes(q)
-    );
-    const list = document.getElementById('archive-list');
-    if (cases.length === 0) {
-        list.innerHTML = '<div class="empty"><div class="empty-icon">🗂️</div>No past cases yet — check back tomorrow!</div>';
+function updateStats(){
+    const cases = window._allCases || [];
+    const played = cases.filter(c=>completedDates.has(c.date)).length;
+    const won = cases.filter(c=>wonDates.has(c.date)).length;
+    const winRate = played > 0 ? Math.round((won/played)*100)+'%' : '—';
+    if(played > 0){
+        document.getElementById('stats-strip').style.display='grid';
+        document.getElementById('stat-played').innerText=played;
+        document.getElementById('stat-won').innerText=won;
+        document.getElementById('stat-winrate').innerText=winRate;
+    }
+}
+
+window.renderList = function(){
+    const q=(document.getElementById('search-input').value||'').toLowerCase();
+    let cases=(window._allCases||[]);
+
+    if(currentFilter==='played') cases=cases.filter(c=>completedDates.has(c.date));
+    if(currentFilter==='unplayed') cases=cases.filter(c=>!completedDates.has(c.date));
+    if(q) cases=cases.filter(c=>c.date.includes(q)||c.hx_brief.toLowerCase().includes(q)||c.answer.toLowerCase().includes(q));
+
+    const label=document.getElementById('list-label');
+    label.innerText=`${cases.length} Case${cases.length!==1?'s':''}`;
+
+    const list=document.getElementById('archive-list');
+    if(cases.length===0){
+        list.innerHTML=`<div class="empty"><div class="empty-icon">🗂️</div><div class="empty-title">No cases found</div><div class="empty-sub">Try adjusting your search or filter.</div></div>`;
         return;
     }
-    list.innerHTML = '';
-    cases.forEach(c => {
-        const done = completedDates.has(c.date);
-        const won = wonDates.has(c.date);
-        const row = document.createElement('div');
-        row.className = 'case-row' + (done ? ' completed' : '');
-        row.innerHTML = `
-            <div class="date-badge">${formatDateShort(c.date)}</div>
+
+    list.innerHTML='';
+    cases.forEach(c=>{
+        const played=completedDates.has(c.date);
+        const won=wonDates.has(c.date);
+        const score=scoreMap[c.date];
+        const parts=formatDateParts(c.date);
+
+        let rowClass='case-row';
+        if(played && won) rowClass+=' won';
+        else if(played && !won) rowClass+=' lost';
+        else if(played) rowClass+=' played';
+
+        let metaBadge='';
+        if(played && won) metaBadge=`<span class="meta-badge meta-won">✓ Won${score!==undefined?` · ${score} pts`:''}</span>`;
+        else if(played) metaBadge=`<span class="meta-badge meta-lost">✗ Lost${score!==undefined?` · ${score} pts`:''}</span>`;
+
+        const row=document.createElement('div');
+        row.className=rowClass;
+        row.innerHTML=`
+            <div class="date-badge">
+                <div class="date-badge-mon">${parts.mon}</div>
+                <div class="date-badge-day">${parts.day}</div>
+            </div>
             <div class="case-row-info">
                 <div class="case-row-hx">${c.hx_brief}</div>
                 <div class="case-row-meta">
-                    <span>Benchmark: ${c.adminScore ?? '—'} pts</span>
-                    ${done ? `<span class="${won ? 'win-badge' : 'loss-badge'}">${won ? '✓ Won' : '✗ Lost'}</span>` : ''}
+                    <span>Benchmark: ${c.adminScore??'—'} pts</span>
+                    ${metaBadge}
                 </div>
             </div>
-            <button class="replay-btn">${done ? 'Replay →' : 'Play →'}</button>`;
-        row.onclick = () => window.location.href = `index.html?caseId=${c.date}`;
+            <button class="play-btn">${played?'Replay':'Play →'}</button>`;
+        row.onclick=()=>window.location.href=`index.html?caseId=${c.date}`;
         list.appendChild(row);
     });
-}
+};
 
-onAuthStateChanged(auth, async (user) => {
-    if (user) {
-        try {
-            // Completed dates from Firestore
-            const snap = await getDoc(doc(db,'completed',user.uid));
-            if (snap.exists()) snap.data().dates?.forEach(d => completedDates.add(d));
+onAuthStateChanged(auth, async(user)=>{
+    if(user){
+        try{
+            const snap=await getDoc(doc(db,'completed',user.uid));
+            if(snap.exists()) snap.data().dates?.forEach(d=>completedDates.add(d));
 
-            // Load win/loss data from scores collection
-            const scoresSnap = await getDocs(
-                query(collection(db,'scores'), where('uid','==',user.uid), where('isArchive','==',false))
-            );
-            scoresSnap.forEach(d => {
-                const data = d.data();
-                if (data.won) wonDates.add(data.caseDate);
+            const scoresSnap=await getDocs(query(collection(db,'scores'),where('uid','==',user.uid)));
+            scoresSnap.forEach(d=>{
+                const data=d.data();
+                if(data.won) wonDates.add(data.caseDate);
+                if(data.score!==undefined) scoreMap[data.caseDate]=data.score;
+                else if(completedDates.has(data.caseDate) && !wonDates.has(data.caseDate)) wonDates.delete(data.caseDate);
             });
-        } catch(e) {}
+        }catch(e){}
     }
     await loadArchives();
 });
