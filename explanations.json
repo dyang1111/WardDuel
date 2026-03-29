@@ -655,5 +655,23 @@
     "step1_buzzwords": "Oat cells, Nuclear molding, SVC syndrome, SIADH, Lambert-Eaton, ACTH (Cushing).",
     "lab_buzzwords": "Hyponatremia (SIADH), Synaptophysin/Chromogranin A positive on biopsy.",
     "treatment": "Chemotherapy (Cisplatin + Etoposide) + Radiation. Surgery rarely indicated \u2014 too advanced at diagnosis."
+  },
+  "Aortic Regurgitation": {
+    "who_gets_it": "Adults with bicuspid aortic valve, Marfan syndrome, or history of endocarditis or rheumatic fever.",
+    "risk_factors": "Bicuspid aortic valve (most common in young), Marfan syndrome, aortic root dilation, prior endocarditis.",
+    "typical_presentation": "Slowly progressive exertional dyspnea, orthopnea, wide pulse pressure, bounding pulses \u2014 often asymptomatic for years before decompensation.",
+    "moa": "Regurgitant flow from aorta back into LV during diastole causes LV volume overload \u2192 eccentric hypertrophy \u2192 eventual systolic dysfunction.",
+    "step1_buzzwords": "Water-hammer pulse, de Musset's sign, wide pulse pressure, diastolic blowing murmur, Austin Flint murmur.",
+    "lab_buzzwords": "Echo: regurgitant fraction, vena contracta, LVEDP elevated on cath.",
+    "treatment": "Surgical AVR (valve replacement) \u2014 indicated when symptoms develop or EF drops below 50-55% or LV dilates >65mm."
+  },
+  "Hereditary Hemochromatosis": {
+    "who_gets_it": "Adults of Northern European descent, typically males presenting in 40s-50s (females present later due to menstrual iron loss).",
+    "risk_factors": "Homozygous HFE C282Y mutation, family history, high dietary iron intake.",
+    "typical_presentation": "Bronze skin, cirrhosis, diabetes mellitus, arthropathy (2nd/3rd MCP), hypogonadism, cardiomyopathy \u2014 the classic pentad.",
+    "moa": "HFE mutation \u2192 unregulated intestinal iron absorption \u2192 iron deposits in liver, heart, pancreas, joints, and pituitary.",
+    "step1_buzzwords": "Bronze diabetes, C282Y mutation, Prussian blue stain, transferrin saturation >45%, elevated ferritin.",
+    "lab_buzzwords": "Ferritin >1000 ng/mL, transferrin saturation >45%, elevated LFTs, elevated glucose.",
+    "treatment": "Therapeutic phlebotomy (weekly until ferritin <50) \u2014 removes excess iron. Chelation if phlebotomy not tolerated."
   }
 }
