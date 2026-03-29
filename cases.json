@@ -967,26 +967,26 @@
   },
   {
     "date": "2026-04-27",
-    "adminScore": 68,
-    "hx_brief": "64yo male presents to his PCP after his wife noticed his left face drooping briefly while he was watching TV. It lasted about 20 minutes and he is completely normal now. He almost didn't come in.",
+    "adminScore": 62,
+    "hx_brief": "48yo male with a known bicuspid aortic valve presents to cardiology follow-up for 'mild regurgitation found on echo 3 years ago.' His wife says he's been sleeping on 3 pillows and gets winded walking to the car.",
     "hints": {
-      "hx": "Episode lasted approximately 18 minutes \u2014 left facial droop, left arm weakness, and slurred speech, then resolved completely. He attributed it to 'sleeping funny.' Hypertension (poorly controlled), hyperlipidemia, half-pack smoker for 30 years.",
-      "pe": "BP 188/104. Neurologically completely intact \u2014 NIHSS 0. Right carotid bruit audible. Left carotid: no bruit. No cardiac murmurs.",
-      "img": "MRI Brain DWI: No acute diffusion restriction \u2014 no completed infarct. FLAIR: Old small vessel ischemic changes. MRA Neck: 78% stenosis right internal carotid artery at bifurcation."
+      "hx": "Was told the regurgitation was mild and to 'just watch it.' Exertional dyspnea progressively worsening over 18 months \u2014 he stopped jogging 6 months ago. Now orthopneic. Occasional awareness of his heartbeat, especially lying on his left side. No chest pain. No syncope.",
+      "pe": "BP 158/54 \u2014 wide pulse pressure (104mmHg). HR 88. Bounding, water-hammer pulses at the radial arteries. Head bobs with each heartbeat (de Musset's sign). Blowing early diastolic decrescendo murmur at left sternal border, best in full expiration leaning forward. Displaced hyperdynamic apical impulse \u2014 laterally displaced PMI.",
+      "img": "Echo: Bicuspid aortic valve with severe aortic regurgitation. Regurgitant fraction 58%. LV severely dilated \u2014 LVIDd 72mm (normal <55mm). EF 42% (reduced \u2014 decompensating). Vena contracta 8mm. Pressure half-time 180ms (severe). Aortic root 4.6cm."
     },
-    "specialty_name": "Hypercoagulable Panel",
+    "specialty_name": "Cardiac Catheterization",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "LDL 182. Glucose 118. Creatinine 1.1.",
-      "EKG": "Normal sinus rhythm. No AF. PR interval normal.",
-      "Trop": "Normal",
+      "CMP": "Normal. BNP 880 pg/mL (markedly elevated).",
+      "EKG": "LVH with strain pattern. Sinus tachycardia. Left axis deviation.",
+      "Trop": "0.08 ng/mL \u2014 mildly elevated (LV wall stress).",
       "Lipase": "Normal",
       "UA": "Normal",
-      "ABG": "Normal",
+      "ABG": "pO2 74 on room air \u2014 mild hypoxemia.",
       "Coags": "Normal",
-      "Specialty": "Holter Monitor 48hr: No paroxysmal AF detected. Echocardiogram: No intracardiac thrombus. ABCD2 score 5 (high 2-day stroke risk \u2014 requires urgent workup). Aspirin + statin initiated. Carotid endarterectomy scheduled. This is a TIA presenting as an 'Ischemic Stroke' \u2014 transient, but same mechanism."
+      "Specialty": "Cath: LVEDP 28 mmHg (severely elevated \u2014 failing LV). Aortic regurgitant fraction confirmed 60%. No significant CAD. Surgical AVR indicated \u2014 LV dysfunction from chronic severe AR is partially reversible if corrected before EF drops below 25%."
     },
-    "answer": "Ischemic Stroke"
+    "answer": "Aortic Regurgitation"
   },
   {
     "date": "2026-04-28",
@@ -1243,26 +1243,26 @@
   },
   {
     "date": "2026-05-09",
-    "adminScore": 57,
-    "hx_brief": "58yo male presents to the ED for a pathological femur fracture after a minor trip. He has had back pain for 6 months and three infections in the past year. His PCP attributed these to immunosenescence.",
+    "adminScore": 60,
+    "hx_brief": "52yo male of Irish descent presents with fatigue, joint pain in his knuckles, and his wife saying he looks 'bronze.' His PCP initially attributed it to working outdoors.",
     "hints": {
-      "hx": "Three infections (2 pneumonias, 1 sinusitis) in 12 months \u2014 recurrent infections from hypogammaglobulinemia. Back pain worse at night. New-onset thirst and polyuria \u2014 hypercalcemia causing nephrogenic DI. Lost 20 pounds.",
-      "pe": "Cachectic. Midline spinal tenderness T10-L2. Pale conjunctivae. No lymphadenopathy. No hepatosplenomegaly. Pathological femur fracture \u2014 crepitus on movement.",
-      "img": "Skeletal survey: Multiple lytic punched-out lesions \u2014 skull, vertebrae, ribs, and pelvis. No sclerotic lesions. MRI spine: Multiple vertebral lesions with epidural soft tissue extension approaching thecal sac."
+      "hx": "Bronze skin discoloration progressively worsening over 3 years \u2014 most pronounced on sun-exposed areas and knuckles. Severe fatigue. Arthropathy of the 2nd and 3rd MCPs \u2014 firm, tender swelling. Loss of libido and erectile dysfunction. No alcohol use. Father had 'liver disease' of unclear cause and died at 58.",
+      "pe": "Bronze/slate-gray skin pigmentation. Hepatomegaly \u2014 liver edge 5cm below costal margin, firm. MCP joints bilaterally enlarged with hook-like osteophytes palpable. Testicular atrophy. No spider angiomata. No asterixis yet.",
+      "img": "MRI Liver: Diffuse T2 hypointensity throughout the hepatic parenchyma \u2014 iron deposition pattern. Liver biopsy: Prussian blue staining confirms massive iron deposition in hepatocytes and Kupffer cells. Hepatic iron index >2. No cirrhosis yet \u2014 periportal fibrosis only."
     },
-    "specialty_name": "Bone Marrow Biopsy",
+    "specialty_name": "HFE Gene Testing",
     "lab_results": {
-      "CBC": "Hgb 7.1 \u2014 normocytic anemia. Rouleaux formation on peripheral smear. WBC 3.8. Plts 88,000.",
-      "CMP": "Calcium 14.2 (markedly elevated). Creatinine 3.2. Total protein 12.8. Albumin 2.6. Globulin gap 10.2.",
-      "EKG": "Shortened QT interval.",
+      "CBC": "Hgb 11.4 \u2014 mild normocytic anemia (late finding from liver disease).",
+      "CMP": "AST 88, ALT 72 (elevated). Glucose 198 \u2014 new onset diabetes (bronze diabetes from pancreatic iron deposition). Albumin 3.2.",
+      "EKG": "1st degree AV block. Low voltage.",
       "Trop": "Normal",
       "Lipase": "Normal",
-      "UA": "Urine protein 4+ on dipstick but negative by SSA (Bence Jones proteinuria \u2014 kappa light chains). UPEP confirms free kappa.",
+      "UA": "Trace glucose (glycosuria from diabetes).",
       "ABG": "Normal",
-      "Coags": "Normal",
-      "Specialty": "SPEP: IgA lambda M-spike 6.2 g/dL. Bone marrow: 68% clonal plasma cells. FISH: del(17p) and t(4;14) \u2014 double-hit high-risk cytogenetics. Beta-2 microglobulin 8.8 mg/L. R-ISS Stage III."
+      "Coags": "PT 14.8s (mildly prolonged \u2014 early hepatic dysfunction).",
+      "Specialty": "Serum ferritin: 4,800 ng/mL (markedly elevated; normal <300). Transferrin saturation: 88% (normal <45%). HFE gene: Homozygous C282Y mutation \u2014 classic hereditary hemochromatosis. Echocardiogram: Restrictive cardiomyopathy from myocardial iron deposition."
     },
-    "answer": "Multiple Myeloma"
+    "answer": "Hereditary Hemochromatosis"
   },
   {
     "date": "2026-05-10",
