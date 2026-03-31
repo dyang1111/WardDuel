@@ -346,26 +346,26 @@
   },
   {
     "date": "2026-03-31",
-    "adminScore": 58,
-    "hx_brief": "49yo female presents to her PCP for a routine annual visit. She mentions feeling 'off' for months \u2014 gaining weight despite dieting, always cold, memory not what it used to be. Was treated for Graves disease with radioactive iodine 14 months ago.",
+    "adminScore": 54,
+    "hx_brief": "64yo male presents with 4 months of progressive exertional dyspnea, bilateral leg swelling, and easy bruising. He also mentions his 'shoes feel tight' and his tongue feels 'too big for his mouth.'",
     "hints": {
-      "hx": "Completed RAI therapy \u2014 thyroid levels were normal 6 months ago, never rechecked since. Periods heavier and more irregular. Voice has changed. Has fallen asleep at dinner several times this month.",
-      "pe": "HR 48. BP 138/88. Periorbital puffiness. Diffuse non-pitting facial edema. Tongue mildly enlarged. Hair coarse and thinning. Skin dry and cool. DTRs 1+ with marked prolongation of relaxation phase \u2014 hung-up reflexes.",
-      "img": "CXR: Mildly enlarged cardiac silhouette. Echo: Small-to-moderate pericardial effusion. EF 65% preserved."
+      "hx": "Patient has a history of bilateral carpal tunnel syndrome (surgically released last year). He notes 'purplish spots' around his eyes after coughing fits. He has no prior cardiac history. Denies fever, weight loss, or night sweats. Currently taking only furosemide, which hasn't fully cleared the edema.",
+      "pe": "HR 92, BP 102/64. JVP 14cm with prominent 'y' descent. S3 gallop present. Lungs: bibasilar crackles. Macroglossia (enlarged tongue with lateral teeth indentations). Periorbital ecchymosis ('raccoon eyes'). 3+ pitting edema to the knees. Sensation: reduced pinprick in a glove-and-stocking distribution.",
+      "img": "Echo: Severely thickened LV walls (16mm) with a 'speckled' or 'granular' myocardial appearance. Diastolic dysfunction (Grade III). EF 48% (mildly reduced). CXR: Pleural effusions and mild cardiomegaly."
     },
-    "specialty_name": "Thyroid Panel",
+    "specialty_name": "Fat Pad Biopsy",
     "lab_results": {
-      "CBC": "Hemoglobin 10.4 \u2014 normocytic anemia.",
-      "CMP": "Na 130 (hyponatremia). LDL 218 (elevated). Total cholesterol 292. CK 380 (mildly elevated).",
-      "EKG": "Sinus bradycardia at 46 bpm. Low voltage in limb leads. Prolonged QTc.",
-      "Trop": "Normal",
+      "CBC": "Hgb 11.2 (normocytic). WBC 6.8. Platelets normal.",
+      "CMP": "Albumin 2.4 (low). Total protein 8.2 (protein gap). Creatinine 1.8. ALP 210 (elevated).",
+      "EKG": "Low voltage in limb leads (paradoxical given the 'thick' walls on echo). Pseudo-infarction pattern (Q waves in V1-V3) without actual CAD.",
+      "Trop": "0.12 ng/mL (chronically elevated).",
       "Lipase": "Normal",
-      "UA": "Normal",
+      "UA": "4+ protein on dipstick. 24hr urine protein: 6.2g (nephrotic range).",
       "ABG": "Normal",
-      "Coags": "Normal",
-      "Specialty": "TSH 142 mIU/L (severely elevated). Free T4 0.3 ng/dL (severely low). Anti-TPO antibodies: Positive 1:1280. Developed Hashimoto's post-RAI \u2014 a well-recognized complication."
+      "Coags": "PT 14.2s (mildly prolonged). Factor X activity: 30% (low \u2014 specific association with this diagnosis).",
+      "Specialty": "Serum Free Light Chain Assay: Kappa/Lambda ratio 0.02 (markedly low, lambda predominant). Fat Pad Biopsy: Congo Red stain shows apple-green birefringence under polarized light. Diagnosis: Systemic AL Amyloidosis."
     },
-    "answer": "Hypothyroidism"
+    "answer": "Amyloidosis (AL)"
   },
   {
     "date": "2026-04-01",
