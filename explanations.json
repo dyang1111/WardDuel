@@ -26,6 +26,15 @@
     "lab_buzzwords": "IOP >30 mmHg (Tonometry).",
     "treatment": "Pilocarpine, Acetazolamide, Laser iridotomy."
   },
+  "Amyloidosis (AL)": {
+    "who_gets_it": "Adults over 50; often associated with Plasma Cell Dyscrasias (Multiple Myeloma).",
+    "risk_factors": "Monoclonal Gammopathy, Chronic inflammatory states (for AA type).",
+    "typical_presentation": "Nephrotic syndrome, restrictive cardiomyopathy, easy bruising, and macroglossia.",
+    "moa": "Extracellular deposition of misfolded light chain proteins (LCs) into insoluble fibrils.",
+    "step1_buzzwords": "Apple-green birefringence, Congo red stain, Macroglossia, Periorbital ecchymosis, Speckled heart.",
+    "lab_buzzwords": "Low voltage EKG with thick walls on Echo, Factor X deficiency, Lambda light chains.",
+    "treatment": "Chemotherapy (Bortezomib), Autologous Stem Cell Transplant, Melphalan."
+  },
   "Guillain-Barre Syndrome (GBS)": {
     "who_gets_it": "Any age, usually 1-2 weeks after an infection.",
     "risk_factors": "Campylobacter jejuni, CMV, EBV, vaccinations.",
