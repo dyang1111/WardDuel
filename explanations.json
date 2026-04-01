@@ -26,15 +26,6 @@
     "lab_buzzwords": "IOP >30 mmHg (Tonometry).",
     "treatment": "Pilocarpine, Acetazolamide, Laser iridotomy."
   },
-  "Amyloidosis (AL)": {
-    "who_gets_it": "Adults over 50; often associated with Plasma Cell Dyscrasias (Multiple Myeloma).",
-    "risk_factors": "Monoclonal Gammopathy, Chronic inflammatory states (for AA type).",
-    "typical_presentation": "Nephrotic syndrome, restrictive cardiomyopathy, easy bruising, and macroglossia.",
-    "moa": "Extracellular deposition of misfolded light chain proteins (LCs) into insoluble fibrils.",
-    "step1_buzzwords": "Apple-green birefringence, Congo red stain, Macroglossia, Periorbital ecchymosis, Speckled heart.",
-    "lab_buzzwords": "Low voltage EKG with thick walls on Echo, Factor X deficiency, Lambda light chains.",
-    "treatment": "Chemotherapy (Bortezomib), Autologous Stem Cell Transplant, Melphalan."
-  },
   "Guillain-Barre Syndrome (GBS)": {
     "who_gets_it": "Any age, usually 1-2 weeks after an infection.",
     "risk_factors": "Campylobacter jejuni, CMV, EBV, vaccinations.",
@@ -682,5 +673,168 @@
     "step1_buzzwords": "Bronze diabetes, C282Y mutation, Prussian blue stain, transferrin saturation >45%, elevated ferritin.",
     "lab_buzzwords": "Ferritin >1000 ng/mL, transferrin saturation >45%, elevated LFTs, elevated glucose.",
     "treatment": "Therapeutic phlebotomy (weekly until ferritin <50) \u2014 removes excess iron. Chelation if phlebotomy not tolerated."
+  },
+  "Addison's Disease": {
+    "mechanism": "Autoimmune destruction of the adrenal cortex (>90% of tissue) causes deficiency of all three adrenal hormones: cortisol (glucocorticoid), aldosterone (mineralocorticoid), and DHEA (androgen). Without aldosterone, sodium is wasted and potassium is retained \u2014 causing the classic hyponatremia + hyperkalemia electrolyte pattern. Without cortisol, the pituitary's negative feedback is lost, causing ACTH to rise dramatically. ACTH has structural homology with MSH (melanocyte-stimulating hormone) \u2014 explaining the pathognomonic hyperpigmentation, especially in sun-exposed areas, palmar creases, buccal mucosa, and scars.",
+    "diagnosis": "Diagnosis requires a cosyntropin (ACTH) stimulation test: administer 250mcg synthetic ACTH and measure cortisol at 0, 30, and 60 minutes. Peak cortisol <18 \u00b5g/dL = adrenal insufficiency. A markedly elevated ACTH level (>200 pg/mL) with low cortisol confirms primary (adrenal) disease \u2014 distinguishing it from secondary (pituitary) insufficiency where ACTH would be low. 21-hydroxylase antibodies confirm autoimmune etiology (Addison's disease). The 'triple threat' triad: hyponatremia + hyperkalemia + hypoglycemia in a sick, hyperpigmented patient = Addison's until proven otherwise.",
+    "treatment": "Acute adrenal crisis: IV hydrocortisone 100mg bolus \u2192 50-100mg q6-8h + aggressive IV saline (aldosterone deficiency causes volume depletion). Chronic management: hydrocortisone (mimics diurnal cortisol rhythm \u2014 highest dose in morning) + fludrocortisone (synthetic mineralocorticoid to replace aldosterone). Patients must double or triple their dose during illness, surgery, or physical stress ('sick day rules'). Medical alert bracelet and emergency IM hydrocortisone kit are mandatory \u2014 adrenal crisis is rapidly fatal without treatment."
+  },
+  "Amyloidosis (AL)": {
+    "mechanism": "In AL (light chain) amyloidosis, clonal plasma cells in the bone marrow overproduce immunoglobulin light chains (most commonly lambda). These light chains misfold and aggregate into beta-pleated sheet fibrils \u2014 amyloid \u2014 which deposit in organs and disrupt their architecture. The heart is the most critical organ: amyloid infiltrates the myocardium, causing severe diastolic dysfunction and a 'restrictive cardiomyopathy' pattern. Paradoxically, the massively thickened walls on echo (LVH appearance) are accompanied by low voltage on EKG \u2014 amyloid fibrils are electrically insulating. This low voltage + 'thick walls' discordance is virtually pathognomonic. Factor X deficiency (amyloid binds and sequesters factor X) and periorbital ecchymosis ('raccoon eyes' from minor trauma or Valsalva) are also characteristic. Macroglossia occurs when amyloid deposits in the tongue.",
+    "diagnosis": "Serum free light chain ratio (kappa/lambda) is the most sensitive screening test \u2014 a markedly abnormal ratio confirms the clonal process. UPEP shows Bence Jones proteinuria (free light chains). Fat pad biopsy (abdominal subcutaneous fat): Congo Red staining shows apple-green birefringence under polarized light \u2014 pathognomonic for all amyloid types. Bone marrow biopsy quantifies plasma cell burden. EKG low voltage + echo 'sparkling/granular' myocardium + restrictive filling = cardiac amyloid until proven otherwise. Technetium pyrophosphate (Tc-PYP) scan is positive in ATTR amyloid but negative in AL \u2014 helps distinguish the two.",
+    "treatment": "AL amyloidosis: Treat the underlying plasma cell dyscrasia with daratumumab-based regimens (similar to myeloma). Cardiac transplant followed by stem cell transplant in selected patients. ATTR amyloidosis (transthyretin \u2014 separate disease): tafamidis stabilizes TTF tetramer and slows progression. Unlike myeloma, AL amyloid is not cured by chemotherapy \u2014 organ damage from amyloid deposits is largely irreversible. Prognosis is driven by cardiac involvement: median survival without treatment ~6 months with advanced cardiac disease; modern therapy extends this significantly."
+  },
+  "Boerhaave Syndrome": {
+    "who_gets_it": "Middle-aged alcoholic males; any patient with forceful/prolonged vomiting.",
+    "risk_factors": "Alcohol intoxication, eating disorders (bulimia), forceful vomiting.",
+    "typical_presentation": "Sudden severe chest and back pain immediately after violent vomiting; diaphoresis, subcutaneous emphysema at neck.",
+    "moa": "Sudden spike in intraesophageal pressure causes full-thickness longitudinal tear at the left posterolateral GEJ \u2014 gastric contents flood the mediastinum causing chemical then bacterial mediastinitis.",
+    "step1_buzzwords": "Mackler triad (vomiting + chest pain + subcutaneous emphysema), Hamman's sign (mediastinal crunch), pneumomediastinum.",
+    "lab_buzzwords": "Pleural fluid: very low pH (<6), elevated amylase (salivary isoenzyme \u2014 NOT lipase). CT: oral contrast extravasation.",
+    "treatment": "Emergency surgical repair within 24 hours. Broad-spectrum antibiotics + chest drainage. Esophageal stenting for poor surgical candidates. Mortality >50% if delayed."
+  },
+  "MELAS Syndrome": {
+    "who_gets_it": "Children and young adults; maternal inheritance pattern (mitochondrial DNA).",
+    "risk_factors": "m.3243A>G mutation in MT-TL1 gene (tRNA-Leu) \u2014 most common. Variable heteroplasmy determines severity.",
+    "typical_presentation": "Stroke-like episodes before age 40 NOT following vascular territories, lactic acidosis, encephalopathy, sensorineural hearing loss, short stature, diabetes, WPW pattern.",
+    "moa": "Mitochondrial DNA mutation impairs oxidative phosphorylation \u2014 neurons with high energy demand fail, causing stroke-like episodes from metabolic failure rather than ischemia.",
+    "step1_buzzwords": "Ragged red fibers (Gomori trichrome), maternal inheritance, stroke not following vascular territory, elevated lactate:pyruvate ratio >20.",
+    "lab_buzzwords": "Lactate elevated at rest, MR spectroscopy: lactate peak at 1.33 ppm, m.3243A>G on genetic testing, muscle biopsy ragged red fibers.",
+    "treatment": "No cure. L-arginine IV during stroke-like episodes (increases NO, improves vasodilation). CoQ10, riboflavin supplements. Avoid valproate (worsens mitochondrial function)."
+  },
+  "Menetrier Disease": {
+    "who_gets_it": "Adults 40-60, males >> females. CMV-associated in children.",
+    "risk_factors": "TGF-alpha overexpression, possible H. pylori association (though negative in most).",
+    "typical_presentation": "Epigastric pain, profound weight loss, steatorrhea, bilateral pitting edema from hypoalbuminemia. PPI-refractory. H. pylori negative.",
+    "moa": "TGF-alpha overexpression causes massive foveolar hyperplasia and parietal cell loss \u2014 achlorhydria + massive protein leakage into gastric lumen = protein-losing gastropathy.",
+    "step1_buzzwords": "Giant gastric rugal folds (fundus/body, antrum SPARED), protein-losing gastropathy, achlorhydria, antrum sparing.",
+    "lab_buzzwords": "Albumin critically low (<2.0), elevated fecal alpha-1 antitrypsin clearance (confirms protein-losing gastropathy), full-thickness biopsy shows foveolar hyperplasia with gland atrophy.",
+    "treatment": "Cetuximab (EGFR/TGF-alpha inhibitor). Gastrectomy for refractory cases. High-protein diet. Treat H. pylori if positive."
+  },
+  "Lemierre Syndrome": {
+    "who_gets_it": "Healthy young adults (15-35) \u2014 the 'forgotten disease.' Often misdiagnosed as EBV or strep.",
+    "risk_factors": "Fusobacterium necrophorum oropharyngeal colonization, prior pharyngitis, poor dental hygiene.",
+    "typical_presentation": "Pharyngitis \u2192 tender neck mass (IJV thrombosis) \u2192 septic pulmonary emboli (cavitating nodules). Strep and mono tests negative. Young healthy patient in septic shock.",
+    "moa": "Fusobacterium necrophorum spreads from oropharynx to parapharyngeal space \u2192 internal jugular vein thrombophlebitis \u2192 septic emboli to lungs, liver, joints.",
+    "step1_buzzwords": "Fusobacterium necrophorum, IJV thrombosis, septic pulmonary emboli, young adult with pharyngitis + neck mass.",
+    "lab_buzzwords": "Blood cultures: gram-negative anaerobic rods. CT neck: IJV thrombosis + parapharyngeal abscess. CT chest: bilateral cavitating nodules.",
+    "treatment": "Prolonged antibiotics x4-6 weeks: metronidazole + beta-lactam/BLI (ampicillin-sulbactam). Anticoagulation controversial \u2014 used in extensive thrombosis. I&D of abscess if present."
+  },
+  "Stiff Person Syndrome": {
+    "who_gets_it": "Middle-aged females. Associated with type 1 diabetes, autoimmune thyroiditis, vitiligo (autoimmune polyglandular).",
+    "risk_factors": "Anti-GAD65 autoantibodies (loss of GABAergic inhibitory interneurons). Paraneoplastic (anti-amphiphysin) in breast/lung cancer.",
+    "typical_presentation": "Progressive axial rigidity (board-like abdomen even at rest), painful episodic spasms triggered by noise/touch/emotion, falls without warning, hyperreflexia. Rigidity persists during sleep.",
+    "moa": "Anti-GAD65 antibodies inhibit GABA synthesis \u2014 loss of inhibitory tone causes continuous motor unit firing and exaggerated startle.",
+    "step1_buzzwords": "Anti-GAD65, continuous motor unit activity on EMG (does not suppress with sleep), exaggerated startle, dramatic benzodiazepine response.",
+    "lab_buzzwords": "Anti-GAD65 >1000 IU/mL (vs. low titers in T1DM alone). EMG: continuous motor unit activity at rest. CSF: oligoclonal bands.",
+    "treatment": "Benzodiazepines (dramatic response \u2014 diagnostic). Baclofen. IVIG or plasmapheresis for refractory cases. Treat underlying malignancy if paraneoplastic."
+  },
+  "Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC)": {
+    "who_gets_it": "Young athletes; males > females. Leading cause of SCD in athletes in Italy.",
+    "risk_factors": "Autosomal dominant desmosomal mutations \u2014 PKP2 (plakophilin-2) most common. Exercise accelerates disease progression.",
+    "typical_presentation": "Syncope or SCD during exercise in a young athlete. LBBB-morphology PVCs. Family history of sudden death. RV dilation on echo.",
+    "moa": "Desmosomal protein mutations cause fibrofatty replacement of the RV myocardium \u2014 reentrant arrhythmias originate from the 'triangle of dysplasia' (inlet, apex, infundibulum).",
+    "step1_buzzwords": "Epsilon wave (V1-V3), T-wave inversions V1-V4, LBBB-morphology VT, fatty RV infiltration on cardiac MRI, triangle of dysplasia.",
+    "lab_buzzwords": "EKG: epsilon wave + T inversions V1-V4. Cardiac MRI: fatty infiltration + late gadolinium enhancement of RV free wall. PKP2 mutation on genetics.",
+    "treatment": "ICD implantation (all symptomatic patients). Antiarrhythmics (sotalol, amiodarone). Exercise prohibition \u2014 critical. Catheter ablation. Family screening mandatory."
+  },
+  "Hereditary Angioedema": {
+    "who_gets_it": "Any age \u2014 autosomal dominant. Family history of angioedema. Episodes begin in childhood/adolescence.",
+    "risk_factors": "SERPING1 gene mutation. ACE inhibitors precipitate attacks (absolutely contraindicated). Estrogen, stress, trauma, dental procedures trigger attacks.",
+    "typical_presentation": "Recurrent non-pitting, non-pruritic, non-erythematous angioedema of skin, bowel (mimics acute abdomen), and larynx. NO urticaria. NO response to epinephrine or antihistamines.",
+    "moa": "C1-inhibitor deficiency \u2192 uncontrolled bradykinin production \u2192 increased vascular permeability. Bradykinin-mediated (NOT histamine-mediated) \u2014 explains lack of response to allergy treatments.",
+    "step1_buzzwords": "C4 low BETWEEN attacks (best screening test), no urticaria, no pruritus, no epinephrine response, bradykinin-mediated, ACE inhibitor contraindicated.",
+    "lab_buzzwords": "C4 critically low (even between attacks). C1-INH functional assay low. C1q normal (distinguishes from acquired C1-INH deficiency). Tryptase normal (not mast-cell).",
+    "treatment": "Acute: C1-INH concentrate, icatibant (bradykinin B2 receptor antagonist), or ecallantide. Prophylaxis: lanadelumab (anti-kallikrein), C1-INH infusions. NEVER give ACE inhibitors."
+  },
+  "Polyarteritis Nodosa": {
+    "who_gets_it": "Adults 40-60, males > females. Associated with Hepatitis B (30%).",
+    "risk_factors": "Hepatitis B infection (most important), Hepatitis C, hairy cell leukemia.",
+    "typical_presentation": "Renal hypertension (infarcts not GN), mesenteric ischemia, testicular pain, mononeuritis multiplex, livedo reticularis, skin ulcers. ANCA negative.",
+    "moa": "Necrotizing vasculitis of medium-sized arteries \u2014 fibrinoid necrosis of the vessel wall WITHOUT immune complex deposition. Spares capillaries \u2192 NO glomerulonephritis.",
+    "step1_buzzwords": "Medium vessel vasculitis, NO glomerulonephritis, ANCA negative, microaneurysms on angiography ('string of beads'), HBV association.",
+    "lab_buzzwords": "ANCA negative (critical). Elevated ESR/CRP. Hematuria WITHOUT casts. HBsAg positive in 30%. Angiography: saccular microaneurysms at bifurcations.",
+    "treatment": "Steroids + cyclophosphamide. HBV-associated: antiviral therapy + plasmapheresis (NOT long-term immunosuppression). Avoid ACE inhibitors in renal artery involvement."
+  },
+  "Susac Syndrome": {
+    "who_gets_it": "Young adults 20-50, females > males. Frequently misdiagnosed as MS, psychiatric illness, or viral encephalitis.",
+    "risk_factors": "Autoimmune endotheliopathy \u2014 anti-endothelial cell antibodies targeting microvasculature of brain, retina, cochlea.",
+    "typical_presentation": "Classic triad: encephalopathy (confusion, memory loss, psychiatric symptoms) + branch retinal artery occlusions (BRAOs in DIFFERENT eyes) + sensorineural hearing loss (low/mid frequencies).",
+    "moa": "Autoimmune occlusion of microvasculature of the brain, retina, and cochlea. Anti-alpha-SNAP antibodies identified in some cases.",
+    "step1_buzzwords": "Snowball lesions in CENTRAL corpus callosum (vs. peripheral in MS), Gass plaques on fundoscopy, BRAOs in multiple vessels, triad of encephalopathy + vision + hearing.",
+    "lab_buzzwords": "MRI: snowball lesions in corpus callosum body/genu. Fluorescein angiography: BRAOs with Gass plaques. Anti-AECA positive. All infectious and coag workups negative.",
+    "treatment": "Aggressive immunosuppression: high-dose steroids + mycophenolate or azathioprine + IVIG. Aspirin for retinal protection. Relapses common \u2014 long-term maintenance required."
+  },
+  "Mesenteric Ischemia (Acute)": {
+    "who_gets_it": "Elderly with A-fib, low cardiac output, or hypercoagulable states. Recent cardioversion is a trigger.",
+    "risk_factors": "Atrial fibrillation (SMA embolism most common cause \u2014 50%), low EF, hypercoagulable state, atherosclerosis (thrombosis), vasopressors (non-occlusive).",
+    "typical_presentation": "Severe periumbilical pain OUT OF PROPORTION to physical exam (soft abdomen early). Bloody diarrhea is LATE. Atrial fibrillation on EKG. Elevated lactate.",
+    "moa": "SMA embolism (50%) or thrombosis (25%) \u2192 bowel ischemia \u2192 mucosal infarction \u2192 bacterial translocation \u2192 sepsis. Every hour of delay = more bowel necrosis.",
+    "step1_buzzwords": "Pain out of proportion to exam, A-fib, elevated lactate, pneumatosis intestinalis (late/ominous), elevated phosphate (cell death).",
+    "lab_buzzwords": "Lactate >4 (severe ischemia), leukocytosis, elevated phosphate, CT angiography: SMA filling defect. Normal lipase (rules out pancreatitis).",
+    "treatment": "Emergency CT angiography \u2192 catheter-directed thrombolysis or surgical embolectomy. Bowel resection for necrotic segments. Broad-spectrum antibiotics. Mortality >50% with delays."
+  },
+  "Adrenal Crisis": {
+    "who_gets_it": "Patients on chronic steroids who abruptly stop; Addison's patients under physiologic stress; bilateral adrenal hemorrhage (Waterhouse-Friderichsen).",
+    "risk_factors": "Abrupt glucocorticoid withdrawal (most common), physiologic stress in known adrenal insufficiency, meningococcemia (bilateral adrenal hemorrhage).",
+    "typical_presentation": "Refractory hypotension unresponsive to fluids, nausea/vomiting, abdominal pain, hypoglycemia, hyponatremia, hyperkalemia, eosinophilia. Hyperpigmentation if primary (elevated ACTH).",
+    "moa": "Absolute cortisol deficiency \u2192 loss of vascular tone, impaired gluconeogenesis, impaired stress response. Mineralocorticoid deficiency (primary only) \u2192 salt-wasting, hyperkalemia.",
+    "step1_buzzwords": "Eosinophilia (unique to adrenal crisis), refractory hypotension, hyponatremia + hyperkalemia (primary AI), hyperpigmentation, precipitated by steroid withdrawal or illness.",
+    "lab_buzzwords": "Random cortisol <18 mcg/dL. ACTH stimulation: cortisol fails to rise >18. ACTH high (primary) or undetectable (secondary/steroid withdrawal). Hyponatremia, hyperkalemia, hypoglycemia.",
+    "treatment": "IV hydrocortisone 100mg STAT \u2014 do NOT wait for labs. Volume resuscitation with D5NS. Identify and treat precipitant. Sick day rules: double/triple steroid dose during illness or surgery."
+  },
+  "Whipple Disease": {
+    "who_gets_it": "Middle-aged white males, especially farmers or outdoor workers. Extremely rare.",
+    "risk_factors": "Tropheryma whipplei exposure \u2014 exact transmission unknown. Possible immune defect in bacterial clearance.",
+    "typical_presentation": "Classic tetrad: diarrhea (steatorrhea) + weight loss + migratory non-erosive arthritis (precedes GI symptoms by years) + fever. CNS: oculomasticatory myorhythmia (pathognomonic eye movement).",
+    "moa": "T. whipplei survives inside macrophages, blocking phagolysosome fusion \u2014 PAS-positive macrophages pack the lamina propria, blocking lymphatic drainage and nutrient absorption.",
+    "step1_buzzwords": "PAS-positive macrophages in small bowel lamina propria, oculomasticatory myorhythmia, seronegative arthritis preceding GI symptoms, Tropheryma whipplei PCR.",
+    "lab_buzzwords": "Biopsy: PAS-positive diastase-resistant macrophages (pathognomonic). PCR: T. whipplei in duodenal biopsy or CSF. Severe hypoalbuminemia. Elevated fecal fat.",
+    "treatment": "Ceftriaxone IV x2 weeks \u2192 TMP-SMX x1-2 years (prevents relapse). CNS involvement: 2 years minimum. Check CSF PCR even without neuro symptoms \u2014 CNS relapse is devastating."
+  },
+  "Takotsubo Cardiomyopathy": {
+    "who_gets_it": "Postmenopausal women (90%); triggered by intense emotional or physical stress.",
+    "risk_factors": "Emotional stressor (death of loved one, argument), physical stress (surgery, stroke, sepsis), catecholamine surge.",
+    "typical_presentation": "STEMI-like presentation with normal coronary arteries. Wall motion abnormality extends BEYOND any single coronary territory. Apical ballooning with hypercontractile base on echo/ventriculography.",
+    "moa": "Catecholamine surge causes apical myocardial stunning \u2014 apical myocytes have more beta-2 receptors than basal myocytes, making the apex preferentially dysfunctional.",
+    "step1_buzzwords": "Apical ballooning, octopus trap shape, normal coronaries, troponin elevated but DISPROPORTIONATELY LOW for wall motion abnormality, QTc prolongation.",
+    "lab_buzzwords": "Troponin elevated but low relative to WMA severity. EKG: QTc prolonged, ST changes. Echo: apical ballooning + hypercontractile base. Angiography: normal coronaries.",
+    "treatment": "Supportive \u2014 beta-blockers, ACE inhibitors. Anticoagulate if LV thrombus. Avoid catecholamines (worsen). EF recovers in 4-8 weeks. Recurrence ~10%. Prognosis generally excellent."
+  },
+  "Paroxysmal Nocturnal Hemoglobinuria (PNH)": {
+    "who_gets_it": "Young adults 30-40. Acquired \u2014 not hereditary.",
+    "risk_factors": "Somatic PIG-A mutation in hematopoietic stem cell. Associated with aplastic anemia.",
+    "typical_presentation": "Morning hemoglobinuria (dark urine clearing by afternoon), pancytopenia, and thrombosis in unusual sites (hepatic veins = Budd-Chiari, portal vein, cerebral veins). Most common cause of Budd-Chiari in young patients.",
+    "moa": "PIG-A mutation \u2192 absent GPI-anchor proteins (CD55, CD59) on RBC surface \u2192 unregulated complement activation \u2192 intravascular hemolysis + platelet activation + thrombosis.",
+    "step1_buzzwords": "Morning hemoglobinuria, GPI-anchor deficiency, CD55/CD59 absent on flow cytometry, Budd-Chiari in young patient, pancytopenia + hemolysis.",
+    "lab_buzzwords": "Flow cytometry: absent CD55 and CD59 on RBCs and granulocytes (diagnostic). LDH markedly elevated, haptoglobin undetectable, hemoglobinuria on UA. Ham test (historical).",
+    "treatment": "Eculizumab (anti-C5 complement inhibitor) \u2014 dramatically reduces hemolysis and thrombosis. Anticoagulation for thrombosis. Bone marrow transplant is curative. Supplement iron/folate."
+  },
+  "Spinal Dural Arteriovenous Fistula": {
+    "who_gets_it": "Males over 50 \u2014 most common spinal vascular malformation.",
+    "risk_factors": "Idiopathic in most cases. Rarely post-traumatic or iatrogenic.",
+    "typical_presentation": "Slowly progressive myelopathy \u2014 ascending leg weakness, hyperreflexia, Babinski, urinary incontinence. Symptoms worsen with exercise or standing. Frequently misdiagnosed as spinal stenosis or MS.",
+    "moa": "Abnormal AV connection at the dural sleeve of a nerve root \u2192 venous hypertension \u2192 progressive spinal cord ischemia (Foix-Alajouanine syndrome if untreated).",
+    "step1_buzzwords": "Serpiginous flow voids on dorsal cord surface (T2 MRI), progressive UMN myelopathy, no cord compression on MRI, venous hypertension, Foix-Alajouanine.",
+    "lab_buzzwords": "MRI: serpentine flow voids dorsal to cord + T2 cord signal change. Spinal angiography (gold standard): identifies feeding artery and fistulous point. EMG: UMN pattern.",
+    "treatment": "Endovascular embolization or surgical ligation of the fistula. Early treatment critical \u2014 delays cause irreversible cord damage. Neurological recovery partial \u2014 the longer the delay, the worse the outcome."
+  },
+  "Spontaneous Coronary Artery Dissection (SCAD)": {
+    "who_gets_it": "Young women (mean age 44) with NO traditional cardiac risk factors. Peripartum period is highest risk.",
+    "risk_factors": "Peripartum state, fibromuscular dysplasia (FMD), connective tissue disorders, intense exercise, emotional stress. NOT atherosclerosis.",
+    "typical_presentation": "STEMI or ACS in a young woman with NO cardiac risk factors. Peripartum or perimenopausal. Normal or near-normal coronary anatomy on initial angiography.",
+    "moa": "Spontaneous intramural hematoma or intimal tear creates a false lumen that compresses the true coronary lumen \u2192 ischemia. Type 2 (intramural hematoma without tear) is most common \u2014 missed on angiography alone.",
+    "step1_buzzwords": "Young woman, no risk factors, peripartum, FMD, normal coronaries on angio but IVUS/OCT shows intramural hematoma, smooth-walled narrowing without plaque.",
+    "lab_buzzwords": "Troponin markedly elevated (true MI). OCT/IVUS: intramural hematoma with false lumen. Angiography alone underestimates \u2014 intravascular imaging required. FMD on renal/iliac angiography.",
+    "treatment": "Conservative management \u2014 NO PCI (propagates dissection), NO thrombolytics. Beta-blockers to reduce aortic wall stress. Aspirin. Cardiac rehab. Screen for FMD. Recurrence rate ~20% \u2014 long-term cardiology follow-up."
+  },
+  "IgG4-Related Disease": {
+    "who_gets_it": "Middle-aged to elderly males (60s). Multiorgan involvement \u2014 frequently misdiagnosed as cancer or Sjogren's.",
+    "risk_factors": "Unknown trigger. Dramatic steroid response distinguishes from malignancy.",
+    "typical_presentation": "Tumefactive lesions in multiple organs: pancreas (autoimmune pancreatitis), salivary/lacrimal glands (Mikulicz), orbits (pseudotumor), kidneys (TIN), retroperitoneum (fibrosis), bile ducts, aorta. ANA/SSA/SSB NEGATIVE.",
+    "moa": "IgG4-secreting plasma cells infiltrate tissues \u2192 storiform fibrosis + obliterative phlebitis + tissue destruction. TH2 and T-regulatory cell dysregulation.",
+    "step1_buzzwords": "Storiform fibrosis + obliterative phlebitis + >10 IgG4+ plasma cells/HPF (pathognomonic biopsy triad). Serum IgG4 >135 mg/dL. Dramatic steroid response. ANA/SSA/SSB negative.",
+    "lab_buzzwords": "Serum IgG4 >135 mg/dL (sensitive but not specific). Biopsy: storiform fibrosis + obliterative phlebitis + IgG4+ plasma cells. Eosinophilia common. Normal lipase despite pancreatic mass.",
+    "treatment": "High-dose prednisone \u2014 nearly universal dramatic response (diagnostic and therapeutic). Rituximab for refractory/relapsing disease. Steroid-sparing: mycophenolate or azathioprine. Always biopsy to exclude malignancy first."
   }
 }
