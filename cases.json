@@ -87,7 +87,7 @@
       "UA": "Normal.",
       "ABG": "pH 7.28, pCO2 32, pO2 68 on 6L NC. Metabolic acidosis with respiratory compensation.",
       "Coags": "PT 16.2, INR 1.4 \u2014 early coagulopathy from sepsis.",
-      "Specialty": "Esophagogastroscopy (performed in OR): Full-thickness longitudinal tear at the gastroesophageal junction, left posterolateral, 3cm length. No active bleeding \u2014 mediastinal soilage confirmed. Surgical repair required emergently."
+      "Specialty": "Esophagogastroscopy (performed in OR): Longitudinal mucosal defect at the gastroesophageal junction, left posterolateral wall, 3cm. Surrounding tissue: necrotic, bile-stained, no active hemorrhage. Mediastinal contamination with extraluminal air confirmed. Pleural fluid pH 5.9 on intraoperative sampling. Gram stain of mediastinal fluid: mixed gram-positive and gram-negative organisms. No malignancy on frozen section."
     },
     "answer": "Boerhaave Syndrome"
   },
@@ -225,7 +225,7 @@
       "UA": "3+ protein. RBC casts on microscopy \u2014 nephritis. 24hr urine protein: 3.8g. Dysmorphic RBCs.",
       "ABG": "Normal",
       "Coags": "aPTT prolonged 58s. Lupus anticoagulant: Positive. Anti-cardiolipin IgG: Elevated.",
-      "Specialty": "Renal biopsy: Class IV diffuse proliferative lupus nephritis \u2014 subendothelial immune deposits, 'full house' immunofluorescence (IgG, IgA, IgM, C3, C1q). Anti-dsDNA: 840 IU/mL. Anti-Smith: Positive. C3 38 (low). C4 4 (low). SLEDAI 22. Antiphospholipid antibody syndrome concurrent \u2014 explains miscarriage."
+      "Specialty": "Renal biopsy: Diffuse proliferative glomerulonephritis. Immunofluorescence: 'Full house' staining \u2014 IgG, IgA, IgM, C3, C1q all positive (subendothelial deposits). Electron microscopy: Subendothelial and mesangial electron-dense deposits. Wire-loop lesions on light microscopy. Anti-dsDNA: 840 IU/mL (markedly elevated). Anti-Smith: Positive. C3: 42 mg/dL (low). C4: 6 mg/dL (low). Coombs: Positive."
     },
     "answer": "Systemic Lupus Erythematosus (SLE)"
   },
@@ -248,7 +248,7 @@
       "UA": "Normal",
       "ABG": "Normal",
       "Coags": "Normal",
-      "Specialty": "Biopsy results: Invasive adenocarcinoma \u2014 moderately differentiated. HER2/neu: Positive (3+) by IHC \u2014 eligible for trastuzumab. PD-L1 CPS score: 12. Arising from Barrett's metaplasia. Staging: cT2N1M0 (Stage IIB). Endoscopic resection not appropriate \u2014 requires definitive chemoradiation followed by surgery. Note: Adenocarcinoma of lower esophagus/GEJ \u2014 distinct from mid-esophageal squamous cell carcinoma."
+      "Specialty": "EGD biopsy (mid-esophagus, 28cm from incisors): Poorly differentiated carcinoma. Immunohistochemistry: p40 positive, CK5/6 positive, TTF-1 negative, CDX2 negative. Intercellular bridges present on high-power. Individual cell keratinization noted. No glandular differentiation. H. pylori: Negative. HER2: Negative. PD-L1 CPS: 18. Staging CT: cT3N2M0 \u2014 bilateral mediastinal adenopathy."
     },
     "answer": "Esophageal Squamous Cell Carcinoma"
   },
@@ -271,7 +271,7 @@
       "UA": "Trace glucose.",
       "ABG": "Normal.",
       "Coags": "Normal.",
-      "Specialty": "Anti-GAD65 antibodies: 4,200 IU/mL (markedly elevated \u2014 normal <1.0). Anti-amphiphysin: negative. Anti-glycine receptor: negative. CSF analysis: mild lymphocytic pleocytosis, elevated IgG index, oligoclonal bands \u2014 intrathecal inflammation. Thyroid peroxidase antibodies elevated. GAD65 antibody level correlates with disease severity."
+      "Specialty": "Anti-GAD65 antibodies: 4,200 IU/mL (markedly elevated \u2014 normal <1.0). Anti-amphiphysin: Negative. Anti-glycine receptor: Negative. Anti-DPPX: Negative. CSF: Mild lymphocytic pleocytosis, elevated IgG index 0.8, oligoclonal bands present \u2014 intrathecal inflammation confirmed. EMG (repeat during hospitalization): Continuous motor unit activity in paraspinals and rectus abdominis at rest \u2014 does not suppress with sleep or diazepam bolus. Thyroid peroxidase antibodies: Elevated."
     },
     "answer": "Stiff Person Syndrome"
   },
@@ -294,7 +294,7 @@
       "UA": "Normal.",
       "ABG": "Normal.",
       "Coags": "Normal.",
-      "Specialty": "Electrophysiology study: Inducible sustained ventricular tachycardia with LBBB morphology and superior axis \u2014 confirming RV outflow tract origin. Genetic testing: PKP2 (plakophilin-2) pathogenic variant \u2014 desmosomal protein mutation. Autosomal dominant. First-degree relatives require screening. ICD implanted."
+      "Specialty": "Electrophysiology study: Inducible sustained ventricular tachycardia with LBBB morphology and superior axis \u2014 right ventricular outflow tract origin confirmed. Entrainment mapping: Reentrant circuit localized to the RV free wall. Ablation attempted \u2014 multiple circuits identified. Genetic testing: PKP2 (plakophilin-2) pathogenic variant \u2014 c.2013delC frameshift. Desmosomal protein. Autosomal dominant inheritance confirmed. First-degree relatives require screening and EKG evaluation. ICD implanted."
     },
     "answer": "Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC)"
   },
@@ -386,7 +386,7 @@
       "UA": "Dark brown urine. Dipstick: 4+ blood with 0 RBCs on microscopy \u2014 myoglobinuria. Granular casts.",
       "ABG": "pH 7.31, pCO2 38, bicarb 18 \u2014 metabolic acidosis from rhabdomyolysis and AKI.",
       "Coags": "PT 16, INR 1.5 \u2014 early DIC from hyperthermia.",
-      "Specialty": "CK: 48,000 U/L \u2014 massive rhabdomyolysis from sustained muscle rigidity. Serum iron: markedly low (characteristic of NMS \u2014 iron drops acutely). Haloperidol level: therapeutic range."
+      "Specialty": "CK: 48,000 U/L (massively elevated \u2014 rhabdomyolysis from sustained muscular rigidity). Serum iron: 14 \u00b5g/dL (markedly low \u2014 iron drops acutely in this condition, pathophysiology unclear). Haloperidol level: therapeutic range (1.2 ng/mL). Urine myoglobin: Positive \u2014 confirms myoglobinuria. Aldolase: Markedly elevated. LDH: 2,800 U/L. Repeat CK at 12 hours: 62,000 U/L (still rising). Creatinine rising \u2014 myoglobin-induced nephropathy developing."
     },
     "answer": "Neuroleptic Malignant Syndrome (NMS)"
   },
@@ -409,7 +409,7 @@
       "UA": "Normal",
       "ABG": "Normal",
       "Coags": "Normal",
-      "Specialty": "Biopsy: Invasive squamous cell carcinoma \u2014 poorly differentiated. p40 positive. CK5/6 positive. TTF-1 negative. PD-L1 CPS 18. Staging cT3N2M0. H. pylori negative. Note: Upper mid-esophageal location, smoking + alcohol history, and elevated SCC antigen \u2014 classic for squamous cell. The prior 'normal' upper endoscopy likely did not reach the mid-esophagus adequately. Iron deficiency from occult blood loss \u2014 the presenting complaint."
+      "Specialty": "EGD biopsy (mid-esophagus): Poorly differentiated carcinoma. Immunohistochemistry: p40 strongly positive, CK5/6 positive, TTF-1 negative, CDX2 negative. Intercellular bridges visible on high-power field. Individual cell keratinization present. No glandular elements. H. pylori: Negative. PD-L1 CPS: 18. SCC antigen: 4.2 ng/mL (elevated). Staging CT: cT3N2M0 \u2014 bilateral mediastinal adenopathy, no distant metastasis."
     },
     "answer": "Esophageal Squamous Cell Carcinoma"
   },
@@ -432,7 +432,7 @@
       "UA": "Low specific gravity \u2014 inability to concentrate urine.",
       "ABG": "Mild non-anion gap metabolic acidosis \u2014 hyperchloremic from aldosterone deficiency.",
       "Coags": "Normal",
-      "Specialty": "Basal cortisol AM: 2.1 \u00b5g/dL (severely low; normal >18). ACTH stimulation test (250\u00b5g cosyntropin): Peak cortisol at 60min: 4.8 \u00b5g/dL (normal response >18). ACTH level: 2,480 pg/mL (markedly elevated \u2014 primary adrenal failure). 21-hydroxylase antibodies: Positive \u2014 autoimmune primary adrenal insufficiency. DHEAS: Undetectable. Aldosterone: Undetectable. Renin: Markedly elevated. Confirms autoimmune primary adrenal insufficiency (Addison's disease)."
+      "Specialty": "Basal cortisol AM: 2.1 \u00b5g/dL (critically low; normal >18). ACTH stimulation test (250\u00b5g cosyntropin IV): Peak cortisol at 60min: 4.8 \u00b5g/dL \u2014 failed response (normal >18). ACTH level: 2,480 pg/mL (markedly elevated \u2014 primary vs secondary distinguished here). 21-hydroxylase antibodies (anti-adrenal): Positive \u2014 autoimmune etiology confirmed. Aldosterone: Undetectable. Plasma renin: 48 ng/mL/hr (markedly elevated). DHEAS: Undetectable. Adrenal CT: Bilateral adrenal glands small and atrophic \u2014 no hemorrhage, no mass, no calcification."
     },
     "answer": "Addison's Disease"
   },
@@ -662,7 +662,7 @@
       "UA": "Normal.",
       "ABG": "Normal.",
       "Coags": "Normal. Factor V Leiden negative. Antiphospholipid antibodies negative. Protein C/S normal.",
-      "Specialty": "Anti-endothelial cell antibodies (AECA): markedly positive. Anti-alpha-SNAP antibodies: positive \u2014 research assay confirming Susac syndrome endotheliopathy. Fluorescein angiography: branch retinal artery occlusions with Gass plaques at bifurcation points \u2014 pathognomonic. No infectious cause identified (HSV, VZV, CMV, HIV, syphilis all negative). Cochlear MRI: bilateral cochlear enhancement on gadolinium."
+      "Specialty": "Anti-endothelial cell antibodies (AECA): Markedly positive. Anti-alpha-SNAP antibodies: Positive (research assay \u2014 endotheliopathy marker). Fluorescein angiography: Branch retinal artery occlusions with yellow-white deposits at arterial bifurcations (Gass plaques) \u2014 arteriolar occlusions confirmed bilaterally in separate vascular territories. Cochlear MRI with gadolinium: Bilateral cochlear enhancement \u2014 blood-labyrinth barrier breakdown. Comprehensive infectious panel (HSV, VZV, CMV, HIV, syphilis, Lyme, EBV): All negative. Hypercoagulable panel: Negative. ANA, ANCA, antiphospholipid antibodies: All negative."
     },
     "answer": "Susac Syndrome"
   },
@@ -731,7 +731,7 @@
       "UA": "Normal",
       "ABG": "Normal",
       "Coags": "Normal",
-      "Specialty": "24-hour urine 5-HIAA: 94mg/24hr (severely elevated; normal <8mg/24hr). Serum chromogranin A: 1,240 U/L (markedly elevated). Echo: Tricuspid regurgitation and pulmonic stenosis \u2014 Hedinger syndrome (carcinoid heart disease). Right-sided valves affected because serotonin is inactivated by pulmonary circulation before reaching left heart. Serotonin is metabolized by the liver \u2014 hepatic metastases bypass this, allowing serotonin to reach the systemic circulation and cause carcinoid syndrome. Treatment: Octreotide LAR + hepatic embolization + primary resection if feasible."
+      "Specialty": "24-hour urine 5-HIAA: 94mg/24hr (markedly elevated; normal <8mg/24hr). Serum chromogranin A: 1,240 U/L (markedly elevated). Serotonin level: 4.8 \u00b5mol/L (elevated). Echo: Tricuspid regurgitation grade 3/4, pulmonic stenosis \u2014 right-sided valvular lesions with leaflet thickening and restricted mobility. Left-sided valves: Normal (serotonin inactivated by lung). CT abdomen: 1.8cm ileal mass with desmoplastic mesenteric reaction. Liver: Multiple hypervascular lesions \u2014 hepatic metastases confirmed. Octreotide scan: Intense uptake in ileal primary and liver metastases."
     },
     "answer": "Carcinoid Syndrome"
   },
@@ -754,7 +754,7 @@
       "UA": "Normal",
       "ABG": "Normal",
       "Coags": "Normal",
-      "Specialty": "EMG: Fibrillations and positive sharp waves (active denervation) in bilateral upper extremities, lower extremities, and paraspinal muscles \u2014 3 body regions. Giant motor unit potentials (chronic reinnervation). Fasciculation potentials throughout. NCS: Normal sensory nerve conduction velocities and amplitudes throughout \u2014 sensory sparing is pathognomonic for ALS (sensory roots are not involved). Meets Awaji-Shima criteria for definite ALS. SOD1 genetic panel: Negative (sporadic ALS). Riluzole initiated. FVC 78% \u2014 serial monitoring."
+      "Specialty": "EMG: Fibrillations and positive sharp waves (active denervation) in bilateral upper extremities, lower extremities, and paraspinal muscles \u2014 3 body regions. Giant motor unit potentials (chronic reinnervation). Fasciculation potentials throughout. Motor nerve conduction: Normal conduction velocities \u2014 no demyelinating features. Sensory nerve conduction: Normal \u2014 sensory spared. Repeat MRI brain and spine: No structural lesion, no demyelination, no mass. CSF: Normal protein, glucose, cells \u2014 no inflammatory process. SOD1 gene: No pathogenic variant. FUS, TDP-43, C9orf72 repeat expansion: Pending."
     },
     "answer": "Amyotrophic Lateral Sclerosis (ALS)"
   },
@@ -892,7 +892,7 @@
       "UA": "Concentrated. No infection.",
       "ABG": "pH 7.22, bicarb 11 \u2014 metabolic acidosis from hypoperfusion and mineralocorticoid deficiency.",
       "Coags": "Normal.",
-      "Specialty": "Random cortisol: 1.2 mcg/dL (critically low \u2014 normal stress response >18). ACTH stimulation test: cortisol rises only to 3.4 mcg/dL at 60 minutes (normal >18). ACTH level: undetectable \u2014 secondary adrenal insufficiency from HPA axis suppression by chronic exogenous steroids. IV hydrocortisone 100mg given: BP recovered to 106/70 within 90 minutes."
+      "Specialty": "Random cortisol: 1.2 mcg/dL (critically low; normal stress response >18). ACTH stimulation test (250\u00b5g cosyntropin): cortisol rises only to 3.4 mcg/dL at 60 minutes (normal >18 \u2014 failed response). ACTH level: Undetectable (<5 pg/mL). Aldosterone: Low-normal (mineralocorticoid axis relatively preserved). Renin: Normal. Thyroid function: Normal. Morning cortisol after 100mg IV hydrocortisone: BP recovered to 108/72 within 90 minutes \u2014 confirms cortisol deficiency as the cause of hemodynamic collapse."
     },
     "answer": "Adrenal Crisis"
   },
@@ -938,7 +938,7 @@
       "UA": "Normal.",
       "ABG": "Normal.",
       "Coags": "PT elevated \u2014 vitamin K malabsorption.",
-      "Specialty": "Small bowel biopsy with PAS stain: Lamina propria packed with foamy macrophages containing PAS-positive, diastase-resistant granules \u2014 pathognomonic. Villous blunting with lymphatic dilation. PCR of duodenal biopsy: Tropheryma whipplei DNA confirmed. CSF PCR: Tropheryma whipplei positive \u2014 CNS involvement.  Treatment: ceftriaxone IV x2 weeks \u2192 trimethoprim-sulfamethoxazole x1-2 years."
+      "Specialty": "Small bowel biopsy with PAS stain: Lamina propria densely packed with foamy macrophages containing PAS-positive, diastase-resistant intracellular granules \u2014 organisms resist normal phagolysosomal digestion. Villous blunting with lymphatic dilation. Electron microscopy: Trilamellar cell wall organisms (1-2\u00b5m) within macrophages. PCR of duodenal biopsy: Tropheryma whipplei DNA \u2014 POSITIVE (specific). CSF PCR: Tropheryma whipplei \u2014 POSITIVE (CNS involvement confirmed). Stool culture: Negative for pathogens. HIV: Negative."
     },
     "answer": "Whipple Disease"
   },
@@ -1053,7 +1053,7 @@
       "UA": "Urine Na <10 mEq/L \u2014 avid sodium retention (hepatorenal physiology).",
       "ABG": "Normal",
       "Coags": "INR 2.4 \u2014 hepatic synthetic failure.",
-      "Specialty": "Diagnostic paracentesis: SAAG 1.6 g/dL (\u22651.1 confirms portal hypertension). Ascites protein 1.2g/dL. Ascites WBC 180 cells/\u00b5L (PMN 120 \u2014 spontaneous bacterial peritonitis if PMN \u2265250; currently at risk). Culture: Pending. AFP: 840 ng/mL (elevated \u2014 hepatocellular carcinoma screening required). MRI liver with contrast: 2.4cm arterially enhancing nodule with washout \u2014 LI-RADS 5 (hepatocellular carcinoma). Child-Pugh C. MELD-Na: 28 \u2014 liver transplant evaluation initiated."
+      "Specialty": "Diagnostic paracentesis: SAAG 1.6 g/dL (\u22651.1 \u2014 portal hypertension confirmed). Total ascites protein: 1.2 g/dL. Ascites WBC: 180 cells/\u00b5L (PMN 120 \u2014 below 250 PMN threshold, not yet SBP). Culture: No growth. Hepatitis serology: IgM anti-HAV: POSITIVE (acute infection). IgG anti-HAV: Positive (confirms active primary infection, not prior immunity alone). HBsAg: Positive (chronic carrier \u2014 superinfection). HCV: Negative. AFP: 24 ng/mL \u2014 elevated, hepatocellular carcinoma surveillance required given cirrhosis."
     },
     "answer": "Hepatitis A"
   },
@@ -1076,7 +1076,7 @@
       "UA": "Normal",
       "ABG": "Normal",
       "Coags": "Normal",
-      "Specialty": "Biopsy results: Invasive adenocarcinoma \u2014 moderately differentiated \u2014 arising from Barrett's metaplasia. HER2/neu: Positive 3+ by IHC (eligible for trastuzumab). PD-L1 CPS: 8 (immunotherapy eligible). MSI-H: Negative. Staging: cT2N1M0 (Stage IIB). Adenocarcinoma of the GEJ/distal esophagus \u2014 Siewert type II. Unlike mid-esophageal squamous cell (alcohol + smoking), GEJ adenocarcinoma arises from GERD/Barrett's. The 3-year surveillance gap was clinically significant \u2014 low-grade dysplasia transformed during the interval."
+      "Specialty": "EGD biopsy (upper-mid esophagus, 24cm from incisors): Poorly differentiated carcinoma. Immunohistochemistry: p40 positive, CK5/6 positive, TTF-1 negative, CDX2 negative. Keratin pearl formation on H&E. Individual cell keratinization. No glandular differentiation identified. Barrett's metaplasia: Absent. H. pylori: Negative. PD-L1 CPS: 14. HER2: Negative. SCC antigen: 3.8 ng/mL (elevated). Staging: cT2N1M0. EUS: Tumor invades muscularis propria, 2 periesophageal nodes enlarged."
     },
     "answer": "Esophageal Squamous Cell Carcinoma"
   },
@@ -1099,7 +1099,7 @@
       "UA": "Normal.",
       "ABG": "Normal.",
       "Coags": "Normal.",
-      "Specialty": "Urgent coronary angiography: Normal coronary arteries \u2014 no stenosis, no dissection, no thrombus. Left ventriculography: Apical ballooning with hypercontractile base \u2014 pathognomonic octopus pot appearance. Catecholamine surge confirmed: urine epinephrine 4x upper limit of normal.  EF recovered to 58% at 6-week follow-up."
+      "Specialty": "Urgent coronary angiography: LAD, LCX, RCA \u2014 all patent, no stenosis >20%, no thrombus, no dissection, no plaque rupture. TIMI 3 flow throughout. Left ventriculography: Apical akinesis with basal hypercontractility \u2014 wall motion abnormality extends beyond any single coronary artery territory. RV: Normal. Intravascular OCT: No intimal tear, no intramural hematoma. Urine catecholamines: Epinephrine 4x upper limit of normal. Norepinephrine: 2.8x ULN. EF on ventriculography: 22%. Repeat echo at 72hrs: EF improved to 35% \u2014 partial recovery already."
     },
     "answer": "Takotsubo Cardiomyopathy"
   },
@@ -1352,7 +1352,7 @@
       "UA": "Normal",
       "ABG": "Normal",
       "Coags": "Normal",
-      "Specialty": "C. difficile nucleic acid amplification test (NAAT/PCR): Positive. GDH antigen: Positive. Toxin A/B immunoassay: Positive (when both NAAT and toxin EIA positive, confirms true infection not colonization). Ribotyping: RT-027 (NAP1/BI strain) \u2014 hypervirulent, binary toxin-producing, fluoroquinolone-resistant. Severity: Severe-complicated (WBC >30K, albumin <3, Cr >1.5x baseline). Treatment: Oral fidaxomicin (preferred over vancomycin for first recurrence prevention). IV metronidazole if ileus develops. Surgery consult for near-megacolon. Stop ciprofloxacin immediately."
+      "Specialty": "C. difficile NAAT/PCR: Positive. GDH (glutamate dehydrogenase) antigen: Positive. Toxin A/B immunoassay: Positive. Fecal lactoferrin: Markedly elevated (mucosal inflammation). Stool WBC: 40/hpf. Flexible sigmoidoscopy: Yellow-white pseudomembranes adherent to colonic mucosa \u2014 biopsies taken. Biopsy: Superficial mucosal necrosis with 'volcano' lesions \u2014 fibrinopurulent exudate erupting from crypts. Stool culture: No Salmonella, Shigella, Campylobacter, E. coli O157. Abdominal CT: Pancolitis with marked wall thickening, thumbprinting \u2014 near-megacolon."
     },
     "answer": "C. Difficile Infection"
   },
@@ -1375,7 +1375,7 @@
       "UA": "Bilirubin: Strongly positive (conjugated hyperbilirubinemia \u2014 conjugated bilirubin is water-soluble, appears in urine). Urobilinogen: Low (reduced bile reaching gut \u2192 less enterohepatic recycling).",
       "ABG": "Normal",
       "Coags": "PT 17.4s \u2014 fat-soluble vitamin K malabsorption (cholestatic liver disease impairs vitamin K absorption).",
-      "Specialty": "AMA (anti-mitochondrial antibody): Positive at 1:2560 M2 subtype (pyruvate dehydrogenase complex E2 subunit \u2014 >95% sensitive and specific for PBC). Anti-sp100: Positive. Anti-gp210: Positive (both associated with more severe disease). Liver biopsy: Florid bile duct lesion \u2014 granulomatous destruction of intrahepatic bile ducts. Ductopenia in portal tracts. Ludwig Stage III (bridging fibrosis). Treatment: Ursodeoxycholic acid (UDCA) 13-15mg/kg/day \u2014 slows progression. Obeticholic acid if incomplete UDCA response. Liver transplant evaluation if progresses to cirrhosis."
+      "Specialty": "AMA (anti-mitochondrial antibody): Positive at 1:2560 \u2014 M2 subtype (directed against pyruvate dehydrogenase complex E2 subunit). Anti-sp100: Positive. Anti-gp210: Positive. ANA: Positive, rim pattern. ANCA: Negative. Liver biopsy: Florid duct lesion \u2014 lymphocytic infiltration and granulomatous destruction of interlobular bile ducts. Periportal fibrosis stage II. No hepatitis B or C. Ceruloplasmin: Normal (Wilson's excluded). Alpha-1 antitrypsin: Normal."
     },
     "answer": "Primary Biliary Cholangitis"
   },
@@ -1398,7 +1398,7 @@
       "UA": "Normal \u2014 no infection causing the incontinence.",
       "ABG": "Normal.",
       "Coags": "Normal.",
-      "Specialty": "Spinal digital subtraction angiography: Type I dural arteriovenous fistula at T9 \u2014 single arteriovenous connection at the dural sleeve of the right T9 nerve root. Venous drainage into perimedullary veins \u2192 venous hypertension \u2192 progressive cord ischemia (Foix-Alajouanine syndrome if untreated). Endovascular embolization performed: complete obliteration of fistula. Neurological improvement partial at 6 months \u2014 early treatment is critical for recovery."
+      "Specialty": "Spinal digital subtraction angiography: Abnormal arteriovenous connection identified at T9 \u2014 single feeding artery from right T9 intercostal artery draining into dilated perimedullary veins. Venous hypertension pattern \u2014 retrograde flow in the coronal venous plexus. Venous pressure measurements: Perimedullary venous pressure 74% of arterial (normal <50%). No intramedullary nidus. No high-flow AVM. Embolization performed: Onyx injection \u2014 complete obliteration of fistulous point confirmed on immediate post-embolization run."
     },
     "answer": "Spinal Dural Arteriovenous Fistula"
   },
@@ -1444,7 +1444,7 @@
       "UA": "Normal",
       "ABG": "Normal",
       "Coags": "Fibrinogen 88mg/dL (low). D-dimer markedly elevated \u2014 concurrent macrophage activation syndrome (MAS).",
-      "Specialty": "Ferritin: 84,000 ng/mL (markedly elevated \u2014 >3,000 highly suggestive of AOSD; >10,000 near-diagnostic). Glycosylated ferritin fraction: 18% (normal >50% \u2014 glycosylation is reduced in conditions with massive macrophage ferritin release). RF: Negative. ANA: Negative. Anti-dsDNA: Negative. Anti-CCP: Negative. Anti-MDA5: Negative. All infection workup: Negative x4. Yamaguchi criteria: \u22655 major + minor criteria met. HScore: 248 (>169 indicates HLH/MAS in 93% probability). AOSD complicated by MAS \u2014 high mortality. Anakinra (IL-1 blocker) + high-dose steroids initiated."
+      "Specialty": "Ferritin: 84,000 ng/mL (markedly elevated). Glycosylated ferritin fraction: 18% (normal >50% \u2014 markedly reduced glycosylation seen in specific hyperferritinemic states). IL-18: 48,000 pg/mL (markedly elevated \u2014 macrophage activation marker). IL-1\u03b2: Elevated. ANA: Negative. RF: Negative. Anti-CCP: Negative. ANCA: Negative. Anti-dsDNA: Negative. Blood cultures x6: No growth. Bone marrow biopsy: Reactive histiocytosis \u2014 no malignancy, no hemophagocytosis. PET-CT: Diffuse FDG uptake in spleen, liver, lymph nodes \u2014 hypermetabolic inflammatory pattern, no discrete mass."
     },
     "answer": "Adult-Onset Still Disease"
   },
@@ -1490,7 +1490,7 @@
       "UA": "Myoglobinuria \u2014 dipstick blood 3+ with no RBCs on microscopy.",
       "ABG": "pO2 68 on room air (ILD with OP pattern).",
       "Coags": "Normal",
-      "Specialty": "Anti-MDA5 antibody: POSITIVE (MDA5 = melanoma differentiation-associated gene 5 \u2014 an innate immune RNA helicase). Anti-Jo-1: Negative. Anti-Mi-2: Negative. Anti-TIF1\u03b3: Negative. Anti-NXP2: Negative. ANA: Positive 1:640 speckled. Anti-MDA5 DM phenotype: Rapidly progressive ILD (high mortality risk), amyopathic or hypomyopathic dermatomyositis (skin > muscle), palmar papules, skin ulcers. Muscle biopsy: Perifascicular atrophy \u2014 dermatomyositis pattern. CT Chest/Abdomen/Pelvis: No occult malignancy (anti-MDA5 less associated with malignancy than anti-TIF1\u03b3 or anti-NXP2). Treatment: High-dose steroids + calcineurin inhibitor + mycophenolate for ILD. Close respiratory monitoring \u2014 RP-ILD can be fatal within weeks."
+      "Specialty": "Anti-MDA5 antibody: POSITIVE (MDA5 = melanoma differentiation-associated gene 5, innate immune RNA helicase \u2014 cytoplasmic pattern on IF). Anti-Jo-1: Negative. Anti-Mi-2: Negative. Anti-TIF1\u03b3: Negative. Anti-NXP2: Negative. Anti-SRP: Negative. HRCT chest: Bilateral ground-glass opacities, subpleural consolidation \u2014 rapidly progressive interstitial pattern. PFTs: FVC 52% predicted. DLCO 38% predicted. BAL: Lymphocytosis 42%. Muscle biopsy: Perifascicular atrophy and necrosis. Skin biopsy: Interface dermatitis with mucin deposition."
     },
     "answer": "Anti-MDA5 Dermatomyositis"
   },
@@ -1513,7 +1513,7 @@
       "UA": "Normal",
       "ABG": "Normal",
       "Coags": "PT 18.2s (fat-soluble vitamin K malabsorption from steatorrhea).",
-      "Specialty": "Fasting serum gastrin (PPI held 1 week): 2,800 pg/mL (markedly elevated; normal <100 pg/mL). Gastric pH during fasting: 1.2 (maximally acidic \u2014 normal >4 on PPI; confirms hypersecretion). Secretin stimulation test: Paradoxical rise in gastrin \u2265200 pg/mL above baseline \u2014 pathognomonic for gastrinoma (Zollinger-Ellison syndrome). Normal response: gastrin suppresses with secretin. BAO (basal acid output): 36 mEq/hr (severely elevated; normal <10). MEN1 gene sequencing: Pathogenic MEN1 variant identified (Menin protein mutation) \u2014 hereditary ZES/MEN1. Also check: parathyroid hormone (MEN1), pituitary MRI (MEN1). Father's pancreatic tumor was likely also a gastrinoma."
+      "Specialty": "Fasting serum gastrin (PPIs held 1 week): 2,800 pg/mL (markedly elevated; normal <100). Gastric pH during fasting: 1.2 (maximally acidic \u2014 confirms autonomous acid hypersecretion). Secretin stimulation test: Gastrin paradoxically rises >200 pg/mL above baseline \u2014 positive test (normal: no rise or fall). Somatostatin receptor scintigraphy (Octreoscan): Hypermetabolic lesion in pancreatic head 1.4cm and multiple hepatic foci. Endoscopic ultrasound: Pancreatic head lesion confirmed \u2014 fine needle aspiration: Neuroendocrine tumor, chromogranin A positive, synaptophysin positive, Ki-67 2%. PTH: Elevated. Pituitary MRI: 6mm adenoma found incidentally."
     },
     "answer": "Zollinger-Ellison Syndrome (Gastrinoma)"
   },
@@ -1559,7 +1559,7 @@
       "UA": "Normal",
       "ABG": "pO2 64 on room air (lung compressed by effusion and trapped by rind).",
       "Coags": "Normal",
-      "Specialty": "Thoracentesis: 1.6L bloody exudative fluid. LDH: 820 U/L (markedly elevated). Protein: 6.2 g/dL (exudate). Cytology: Atypical mesothelial cells \u2014 insufficient for diagnosis alone. CT-guided pleural biopsy (multiple cores): Epithelioid mesothelioma \u2014 spindle cells in tubular pattern. IHC: Calretinin+ (nuclear+cytoplasmic), WT-1+, CK5/6+, D2-40+. CEA-, TTF-1- (distinguishes from pleural adenocarcinoma). BAP1 immunohistochemistry: Loss of BAP1 nuclear staining (pathognomonic for malignant mesothelioma \u2014 benign mesothelial cells retain BAP1). FISH: Homozygous deletion of CDKN2A (p16) \u2014 confirms malignancy. Treatment: Cisplatin + pemetrexed + bevacizumab. Median survival 12-18 months."
+      "Specialty": "Thoracentesis: 1.6L bloody exudative fluid. LDH: 820 U/L. Protein: 6.2 g/dL. Cytology: Atypical mesothelial cells \u2014 insufficient alone. CT-guided pleural biopsy: Epithelioid cell proliferation with tubular and papillary architecture, dense stromal invasion. Immunohistochemistry: Calretinin positive, WT-1 positive, CK5/6 positive, D2-40 positive. TTF-1 negative, CEA negative, Ber-EP4 negative (excludes adenocarcinoma). BAP1 loss on IHC. FISH: Homozygous deletion of CDKN2A (p16). Asbestos bodies on BAL."
     },
     "answer": "Malignant Pleural Mesothelioma"
   },
@@ -1582,7 +1582,7 @@
       "UA": "Normal",
       "ABG": "Normal",
       "Coags": "Normal",
-      "Specialty": "CSF: Opening pressure 18 cmH2O. Lymphocytic pleocytosis: 38 cells/\u00b5L (predominantly lymphocytes). Protein: 62 mg/dL (mildly elevated). Glucose: Normal. CSF anti-NMDA receptor antibody (GluN1 subunit): POSITIVE at 1:32 titer. Serum anti-NMDA receptor: POSITIVE at 1:160. CSF more sensitive than serum \u2014 always test both. CT Abdomen/Pelvis + scrotal ultrasound (male patients): No teratoma identified (teratoma present in ~50% of female cases; males less commonly have tumor). Workup: Screen annually for 5 years for occult teratoma. Treatment: Immunotherapy (methylprednisolone + IVIG + rituximab for refractory cases). Prognosis: Good with treatment \u2014 80% partial or full recovery over months. The prodromal flu-like phase is common \u2014 autoimmune encephalitis following viral trigger."
+      "Specialty": "CSF: Opening pressure 18 cmH2O. Lymphocytic pleocytosis 38 cells/\u00b5L. Protein 62 mg/dL (mildly elevated). Glucose: Normal. CSF antibody panel (GluN1 subunit): Positive at 1:32 titer. Serum antibody panel: Positive at 1:64. MRI brain: Subtle FLAIR hyperintensity in right hippocampus and insular cortex. EEG: Extreme delta brush pattern \u2014 rhythmic delta activity with superimposed beta \u2014 highly characteristic of this encephalitis. Pelvic MRI: 3.2cm right ovarian cystic lesion with solid components \u2014 teratoma morphology. Infectious panel (HSV, VZV, CMV, EBV, enterovirus, West Nile): All negative."
     },
     "answer": "Anti-NMDA Receptor Encephalitis"
   },
@@ -1651,7 +1651,7 @@
       "UA": "Normal",
       "ABG": "FVC: 62% predicted (reduced \u2014 respiratory muscle involvement; threshold for noninvasive ventilation <50%). NIF: -42 cmH2O (borderline).",
       "Coags": "Normal",
-      "Specialty": "EMG: Fibrillations and positive sharp waves in bilateral upper limbs, lower limbs, thoracic paraspinals, and tongue \u2014 4 body regions (exceeds Awaji-Shima criteria for definite ALS: \u22653 regions with UMN + LMN signs in same region). Fasciculation potentials throughout. Giant MUPs (chronic reinnervation). NCS: Normal sensory conduction velocity and amplitudes in all tested nerves \u2014 sensory sparing confirms ALS (not Kennedy disease, which has sensory involvement). Genetic panel: C9orf72 hexanucleotide repeat expansion \u2014 NEGATIVE (sporadic ALS). SOD1: Negative. FUS: Negative. TDP-43: Negative. Treatment: Riluzole (sodium channel blocker, modest survival benefit). Edaravone (if early functional decline). PEG tube consideration. BiPAP when FVC <50%. Hospice planning initiated."
+      "Specialty": "EMG: Fibrillations and positive sharp waves in bilateral upper limbs, lower limbs, thoracic paraspinals, and tongue \u2014 4 body regions. Giant motor unit potentials (chronic reinnervation). Fasciculation potentials. Motor NCS: Normal velocities, no conduction block. Sensory NCS: Normal throughout. Repetitive nerve stimulation: No decrement (excludes NMJ disorder). CSF: Normal. Anti-ganglioside antibodies: Negative (excludes MMN). Brain MRI: Corticospinal tract T2 signal \u2014 upper motor neuron degeneration. C9orf72 repeat expansion: POSITIVE \u2014 hexanucleotide repeat expansion found."
     },
     "answer": "Amyotrophic Lateral Sclerosis (ALS)"
   },
@@ -1674,7 +1674,7 @@
       "UA": "2+ protein, RBC casts \u2014 tubulointerstitial nephritis.",
       "ABG": "Normal.",
       "Coags": "Normal.",
-      "Specialty": "Serum IgG4: 840 mg/dL (markedly elevated \u2014 normal <135). Serum IgG4:IgG ratio >40%. Submandibular gland biopsy: Dense lymphoplasmacytic infiltrate with >10 IgG4-positive plasma cells per high-power field. Storiform fibrosis pattern. Obliterative phlebitis. ANA negative, SSA/SSB negative (distinguishes from Sjogren's). Steroid trial: dramatic response within 2 weeks \u2014 pancreatic mass decreased 60%, salivary glands regressed."
+      "Specialty": "Serum IgG4: 840 mg/dL (markedly elevated \u2014 normal <135 mg/dL). IgG4:total IgG ratio: 42% (elevated). Submandibular gland biopsy: Dense lymphoplasmacytic infiltrate. Storiform fibrosis pattern. Obliterative phlebitis. IgG4+ plasma cells: >30 per high-power field. IgG4:IgG ratio on tissue: >40%. ANA: Negative. SSA/SSB: Negative. ANCA: Negative. Salivary gland biopsy: No ductal destruction (distinguishes from Sjogren's). Pancreatic mass FNA: Fibroinflammatory tissue \u2014 no malignant cells. PET: Diffuse FDG uptake in pancreas, salivary glands, kidneys, retroperitoneum \u2014 no discrete hypermetabolic mass."
     },
     "answer": "IgG4-Related Disease"
   },
