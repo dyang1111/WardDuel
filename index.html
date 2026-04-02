@@ -571,7 +571,7 @@
                 <button class="lab-btn" id="lab-UA" onclick="orderLab('UA')">Urinalysis</button>
                 <button class="lab-btn" id="lab-ABG" onclick="orderLab('ABG')">ABG/VBG</button>
                 <button class="lab-btn" id="lab-Coags" onclick="orderLab('Coags')">Coags</button>
-                <button class="lab-btn locked-lab" id="lab-Specialty" onclick="orderLab('Specialty')" disabled data-tip="Order 2 labs first">🔒 Special Test</button>
+                <button class="lab-btn locked-lab" id="lab-Specialty" onclick="orderLab('Specialty')" disabled data-tip="Order 2 labs first">🔒 Special Test −30 HP</button>
             </div>
         </div>
 
@@ -793,7 +793,7 @@ async function initGame(){
     caseHxEl.innerHTML = '';
     caseHxEl.innerText = currentCase.hx_brief;
     document.getElementById('date-label').innerText=isArchive?`Archive — ${archiveId}`:'Daily Case';
-    document.getElementById('lab-Specialty').innerText='🔒 Special Test';
+    document.getElementById('lab-Specialty').innerText='🔒 Special Test −30 HP';
     document.getElementById('opp-icon-wrap').innerHTML=logoIconSVG(38);
     if(!isArchive){
         if(currentUser){
@@ -1006,9 +1006,9 @@ window.orderLab=(key)=>{
     if(gameActive){
         if(key==='Specialty'){
             const ns=[...orderedLabs].filter(k=>k!=='Specialty').length;
-            if(ns<2){showToast('Order 2 labs first to unlock Specialty','#475569');return;}
+            if(ns<2){showToast('Order 2 labs first to unlock Special Test','#475569');return;}
         }
-        hp-=(key==='Specialty'?15:8);updateHP(true);
+        hp-=(key==='Specialty'?30:8);updateHP(true);
     }
     orderedLabs.add(key);
     const ns=[...orderedLabs].filter(k=>k!=='Specialty').length;
@@ -1021,7 +1021,7 @@ window.orderLab=(key)=>{
     if(ns>=2){
         const sb=document.getElementById('lab-Specialty');
         sb.disabled=false;sb.classList.remove('locked-lab','postgame');
-        sb.innerText='Special Test';
+        sb.innerText='Special Test −30 HP';
     }
     const result=(currentCase.lab_results&&currentCase.lab_results[key])||'Normal / No findings';
     const label=key==='Specialty'?(currentCase.specialty_name||'Specialty'):key;
@@ -1030,13 +1030,14 @@ window.orderLab=(key)=>{
     card.style.display='block';
     const row=document.createElement('div');
     row.className='lab-result-row';
+    // Append (HIGH) or (LOW) at the END of the result text — simple and safe
     function labTag(text){
-        const hi=/\b(elevated|increased|high|markedly elevated|severely elevated|critically (high|elevated)|positive(?! sharp)|above (normal|limit)|>\s*\d|greater than|marked)/i;
-        const lo=/\b(low|decreased|reduced|critically low|below (normal|limit)|undetectable|suppressed|deficient|<\s*\d|less than)/i;
-        const norm=/\b(normal|within normal|no (acute|significant|finding|evidence)|negative(?! birefringent)|clear|unremarkable)/i;
+        const hi=/\b(markedly elevated|severely elevated|critically elevated|critically high|elevated|increased|markedly high|above normal|above limit)/i;
+        const lo=/\b(critically low|markedly low|severely low|decreased|reduced|undetectable|suppressed|deficient|below normal|below limit)/i;
+        const norm=/\b(normal|within normal limits|unremarkable|no acute|no significant|no evidence|negative|clear)/i;
         if(norm.test(text)) return text;
-        if(hi.test(text)) return text.replace(/^(.{0,80})/,'$1<span class="lab-tag high">HIGH</span>');
-        if(lo.test(text)) return text.replace(/^(.{0,80})/,'$1<span class="lab-tag low">LOW</span>');
+        if(hi.test(text)) return text + ' <span class="lab-tag high">(HIGH)</span>';
+        if(lo.test(text)) return text + ' <span class="lab-tag low">(LOW)</span>';
         return text;
     }
     row.innerHTML=`<span class="lrk">${label}</span><span class="lrv">${labTag(result)}</span>`;
