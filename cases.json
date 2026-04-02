@@ -369,26 +369,26 @@
   },
   {
     "date": "2026-04-01",
-    "adminScore": 55,
-    "hx_brief": "46yo male presents to his PCP with 6 months of episodic severe headaches, flushing, and palpitations. He has been told he has 'migraines with autonomic features' and has tried 3 different preventive medications without relief.",
+    "adminScore": 99,
+    "hx_brief": "34yo female psychiatry inpatient is called to medicine after her nurse noticed her lips and tongue are swollen and she is making a 'chewing motion' with her jaw that she cannot stop. She was admitted 6 days ago for a first psychotic break and started on haloperidol 3 days ago.",
     "hints": {
-      "hx": "Episodes are unpredictable \u2014 some wake him from sleep (migraines don't typically wake patients). BP measured during one ER visit: 230/128 \u2014 resolved spontaneously before any treatment was given. Between episodes he feels completely normal. Episodes last 20-40 minutes and leave him exhausted. No preceding visual aura. Mother and maternal uncle both had 'endocrine tumors.' He mentions mild tremor and has lost 8 pounds over 6 months without trying.",
-      "pe": "Between episodes: BP 148/94. HR 84. Mild diaphoresis. No tremor currently. No thyroid enlargement. No cafe-au-lait spots. No neurofibromas. No Cushingoid features. Abdomen: no bruit, no palpable mass.",
-      "img": "MRI Abdomen with gadolinium: 4.2cm right adrenal mass \u2014 heterogeneous with central necrosis, characteristic 'salt and pepper' appearance on T2. Adrenal vein sampling not indicated \u2014 biochemical confirmation first. 123I-MIBG scintigraphy: Intense uptake in right adrenal mass. No extra-adrenal uptake."
+      "hx": "She has no prior neurological history. The jaw movements started yesterday \u2014 she thought it was anxiety. Today her tongue is protruding involuntarily and she cannot control it. She also has severe neck stiffness and her eyes keep deviating upward \u2014 she is terrified. Temperature was 38.1C this morning. She is on haloperidol 5mg BID, benztropine was NOT prescribed with it. No cocaine, no other drugs. No family history of movement disorders. She has been drinking very little water \u2014 nursing noted she looked 'stiff' walking to the bathroom yesterday.",
+      "pe": "Temp 38.6C, HR 118, BP 158/96, RR 22. Diaphoresis. Oculogyric crisis \u2014 eyes deviated up and to the right, patient cannot voluntarily correct. Trismus. Tongue protruding rhythmically. Neck: severely rigid \u2014 both cogwheel AND lead-pipe quality. Tremor bilateral upper extremities at rest. Skin: diaphoretic, flushed. No urticaria. Lungs clear. No rash.",
+      "img": "CT head: No acute intracranial process. No hemorrhage. No mass effect. MRI brain (ordered to rule out encephalitis): Normal. No basal ganglia signal abnormality. No demyelination. EEG ordered \u2014 results pending. CXR: Clear."
     },
-    "specialty_name": "Plasma Metanephrines",
+    "specialty_name": "CK + Dopamine Receptor Panel",
     "lab_results": {
-      "CBC": "Normal",
-      "CMP": "Glucose 192 (stress hyperglycemia from catecholamine excess). Otherwise normal.",
-      "EKG": "Sinus tachycardia during episode. Occasional PVCs. No ischemic changes.",
-      "Trop": "Normal between episodes.",
-      "Lipase": "Normal",
-      "UA": "Normal between episodes.",
-      "ABG": "Normal",
-      "Coags": "Normal",
-      "Specialty": "Plasma free metanephrines: Normetanephrine 12.8x ULN. Metanephrine 6.4x ULN. 24hr urine catecholamines: Norepinephrine 6,800 \u00b5g/day (markedly elevated). Epinephrine 280 \u00b5g/day (elevated). VMA 58mg/day (elevated). Genetic panel: RET proto-oncogene \u2014 pathogenic variant (Cys634Arg) \u2014 MEN2A. Calcitonin elevated \u2014 medullary thyroid carcinoma screening positive. Alpha-blockade (phenoxybenzamine) must precede beta-blockade before surgical resection."
+      "CBC": "WBC 18,400 with left shift. Hgb 14.1. Platelets normal.",
+      "CMP": "Na 152 (hypernatremia \u2014 poor PO intake). Cr 1.9 (AKI from rhabdo/dehydration). BUN 44. LFTs mildly elevated.",
+      "EKG": "Sinus tachycardia 118. QTc 498ms \u2014 prolonged (haloperidol effect). No ischemic changes.",
+      "Trop": "0.09 \u2014 demand from tachycardia and hyperthermia.",
+      "Lipase": "Normal.",
+      "UA": "Dark brown urine. Dipstick: 4+ blood with 0 RBCs on microscopy \u2014 myoglobinuria. Granular casts.",
+      "ABG": "pH 7.31, pCO2 38, bicarb 18 \u2014 metabolic acidosis from rhabdomyolysis and AKI.",
+      "Coags": "PT 16, INR 1.5 \u2014 early DIC from hyperthermia.",
+      "Specialty": "CK: 48,000 U/L \u2014 massive rhabdomyolysis from sustained muscle rigidity. Serum iron: markedly low (characteristic of NMS \u2014 iron drops acutely). Haloperidol level: therapeutic range. Diagnosis confirmed: Neuroleptic Malignant Syndrome (NMS). Immediate: stop haloperidol, ICU transfer, aggressive cooling, IV dantrolene 2.5mg/kg, bromocriptine. Benzodiazepines for agitation. Do NOT restart antipsychotics for minimum 2 weeks."
     },
-    "answer": "Pheochromocytoma"
+    "answer": "Neuroleptic Malignant Syndrome (NMS)"
   },
   {
     "date": "2026-04-02",
