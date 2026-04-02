@@ -209,11 +209,11 @@
   {
     "date": "2026-03-25",
     "adminScore": 60,
-    "hx_brief": "34yo female presents to rheumatology after 14 months of joint swelling, a facial rash that appeared after a beach vacation, and two episodes of pleuritis.",
+    "hx_brief": "34yo female presents to rheumatology with 14 months of joint swelling, two hospitalizations for pleuritis, and a facial rash her dermatologist called 'seborrheic dermatitis' and treated unsuccessfully. ANA sent by her PCP: positive 1:640.",
     "hints": {
-      "hx": "Rash appears specifically on sun-exposed areas and lasts days. Two painless oral ulcers in the past year. Hair thinning diffusely \u2014 clumps on pillow. She had a miscarriage at 10 weeks last year. Noticed her legs swell and urine looks frothy when she's stressed. Started hydroxychloroquine empirically 2 months ago with mild improvement. Her PCP ran an 'autoimmune panel' \u2014 ANA was 'weakly positive' but nothing further was done.",
-      "pe": "Malar erythema \u2014 butterfly distribution, sparing nasolabial folds. Two small oral ulcers on buccal mucosa. Bilateral wrist and MCP synovitis. Basilar dullness on percussion bilaterally \u2014 small pleural effusions. BP 152/96 (previously normal). 2+ pitting edema bilateral ankles.",
-      "img": "CXR: Bilateral small pleural effusions. Echo: Trace pericardial effusion. Renal ultrasound: Mildly echogenic kidneys bilaterally \u2014 nephropathy pattern. MRI Kidneys: Bilateral cortical thinning."
+      "hx": "Joint swelling in her wrists and fingers \u2014 worse in the morning, better by noon. Both pleuritis episodes required hospitalization; chest X-ray showed effusion. The facial rash appears and disappears \u2014 worse after being outdoors. She has noticed hair thinning and found two painless sores in her mouth last month. 2 years ago had a DVT with no identifiable cause \u2014 on aspirin only. Family history: mother has Hashimoto's thyroiditis.",
+      "pe": "BP 148/94. Mild malar erythema \u2014 spares nasolabial folds. No active oral ulcers now. Wrists: mild synovitis bilaterally. Hands: swelling at MCPs and PIPs \u2014 nailbed telangiectasias. Mild pitting edema lower extremities. Lungs: decreased breath sounds at left base.",
+      "img": "CXR: Small left pleural effusion. Echo: Trivial pericardial effusion. No valvular vegetations. Renal ultrasound: Normal size, normal echogenicity. No obstruction. Urinalysis microscopy: RBC casts on spin \u2014 ordered due to rising creatinine (1.4 \u2192 2.1 over 6 months)."
     },
     "specialty_name": "Renal Biopsy",
     "lab_results": {
@@ -416,11 +416,11 @@
   {
     "date": "2026-04-03",
     "adminScore": 60,
-    "hx_brief": "42yo female with known type 1 diabetes and celiac disease presents with 3 months of profound fatigue, hypotension, and weight loss. Her endocrinologist increased her insulin dose twice without improvement.",
+    "hx_brief": "42yo female with type 1 diabetes and celiac disease presents to the ED with 3 months of worsening fatigue, 14-pound weight loss, and nausea. Her endocrinologist has increased her insulin dose twice. Today her blood pressure is 78/50.",
     "hints": {
-      "hx": "Requires less insulin than ever despite unchanged diet \u2014 hypoglycemia is becoming more frequent and severe. Fatigue is profound \u2014 cannot work full days. Orthostatic \u2014 nearly faints when standing. Lost 12 pounds. Salt craving \u2014 actively adds salt to everything. Increased skin pigmentation \u2014 her spouse noticed it first. Has had autoimmune thyroid disease and celiac \u2014 both well controlled.",
-      "pe": "BP sitting 94/58, standing 72/44 (significant orthostasis). HR 108. Diffuse hyperpigmentation \u2014 especially notable in palmar creases, buccal mucosa, and a surgical scar from appendectomy (scars hyperpigment in primary adrenal insufficiency). No Cushingoid features. Axillary and pubic hair loss.",
-      "img": "CT Abdomen: Bilateral adrenal glands small and atrophic \u2014 no hemorrhage, no mass, no calcification. No lymphadenopathy. CXR: Small heart size (hypoadrenalism). MRI Pituitary: Normal \u2014 confirms primary, not secondary adrenal insufficiency."
+      "hx": "Her insulin requirements have been dropping paradoxically \u2014 she keeps having hypoglycemic episodes despite cutting her doses. She's been nauseated most mornings and has no appetite. Weight loss despite eating what she can. She craves salty foods compulsively. Her husband notices a darkening of her skin \u2014 she thinks it's from being outdoors more but she hasn't changed her routine. Has vitiligo patches on both forearms.",
+      "pe": "BP 78/50 supine, undetectable on standing. HR 128. She appears cachectic. Skin: diffuse hyperpigmentation of sun-exposed areas, palmar creases, and buccal mucosa \u2014 subtle but present. Vitiligo patches bilateral forearms. No thyromegaly. Abdomen: mild diffuse tenderness, no peritoneal signs.",
+      "img": "CXR: Normal heart size, no effusion. CT abdomen: Adrenal glands appear small and atrophic bilaterally \u2014 no mass, no hemorrhage, no calcification. Thyroid ultrasound: Heterogeneous echogenicity \u2014 consistent with autoimmune thyroiditis."
     },
     "specialty_name": "ACTH Stimulation Test",
     "lab_results": {
@@ -577,11 +577,11 @@
   {
     "date": "2026-04-10",
     "adminScore": 58,
-    "hx_brief": "72yo male with paroxysmal atrial fibrillation presents to the ED 90 minutes after sudden onset of left arm weakness and difficulty finding words. His wife called 911 immediately.",
+    "hx_brief": "72yo male with paroxysmal atrial fibrillation is brought to the ED by his wife. He was 'acting strange' \u2014 couldn't find words during dinner and kept dropping his fork on the left side. She called 911 after 20 minutes. His cardiologist had him on aspirin only.",
     "hints": {
-      "hx": "Known PAF \u2014 on aspirin only because 'his cardiologist said his risk was low' (CHA2DS2-VASc is actually 4). HTN, type 2 diabetes. Weakness came on over 30 seconds \u2014 fully abrupt. Expressive aphasia \u2014 knows what he wants to say but words won't come. Never had a TIA. Last seen normal 95 minutes ago.",
-      "pe": "BP 206/112. HR 88 irregularly irregular. NIHSS 16. Right facial droop (upper motor neuron pattern). Right arm strength 1/5. Right leg 3/5. Expressive aphasia \u2014 follows simple commands. Left gaze preference. No ataxia. No sensory deficit.",
-      "img": "CT Head (non-contrast, 15min): No hemorrhage. Subtle loss of gray-white differentiation left MCA territory \u2014 early ischemic change. ASPECTS score 7. CTA Head/Neck: Complete occlusion left MCA M1 segment. No significant extracranial carotid stenosis. CT Perfusion: Large penumbra (salvageable tissue) in left MCA territory \u2014 core infarct 18mL, penumbra 88mL."
+      "hx": "His wife says it started suddenly mid-sentence at dinner \u2014 he stopped talking, looked confused, then couldn't answer her questions correctly. He kept trying to pick up his fork with his right hand and it would fall from his left. No headache, no loss of consciousness. He has known AFib for 3 years. Also has hypertension and type 2 diabetes. His cardiologist said his stroke risk was 'manageable with aspirin' \u2014 CHA2DS2-VASc is actually 4. Last known normal: 90 minutes ago.",
+      "pe": "BP 184/106, HR 88 (irregularly irregular). Left facial droop \u2014 lower face. Left arm pronator drift \u2014 arm falls within 10 seconds. Grip strength 4/5 left, 5/5 right. Broca's aphasia \u2014 speaks in short phrases, frustrated. Follows simple commands. No gaze deviation. Left hemineglect \u2014 ignores examiner on left side.",
+      "img": "Non-contrast CT head: No hemorrhage. No early ischemic changes. CTA head and neck: Hyperdense right MCA sign \u2014 thrombus visible in M1 segment. Right MCA territory at risk. Mild atherosclerotic change in carotids bilaterally \u2014 no significant stenosis. NIHSS: 14."
     },
     "specialty_name": "Hypercoagulable Panel",
     "lab_results": {
@@ -623,11 +623,11 @@
   {
     "date": "2026-04-12",
     "adminScore": 65,
-    "hx_brief": "80yo female brought in by her son after she left the stove on three times in the past month and missed a doctor's appointment she had marked on her calendar. 'She was always so sharp.'",
+    "hx_brief": "80yo female is brought to her internist by her son. She has been living alone since her husband died 2 years ago. The son flew in from across the country after neighbors called him twice in one month \u2014 once because she left her front door open all night, once because she was 'confused' in the grocery store parking lot.",
     "hints": {
-      "hx": "Memory decline insidious over 3 years \u2014 son initially thought it was 'normal aging.' Now she cannot recall what she ate for breakfast, gets confused about the day of the week, and recently accused her cleaning lady of stealing jewelry later found in a shoebox. Still lives alone. No focal weakness, no gait disturbance, no incontinence. She passed a 'dementia screening' at her PCP 18 months ago (MMSE 26/30 at that time \u2014 missed early impairment).",
-      "pe": "MoCA: 12/30 \u2014 impaired immediate recall (1/5), delayed recall (0/5), orientation (4/6), visuospatial (1/4). MMSE 17/30. No focal motor deficits. Normal gait and coordination. No tremor. No rigidity. Frontal release signs: Snout reflex present.",
-      "img": "MRI Brain: Bilateral hippocampal volume loss disproportionate to age \u2014 medial temporal lobe atrophy. Entorhinal cortex thinning. Widened temporal horns. No strategic infarcts. No mass lesion. No hydrocephalus. Amyloid PET (florbetapir): Diffuse cortical amyloid deposition \u2014 frontal, parietal, temporal, and hippocampal regions."
+      "hx": "Son describes a 3-year decline he initially dismissed as grief after his father's death. Now she cannot recall that her husband is dead \u2014 asks where he is daily. Repeats the same questions in a single conversation. Got lost driving to her church she attended for 40 years. Found the stove on three times last month \u2014 no burns yet. Accuses her neighbor of stealing her glasses. She insists 'nothing is wrong.' ADLs declining \u2014 bills unpaid, refrigerator full of expired food. No focal deficits, no falls, no hallucinations.",
+      "pe": "Appears well-groomed today (son helped her prepare). BP 134/82. MMSE 14/30 \u2014 loses points on orientation (date, year, season), recall (0/3 at 5 min), serial 7s, and copying a pentagon. Clock drawing: Numbers bunched on right half, hands absent. No focal motor or sensory deficits. Gait: mildly shuffled but no festination. No cogwheel rigidity. No Babinski.",
+      "img": "MRI brain without contrast: Bilateral hippocampal and entorhinal cortex atrophy \u2014 disproportionate to global atrophy. Prominent medial temporal lobe sulci. Mild periventricular white matter changes (Fazekas 1 \u2014 age-appropriate). No space-occupying lesion. No hemorrhage. No infarct. No hydrocephalus. Ventricles normal size (distinguishes from NPH)."
     },
     "specialty_name": "CSF Biomarkers",
     "lab_results": {
@@ -899,11 +899,11 @@
   {
     "date": "2026-04-24",
     "adminScore": 62,
-    "hx_brief": "33yo male with 6 months of worsening exertional dyspnea and two episodes of syncope during exercise. He was told 3 years ago he had a 'heart murmur \u2014 nothing to worry about.'",
+    "hx_brief": "33yo male personal trainer presents to cardiology after his gym flagged him for 'near-syncope' during a heavy deadlift set last week. He became pale, felt his heart racing, then nearly passed out. He has been training competitively for 8 years without prior symptoms.",
     "hints": {
-      "hx": "Father died suddenly at 38 during a recreational basketball game \u2014 'cardiac arrhythmia.' Two maternal cousins have had unexplained syncope. He has had exertional presyncope for 6 months. Recently stopped playing recreational soccer because the dyspnea was affecting performance. No chest pain. No palpitations. The murmur was heard on a routine physical and dismissed without echo.",
-      "pe": "BP 124/82. HR 76. Harsh grade 3/6 systolic murmur at left sternal border \u2014 increases with standing (reduced preload \u2192 increased obstruction \u2192 louder murmur) and decreases with squatting (increased preload \u2192 decreased obstruction \u2192 softer). Sustained apical impulse. S4 gallop. No aortic click. No carotid radiation.",
-      "img": "Echo: Asymmetric septal hypertrophy \u2014 IVS 24mm (posterior wall 10mm). Ratio 2.4. LVOT peak gradient 58mmHg at rest \u2014 increases to 94mmHg with Valsalva maneuver. Systolic anterior motion (SAM) of mitral valve. Moderate MR (SAM-related). EF 78% (hyperdynamic). No aortic valve stenosis."
+      "hx": "The near-syncopal episode lasted about 30 seconds \u2014 he sat down and recovered fully. He admits to 3-4 similar episodes over the past 6 months \u2014 always during maximum exertion, never at rest. He has been ignoring them, attributing them to 'overtraining.' His father died suddenly at 38 playing recreational basketball \u2014 death certificate said 'cardiac arrhythmia.' A maternal cousin had an ICD placed at age 22 for 'a heart problem' \u2014 details unknown. He has no chest pain at rest. No palpitations he can feel.",
+      "pe": "BP 122/74. HR 58 \u2014 athletic. Harsh grade 3/6 systolic ejection murmur at the left sternal border \u2014 LOUDER when he stands from squatting (preload-dependent). SOFTER when he squats or with passive leg raise. Murmur does not radiate to carotids. No click. S4 gallop on careful auscultation. Sustained PMI.",
+      "img": "Echo: Asymmetric septal hypertrophy \u2014 interventricular septum 22mm, posterior wall 11mm. Ratio 2:1. LVEF 72% (hyperdynamic). Systolic anterior motion (SAM) of the mitral valve. Dynamic LVOT gradient at rest 42mmHg \u2014 increases to 88mmHg with Valsalva. Mild mitral regurgitation (from SAM). RV: normal. LA: mildly enlarged."
     },
     "specialty_name": "Genetic Panel",
     "lab_results": {
@@ -1014,11 +1014,11 @@
   {
     "date": "2026-04-29",
     "adminScore": 60,
-    "hx_brief": "16yo female is brought to the ED by her mother after fainting at her high school track meet. She denies anything is wrong and is upset her mother called 911.",
+    "hx_brief": "16yo female is brought to the ED by her mother after fainting at her high school track meet. She ran the 400m, finished the race, then collapsed in the infield. She is adamant she is 'completely fine' and wants to go home.",
     "hints": {
-      "hx": "She has been eating 'super healthy' for 9 months \u2014 eliminated all processed foods and most carbohydrates. Lost 28 pounds. Her mother noticed her periods stopped 5 months ago. She runs 2 hours per day, does weight training for 1 hour, and restricts intake to 'around 800 calories.' Feels cold constantly. Fine hair growing on her arms. She insists she is 'still overweight' \u2014 her current BMI is 13.6.",
-      "pe": "BMI 13.6 (severely underweight). HR 38. BP 72/44. Temperature 35.4C (hypothermic). Lanugo on forearms, back, and face. Temporal wasting. Bilateral parotid enlargement (from intermittent purging she denied initially). Yellow-orange tinge to skin (hypercarotenemia from diet high in beta-carotene). Peripheral edema bilateral ankles (hypoalbuminemia).",
-      "img": "Echo: Moderate pericardial effusion (6mm). EF 55% \u2014 preserved but with borderline diastolic dysfunction. Mitral valve prolapse. Bone densitometry (DXA): Lumbar spine T-score -3.4 \u2014 severe osteoporosis (in a 16-year-old). Femoral neck T-score -2.8."
+      "hx": "She is a varsity track athlete. Mother reports she has been eating 'very clean' for 9 months \u2014 eliminated all processed food, all carbohydrates, and has been running 2-a-day practices. Lost approximately 28 pounds over this period. Mother has noticed she wears baggy clothes now and avoids family meals with excuses. Periods stopped 5 months ago \u2014 patient says 'that's normal for athletes.' Fine downy hair appearing on her arms. She denies restricting, purging, or excessive exercise \u2014 says she is 'training like the other girls.' Mood: defensive and irritable during interview.",
+      "pe": "BP 84/56, HR 48. Temp 36.0C. BMI 14.8 \u2014 severely underweight. Appears thin in hospital gown. Lanugo on bilateral forearms and upper back. Parotid glands: mildly enlarged bilaterally. Teeth: enamel erosion on posterior surfaces. Skin: dry, sallow. Extremities: cool, mild peripheral cyanosis. No edema. Orthostatic BP drop 22mmHg.",
+      "img": "ECG: Sinus bradycardia 48bpm. QTc 498ms (prolonged \u2014 arrhythmia risk from electrolyte abnormalities). Low voltage. No ST changes. Echo: Mild mitral valve prolapse (from loss of cardiac muscle mass). Small pericardial effusion. EF preserved. Bone density scan: Z-score -2.4 at lumbar spine (osteoporosis in a 16-year-old)."
     },
     "specialty_name": "Bone Density",
     "lab_results": {
@@ -1106,11 +1106,11 @@
   {
     "date": "2026-05-03",
     "adminScore": 58,
-    "hx_brief": "33yo male with 10 weeks of bloody diarrhea is seen for the third time. His PCP has treated him twice for 'infectious gastroenteritis' \u2014 three stool cultures all negative.",
+    "hx_brief": "33yo male presents to the ED for the third time in 10 weeks. His PCP has treated him twice for 'infectious gastroenteritis' with empiric antibiotics and oral rehydration. He is now 16 pounds lighter, cannot work, and his third stool culture just came back negative.",
     "hints": {
-      "hx": "Up to 12 bloody stools per day \u2014 mucoid, urgent, cannot defer. Lost 16 pounds. Cannot work \u2014 has fecal urgency every 30-40 minutes. Also developed bilateral ankle swelling and painful red eye 2 weeks ago. NSAIDs given for ankle pain dramatically worsened diarrhea (NSAIDs can flare IBD). No recent travel. No antibiotics. No sick contacts.",
-      "pe": "Pale, tachycardic (HR 108). LLQ tenderness. No peritoneal signs. Right anterior uveitis (ciliary injection, photophobia). Bilateral ankle effusions \u2014 non-tender. Oral aphthous ulcers x2. Erythema nodosum on left anterior shin.",
-      "img": "CT Abdomen/Pelvis: Continuous colonic wall thickening rectum \u2192 splenic flexure. No skip lesions. No terminal ileal involvement. No free air. Colonoscopy: Continuous erythema, friability, and spontaneous hemorrhage from rectum extending to splenic flexure \u2014 abrupt transition to normal mucosa at splenic flexure. Rectal involvement present (no 'rectal sparing')."
+      "hx": "Up to 12 bloody stools per day \u2014 the blood is mixed with the stool, not just on the surface. Urgency so severe he cannot defer more than a few minutes. Crampy lower abdominal pain that temporarily improves after defecation. No nausea, no vomiting, no fever currently (had fever during first two episodes). He recently developed bilateral knee pain and a red eye his optometrist called 'iritis.' No travel. No sick contacts. No antibiotics before this illness started. Family history: sister has 'some kind of gut problem.'",
+      "pe": "Thin, pale. BP 104/68, HR 102. Abdomen: left lower quadrant tenderness, no guarding, no peritoneal signs. Rectal exam: bright red blood on glove. Eyes: left anterior uveitis \u2014 ciliary flush. Knees: mild effusion bilateral without warmth. Skin: two tender red nodules on bilateral shins.",
+      "img": "AXR: Colonic wall thickening visible on plain film \u2014 loss of haustral markings in the descending and sigmoid colon. No toxic megacolon (transverse colon <6cm). CT abdomen/pelvis with contrast: Continuous mucosal thickening from rectum to splenic flexure \u2014 no skip lesions. Mucosal enhancement. Pericolonic stranding. No perforation. No abscess."
     },
     "specialty_name": "Colonoscopy Biopsy",
     "lab_results": {
@@ -1290,11 +1290,11 @@
   {
     "date": "2026-05-11",
     "adminScore": 67,
-    "hx_brief": "13yo male presents with 5 days of dark urine, facial puffiness, and a 4-pound weight gain. His mother initially treated him for 'allergies.'",
+    "hx_brief": "13yo male is brought to his pediatrician with 5 days of 'Coca-Cola colored urine' and facial puffiness that his mother treated with antihistamines for 3 days without improvement. He is 4 pounds heavier than his last visit 6 weeks ago.",
     "hints": {
-      "hx": "Had a 'skin infection' on his left leg 4 weeks ago \u2014 impetigo \u2014 treated with topical mupirocin only. Facial puffiness was worse when he woke up this morning. Urine has been dark brown 'like tea' for 5 days. He gained 4 pounds in 1 week. Mild headache. No sore throat (impetigo is more commonly associated with PSGN than pharyngitis in warm climates \u2014 pharyngitis PSGN is more common in temperate climates).",
-      "pe": "BP 162/102 (hypertensive for age \u2014 BMI-adjusted). Bilateral periorbital edema most pronounced on awakening. Puffiness cheeks. 1+ pitting edema bilateral ankles. Temp 37.0C (afebrile). No respiratory distress. Fundi: normal (no papilledema).",
-      "img": "Renal ultrasound: Bilaterally enlarged, echogenic kidneys \u2014 swollen from inflammation. No hydronephrosis. No stones. Renal Doppler: Normal arterial and venous waveforms. CXR: Mild cardiomegaly from fluid overload. Small bilateral pleural effusions."
+      "hx": "Facial puffiness is worse in the morning and improves through the day. The dark urine started suddenly 5 days ago \u2014 no dysuria, no frequency, no fever. He had a skin infection on his left lower leg 4 weeks ago \u2014 looked like a crusty golden sore \u2014 treated only with topical ointment by his mother, not seen by a doctor. He has been mildly short of breath going up stairs but attributes it to 'being out of shape.' Blood pressure has never been checked before today. No prior kidney problems. No sore throat recently.",
+      "pe": "BP 158/102 (high for age \u2014 >95th percentile). Periorbital puffiness \u2014 worse on left. Mild pitting edema bilateral ankles. Lungs: crackles bilateral bases. Abdomen: mild flank tenderness bilaterally. Left lower leg: healing crusted erosion 2cm \u2014 golden-yellow crust, hyperpigmented border.",
+      "img": "CXR: Mild pulmonary vascular congestion. Small bilateral pleural effusions. Renal ultrasound: Bilateral kidneys enlarged for age \u2014 increased echogenicity (acute inflammation). No obstruction. No stones. Doppler: Elevated resistive indices bilaterally \u2014 consistent with acute nephropathy."
     },
     "specialty_name": "ASO Titer",
     "lab_results": {
@@ -1451,11 +1451,11 @@
   {
     "date": "2026-05-18",
     "adminScore": 65,
-    "hx_brief": "54yo male presents to his PCP with a 6-month history of severe right great toe pain that recurs episodically. His PCP has been treating him for 'plantar fasciitis' with orthotics and ibuprofen.",
+    "hx_brief": "54yo male construction supervisor presents to urgent care after his wife dragged him in. He has been limping for 3 days and refuses to wear shoes. His foot has been treated with orthotics and ibuprofen by his PCP for 6 months for 'plantar fasciitis' \u2014 the orthotics have never fit because of 'the bumps on his feet.'",
     "hints": {
-      "hx": "Attacks wake him from sleep \u2014 severe pain, swelling, redness of the right first MTP joint, cannot tolerate bedsheet touching it. Each attack lasts 7-10 days then fully resolves. Has had 4 attacks in 6 months. Recently started hydrochlorothiazide for hypertension (HCTZ reduces renal urate excretion). Drinks 5-6 craft beers nightly. Diet heavy in red meat and shellfish. Family history: father had 'kidney stones and joint problems.' Ibuprofen helps but is becoming less effective.",
-      "pe": "Between attacks today: right first MTP joint \u2014 mild residual tenderness, early bony enlargement. Tophi palpable: right ear helix (painless white chalky deposits), bilateral Achilles tendons (firm subcutaneous nodules). Left first MTP: chronic bony deformity. Mild bilateral ankle effusions. No skin breakdown over tophi.",
-      "img": "X-ray right foot: Periarticular lytic lesions with overhanging edges and sclerotic margins at first MTP (rat-bite erosions \u2014 pathognomonic). Soft tissue calcifications (tophi). No chondrocalcinosis (rules out CPPD). Dual-energy CT (DECT): Urate crystal deposition visualized in color coding \u2014 green deposits at first MTP, Achilles, and plantar fascia."
+      "hx": "The current attack came on overnight \u2014 he woke at 3am from deep sleep to severe pain in his right foot. By morning it was red, swollen, and he could not put on his shoe. Pain is 9/10 \u2014 cannot bear weight. He drinks 3-4 beers most evenings. Takes hydrochlorothiazide for hypertension. Has had 5-6 similar attacks over 2 years, each lasting 1-2 weeks \u2014 right foot, left ankle, and once the right knee. Between attacks he's completely normal. The 'bumps' on his feet: firm, chalky white deposits over the metatarsal heads \u2014 present for 1 year. Similar deposits on his right ear helix.",
+      "pe": "Right first MTP joint: markedly erythematous, swollen, exquisitely tender \u2014 cannot tolerate sheet touching it. Warm to palpation. ROM severely limited. Firm whitish deposits palpable over bilateral metatarsal heads and right olecranon. Right ear helix: 3mm firm white nodule. Left ankle: mild residual swelling from prior attack.",
+      "img": "X-ray right foot: Soft tissue swelling at first MTP. Punched-out erosions with overhanging edges and sclerotic borders \u2014 'rat bite' appearance at metatarsal head. Joint space preserved (distinguishes from OA and RA). Chondrocalcinosis absent. Subcortical cyst formation."
     },
     "specialty_name": "Joint Aspiration",
     "lab_results": {
@@ -1612,11 +1612,11 @@
   {
     "date": "2026-05-25",
     "adminScore": 62,
-    "hx_brief": "34yo female presents with 5 months of recurrent abdominal pain, bloating, and alternating constipation and diarrhea. She has had an extensive negative workup at two other institutions.",
+    "hx_brief": "34yo female presents to a new gastroenterologist after being told 'everything is normal' at two other institutions. She has had 5 months of debilitating abdominal pain and cannot identify a pattern \u2014 it seems to have no trigger. She was referred after her primary care noted a history of childhood sexual abuse in her chart.",
     "hints": {
-      "hx": "Pain is crampy, periumbilical and lower abdominal \u2014 worse before bowel movements, relieves with defecation. Bloating worsens with stress. No blood in stool. No nocturnal symptoms \u2014 never wakes from sleep with pain. No weight loss. No fever. 'All my tests come back normal \u2014 they think I'm making it up.' Prior extensive workup: colonoscopy normal, CT normal, CRP normal, celiac negative, H. pylori negative. History of sexual trauma at age 19. Current high-stress job. No previous diagnosis of functional GI disorder.",
-      "pe": "Diffuse mild tenderness to deep palpation \u2014 no guarding, no rebound, no organomegaly. Normal bowel sounds. Rectal exam: Normal tone, no masses. Stool: guaiac negative. Skin: no rash. No lymphadenopathy.",
-      "img": "Repeat colonoscopy (outside): Normal mucosa, normal biopsies \u2014 no microscopic colitis. Wireless motility capsule: Normal small bowel and colonic transit times. No dysmotility. Functional MRI (at academic center): Increased visceral sensitivity to balloon distension \u2014 demonstrates central sensitization."
+      "hx": "Pain is crampy, periumbilical and lower abdominal \u2014 variable in character. She has alternating constipation (sometimes 5 days without a bowel movement) and explosive diarrhea with urgency. Significant bloating \u2014 her abdomen distends visibly throughout the day. She has identified stress as a worsening factor. No blood in stool. No nocturnal symptoms \u2014 pain never wakes her. No weight loss. No fever. She has fibromyalgia and chronic pelvic pain (both diagnosed previously). She is a high-functioning attorney who works 70-hour weeks. Her prior workup included: colonoscopy (normal), CT abdomen (normal), celiac serology (negative), thyroid (normal), inflammatory markers (normal), stool cultures x3 (negative), fecal calprotectin 22.",
+      "pe": "BP 118/76, HR 80. Abdomen: diffuse mild tenderness to deep palpation \u2014 no guarding, no rigidity, no peritoneal signs. Tenderness is non-specific, reproduces her usual pain. No organomegaly. No masses. Normal bowel sounds. Rectal exam: normal tone, no masses, no blood.",
+      "img": "CT abdomen/pelvis with contrast (done today at her request): No bowel wall thickening. No mesenteric adenopathy. No mass. No obstruction. No inflammatory change. Normal appendix. Normal ovaries. Uterus normal. No free fluid. Functional constipation pattern \u2014 stool burden in ascending colon."
     },
     "specialty_name": "Fecal Calprotectin",
     "lab_results": {
