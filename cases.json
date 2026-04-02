@@ -11,9 +11,9 @@
     "specialty_name": "Cardiac MRI",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "BNP 640 pg/mL. Creatinine 1.2. Otherwise normal.",
+      "CMP": "BNP 640 pg/mL (high). Creatinine 1.2 (normal). Otherwise normal.",
       "EKG": "LVH with strain. Sinus tachycardia. Prolonged PR 220ms.",
-      "Trop": "0.06 ng/mL \u2014 chronically mildly elevated from LV wall stress.",
+      "Trop": "0.06 ng/mL (high) \u2014 chronically mildly elevated from LV wall stress.",
       "Lipase": "Normal",
       "UA": "Normal",
       "ABG": "Normal",
@@ -33,13 +33,13 @@
     },
     "specialty_name": "Pulmonary Function Tests",
     "lab_results": {
-      "CBC": "Mild normocytic anemia Hgb 10.8.",
+      "CBC": "Mild normocytic anemia \u2014 Hgb 10.8 (low).",
       "CMP": "Normal",
       "EKG": "Right axis deviation. R>S in V1. P pulmonale.",
       "Trop": "Normal",
       "Lipase": "Normal",
       "UA": "Normal",
-      "ABG": "pO2 68 on room air. A-a gradient 28.",
+      "ABG": "pO2 68 (low) on room air. A-a gradient 28 (high).",
       "Coags": "Normal",
       "Specialty": "PFTs: FVC 58% predicted. TLC 62% predicted. DLCO 42% predicted \u2014 severely reduced, out of proportion to restriction. ANA positive 1:640 nucleolar pattern. Anti-Scl-70 (anti-topoisomerase I): Positive. Anti-centromere: Negative. Consistent with diffuse cutaneous systemic sclerosis with combined ILD and pulmonary arterial hypertension."
     },
@@ -57,7 +57,7 @@
     "specialty_name": "PTH Level",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "Calcium 12.4 mg/dL (elevated). Phosphorus 1.8 (low). Creatinine 1.7 (mildly elevated). Glucose 118. Chloride 108 (hyperchloremic).",
+      "CMP": "Calcium 12.4 mg/dL (high). Phosphorus 1.8 (low). Creatinine 1.7 (high). Glucose 118. Chloride 108 (high) \u2014 hyperchloremic metabolic acidosis. Bicarbonate 18 (low).",
       "EKG": "QTc 380ms (shortened). Sinus bradycardia at 52bpm.",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -79,14 +79,14 @@
     },
     "specialty_name": "Esophagogastroscopy",
     "lab_results": {
-      "CBC": "WBC 19,400 with left shift. Hgb 14.2.",
-      "CMP": "Na 131, Cr 1.6, BUN 38. Amylase 280 (salivary isoenzyme \u2014 NOT pancreatic).",
+      "CBC": "WBC 19,400 (high) with left shift. Hgb 14.2.",
+      "CMP": "Na 131 (low). Cr 1.6 (high). BUN 38 (high). Amylase 280 (high) \u2014 salivary isoenzyme, NOT pancreatic.",
       "EKG": "Sinus tachycardia. No ischemic changes.",
-      "Trop": "0.04 \u2014 borderline, likely demand in setting of shock.",
+      "Trop": "0.04 (borderline high) \u2014 demand ischemia in setting of shock.",
       "Lipase": "Normal \u2014 critical finding. Amylase elevation is salivary, not pancreatic.",
       "UA": "Normal.",
-      "ABG": "pH 7.28, pCO2 32, pO2 68 on 6L NC. Metabolic acidosis with respiratory compensation.",
-      "Coags": "PT 16.2, INR 1.4 \u2014 early coagulopathy from sepsis.",
+      "ABG": "pH 7.28 (low). pCO2 32. pO2 68 (low) on 6L NC. Metabolic acidosis with respiratory compensation.",
+      "Coags": "PT 16.2 (high). INR 1.4 (high) \u2014 early coagulopathy from sepsis.",
       "Specialty": "Esophagogastroscopy (performed in OR): Longitudinal mucosal defect at the gastroesophageal junction, left posterolateral wall, 3cm. Surrounding tissue: necrotic, bile-stained, no active hemorrhage. Mediastinal contamination with extraluminal air confirmed. Pleural fluid pH 5.9 on intraoperative sampling. Gram stain of mediastinal fluid: mixed gram-positive and gram-negative organisms. No malignancy on frozen section."
     },
     "answer": "Boerhaave Syndrome"
@@ -103,12 +103,12 @@
     "specialty_name": "Muscle Biopsy + Genetics",
     "lab_results": {
       "CBC": "Normal.",
-      "CMP": "Lactate 4.8 mmol/L at rest (markedly elevated). Pyruvate elevated. Lactate:pyruvate ratio >20.",
+      "CMP": "Lactate 4.8 mmol/L (high \u2014 critical) at rest. Pyruvate elevated. Lactate:pyruvate ratio >20 (high).",
       "EKG": "Wolff-Parkinson-White pattern \u2014 delta waves. PR interval short.",
       "Trop": "Normal.",
       "Lipase": "Normal.",
       "UA": "Normal.",
-      "ABG": "pH 7.31, bicarb 16 \u2014 mild metabolic acidosis from lactate accumulation.",
+      "ABG": "pH 7.31 (low). Bicarb 16 (low) \u2014 mild metabolic acidosis from lactate accumulation.",
       "Coags": "Normal.",
       "Specialty": "Muscle biopsy: Ragged red fibers on Gomori trichrome stain. Subsarcolemmal mitochondrial accumulation. Electron microscopy: abnormal mitochondrial cristae. Genetic testing: m.3243A>G point mutation in MT-TL1 gene (mitochondrial tRNA-Leu). Heteroplasmy 68% in blood, 84% in muscle."
     },
@@ -125,8 +125,8 @@
     },
     "specialty_name": "Full-Thickness Gastric Biopsy",
     "lab_results": {
-      "CBC": "WBC normal. Hgb 10.2 (normocytic \u2014 protein-losing). Eosinophilia absent.",
-      "CMP": "Albumin 1.8 g/dL (severe hypoalbuminemia). Total protein 3.9. Normal LFTs. Normal renal function.",
+      "CBC": "WBC normal. Hgb 10.2 (low) \u2014 normocytic, protein-losing. Eosinophilia absent.",
+      "CMP": "Albumin 1.8 g/dL (critically low). Total protein 3.9 (low). Normal LFTs. Normal renal function.",
       "EKG": "Normal.",
       "Trop": "Normal.",
       "Lipase": "Normal.",
@@ -149,7 +149,7 @@
     "specialty_name": "Urine PBG",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "Na 122 (hyponatremia \u2014 SIADH). Mild transaminase elevation AST 62, ALT 54. Otherwise normal.",
+      "CMP": "Na 122 (low \u2014 SIADH). AST 62 (high), ALT 54 (high). Otherwise normal.",
       "EKG": "Sinus tachycardia 112bpm. No ischemic changes.",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -171,14 +171,14 @@
     },
     "specialty_name": "Blood Cultures + IR Drainage",
     "lab_results": {
-      "CBC": "WBC 28,400 with 94% PMNs and toxic granulation. Hgb 11.8. Platelets 88 (sepsis-related).",
-      "CMP": "Tbili 3.2, AST 88, ALT 72 \u2014 Lemierre hepatitis. Albumin 2.4. Cr 1.8.",
+      "CBC": "WBC 28,400 (high) with 94% PMNs and toxic granulation. Hgb 11.8 (low). Platelets 88,000 (low \u2014 sepsis-related).",
+      "CMP": "Tbili 3.2 (high). AST 88 (high), ALT 72 (high) \u2014 Lemierre hepatitis. Albumin 2.4 (low). Cr 1.8 (high).",
       "EKG": "Sinus tachycardia.",
-      "Trop": "0.06 \u2014 demand.",
+      "Trop": "0.06 (high) \u2014 demand ischemia.",
       "Lipase": "Normal.",
       "UA": "Mild pyuria.",
-      "ABG": "pH 7.32, pO2 74 on 4L \u2014 septic emboli causing V/Q mismatch.",
-      "Coags": "PT 18, INR 1.6 \u2014 sepsis coagulopathy.",
+      "ABG": "pH 7.32 (low). pO2 74 (low) on 4L \u2014 septic emboli causing V/Q mismatch.",
+      "Coags": "PT 18 (high). INR 1.6 (high) \u2014 sepsis coagulopathy.",
       "Specialty": "Blood cultures x4: Fusobacterium necrophorum \u2014 gram-negative anaerobic rod. Sensitivity: penicillin-resistant strain, susceptible to metronidazole + beta-lactam/beta-lactamase inhibitor. IR-guided drainage of parapharyngeal abscess: foul-smelling purulent material. Abscess culture: Fusobacterium necrophorum confirmed."
     },
     "answer": "Lemierre Syndrome"
@@ -217,14 +217,14 @@
     },
     "specialty_name": "Renal Biopsy",
     "lab_results": {
-      "CBC": "WBC 2.6 (leukopenia). Hgb 9.2 (normocytic). Platelets 82,000 (thrombocytopenia). Direct Coombs: Positive.",
-      "CMP": "Creatinine 2.1 (up from 0.8 one year ago). BUN 34. Albumin 2.6.",
+      "CBC": "WBC 2.6 (low \u2014 leukopenia). Hgb 9.2 (low \u2014 normocytic). Platelets 82,000 (low \u2014 thrombocytopenia). Direct Coombs: Positive.",
+      "CMP": "Creatinine 2.1 (high \u2014 up from 0.8 one year ago). BUN 34 (high). Albumin 2.6 (low).",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
-      "UA": "3+ protein. RBC casts on microscopy \u2014 nephritis. 24hr urine protein: 3.8g. Dysmorphic RBCs.",
+      "UA": "3+ protein (high). RBC casts on microscopy \u2014 nephritis. 24hr urine protein: 3.8g (high). Dysmorphic RBCs.",
       "ABG": "Normal",
-      "Coags": "aPTT prolonged 58s. Lupus anticoagulant: Positive. Anti-cardiolipin IgG: Elevated.",
+      "Coags": "aPTT 58s (high). Lupus anticoagulant: Positive. Anti-cardiolipin IgG: Elevated (high).",
       "Specialty": "Renal biopsy: Diffuse proliferative glomerulonephritis. Immunofluorescence: 'Full house' staining \u2014 IgG, IgA, IgM, C3, C1q all positive (subendothelial deposits). Electron microscopy: Subendothelial and mesangial electron-dense deposits. Wire-loop lesions on light microscopy. Anti-dsDNA: 840 IU/mL (markedly elevated). Anti-Smith: Positive. C3: 42 mg/dL (low). C4: 6 mg/dL (low). Coombs: Positive."
     },
     "answer": "Systemic Lupus Erythematosus (SLE)"
@@ -240,8 +240,8 @@
     },
     "specialty_name": "EGD Biopsy",
     "lab_results": {
-      "CBC": "Hgb 10.8 \u2014 mild normocytic anemia (occult blood loss).",
-      "CMP": "Albumin 3.1. CEA 8.4 (mildly elevated). CA19-9 normal. Otherwise normal.",
+      "CBC": "Hgb 10.8 (low) \u2014 mild normocytic anemia from occult blood loss.",
+      "CMP": "Albumin 3.1 (low-normal). CEA 8.4 (high). CA19-9 normal. Otherwise normal.",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -264,7 +264,7 @@
     "specialty_name": "Autoimmune Antibody Panel",
     "lab_results": {
       "CBC": "Normal.",
-      "CMP": "Glucose 214 (DM1). HbA1c 9.1. Otherwise normal.",
+      "CMP": "Glucose 214 (high \u2014 DM1). HbA1c 9.1 (high). Otherwise normal.",
       "EKG": "Normal.",
       "Trop": "Normal.",
       "Lipase": "Normal.",
@@ -309,14 +309,14 @@
     },
     "specialty_name": "Urine Culture",
     "lab_results": {
-      "CBC": "WBC 28,400 with 94% neutrophils and 22% bands. Hgb 11.2. Platelets 88,000 (thrombocytopenia \u2014 early DIC).",
-      "CMP": "Creatinine 4.8 (baseline estimated 1.1). BUN 92. Na 128. K 5.8. Bicarbonate 14.",
+      "CBC": "WBC 28,400 (high) with 94% neutrophils and 22% bands. Hgb 11.2 (low). Platelets 88,000 (low \u2014 early DIC).",
+      "CMP": "Creatinine 4.8 (critically high \u2014 baseline ~1.1). BUN 92 (high). Na 128 (low). K 5.8 (high). Bicarbonate 14 (low).",
       "EKG": "Sinus tachycardia 124bpm. Peaked T waves V1-V4.",
-      "Trop": "0.22 ng/mL \u2014 demand ischemia from sepsis.",
+      "Trop": "0.22 ng/mL (high) \u2014 demand ischemia from sepsis.",
       "Lipase": "Normal",
       "UA": "WBCs too numerous to count. Nitrites positive. WBC casts \u2014 infection localized to upper tract/kidney. Bacteria on unspun specimen.",
-      "ABG": "Lactate 5.8 mmol/L. pH 7.22. HCO3 12. Septic shock.",
-      "Coags": "PT 18.2s. PTT 52s. Fibrinogen 88mg/dL \u2014 DIC pattern.",
+      "ABG": "Lactate 5.8 mmol/L (critically high). pH 7.22 (low). HCO3 12 (low). Septic shock.",
+      "Coags": "PT 18.2s (high). PTT 52s (high). Fibrinogen 88mg/dL (low \u2014 critically low) \u2014 DIC pattern.",
       "Specialty": "Blood cultures x2: Preliminary Gram-negative rods (E. coli). Urine culture: >100,000 CFU/mL E. coli \u2014 ESBL producing. Oxybutynin (anticholinergic) caused urinary retention in setting of functional BPH equivalent \u2014 obstruction above which pyelonephritis developed, then seeded bloodstream. Ureteral stenting + IV ertapenem."
     },
     "answer": "Urosepsis (Obstructive Pyelonephritis)"
@@ -355,14 +355,14 @@
     },
     "specialty_name": "Fat Pad Biopsy",
     "lab_results": {
-      "CBC": "Hgb 10.8 (normocytic). WBC 6.2. Platelets normal.",
-      "CMP": "Albumin 2.2 (severely low). Total protein 8.4 (protein gap 6.2). Creatinine 1.9. ALP 240.",
+      "CBC": "Hgb 10.8 (low \u2014 normocytic). WBC 6.2. Platelets normal.",
+      "CMP": "Albumin 2.2 (critically low). Total protein 8.4 (high \u2014 protein gap 6.2). Creatinine 1.9 (high). ALP 240 (high).",
       "EKG": "Pseudo-infarction pattern: Q waves V1-V3. Low voltage in limb leads \u2014 paradoxical given LVH on echo (highly specific for infiltrative cardiomyopathy).",
-      "Trop": "0.14 ng/mL (chronically elevated).",
+      "Trop": "0.14 ng/mL (high) \u2014 chronically elevated.",
       "Lipase": "Normal",
-      "UA": "Protein 4+ on dipstick. 24hr urine protein 5.8g (nephrotic range). UPEP: Free lambda light chains (Bence Jones).",
+      "UA": "Protein 4+ on dipstick (high). 24hr urine protein 5.8g (high \u2014 nephrotic range). UPEP: Free lambda light chains (Bence Jones) \u2014 abnormal.",
       "ABG": "Normal",
-      "Coags": "Factor X activity: 28% (low \u2014 amyloid binds and inactivates factor X; specific association).",
+      "Coags": "Factor X activity: 28% (low) \u2014 amyloid binds and inactivates factor X.",
       "Specialty": "Serum free light chains: Lambda 840 mg/L. Kappa 18 mg/L. Kappa/lambda ratio: 0.02 (severely abnormal \u2014 lambda predominant). Fat pad biopsy: Congo Red stain \u2014 apple-green birefringence under polarized light. Amyloid P scintigraphy: Cardiac and renal uptake. Bone marrow: 18% lambda-restricted plasma cells."
     },
     "answer": "Amyloidosis (AL)"
@@ -378,14 +378,14 @@
     },
     "specialty_name": "CK + Dopamine Receptor Panel",
     "lab_results": {
-      "CBC": "WBC 18,400 with left shift. Hgb 14.1. Platelets normal.",
-      "CMP": "Na 152 (hypernatremia \u2014 poor PO intake). Cr 1.9 (AKI from rhabdo/dehydration). BUN 44. LFTs mildly elevated.",
+      "CBC": "WBC 18,400 (high) with left shift. Hgb 14.1. Platelets normal.",
+      "CMP": "Na 152 (high \u2014 hypernatremia). Cr 1.9 (high). BUN 44 (high). LFTs mildly elevated (high).",
       "EKG": "Sinus tachycardia 118. QTc 498ms \u2014 prolonged (haloperidol effect). No ischemic changes.",
-      "Trop": "0.09 \u2014 demand from tachycardia and hyperthermia.",
+      "Trop": "0.09 (high) \u2014 demand from tachycardia and hyperthermia.",
       "Lipase": "Normal.",
-      "UA": "Dark brown urine. Dipstick: 4+ blood with 0 RBCs on microscopy \u2014 myoglobinuria. Granular casts.",
-      "ABG": "pH 7.31, pCO2 38, bicarb 18 \u2014 metabolic acidosis from rhabdomyolysis and AKI.",
-      "Coags": "PT 16, INR 1.5 \u2014 early DIC from hyperthermia.",
+      "UA": "Dark brown urine. Dipstick: 4+ blood (high) with 0 RBCs on microscopy \u2014 myoglobinuria. Granular casts.",
+      "ABG": "pH 7.31 (low). pCO2 38. Bicarb 18 (low) \u2014 metabolic acidosis from rhabdomyolysis and AKI.",
+      "Coags": "PT 16 (high). INR 1.5 (high) \u2014 early DIC from hyperthermia.",
       "Specialty": "CK: 48,000 U/L (massively elevated \u2014 rhabdomyolysis from sustained muscular rigidity). Serum iron: 14 \u00b5g/dL (markedly low \u2014 iron drops acutely in this condition, pathophysiology unclear). Haloperidol level: therapeutic range (1.2 ng/mL). Urine myoglobin: Positive \u2014 confirms myoglobinuria. Aldolase: Markedly elevated. LDH: 2,800 U/L. Repeat CK at 12 hours: 62,000 U/L (still rising). Creatinine rising \u2014 myoglobin-induced nephropathy developing."
     },
     "answer": "Neuroleptic Malignant Syndrome (NMS)"
@@ -401,8 +401,8 @@
     },
     "specialty_name": "EGD Biopsy",
     "lab_results": {
-      "CBC": "Hgb 8.2 \u2014 microcytic (MCV 68). Ferritin 2 (severely depleted).",
-      "CMP": "Albumin 2.0 (severely low). Ca 11.8 (elevated \u2014 PTHrP). CEA 18.4 (elevated). SCC antigen elevated.",
+      "CBC": "Hgb 8.2 (low \u2014 microcytic, MCV 68). Ferritin 2 (critically depleted).",
+      "CMP": "Albumin 2.0 (critically low). Ca 11.8 (high). CEA 18.4 (high). SCC antigen elevated (high).",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -424,8 +424,8 @@
     },
     "specialty_name": "ACTH Stimulation Test",
     "lab_results": {
-      "CBC": "Mild normocytic anemia Hgb 10.4. Mild eosinophilia 8%.",
-      "CMP": "Na 126 (hyponatremia). K 5.8 (hyperkalemia). Glucose 62 (hypoglycemia). BUN/Cr ratio elevated \u2014 prerenal.",
+      "CBC": "Mild normocytic anemia \u2014 Hgb 10.4 (low). Eosinophilia 8% (high).",
+      "CMP": "Na 126 (low \u2014 hyponatremia). K 5.8 (high \u2014 hyperkalemia). Glucose 62 (low \u2014 hypoglycemia). BUN/Cr ratio elevated (high) \u2014 prerenal.",
       "EKG": "Sinus tachycardia. Peaked T waves from hyperkalemia.",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -447,12 +447,12 @@
     },
     "specialty_name": "Mesenteric Angiography",
     "lab_results": {
-      "CBC": "WBC 13,200. Eosinophilia absent. Hgb 10.4 (anemia of chronic inflammation).",
-      "CMP": "Cr 2.1 (renal involvement). BUN 34. Elevated ESR 88, CRP 64.",
+      "CBC": "WBC 13,200 (high). Eosinophilia absent. Hgb 10.4 (low).",
+      "CMP": "Cr 2.1 (high). BUN 34 (high). ESR 88 (high). CRP 64 (high).",
       "EKG": "Normal.",
       "Trop": "Normal.",
       "Lipase": "Normal.",
-      "UA": "3+ blood, 2+ protein \u2014 renal arteritis with infarction, not glomerulonephritis.",
+      "UA": "3+ blood (high). 2+ protein (high) \u2014 renal arteritis with infarction, not glomerulonephritis.",
       "ABG": "Normal.",
       "Coags": "Normal.",
       "Specialty": "Mesenteric angiography: Multiple saccular microaneurysms at vessel bifurcations throughout the celiac, SMA, and renal arterial beds. Classic 'string of beads' pattern. ANCA: negative (p-ANCA and c-ANCA). HBsAg positive \u2014 HBV-associated PAN. Hepatitis B DNA: 2.4 million IU/mL."
@@ -470,14 +470,14 @@
     },
     "specialty_name": "Duodenal Biopsy",
     "lab_results": {
-      "CBC": "Hgb 7.2 \u2014 microcytic (MCV 64). Ferritin 3. Folate deficient. B12 borderline low.",
-      "CMP": "Albumin 2.3. Calcium 7.0 (hypocalcemia \u2014 malabsorption). Magnesium 1.1 (low). ALP 210 (elevated \u2014 bone turnover from vitamin D deficiency). Vitamin D 8 ng/mL (severely deficient).",
+      "CBC": "Hgb 7.2 (critically low \u2014 microcytic, MCV 64). Ferritin 3 (critically depleted). Folate deficient (low). B12 borderline low.",
+      "CMP": "Albumin 2.3 (low). Calcium 7.0 (low \u2014 hypocalcemia from malabsorption). Magnesium 1.1 (low). ALP 210 (high \u2014 bone turnover from vitamin D deficiency).",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
       "UA": "Normal",
       "ABG": "Normal",
-      "Coags": "PT 16.8s \u2014 vitamin K malabsorption.",
+      "Coags": "PT 16.8s (high) \u2014 vitamin K malabsorption.",
       "Specialty": "IgA anti-tissue transglutaminase (tTG): 218 U/mL (strongly positive; normal <4). Total IgA: Normal (ruling out IgA deficiency as false-negative cause). Skin biopsy (elbow): Direct immunofluorescence \u2014 granular IgA deposits at dermal-epidermal junction (dermatitis herpetiformis \u2014 pathognomonic for celiac disease). Duodenal biopsy: Marsh 3c \u2014 total villous atrophy, crypt hyperplasia. Intraepithelial lymphocytosis."
     },
     "answer": "Celiac Disease"
@@ -494,12 +494,12 @@
     "specialty_name": "Urine Electrolytes",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "Creatinine 3.4 (up from baseline 1.8 over 3 weeks). BUN 88. BUN:Cr ratio 26 (>20 \u2014 prerenal). Potassium 6.4 (dangerous). Bicarbonate 16. Na 132.",
+      "CMP": "Creatinine 3.4 (high \u2014 up from baseline 1.8). BUN 88 (high). BUN:Cr ratio 26 (high \u2014 >20, prerenal). Potassium 6.4 (critically high).",
       "EKG": "Peaked T waves V2-V4. Widened QRS 114ms. Sinus tachycardia \u2014 hyperkalemia emergency.",
       "Trop": "Normal",
       "Lipase": "Normal",
       "UA": "Hyaline casts only. No granular casts. No RBC casts. Urine osmolality 640 mOsm/kg (concentrating \u2014 tubules intact).",
-      "ABG": "pH 7.22. HCO3 16. pCO2 38 \u2014 metabolic acidosis.",
+      "ABG": "pH 7.22 (low). HCO3 16 (low). pCO2 38 \u2014 metabolic acidosis.",
       "Coags": "Normal",
       "Specialty": "Spot urine sodium: 4 mEq/L. FeNa: 0.2% (confirms prerenal \u2014 tubular reabsorption intact). FEUrea: 24% (also prerenal). Mechanism: COX-2 inhibitor (celecoxib) \u2014 same mechanism as non-selective NSAIDs \u2014 blocks prostaglandin-mediated afferent arteriolar dilation. In combination with ACE inhibitor (efferent dilation blocked) and diuretic (volume depletion) = 'triple whammy' nephrotoxicity. Celecoxib NOT safer than non-selective NSAIDs in CKD patients on ACEi/diuretics."
     },
@@ -539,12 +539,12 @@
     },
     "specialty_name": "SPEP",
     "lab_results": {
-      "CBC": "Hgb 7.0 \u2014 normocytic. WBC 3.8. Platelets 102,000. Peripheral smear: Rouleaux formation (RBCs stacking like coins).",
-      "CMP": "Calcium 14.6 (markedly elevated). Creatinine 3.4. Total protein 11.8. Albumin 2.4. Globulin gap 9.4. LDH 680.",
+      "CBC": "Hgb 7.0 (critically low \u2014 normocytic). WBC 3.8 (low). Platelets 102,000 (low). Peripheral smear: Rouleaux formation.",
+      "CMP": "Calcium 14.6 (critically high). Creatinine 3.4 (high). Total protein 11.8 (high). Albumin 2.4 (low). Globulin gap 9.4 (high). LDH 680 (high).",
       "EKG": "Shortened QTc 340ms \u2014 hypercalcemia.",
       "Trop": "Normal",
       "Lipase": "Normal",
-      "UA": "Protein 4+ by dipstick. SSA test: Negative for albumin (Bence Jones proteins \u2014 light chains \u2014 not detected by dipstick sulfosalicylic acid precipitation \u2014 a classic trap).",
+      "UA": "Protein 4+ by dipstick (high). SSA test: Negative for albumin \u2014 Bence Jones proteins present (light chains not detected by standard dipstick).",
       "ABG": "Normal",
       "Coags": "Normal",
       "Specialty": "SPEP: IgG kappa M-spike 5.2 g/dL. UPEP: Bence Jones proteinuria \u2014 free kappa light chains. Beta-2 microglobulin: 9.2 mg/L (markedly elevated \u2014 adverse prognosis). Bone marrow biopsy: 52% clonal plasma cells. FISH: t(4;14) and del(17p) \u2014 double-hit high-risk cytogenetics. R-ISS Stage III. CRAB criteria all present: hyperCalcemia, Renal failure, Anemia, Bone lesions."
@@ -586,9 +586,9 @@
     "specialty_name": "Hypercoagulable Panel",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "Glucose 178. Creatinine 1.2.",
+      "CMP": "Glucose 178 (high). Creatinine 1.2.",
       "EKG": "Atrial fibrillation \u2014 irregularly irregular, no P waves, rate 88bpm.",
-      "Trop": "0.06 ng/mL \u2014 demand, not ACS.",
+      "Trop": "0.06 ng/mL (high) \u2014 demand, not ACS.",
       "Lipase": "Normal",
       "UA": "Normal",
       "ABG": "Normal",
@@ -608,8 +608,8 @@
     },
     "specialty_name": "Lymph Node Biopsy",
     "lab_results": {
-      "CBC": "WBC 15,200 with eosinophilia 16% (absolute eosinophilia \u2014 paraneoplastic). Hgb 10.4. Platelets 480,000 (reactive thrombocytosis).",
-      "CMP": "LDH 580 (elevated). Albumin 2.6. ESR 92mm/hr.",
+      "CBC": "WBC 15,200 (high) with eosinophilia 16% (high \u2014 absolute eosinophilia, paraneoplastic). Hgb 10.4 (low). Platelets 480,000 (high \u2014 reactive thrombocytosis).",
+      "CMP": "LDH 580 (high). Albumin 2.6 (low). ESR 92mm/hr (high).",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -678,12 +678,12 @@
     "specialty_name": "BNP",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "Na 126 (dilutional hyponatremia \u2014 poor prognostic sign in CHF). Creatinine 2.8 (cardiorenal syndrome). BUN 72. Albumin 3.0. AST 148, ALT 112 (congestive hepatopathy).",
+      "CMP": "Na 126 (low \u2014 dilutional hyponatremia, poor prognostic sign). Creatinine 2.8 (high \u2014 cardiorenal syndrome). BUN 72 (high). Albumin 3.0 (low-normal).",
       "EKG": "Atrial fibrillation with rapid ventricular response. LBBB (paced rhythm from CRT). QRS 168ms.",
-      "Trop": "0.22 ng/mL (chronically elevated from myocardial wall stress \u2014 not acute MI).",
+      "Trop": "0.22 ng/mL (high) \u2014 chronically elevated from myocardial wall stress, not acute MI.",
       "Lipase": "Normal",
       "UA": "Normal",
-      "ABG": "pO2 58 on 6L NC. pH 7.34 \u2014 mild respiratory acidosis from pulmonary edema.",
+      "ABG": "pO2 58 (low) on 6L NC. pH 7.34 (low) \u2014 mild respiratory acidosis from pulmonary edema.",
       "Coags": "Normal",
       "Specialty": "BNP: 6,800 pg/mL (severely elevated). NT-proBNP: >35,000 pg/mL. PA catheter (Swan-Ganz): PCWP 30mmHg (severely elevated). CO 2.8 L/min (reduced). SVR 2,200 dynes (markedly elevated \u2014 cardiogenic shock physiology).  Requires IV diuresis + vasodilators; consider inotrope or mechanical circulatory support."
     },
@@ -700,14 +700,14 @@
     },
     "specialty_name": "Emergent Mesenteric Angiography",
     "lab_results": {
-      "CBC": "WBC 24,600 \u2014 leukocytosis from bowel ischemia. Hgb 11.2.",
-      "CMP": "Lactate 7.8 mmol/L \u2014 critical. BUN 44, Cr 2.1. Phosphate 6.8 \u2014 elevated phosphate from ischemic bowel cell death.",
+      "CBC": "WBC 24,600 (high) \u2014 leukocytosis from bowel ischemia. Hgb 11.2 (low).",
+      "CMP": "Lactate 7.8 mmol/L (critically high). BUN 44 (high). Cr 2.1 (high). Phosphate 6.8 (high) \u2014 ischemic bowel cell death.",
       "EKG": "Atrial fibrillation, rate 112. No ischemic changes.",
-      "Trop": "0.18 \u2014 demand ischemia.",
+      "Trop": "0.18 (high) \u2014 demand ischemia.",
       "Lipase": "Normal \u2014 critical finding ruling out pancreatitis.",
       "UA": "Normal.",
-      "ABG": "pH 7.18, bicarb 10, lactate 7.8 \u2014 severe metabolic acidosis from bowel ischemia.",
-      "Coags": "INR 3.2 \u2014 anticoagulated, yet embolic event still occurred (AF with low EF \u2014 clot despite warfarin).",
+      "ABG": "pH 7.18 (critically low). Bicarb 10 (critically low). Lactate 7.8 (critically high) \u2014 severe metabolic acidosis from bowel ischemia.",
+      "Coags": "INR 3.2 (high) \u2014 anticoagulated, yet embolic event still occurred.",
       "Specialty": "Emergent mesenteric angiography: SMA embolus confirmed at the origin of the middle colic artery. Catheter-directed thrombolysis initiated. Repeat imaging 6 hours: partial recanalization \u2014 40% residual stenosis. Exploratory laparotomy: 80cm necrotic mid-jejunum resected. Patient survived with short bowel syndrome."
     },
     "answer": "Mesenteric Ischemia (Acute)"
@@ -724,7 +724,7 @@
     "specialty_name": "24hr Urine 5-HIAA",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "ALP 320 (elevated \u2014 hepatic metastases). Otherwise normal.",
+      "CMP": "ALP 320 (high \u2014 hepatic metastases). Otherwise normal.",
       "EKG": "Normal sinus rhythm.",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -770,12 +770,12 @@
     "specialty_name": "Myositis Antibody Panel",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "CK: 8,200 U/L (markedly elevated). AST 320, ALT 280 (muscle origin \u2014 not hepatic; LDH elevated confirms). Aldolase: 42 U/L (elevated \u2014 myopathy).",
+      "CMP": "CK 8,200 U/L (critically high). AST 320 (high), ALT 280 (high) \u2014 muscle origin. Aldolase 42 U/L (high).",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
       "UA": "Myoglobinuria \u2014 blood 3+ on dipstick with no RBCs on microscopy.",
-      "ABG": "pO2 70 on room air \u2014 ILD causing hypoxemia.",
+      "ABG": "pO2 70 (low) on room air \u2014 ILD causing hypoxemia.",
       "Coags": "Normal",
       "Specialty": "Anti-Jo-1 antibody: Positive (antisynthetase antibody \u2014 associated with ILD, mechanic's hands, arthritis, Raynaud's + myositis = antisynthetase syndrome). Anti-Mi-2: Negative. Anti-MDA5: Negative. Anti-SRP: Negative. ANA: Positive 1:320 speckled. Muscle biopsy: Perifascicular atrophy and necrosis \u2014 perifascicular pattern pathognomonic for dermatomyositis (distinguishes from polymyositis and IBM). EMG: Myopathic \u2014 short-duration low-amplitude polyphasic MUPs. CT abdomen/pelvis: No occult malignancy (malignancy screening required in DM >40yo)."
     },
@@ -793,7 +793,7 @@
     "specialty_name": "Corneal Scraping Culture",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "Glucose 242 (poorly controlled diabetes \u2014 impairs corneal healing and immune response).",
+      "CMP": "Glucose 242 (high) \u2014 poorly controlled diabetes.",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -815,8 +815,8 @@
     },
     "specialty_name": "BCR-ABL PCR",
     "lab_results": {
-      "CBC": "WBC 284,000 \u2014 full myeloid spectrum: neutrophils, bands, metamyelocytes, myelocytes, promyelocytes, blasts <5%, basophilia 12% (basophilia is characteristic). Hgb 9.4. Platelets 980,000 (thrombocytosis).",
-      "CMP": "Uric acid 11.8 (hyperuricemia from high cell turnover). LDH 2,100 (elevated). B12 markedly elevated >2,000 pg/mL (released from granulocytes \u2014 marker of myeloid expansion). Creatinine 1.1.",
+      "CBC": "WBC 284,000 (critically high) \u2014 full myeloid spectrum: neutrophils, bands, metamyelocytes, myelocytes, promyelocytes, blasts <5%, basophilia 12% (high). Hgb 9.4 (low). Platelets 980,000 (high \u2014 thrombocytosis).",
+      "CMP": "Uric acid 11.8 (high \u2014 hyperuricemia from high cell turnover). LDH 2,100 (high). B12 markedly elevated >2,000 pg/mL (high \u2014 released from granulocytes). Creatinine 1.1.",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Pseudonormally low lipase \u2014 WBCs consume lipase (artifact of massive leukocytosis \u2014 leukocyte larceny).",
@@ -839,12 +839,12 @@
     "specialty_name": "Cardiac MRI",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "Na 128 (dilutional). Creatinine 1.6. BUN 42.",
+      "CMP": "Na 128 (low \u2014 dilutional). Creatinine 1.6 (high). BUN 42 (high).",
       "EKG": "Sinus tachycardia 112bpm. Diffuse low voltage. Non-specific ST changes. Frequent PVCs.",
-      "Trop": "0.32 ng/mL (elevated \u2014 myocardial injury from inflammatory process).",
+      "Trop": "0.32 ng/mL (high) \u2014 myocardial injury from inflammatory process.",
       "Lipase": "Normal",
       "UA": "Normal",
-      "ABG": "pO2 68 on room air.",
+      "ABG": "pO2 68 (low) on room air.",
       "Coags": "Normal",
       "Specialty": "BNP: 5,200 pg/mL (severely elevated). NT-proBNP: 28,000 pg/mL. Cardiac MRI: LVEF 18%. Diffuse myocardial edema on T2 mapping \u2014 suggests active myocarditis. Prolactin: 92 ng/mL (elevated \u2014 still nursing). Anti-cardiac antibody panel: Negative. Viral myocarditis panel: Negative. Endomyocardial biopsy: Mild lymphocytic infiltration \u2014 consistent with peripartum cardiomyopathy. Bromocriptine (prolactin inhibitor) added \u2014 evidence suggests prolactin 16-kDa cleavage product is pathogenic. Prognosis: ~50% recover EF with treatment."
     },
@@ -861,13 +861,13 @@
     },
     "specialty_name": "Right Heart Catheterization",
     "lab_results": {
-      "CBC": "Hgb 18.4 \u2014 polycythemia (secondary, from chronic hypoxemia \u2014 EPO-driven).",
+      "CBC": "Hgb 18.4 (high \u2014 secondary polycythemia from chronic hypoxemia).",
       "CMP": "Normal",
       "EKG": "Right axis deviation. RVH pattern. P pulmonale. Right bundle branch block.",
-      "Trop": "0.06 ng/mL \u2014 RV strain.",
+      "Trop": "0.06 ng/mL (high) \u2014 RV strain.",
       "Lipase": "Normal",
       "UA": "Normal",
-      "ABG": "pH 7.34. pO2 52. pCO2 58 (hypercapnia \u2014 chronic hypoventilation). HCO3 34 (metabolic compensation). O2 sat 88%.",
+      "ABG": "pH 7.34 (low-normal). pO2 52 (critically low). pCO2 58 (high \u2014 chronic hypoventilation). HCO3 34 (high \u2014 metabolic compensation). O2 sat 88% (low).",
       "Coags": "Normal",
       "Specialty": "Sleep study: AHI 68 events/hour (severe OSA). O2 nadir 68%. Right heart catheterization: mPAP 52mmHg (severely elevated). PCWP 12mmHg (normal \u2014 pre-capillary). PVR 8.2 Wood units. CO 3.8 L/min (reduced). Confirms group 3 pulmonary hypertension (from OSA/obesity hypoventilation). CPAP/BiPAP titration + weight loss are primary treatments. Pulmonary vasodilators contraindicated in group 3 PH unless concurrent group 1 PAH confirmed."
     },
@@ -884,13 +884,13 @@
     },
     "specialty_name": "Cortisol + ACTH Stimulation",
     "lab_results": {
-      "CBC": "WBC 14,200 with eosinophilia (12%) \u2014 eosinophilia in adrenal crisis is characteristic. Hgb 13.1.",
-      "CMP": "Na 124 (hyponatremia). K 6.2 (hyperkalemia). Glucose 54 (hypoglycemia). Cr 2.4 (prerenal from hypoperfusion). BUN 52.",
+      "CBC": "WBC 14,200 (high) with eosinophilia 12% (high). Hgb 13.1.",
+      "CMP": "Na 124 (low \u2014 hyponatremia). K 6.2 (high \u2014 hyperkalemia). Glucose 54 (low \u2014 hypoglycemia). Cr 2.4 (high). BUN 52 (high).",
       "EKG": "Peaked T waves \u2014 hyperkalemia. QRS widening 122ms. PR prolongation.",
-      "Trop": "0.06 \u2014 demand.",
+      "Trop": "0.06 (high) \u2014 demand.",
       "Lipase": "Normal.",
       "UA": "Concentrated. No infection.",
-      "ABG": "pH 7.22, bicarb 11 \u2014 metabolic acidosis from hypoperfusion and mineralocorticoid deficiency.",
+      "ABG": "pH 7.22 (low). Bicarb 11 (low) \u2014 metabolic acidosis from hypoperfusion and mineralocorticoid deficiency.",
       "Coags": "Normal.",
       "Specialty": "Random cortisol: 1.2 mcg/dL (critically low; normal stress response >18). ACTH stimulation test (250\u00b5g cosyntropin): cortisol rises only to 3.4 mcg/dL at 60 minutes (normal >18 \u2014 failed response). ACTH level: Undetectable (<5 pg/mL). Aldosterone: Low-normal (mineralocorticoid axis relatively preserved). Renin: Normal. Thyroid function: Normal. Morning cortisol after 100mg IV hydrocortisone: BP recovered to 108/72 within 90 minutes \u2014 confirms cortisol deficiency as the cause of hemodynamic collapse."
     },
@@ -930,14 +930,14 @@
     },
     "specialty_name": "Small Bowel Biopsy (PAS Stain)",
     "lab_results": {
-      "CBC": "WBC 11,400. Hgb 9.2 (malabsorption anemia). Lymphopenia 600.",
-      "CMP": "Albumin 1.6 (severe malnutrition). Low cholesterol (fat malabsorption). Normal LFTs.",
+      "CBC": "WBC 11,400. Hgb 9.2 (low). Lymphopenia 600 (low).",
+      "CMP": "Albumin 1.6 (critically low). Cholesterol low (low \u2014 fat malabsorption). Normal LFTs.",
       "EKG": "Normal.",
       "Trop": "Normal.",
       "Lipase": "Normal.",
       "UA": "Normal.",
       "ABG": "Normal.",
-      "Coags": "PT elevated \u2014 vitamin K malabsorption.",
+      "Coags": "PT elevated (high) \u2014 vitamin K malabsorption.",
       "Specialty": "Small bowel biopsy with PAS stain: Lamina propria densely packed with foamy macrophages containing PAS-positive, diastase-resistant intracellular granules \u2014 organisms resist normal phagolysosomal digestion. Villous blunting with lymphatic dilation. Electron microscopy: Trilamellar cell wall organisms (1-2\u00b5m) within macrophages. PCR of duodenal biopsy: Tropheryma whipplei DNA \u2014 POSITIVE (specific). CSF PCR: Tropheryma whipplei \u2014 POSITIVE (CNS involvement confirmed). Stool culture: Negative for pathogens. HIV: Negative."
     },
     "answer": "Whipple Disease"
@@ -953,7 +953,7 @@
     },
     "specialty_name": "Anti-CCP",
     "lab_results": {
-      "CBC": "Hgb 10.6 \u2014 normocytic anemia of chronic disease. Thrombocytosis 560,000 (reactive).",
+      "CBC": "Hgb 10.6 (low) \u2014 normocytic anemia of chronic disease. Thrombocytosis 560,000 (high \u2014 reactive).",
       "CMP": "Normal",
       "EKG": "Normal",
       "Trop": "Normal",
@@ -977,12 +977,12 @@
     "specialty_name": "Cardiac Catheterization",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "BNP 920 pg/mL (elevated \u2014 LV decompensation). Creatinine 1.2.",
+      "CMP": "BNP 920 pg/mL (high \u2014 LV decompensation). Creatinine 1.2.",
       "EKG": "LVH with strain pattern. Sinus tachycardia. Prolonged PR 240ms.",
-      "Trop": "0.10 ng/mL \u2014 elevated from LV wall stress.",
+      "Trop": "0.10 ng/mL (high) \u2014 elevated from LV wall stress.",
       "Lipase": "Normal",
       "UA": "Normal",
-      "ABG": "pO2 76 on room air.",
+      "ABG": "pO2 76 (low-normal) on room air.",
       "Coags": "Normal",
       "Specialty": "Cardiac catheterization: Gorlin formula \u2014 regurgitant fraction 60%. LVEDP 28mmHg (elevated \u2014 failing LV). CO 3.4 L/min (reduced). No significant CAD. Aortic root 5.2cm confirmed. Surgical indication: EF <50% AND/OR LVIDd >65mm AND/OR symptoms. All three criteria met. Bentall procedure planned (aortic valve + aortic root replacement with graft) \u2014 not TAVR, given young age and root aneurysm requiring surgical repair. Four-year delay without monitoring allowed silent decompensation."
     },
@@ -999,7 +999,7 @@
     },
     "specialty_name": "Blood Culture",
     "lab_results": {
-      "CBC": "WBC 26,800 with 92% PMNs. Bands 20%. ESR 132mm/hr. CRP 220mg/L.",
+      "CBC": "WBC 26,800 (high) with 92% PMNs. Bands 20% (high). ESR 132mm/hr (high). CRP 220mg/L (high).",
       "CMP": "Normal",
       "EKG": "Normal",
       "Trop": "Normal",
@@ -1022,14 +1022,14 @@
     },
     "specialty_name": "Bone Density",
     "lab_results": {
-      "CBC": "WBC 2.6 (leukopenia \u2014 hypocellular marrow). Hgb 8.8 (normocytic). Platelets 68,000 \u2014 pancytopenia from starvation-induced marrow suppression.",
-      "CMP": "Na 128. K 2.4 (dangerous hypokalemia \u2014 arrhythmia risk). Glucose 38 (hypoglycemia). Phosphorus 1.2 (low \u2014 refeeding syndrome risk). Albumin 2.0 (severely low). Cholesterol 306 (paradoxically elevated \u2014 from abnormal lipid metabolism in starvation).",
+      "CBC": "WBC 2.6 (low \u2014 leukopenia). Hgb 8.8 (low \u2014 normocytic). Platelets 68,000 (low) \u2014 pancytopenia from starvation-induced marrow suppression.",
+      "CMP": "Na 128 (low). K 2.4 (critically low \u2014 dangerous hypokalemia, arrhythmia risk). Glucose 38 (critically low). Phosphorus 1.2 (low \u2014 refeeding syndrome risk). Albumin 2.0 (critically low). Cholesterol 306 (high \u2014 paradoxically elevated from abnormal lipid metabolism in starvation).",
       "EKG": "Sinus bradycardia 36bpm. QTc 524ms (critically prolonged \u2014 risk of Torsades de Pointes). ST depression V4-V6.",
       "Trop": "Normal",
       "Lipase": "Normal",
-      "UA": "Specific gravity 1.003 (maximally dilute \u2014 inability to concentrate). Ketones 4+.",
+      "UA": "Specific gravity 1.003 (low \u2014 maximally dilute, inability to concentrate). Ketones 4+ (high).",
       "ABG": "Normal",
-      "Coags": "PT 17.2s \u2014 vitamin K malabsorption.",
+      "Coags": "PT 17.2s (high) \u2014 vitamin K malabsorption.",
       "Specialty": "LH: 0.4 mIU/mL (suppressed). FSH: 0.6 mIU/mL (suppressed). Estradiol: <10 pg/mL (undetectable). IGF-1: markedly low. Cortisol: 32 \u00b5g/dL (elevated \u2014 stress response). Prolactin: Low. Hypothalamic amenorrhea from caloric restriction. T3: 0.4 ng/mL (low \u2014 euthyroid sick syndrome from starvation). TSH: Normal (central adaptation). Confirmed anorexia nervosa \u2014 restricting type (purging denied initially but parotid enlargement suggests mixed type)."
     },
     "answer": "Anorexia Nervosa"
@@ -1045,14 +1045,14 @@
     },
     "specialty_name": "Paracentesis",
     "lab_results": {
-      "CBC": "WBC 3.2 (hypersplenism). Hgb 8.8 (GI blood loss + anemia of chronic disease). Platelets 62,000.",
-      "CMP": "Total bilirubin 4.8. Direct 3.2. Albumin 2.0. INR 2.4 (synthetic dysfunction). Creatinine 1.6 (hepatorenal physiology). Na 128. Ammonia 142 \u00b5mol/L (elevated \u2014 encephalopathy).",
+      "CBC": "WBC 3.2 (low \u2014 hypersplenism). Hgb 8.8 (low). Platelets 62,000 (low).",
+      "CMP": "Total bilirubin 4.8 (high). Direct 3.2 (high). Albumin 2.0 (critically low). INR 2.4 (high \u2014 synthetic dysfunction). Creatinine 1.6 (high). Na 128 (low). Ammonia 142 \u00b5mol/L (high) \u2014 encephalopathy.",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
       "UA": "Urine Na <10 mEq/L \u2014 avid sodium retention (hepatorenal physiology).",
       "ABG": "Normal",
-      "Coags": "INR 2.4 \u2014 hepatic synthetic failure.",
+      "Coags": "INR 2.4 (high) \u2014 hepatic synthetic failure.",
       "Specialty": "Diagnostic paracentesis: SAAG 1.6 g/dL (\u22651.1 \u2014 portal hypertension confirmed). Total ascites protein: 1.2 g/dL. Ascites WBC: 180 cells/\u00b5L (PMN 120 \u2014 below 250 PMN threshold, not yet SBP). Culture: No growth. Hepatitis serology: IgM anti-HAV: POSITIVE (acute infection). IgG anti-HAV: Positive (confirms active primary infection, not prior immunity alone). HBsAg: Positive (chronic carrier \u2014 superinfection). HCV: Negative. AFP: 24 ng/mL \u2014 elevated, hepatocellular carcinoma surveillance required given cirrhosis."
     },
     "answer": "Hepatitis A"
@@ -1094,7 +1094,7 @@
       "CBC": "Normal postpartum.",
       "CMP": "Normal.",
       "EKG": "ST elevation in V3-V5, T-wave inversions diffusely. QTc prolonged 510ms.",
-      "Trop": "Troponin I 18.4 ng/mL \u2014 markedly elevated, disproportionately LOW relative to the degree of wall motion abnormality (hallmark of Takotsubo).",
+      "Trop": "Troponin I 18.4 ng/mL (high \u2014 markedly elevated, but disproportionately LOW relative to degree of wall motion abnormality \u2014 hallmark of Takotsubo).",
       "Lipase": "Normal.",
       "UA": "Normal.",
       "ABG": "Normal.",
@@ -1114,8 +1114,8 @@
     },
     "specialty_name": "Colonoscopy Biopsy",
     "lab_results": {
-      "CBC": "Hgb 8.0 (normocytic \u2014 blood loss + anemia of chronic disease). WBC 18,200. Platelets 740,000 (reactive thrombocytosis).",
-      "CMP": "Albumin 1.8 (severely low \u2014 protein-losing enteropathy). CRP 118 mg/L. ESR 128mm/hr.",
+      "CBC": "Hgb 8.0 (low). WBC 18,200 (high). Platelets 740,000 (high \u2014 reactive thrombocytosis).",
+      "CMP": "Albumin 1.8 (critically low). CRP 118 mg/L (high). ESR 128mm/hr (high).",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -1184,7 +1184,7 @@
     "specialty_name": "UGT1A1 Genotype",
     "lab_results": {
       "CBC": "Normal \u2014 reticulocyte count 1.2% (normal). Haptoglobin: 88 mg/dL (normal). Direct Coombs: Negative. Peripheral smear: No spherocytes, no schistocytes, no elliptocytes \u2014 hemolysis ruled out.",
-      "CMP": "Total bilirubin: 4.8 mg/dL. Direct (conjugated): 0.4 mg/dL (normal). Indirect (unconjugated): 4.4 mg/dL (markedly elevated). ALT 18, AST 22, ALP 62, GGT 14 \u2014 all completely normal. PT/INR: Normal. Albumin: Normal.",
+      "CMP": "Total bilirubin 4.8 mg/dL (high). Direct 0.4 mg/dL (normal). Indirect 4.4 mg/dL (high). ALT 18, AST 22, ALP 62, GGT 14 \u2014 all completely normal.",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -1206,14 +1206,14 @@
     },
     "specialty_name": "BNP",
     "lab_results": {
-      "CBC": "MCV 108 (macrocytosis \u2014 residual from alcohol use). Hgb 9.6. Mild thrombocytopenia 98,000 (hypersplenism from congestive hepatopathy).",
-      "CMP": "Na 124 (dilutional hyponatremia \u2014 poor prognostic sign). GGT 380 (markedly elevated \u2014 marker of prior alcohol exposure). AST:ALT ratio 2.8:1 (>2:1 \u2014 alcoholic pattern). Total bilirubin 3.8 (congestive hepatopathy). Albumin 2.4.",
+      "CBC": "MCV 108 (high \u2014 macrocytosis from alcohol). Hgb 9.6 (low). Thrombocytopenia 98,000 (low \u2014 hypersplenism).",
+      "CMP": "Na 124 (low \u2014 dilutional hyponatremia). GGT 380 (high). AST:ALT ratio 2.8:1 (high \u2014 >2:1 alcoholic pattern). Total bilirubin 3.8 (high). Albumin 2.4 (low).",
       "EKG": "Atrial fibrillation with rapid ventricular response 126bpm. LBBB. Diffuse low voltage.",
-      "Trop": "0.22 ng/mL (chronically elevated \u2014 myocardial stress).",
+      "Trop": "0.22 ng/mL (high) \u2014 chronically elevated from myocardial stress.",
       "Lipase": "Normal",
       "UA": "Normal",
-      "ABG": "pO2 58 on room air. Lactate 3.2 mmol/L (cardiogenic shock physiology).",
-      "Coags": "PT 18.2s \u2014 hepatic synthetic dysfunction from congestive hepatopathy.",
+      "ABG": "pO2 58 (low) on room air. Lactate 3.2 mmol/L (high) \u2014 cardiogenic shock physiology.",
+      "Coags": "PT 18.2s (high) \u2014 hepatic synthetic dysfunction.",
       "Specialty": "BNP: 8,400 pg/mL (severely elevated). Thiamine level: 18 nmol/L (low \u2014 supplementation required; Wernicke's prevention). Selenium: Low (selenium deficiency is a secondary cause of dilated cardiomyopathy). EtOH: 0.0 (confirmed abstinent). Cardiac MRI (when stabilized): Diffuse myocardial fibrosis on late gadolinium enhancement \u2014 14 months of abstinence; EF not recovered, suggesting established fibrosis rather than reversible toxic cardiomyopathy. ICD implanted (EF <35%, LBBB \u2014 CRT-D criteria met)."
     },
     "answer": "Alcoholic Cardiomyopathy"
@@ -1252,14 +1252,14 @@
     },
     "specialty_name": "HFE Gene Testing",
     "lab_results": {
-      "CBC": "Hgb 10.8 (normocytic \u2014 late complication from liver disease). Normal WBC.",
-      "CMP": "AST 92, ALT 78 (elevated \u2014 iron-induced hepatocellular injury). Glucose 228 (new diabetes \u2014 iron deposits in pancreatic islet cells = 'bronze diabetes'). ALP 188. Albumin 3.0. Total bilirubin 2.4.",
+      "CBC": "Hgb 10.8 (low). Normal WBC.",
+      "CMP": "AST 92 (high), ALT 78 (high) \u2014 iron-induced hepatocellular injury. Glucose 228 (high \u2014 'bronze diabetes'). ALP 188 (high). Albumin 3.0 (low-normal). Total bilirubin 2.4 (high).",
       "EKG": "Atrial fibrillation (cardiac iron deposition \u2192 arrhythmia). Prolonged PR. Low voltage.",
       "Trop": "Normal",
       "Lipase": "Normal",
       "UA": "Glucose 2+ (glycosuria from diabetes).",
       "ABG": "Normal",
-      "Coags": "PT 15.8s \u2014 early hepatic synthetic dysfunction.",
+      "Coags": "PT 15.8s (high) \u2014 early hepatic synthetic dysfunction.",
       "Specialty": "Serum ferritin: 6,200 ng/mL (severely elevated; normal <300 in men). Transferrin saturation: 92% (severely elevated; normal <45%). HFE gene sequencing: Homozygous C282Y mutation (p.Cys282Tyr) \u2014 classic hereditary hemochromatosis. Liver biopsy: Hepatic iron index 4.8 (>1.9 confirms hemochromatosis). Stage 3 fibrosis (periportal bridging). AFP: 24 ng/mL \u2014 hepatocellular carcinoma surveillance required (cirrhosis + hemochromatosis = very high HCC risk). Treatment: Therapeutic phlebotomy weekly until ferritin <50 ng/mL."
     },
     "answer": "Hereditary Hemochromatosis"
@@ -1275,14 +1275,14 @@
     },
     "specialty_name": "Flow Cytometry (GPI-Anchored Proteins)",
     "lab_results": {
-      "CBC": "WBC 2,400 (leukopenia). Hgb 6.8 (severe hemolytic anemia). Platelets 62,000 (thrombocytopenia). Pancytopenia across all lines.",
-      "CMP": "LDH 1,840 (markedly elevated \u2014 intravascular hemolysis). Indirect bilirubin 4.2. Haptoglobin undetectable. Cr 1.8.",
+      "CBC": "WBC 2,400 (low \u2014 leukopenia). Hgb 6.8 (critically low \u2014 severe hemolytic anemia). Platelets 62,000 (low \u2014 thrombocytopenia). Pancytopenia across all lines.",
+      "CMP": "LDH 1,840 (critically high \u2014 intravascular hemolysis). Indirect bilirubin 4.2 (high). Haptoglobin undetectable (critically low). Cr 1.8 (high).",
       "EKG": "Normal.",
       "Trop": "Normal.",
       "Lipase": "Normal.",
       "UA": "Hemoglobinuria \u2014 dark brown urine. No RBC casts.",
       "ABG": "Normal.",
-      "Coags": "Normal INR. D-dimer elevated \u2014 thrombotic tendency.",
+      "Coags": "INR normal. D-dimer elevated (high) \u2014 thrombotic tendency.",
       "Specialty": "Flow cytometry peripheral blood: Absent CD55 and CD59 on RBCs (52% clone size) and granulocytes (68% clone size) \u2014 GPI-anchor deficient population. Sucrose lysis test: positive (historical). Ham test: positive (historical). PIG-A gene mutation confirmed on sequencing."
     },
     "answer": "Paroxysmal Nocturnal Hemoglobinuria (PNH)"
@@ -1298,12 +1298,12 @@
     },
     "specialty_name": "ASO Titer",
     "lab_results": {
-      "CBC": "WBC 11,800 (mild leukocytosis). Hgb 10.8 (dilutional anemia from fluid retention). Normal differential.",
-      "CMP": "Creatinine 2.8 (elevated for age \u2014 normal for 13yo is ~0.7-1.0). BUN 52. Na 134. K 5.4. Bicarbonate 18 (metabolic acidosis from reduced GFR).",
+      "CBC": "WBC 11,800 (high). Hgb 10.8 (low \u2014 dilutional anemia from fluid retention). Normal differential.",
+      "CMP": "Creatinine 2.8 (high \u2014 elevated for age). BUN 52 (high). Na 134 (low-normal). K 5.4 (high). Bicarbonate 18 (low \u2014 metabolic acidosis from reduced GFR).",
       "EKG": "Normal sinus rhythm.",
       "Trop": "Normal",
       "Lipase": "Normal",
-      "UA": "Cola-colored. RBC casts on microscopy \u2014 pathognomonic for glomerulonephritis. Dysmorphic RBCs (acanthocytes). 4+ blood on dipstick. 3+ protein. Urine protein:creatinine ratio 4.2 (nephritic range \u2014 not nephrotic; some overlap).",
+      "UA": "Cola-colored. RBC casts on microscopy. Dysmorphic RBCs. 4+ blood (high). 3+ protein (high). Urine protein:creatinine ratio 4.2 (high).",
       "ABG": "Normal",
       "Coags": "Normal",
       "Specialty": "ASO titer: 1:640 (elevated \u2014 prior streptococcal infection; peaks 3-6 weeks after pharyngitis). Anti-DNase B: Markedly elevated (more sensitive for skin infections than ASO \u2014 impetigo raises anti-DNase B more reliably than ASO). Streptozyme: Positive. C3: 22 mg/dL (severely low; normal 90-180 \u2014 classic for PSGN, via alternative complement pathway). C4: Normal (distinguishes from SLE where both C3 and C4 are low). ANA: Negative. ANCA: Negative. Anti-GBM: Negative. Throat culture: Negative. Skin wound culture: GAS (group A Streptococcus)."
@@ -1322,7 +1322,7 @@
     "specialty_name": "Esophageal Manometry",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "Albumin 2.4 (malnutrition from inadequate intake). Na 136. Otherwise normal.",
+      "CMP": "Albumin 2.4 (low \u2014 malnutrition from inadequate intake). Na 136. Otherwise normal.",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -1344,8 +1344,8 @@
     },
     "specialty_name": "C. diff Toxin PCR",
     "lab_results": {
-      "CBC": "WBC 34,800 (markedly elevated \u2014 WBC >30K in C. diff predicts fulminant course). Bands 26%.",
-      "CMP": "Albumin 2.0 (severely low \u2014 protein-losing enteropathy; poor prognostic marker). Creatinine 2.4 (up from baseline 0.9). Na 130. Lactate 2.8 mmol/L.",
+      "CBC": "WBC 34,800 (critically high \u2014 WBC >30K predicts fulminant course). Bands 26% (high).",
+      "CMP": "Albumin 2.0 (critically low \u2014 poor prognostic marker). Creatinine 2.4 (high \u2014 up from baseline 0.9). Na 130 (low). Lactate 2.8 mmol/L (high).",
       "EKG": "Sinus tachycardia.",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -1368,13 +1368,13 @@
     "specialty_name": "AMA",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "ALP 980 (markedly elevated \u2014 cholestatic pattern; >3x ULN). GGT 720 (markedly elevated). Total bilirubin 8.4. Direct bilirubin 6.2. AST 88, ALT 72 (mildly elevated \u2014 not primarily hepatocellular). Total IgM: Markedly elevated (polyclonal).",
+      "CMP": "ALP 980 (critically high \u2014 cholestatic pattern, >3x ULN). GGT 720 (critically high). Total bilirubin 8.4 (high). Direct bilirubin 6.2 (high). AST 88 (high), ALT 72 (high). Total IgM: markedly elevated (high).",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
       "UA": "Bilirubin: Strongly positive (conjugated hyperbilirubinemia \u2014 conjugated bilirubin is water-soluble, appears in urine). Urobilinogen: Low (reduced bile reaching gut \u2192 less enterohepatic recycling).",
       "ABG": "Normal",
-      "Coags": "PT 17.4s \u2014 fat-soluble vitamin K malabsorption (cholestatic liver disease impairs vitamin K absorption).",
+      "Coags": "PT 17.4s (high) \u2014 fat-soluble vitamin K malabsorption.",
       "Specialty": "AMA (anti-mitochondrial antibody): Positive at 1:2560 \u2014 M2 subtype (directed against pyruvate dehydrogenase complex E2 subunit). Anti-sp100: Positive. Anti-gp210: Positive. ANA: Positive, rim pattern. ANCA: Negative. Liver biopsy: Florid duct lesion \u2014 lymphocytic infiltration and granulomatous destruction of interlobular bile ducts. Periportal fibrosis stage II. No hepatitis B or C. Ceruloplasmin: Normal (Wilson's excluded). Alpha-1 antitrypsin: Normal."
     },
     "answer": "Primary Biliary Cholangitis"
@@ -1436,14 +1436,14 @@
     },
     "specialty_name": "Ferritin",
     "lab_results": {
-      "CBC": "WBC 32,400 (marked leukocytosis \u2014 predominantly neutrophils). Hgb 8.4 (anemia of inflammation). Platelets 98,000 (thrombocytopenia from hemophagocytosis).",
-      "CMP": "LDH 1,480 (markedly elevated). AST 108, ALT 88 (mildly elevated). Albumin 2.4.",
+      "CBC": "WBC 32,400 (high \u2014 predominantly neutrophils). Hgb 8.4 (low). Platelets 98,000 (low \u2014 from hemophagocytosis).",
+      "CMP": "LDH 1,480 (high). AST 108 (high), ALT 88 (high). Albumin 2.4 (low).",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
       "UA": "Normal",
       "ABG": "Normal",
-      "Coags": "Fibrinogen 88mg/dL (low). D-dimer markedly elevated \u2014 concurrent macrophage activation syndrome (MAS).",
+      "Coags": "Fibrinogen 88mg/dL (critically low). D-dimer markedly elevated (high) \u2014 concurrent macrophage activation syndrome.",
       "Specialty": "Ferritin: 84,000 ng/mL (markedly elevated). Glycosylated ferritin fraction: 18% (normal >50% \u2014 markedly reduced glycosylation seen in specific hyperferritinemic states). IL-18: 48,000 pg/mL (markedly elevated \u2014 macrophage activation marker). IL-1\u03b2: Elevated. ANA: Negative. RF: Negative. Anti-CCP: Negative. ANCA: Negative. Anti-dsDNA: Negative. Blood cultures x6: No growth. Bone marrow biopsy: Reactive histiocytosis \u2014 no malignancy, no hemophagocytosis. PET-CT: Diffuse FDG uptake in spleen, liver, lymph nodes \u2014 hypermetabolic inflammatory pattern, no discrete mass."
     },
     "answer": "Adult-Onset Still Disease"
@@ -1460,7 +1460,7 @@
     "specialty_name": "Joint Aspiration",
     "lab_results": {
       "CBC": "WBC 9,800 \u2014 no left shift (attack resolved).",
-      "CMP": "Uric acid 11.4 mg/dL (markedly elevated). Creatinine 1.6 (reduced urate excretion from CKD). Glucose 126. BUN 24.",
+      "CMP": "Uric acid 11.4 mg/dL (high). Creatinine 1.6 (high). Glucose 126 (high). BUN 24 (high-normal).",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -1483,12 +1483,12 @@
     "specialty_name": "Myositis Antibody Panel",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "CK: 11,400 U/L (markedly elevated). Aldolase: 48 U/L (elevated). AST 360, ALT 280 (muscle-origin transaminitis \u2014 not hepatic disease). LDH 820.",
+      "CMP": "CK 11,400 U/L (critically high). Aldolase 48 U/L (high). AST 360 (high), ALT 280 (high). LDH 820 (high).",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
       "UA": "Myoglobinuria \u2014 dipstick blood 3+ with no RBCs on microscopy.",
-      "ABG": "pO2 68 on room air (ILD with OP pattern).",
+      "ABG": "pO2 68 (low) on room air \u2014 ILD with OP pattern.",
       "Coags": "Normal",
       "Specialty": "Anti-MDA5 antibody: POSITIVE (MDA5 = melanoma differentiation-associated gene 5, innate immune RNA helicase \u2014 cytoplasmic pattern on IF). Anti-Jo-1: Negative. Anti-Mi-2: Negative. Anti-TIF1\u03b3: Negative. Anti-NXP2: Negative. Anti-SRP: Negative. HRCT chest: Bilateral ground-glass opacities, subpleural consolidation \u2014 rapidly progressive interstitial pattern. PFTs: FVC 52% predicted. DLCO 38% predicted. BAL: Lymphocytosis 42%. Muscle biopsy: Perifascicular atrophy and necrosis. Skin biopsy: Interface dermatitis with mucin deposition."
     },
@@ -1505,14 +1505,14 @@
     },
     "specialty_name": "Fasting Gastrin",
     "lab_results": {
-      "CBC": "Hgb 10.2 (normocytic \u2014 from GI blood loss and malabsorption).",
-      "CMP": "Albumin 2.2 (severe malnutrition). Normal electrolytes. Vitamin B12: Low (terminal ileum malabsorption from acid). Vitamin D: Severely deficient.",
+      "CBC": "Hgb 10.2 (low).",
+      "CMP": "Albumin 2.2 (low). Vitamin B12 low (low). Vitamin D severely deficient (critically low).",
       "EKG": "Normal",
       "Trop": "Normal",
-      "Lipase": "820 U/L (elevated \u2014 acid damage to pancreatic ducts and enzymatic activation).",
+      "Lipase": "820 U/L (high) \u2014 acid damage to pancreatic ducts.",
       "UA": "Normal",
       "ABG": "Normal",
-      "Coags": "PT 18.2s (fat-soluble vitamin K malabsorption from steatorrhea).",
+      "Coags": "PT 18.2s (high) \u2014 fat-soluble vitamin K malabsorption from steatorrhea.",
       "Specialty": "Fasting serum gastrin (PPIs held 1 week): 2,800 pg/mL (markedly elevated; normal <100). Gastric pH during fasting: 1.2 (maximally acidic \u2014 confirms autonomous acid hypersecretion). Secretin stimulation test: Gastrin paradoxically rises >200 pg/mL above baseline \u2014 positive test (normal: no rise or fall). Somatostatin receptor scintigraphy (Octreoscan): Hypermetabolic lesion in pancreatic head 1.4cm and multiple hepatic foci. Endoscopic ultrasound: Pancreatic head lesion confirmed \u2014 fine needle aspiration: Neuroendocrine tumor, chromogranin A positive, synaptophysin positive, Ki-67 2%. PTH: Elevated. Pituitary MRI: 6mm adenoma found incidentally."
     },
     "answer": "Zollinger-Ellison Syndrome (Gastrinoma)"
@@ -1531,7 +1531,7 @@
       "CBC": "Normal.",
       "CMP": "Normal.",
       "EKG": "ST elevation V2-V5. No reciprocal changes in inferior leads \u2014 pattern atypical for plaque rupture.",
-      "Trop": "Troponin I 42 ng/mL \u2014 massive elevation, true MI.",
+      "Trop": "Troponin I 42 ng/mL (critically high) \u2014 massive elevation, true MI.",
       "Lipase": "Normal.",
       "UA": "Normal.",
       "ABG": "Normal.",
@@ -1557,7 +1557,7 @@
       "Trop": "Normal",
       "Lipase": "Normal",
       "UA": "Normal",
-      "ABG": "pO2 64 on room air (lung compressed by effusion and trapped by rind).",
+      "ABG": "pO2 64 (low) on room air \u2014 lung compressed by effusion and trapped by pleural rind.",
       "Coags": "Normal",
       "Specialty": "Thoracentesis: 1.6L bloody exudative fluid. LDH: 820 U/L. Protein: 6.2 g/dL. Cytology: Atypical mesothelial cells \u2014 insufficient alone. CT-guided pleural biopsy: Epithelioid cell proliferation with tubular and papillary architecture, dense stromal invasion. Immunohistochemistry: Calretinin positive, WT-1 positive, CK5/6 positive, D2-40 positive. TTF-1 negative, CEA negative, Ber-EP4 negative (excludes adenocarcinoma). BAP1 loss on IHC. FISH: Homozygous deletion of CDKN2A (p16). Asbestos bodies on BAL."
     },
@@ -1575,7 +1575,7 @@
     "specialty_name": "CSF Antibody Panel",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "Na 124 (hyponatremia \u2014 SIADH from hypothalamic dysfunction).",
+      "CMP": "Na 124 (low \u2014 SIADH from hypothalamic dysfunction).",
       "EKG": "Normal sinus rhythm. QTc 462ms.",
       "Trop": "Normal",
       "Lipase": "Normal",
@@ -1597,13 +1597,13 @@
     },
     "specialty_name": "Urine Antigen",
     "lab_results": {
-      "CBC": "Hgb 10.4 (normocytic \u2014 chronic inflammation). WBC 14,200 (leukocytosis). Mild thrombocytopenia 112,000.",
-      "CMP": "ALP 320 (hepatic involvement). LDH 480 (elevated \u2014 dissemination). Albumin 2.8.",
+      "CBC": "Hgb 10.4 (low). WBC 14,200 (high). Thrombocytopenia 112,000 (low).",
+      "CMP": "ALP 320 (high \u2014 hepatic involvement). LDH 480 (high). Albumin 2.8 (low-normal).",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
       "UA": "Normal",
-      "ABG": "pO2 72 on room air. A-a gradient elevated.",
+      "ABG": "pO2 72 (low) on room air. A-a gradient elevated (high).",
       "Coags": "Normal",
       "Specialty": "Urine Histoplasma antigen: POSITIVE \u2014 titer 8.8 ng/mL (high, consistent with disseminated disease; >2ng/mL = disseminated). Serum Histoplasma antigen: POSITIVE \u2014 6.4 ng/mL. Bronchoalveolar lavage: GMS stain \u2014 small yeast forms (2-4\u00b5m) within macrophages. Culture: Dimorphic fungus identified as Histoplasma capsulatum at 4 weeks. Serology: Complement fixation antibodies \u22651:32. DNA probe: Positive. Cross-reactivity: Histoplasma antigen cross-reacts with Blastomyces \u2014 clinical correlation required (Ohio River Valley = Histoplasma; Missouri/Mississippi = Blastomyces overlap). Treatment: Itraconazole for mild disease; amphotericin B for severe/disseminated. Prior 'walking pneumonias' were likely prior Histoplasma exposures."
     },
@@ -1644,12 +1644,12 @@
     "specialty_name": "EMG/NCS",
     "lab_results": {
       "CBC": "Normal",
-      "CMP": "Normal. CK: 480 U/L (mildly elevated from denervation).",
+      "CMP": "Normal. CK 480 U/L (high \u2014 mildly elevated from denervation).",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
       "UA": "Normal",
-      "ABG": "FVC: 62% predicted (reduced \u2014 respiratory muscle involvement; threshold for noninvasive ventilation <50%). NIF: -42 cmH2O (borderline).",
+      "ABG": "FVC 62% predicted (low \u2014 respiratory muscle involvement). NIF -42 cmH2O (borderline low).",
       "Coags": "Normal",
       "Specialty": "EMG: Fibrillations and positive sharp waves in bilateral upper limbs, lower limbs, thoracic paraspinals, and tongue \u2014 4 body regions. Giant motor unit potentials (chronic reinnervation). Fasciculation potentials. Motor NCS: Normal velocities, no conduction block. Sensory NCS: Normal throughout. Repetitive nerve stimulation: No decrement (excludes NMJ disorder). CSF: Normal. Anti-ganglioside antibodies: Negative (excludes MMN). Brain MRI: Corticospinal tract T2 signal \u2014 upper motor neuron degeneration. C9orf72 repeat expansion: POSITIVE \u2014 hexanucleotide repeat expansion found."
     },
@@ -1667,11 +1667,11 @@
     "specialty_name": "Serum IgG4 + Tissue Biopsy",
     "lab_results": {
       "CBC": "WBC normal. Eosinophilia 9%.",
-      "CMP": "Cr 1.9 (renal involvement). Normal LFTs (not obstructed yet). Total protein elevated 9.8.",
+      "CMP": "Cr 1.9 (high \u2014 renal involvement). Normal LFTs. Total protein 9.8 (high).",
       "EKG": "Normal.",
       "Trop": "Normal.",
       "Lipase": "Normal (despite pancreatic mass \u2014 autoimmune pancreatitis often has normal lipase).",
-      "UA": "2+ protein, RBC casts \u2014 tubulointerstitial nephritis.",
+      "UA": "2+ protein (high). RBC casts \u2014 tubulointerstitial nephritis.",
       "ABG": "Normal.",
       "Coags": "Normal.",
       "Specialty": "Serum IgG4: 840 mg/dL (markedly elevated \u2014 normal <135 mg/dL). IgG4:total IgG ratio: 42% (elevated). Submandibular gland biopsy: Dense lymphoplasmacytic infiltrate. Storiform fibrosis pattern. Obliterative phlebitis. IgG4+ plasma cells: >30 per high-power field. IgG4:IgG ratio on tissue: >40%. ANA: Negative. SSA/SSB: Negative. ANCA: Negative. Salivary gland biopsy: No ductal destruction (distinguishes from Sjogren's). Pancreatic mass FNA: Fibroinflammatory tissue \u2014 no malignant cells. PET: Diffuse FDG uptake in pancreas, salivary glands, kidneys, retroperitoneum \u2014 no discrete hypermetabolic mass."
@@ -1689,14 +1689,14 @@
     },
     "specialty_name": "Urine Antigen",
     "lab_results": {
-      "CBC": "WBC 2.8 (leukopenia \u2014 marrow infiltration). Hgb 8.2 (normocytic \u2014 chronic disease + marrow involvement). Platelets 62,000 (thrombocytopenia \u2014 marrow infiltration + hypersplenism).",
-      "CMP": "ALP 480 (markedly elevated \u2014 hepatic involvement). Total bilirubin 4.8. Direct 3.6. AST 88, ALT 72. Albumin 2.4. LDH 820.",
+      "CBC": "WBC 2.8 (low \u2014 leukopenia, marrow infiltration). Hgb 8.2 (low). Platelets 62,000 (low \u2014 marrow infiltration + hypersplenism).",
+      "CMP": "ALP 480 (high). Total bilirubin 4.8 (high). Direct 3.6 (high). AST 88 (high), ALT 72 (high). Albumin 2.4 (low). LDH 820 (high).",
       "EKG": "Normal",
       "Trop": "Normal",
       "Lipase": "Normal",
       "UA": "Normal",
-      "ABG": "pO2 68 on room air. A-a gradient 28.",
-      "Coags": "PT 16.8s (hepatic dysfunction).",
+      "ABG": "pO2 68 (low) on room air. A-a gradient 28 (high).",
+      "Coags": "PT 16.8s (high) \u2014 hepatic dysfunction.",
       "Specialty": "Urine Histoplasma antigen: POSITIVE \u2014 12.4 ng/mL (high titer, consistent with disseminated disease). Serum Histoplasma antigen: POSITIVE \u2014 9.8 ng/mL. BAL: GMS stain \u2014 small yeast forms (2-4\u00b5m) engulfed by macrophages. Lysis-centrifugation blood cultures: Histoplasma capsulatum growing at day 9 (bone marrow-level dissemination \u2014 extremely high fungal burden). Bone marrow biopsy: Marked histiocyte infiltration with intracellular yeast \u2014 consistent with disseminated histoplasmosis. CD4 420 does not fully protect against Histoplasma in endemic zones \u2014 unlike most opportunistic infections (CD4 <200 threshold), Histoplasma can disseminate even with CD4 >200 in heavily exposed immunosuppressed patients. Treatment: IV amphotericin B liposomal (severe disseminated disease) for 2 weeks \u2192 step-down to itraconazole for 12 months minimum."
     },
     "answer": "Disseminated Histoplasmosis"
