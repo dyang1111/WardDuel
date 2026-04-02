@@ -1030,9 +1030,11 @@ window.orderLab=(key)=>{
     card.style.display='block';
     const row=document.createElement('div');
     row.className='lab-result-row';
-    // Append (HIGH) or (LOW) at the END of the result text — simple and safe
-    function labTag(text){
-        const hi=/\b(markedly elevated|severely elevated|critically elevated|critically high|elevated|increased|markedly high|above normal|above limit)/i;
+    // Only tag simple labs — not specialty, EKG, imaging-style reports
+    const simpleLabs = ['CBC','CMP','Trop','Lipase','UA','ABG','Coags'];
+    function labTag(key, text){
+        if(!simpleLabs.includes(key)) return text;
+        const hi=/\b(markedly elevated|severely elevated|critically elevated|critically high|elevated|increased|above normal|above limit)/i;
         const lo=/\b(critically low|markedly low|severely low|decreased|reduced|undetectable|suppressed|deficient|below normal|below limit)/i;
         const norm=/\b(normal|within normal limits|unremarkable|no acute|no significant|no evidence|negative|clear)/i;
         if(norm.test(text)) return text;
@@ -1040,7 +1042,7 @@ window.orderLab=(key)=>{
         if(lo.test(text)) return text + ' <span class="lab-tag low">(LOW)</span>';
         return text;
     }
-    row.innerHTML=`<span class="lrk">${label}</span><span class="lrv">${labTag(result)}</span>`;
+    row.innerHTML=`<span class="lrk">${label}</span><span class="lrv">${labTag(key, result)}</span>`;
     document.getElementById('results-list').appendChild(row);
 };
 
