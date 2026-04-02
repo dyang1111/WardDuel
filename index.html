@@ -410,7 +410,7 @@
             <div class="hero-stat-label">Always</div>
         </div>
     </div>
-    <div class="hero-signin">Already have an account? <a onclick="document.getElementById('hero-screen').classList.add('hidden');document.getElementById('authModal').style.display='block'">Sign in</a></div>
+    <div class="hero-signin">Already have an account? <a onclick="document.getElementById('hero-screen').classList.add('hidden');sessionStorage.setItem('wd_hero_dismissed','1');document.getElementById('authModal').style.display='block'">Sign in</a></div>
 </div>
 
 <!-- LEVEL-UP OVERLAY -->
@@ -438,7 +438,7 @@
 <!-- AUTH MODAL -->
 <div id="authModal" class="modal">
     <div class="modal-box">
-        <button class="modal-close" onclick="document.getElementById('authModal').style.display='none'">✕</button>
+        <button class="modal-close" onclick="document.getElementById('authModal').style.display='none';if(!gameInitialized&&!currentUser){gameInitialized=true;initGame();}">✕</button>
         <div class="modal-title" id="auth-title">Welcome back</div>
         <div class="modal-sub" id="auth-sub">Sign in to track your score and streak.</div>
         <input type="text" id="username-input" placeholder="Username">
@@ -1484,9 +1484,13 @@ onAuthStateChanged(auth,async(user)=>{
         }
     }
     if(!gameInitialized){
+        if(!currentUser){
+            maybeShowHero();
+            // If hero is showing, wait for user to click Play — dismissHero() will call initGame
+            if(!sessionStorage.getItem('wd_hero_dismissed')) return;
+        }
         gameInitialized=true;
         await initGame();
-        if(!currentUser) maybeShowHero();
     }
 });
 
@@ -1494,11 +1498,16 @@ onAuthStateChanged(auth,async(user)=>{
 window.dismissHero = function() {
     document.getElementById('hero-screen').classList.add('hidden');
     sessionStorage.setItem('wd_hero_dismissed','1');
+    if(!gameInitialized){
+        gameInitialized=true;
+        initGame();
+    }
 };
 
 function maybeShowHero() {
-    if(currentUser) { document.getElementById('hero-screen').classList.add('hidden'); return; }
-    if(sessionStorage.getItem('wd_hero_dismissed')) { document.getElementById('hero-screen').classList.add('hidden'); return; }
+    if(currentUser){ document.getElementById('hero-screen').classList.add('hidden'); return; }
+    if(sessionStorage.getItem('wd_hero_dismissed')){ document.getElementById('hero-screen').classList.add('hidden'); return; }
+    document.getElementById('hero-screen').classList.remove('hidden');
 }
 
 // ── SHARE CARD ──
