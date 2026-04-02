@@ -220,6 +220,70 @@ function getWeekStart(){
 function logoSVG(size=32){
     return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" style="border-radius:50%;border:2px solid #bfdbfe;background:#eff6ff;overflow:hidden;display:block"><path d="M30,20 Q30,45 50,55 Q70,45 70,20" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round"/><rect x="26" y="15" width="8" height="12" rx="4" fill="#0f172a"/><rect x="66" y="15" width="8" height="12" rx="4" fill="#0f172a"/><path d="M50,55 L50,70" fill="none" stroke="#3b82f6" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="78" r="18" fill="#3b82f6"/><circle cx="50" cy="78" r="14" fill="#0f172a"/><path d="M38,68 L32,60 L42,66 Z" fill="#3b82f6"/><path d="M62,68 L68,60 L58,66 Z" fill="#3b82f6"/><circle cx="45" cy="76" r="2" fill="#f7f9fc"/><circle cx="55" cy="76" r="2" fill="#f7f9fc"/><path d="M47,82 Q50,85 53,82" fill="none" stroke="#f7f9fc" stroke-width="1.5" stroke-linecap="round"/></svg>`;
 }
+const SP=[
+    {n:'Cardiology',c:'#e84a6a',i:'♥'},{n:'Neurology',c:'#7a52c0',i:'⚡'},
+    {n:'Surgery',c:'#3a8a5a',i:'✦'},{n:'Emergency',c:'#d05a20',i:'★'},
+    {n:'Pediatrics',c:'#d4a020',i:'☀'},{n:'Psychiatry',c:'#4a8ab0',i:'◈'},
+    {n:'Radiology',c:'#607080',i:'◉'},{n:'Oncology',c:'#a04070',i:'✿'},
+    {n:'Orthopedics',c:'#8a6030',i:'◆'},{n:'Internal Med',c:'#3b82f6',i:'✚'},
+];
+const ANIMALS=[
+    {nm:'Fox',b:'#e8722a',l:'#f5a05a',f:'#f5d0b0'},
+    {nm:'Bear',b:'#8B5E3C',l:'#c49070',f:'#c49070'},
+    {nm:'Cat',b:'#9a9ab0',l:'#b8b8d0',f:'#dcdce8'},
+    {nm:'Owl',b:'#8B6914',l:'#c8a050',f:'#f5f0e0'},
+    {nm:'Rabbit',b:'#c8c0b8',l:'#dcd8d0',f:'#ece8e4'},
+    {nm:'Panda',b:'#f0f0f0',l:'#e0e0e0',f:'#f0f0f0'},
+    {nm:'Raccoon',b:'#787878',l:'#a8a8a8',f:'#d0d0c0'},
+    {nm:'Frog',b:'#4a9a4a',l:'#7acc7a',f:'#a8d898'},
+];
+const HEADS={
+    Fox:`<polygon points="18,34 10,8 28,28" fill="#e8722a"/><polygon points="72,34 80,8 62,28" fill="#e8722a"/><circle cx="45" cy="46" r="24" fill="#e8722a"/><ellipse cx="45" cy="54" rx="15" ry="11" fill="#f5d0b0"/><circle cx="35" cy="42" r="5" fill="#fff"/><circle cx="55" cy="42" r="5" fill="#fff"/><circle cx="35" cy="42" r="3" fill="#2c1a08"/><circle cx="55" cy="42" r="3" fill="#2c1a08"/><ellipse cx="45" cy="52" rx="3.5" ry="2.4" fill="#c0503a"/><path d="M41,55 Q45,59 49,55" fill="none" stroke="#c0503a" stroke-width="1.3" stroke-linecap="round"/>`,
+    Bear:`<circle cx="22" cy="28" r="11" fill="#8B5E3C"/><circle cx="68" cy="28" r="11" fill="#8B5E3C"/><circle cx="45" cy="48" r="24" fill="#8B5E3C"/><ellipse cx="45" cy="57" rx="14" ry="10" fill="#a87050"/><circle cx="36" cy="44" r="4.5" fill="#fff"/><circle cx="54" cy="44" r="4.5" fill="#fff"/><circle cx="36" cy="44" r="2.8" fill="#1a0a04"/><circle cx="54" cy="44" r="2.8" fill="#1a0a04"/><ellipse cx="45" cy="53" rx="4.5" ry="3" fill="#2a0a04"/><path d="M40,60 Q45,64 50,60" fill="none" stroke="#2a0a04" stroke-width="1.3" stroke-linecap="round"/>`,
+    Cat:`<polygon points="24,38 17,12 35,32" fill="#9a9ab0"/><polygon points="66,38 73,12 55,32" fill="#9a9ab0"/><circle cx="45" cy="46" r="23" fill="#9a9ab0"/><ellipse cx="45" cy="53" rx="15" ry="10" fill="#dcdce8"/><ellipse cx="35" cy="43" rx="5.5" ry="4" fill="#fff"/><ellipse cx="55" cy="43" rx="5.5" ry="4" fill="#fff"/><ellipse cx="35" cy="43" rx="3.2" ry="3.6" fill="#3a8a1a"/><ellipse cx="55" cy="43" rx="3.2" ry="3.6" fill="#3a8a1a"/><ellipse cx="35" cy="43" rx="1.6" ry="2.6" fill="#141420"/><ellipse cx="55" cy="43" rx="1.6" ry="2.6" fill="#141420"/><path d="M42,51 L45,55 L48,51 Z" fill="#e07090"/>`,
+    Owl:`<polygon points="34,28 30,8 40,24" fill="#8B6914"/><polygon points="56,28 60,8 50,24" fill="#8B6914"/><circle cx="45" cy="48" r="24" fill="#8B6914"/><ellipse cx="45" cy="51" rx="16" ry="14" fill="#f5f0e0"/><circle cx="35" cy="46" r="9" fill="#f5f0e0" stroke="#c8a050" stroke-width="1.2"/><circle cx="55" cy="46" r="9" fill="#f5f0e0" stroke="#c8a050" stroke-width="1.2"/><circle cx="35" cy="46" r="6" fill="#c87a14"/><circle cx="55" cy="46" r="6" fill="#c87a14"/><circle cx="35" cy="46" r="3.8" fill="#1a1008"/><circle cx="55" cy="46" r="3.8" fill="#1a1008"/><polygon points="45,54 41,60 49,60" fill="#d4820a"/>`,
+    Rabbit:`<ellipse cx="31" cy="16" rx="7.5" ry="20" fill="#c8c0b8"/><ellipse cx="59" cy="16" rx="7.5" ry="20" fill="#c8c0b8"/><circle cx="45" cy="50" r="22" fill="#c8c0b8"/><ellipse cx="45" cy="57" rx="13" ry="9" fill="#ece8e4"/><circle cx="36" cy="46" r="5" fill="#fff"/><circle cx="54" cy="46" r="5" fill="#fff"/><circle cx="36" cy="46" r="3.2" fill="#d03858"/><circle cx="54" cy="46" r="3.2" fill="#d03858"/><ellipse cx="45" cy="55" rx="3" ry="2.2" fill="#e06888"/>`,
+    Panda:`<circle cx="22" cy="28" r="12" fill="#2c2c2c"/><circle cx="68" cy="28" r="12" fill="#2c2c2c"/><circle cx="45" cy="48" r="24" fill="#f0f0f0"/><ellipse cx="35" cy="44" rx="10" ry="8.5" fill="#2c2c2c"/><ellipse cx="55" cy="44" rx="10" ry="8.5" fill="#2c2c2c"/><circle cx="35" cy="44" r="5.5" fill="#f8f8f8"/><circle cx="55" cy="44" r="5.5" fill="#f8f8f8"/><circle cx="35" cy="44" r="3.4" fill="#1a1a1a"/><circle cx="55" cy="44" r="3.4" fill="#1a1a1a"/><ellipse cx="45" cy="52" rx="4.5" ry="3" fill="#2c2c2c"/><path d="M40,57 Q45,62 50,57" fill="none" stroke="#2c2c2c" stroke-width="1.4" stroke-linecap="round"/>`,
+    Raccoon:`<ellipse cx="23" cy="26" rx="9" ry="11" fill="#787878"/><ellipse cx="67" cy="26" rx="9" ry="11" fill="#787878"/><circle cx="45" cy="48" r="24" fill="#787878"/><ellipse cx="45" cy="57" rx="16" ry="11" fill="#d0d0c0"/><ellipse cx="34" cy="44" rx="10" ry="8" fill="#282828"/><ellipse cx="56" cy="44" rx="10" ry="8" fill="#282828"/><ellipse cx="34" cy="44" rx="6.5" ry="5.5" fill="#f2f2f0"/><ellipse cx="56" cy="44" rx="6.5" ry="5.5" fill="#f2f2f0"/><circle cx="34" cy="44" r="4" fill="#282838"/><circle cx="56" cy="44" r="4" fill="#282838"/><ellipse cx="45" cy="54" rx="3.8" ry="2.6" fill="#282828"/>`,
+    Frog:`<ellipse cx="45" cy="52" rx="28" ry="20" fill="#4a9a4a"/><circle cx="28" cy="34" r="12" fill="#4a9a4a"/><circle cx="62" cy="34" r="12" fill="#4a9a4a"/><circle cx="28" cy="32" r="9" fill="#f8f8d8"/><circle cx="62" cy="32" r="9" fill="#f8f8d8"/><circle cx="28" cy="32" r="6" fill="#2a6a1a"/><circle cx="62" cy="32" r="6" fill="#2a6a1a"/><circle cx="28" cy="32" r="3.8" fill="#0e1e08"/><circle cx="62" cy="32" r="3.8" fill="#0e1e08"/><ellipse cx="45" cy="58" rx="22" ry="14" fill="#a8d898"/><path d="M26,56 Q45,68 64,56" fill="none" stroke="#2a7a2a" stroke-width="2.2" stroke-linecap="round"/>`,
+};
+const SC=[
+    {v:'#e84a6a',d:'#c0304f'},{v:'#7a52c0',d:'#5a38a0'},{v:'#3a8a5a',d:'#286040'},
+    {v:'#d05a20',d:'#a03800'},{v:'#d4a020',d:'#a47800'},{v:'#4a8ab0',d:'#286890'},
+    {v:'#607080',d:'#405060'},{v:'#a04070',d:'#802050'},{v:'#8a6030',d:'#6a4010'},
+    {v:'#3b82f6',d:'#1d4ed8'}
+];
+function renderPlayerIcon(iconPrefs, size=32){
+    if(!iconPrefs) return logoSVG(size);
+    const{iconType,animalIdx=0,colorIdx=0,specIdx=0,levelIdx=0}=iconPrefs;
+    if(iconType==='heart'){
+        const s=size;
+        return `<svg width="${s}" height="${s}" viewBox="0 0 ${s} ${s}" style="border-radius:50%;border:2px solid #fecaca;background:#fef2f2;overflow:hidden;display:block"><path d="M${s/2},${s*.78} Q${s*.15},${s*.56} ${s*.15},${s*.38} Q${s*.15},${s*.22} ${s*.35},${s*.22} Q${s*.43},${s*.22} ${s/2},${s*.33} Q${s*.57},${s*.22} ${s*.65},${s*.22} Q${s*.85},${s*.22} ${s*.85},${s*.38} Q${s*.85},${s*.56} ${s/2},${s*.78} Z" fill="#dc2626"/></svg>`;
+    }
+    if(iconType==='bones'){
+        const c=size/2;
+        return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" style="border-radius:50%;border:2px solid #dde3ed;background:#f7f9fc;overflow:hidden;display:block"><circle cx="${size*.24}" cy="${size*.24}" r="${size*.12}" fill="#475569"/><circle cx="${size*.76}" cy="${size*.76}" r="${size*.12}" fill="#475569"/><rect x="${c-4}" y="${size*.1}" width="8" height="${size*.8}" rx="4" fill="#475569" transform="rotate(-45 ${c} ${c})"/><circle cx="${size*.76}" cy="${size*.24}" r="${size*.12}" fill="#475569"/><circle cx="${size*.24}" cy="${size*.76}" r="${size*.12}" fill="#475569"/><rect x="${c-4}" y="${size*.1}" width="8" height="${size*.8}" rx="4" fill="#475569" transform="rotate(45 ${c} ${c})"/><circle cx="${c}" cy="${c}" r="${size*.1}" fill="#f7f9fc"/></svg>`;
+    }
+    if(iconType==='cross'){
+        const c=size/2,w=size*.14,t=size*.12;
+        return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" style="border-radius:50%;border:2px solid #bfdbfe;background:#eff6ff;overflow:hidden;display:block"><rect x="${c-w/2}" y="${t}" width="${w}" height="${size-t*2}" rx="${w/2}" fill="#3b82f6"/><rect x="${t}" y="${c-w/2}" width="${size-t*2}" height="${w}" rx="${w/2}" fill="#3b82f6"/></svg>`;
+    }
+    if(iconType==='character'){
+        const A=ANIMALS[animalIdx]||ANIMALS[0];
+        const C=SC[colorIdx]||SC[0];
+        const S=SP[specIdx]||SP[0];
+        const scale=size/90;
+        const lvl=levelIdx||0;
+        let body='';
+        if(lvl===0){body=`<ellipse cx="45" cy="96" rx="24" ry="25" fill="${A.b}"/><ellipse cx="45" cy="100" rx="15" ry="18" fill="${A.f}"/><ellipse cx="20" cy="88" rx="9" ry="15" fill="${A.b}" transform="rotate(-8 20 88)"/><ellipse cx="70" cy="88" rx="9" ry="15" fill="${A.b}" transform="rotate(8 70 88)"/>`;}
+        else{body=`<rect x="16" y="66" width="58" height="42" rx="8" fill="${C.v}"/><polygon points="45,66 33,74 45,79 57,74" fill="${C.d}"/><rect x="2" y="67" width="16" height="32" rx="8" fill="${C.v}"/><rect x="72" y="67" width="16" height="32" rx="8" fill="${C.v}"/><ellipse cx="10" cy="101" rx="8" ry="6" fill="${A.l}"/><ellipse cx="80" cy="101" rx="8" ry="6" fill="${A.l}"/>`;}
+        const neck=`<rect x="36" y="57" width="18" height="13" rx="5" fill="${A.b}"/>`;
+        const head=HEADS[A.nm]||'';
+        return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" style="border-radius:50%;border:2px solid #bfdbfe;background:#eff6ff;overflow:hidden;display:block"><g transform="translate(${size/2},${size/2}) scale(${scale*0.95}) translate(-45,-58)">${body}${neck}${head}</g></svg>`;
+    }
+    return logoSVG(size);
+}
+
 
 async function loadAllTime(){
     document.getElementById('period-note').innerText = 'Ranked by total points earned across all cases.';
@@ -229,7 +293,8 @@ async function loadAllTime(){
         name: d.data().username || 'Doctor',
         pts: d.data().totalPts || 0,
         streak: d.data().streak || 0,
-        level: getLevelName(d.data().totalPts || 0)
+        level: getLevelName(d.data().totalPts || 0),
+        iconPrefs: d.data().iconType ? {iconType:d.data().iconType,animalIdx:d.data().animalIdx||0,colorIdx:d.data().colorIdx||0,specIdx:d.data().specIdx||0,levelIdx:0} : null
     }));
 }
 
@@ -244,15 +309,17 @@ async function loadWeekly(){
     const userPts = {};
     const userNames = {};
     const userStreaks = {};
+    const userIcons = {};
     snap.forEach(d=>{
         const data = d.data();
         if(!data.uid) return;
         userPts[data.uid] = (userPts[data.uid]||0) + (data.score||0);
         userNames[data.uid] = data.username || 'Doctor';
         userStreaks[data.uid] = data.streak || 0;
+        if(data.iconPrefs) userIcons[data.uid] = data.iconPrefs;
     });
     return Object.entries(userPts)
-        .map(([uid,pts])=>({uid,name:userNames[uid],pts,streak:userStreaks[uid]||0,level:''}))
+        .map(([uid,pts])=>({uid,name:userNames[uid],pts,streak:userStreaks[uid]||0,level:'',iconPrefs:userIcons[uid]||null}))
         .sort((a,b)=>b.pts-a.pts)
         .slice(0,25);
 }
@@ -270,7 +337,8 @@ async function loadToday(){
         name: d.data().username || 'Doctor',
         pts: d.data().score || 0,
         streak: 0,
-        level: ''
+        level: '',
+        iconPrefs: d.data().iconPrefs || null
     })).sort((a,b)=>b.pts-a.pts).slice(0,25);
     return rows;
 }
@@ -326,7 +394,7 @@ async function loadAndRender(){
                 <div class="lb-row ${rowClass[i]||''} ${isMe?'me':''}">
                     ${rankDisplay}
                     <div class="player-cell">
-                        ${logoSVG(32)}
+                        ${renderPlayerIcon(r.iconPrefs, 32)}
                         <div class="player-info">
                             <div class="player-name">Dr. ${r.name.toUpperCase()}${isMe?'<span class="me-tag">YOU</span>':''}</div>
                             ${r.level?`<div class="player-level">${r.level}</div>`:''}
