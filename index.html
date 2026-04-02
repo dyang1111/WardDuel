@@ -169,6 +169,10 @@
         .lab-result-row:last-child{border-bottom:none}
         .lrk{font-weight:700;color:var(--text);min-width:86px;font-size:11px;flex-shrink:0}
         .lrv{color:var(--text-muted);line-height:1.5}
+        .lab-tag{display:inline-block;font-size:10px;font-weight:800;padding:1px 5px;border-radius:4px;margin-left:5px;vertical-align:middle}
+        .lab-tag.high{background:#fee2e2;color:#dc2626}
+        .lab-tag.low{background:#dbeafe;color:#1d4ed8}
+        .lab-tag.crit{background:#fef3c7;color:#92400e}
 
         /* DX */
         .dx-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
@@ -546,11 +550,16 @@
             </div>
         </div>
 
+                <div id="results-card" class="results-card">
+            <div class="results-header">Lab Results</div>
+            <div id="results-list"></div>
+        </div>
+
         <div id="lab-panel" class="lab-panel">
             <div class="lab-panel-header">
                 <span class="card-title" style="margin-bottom:0">Select Lab / Study</span>
                 <div style="display:flex;align-items:center;gap:8px">
-                    <span class="lab-counter" id="lab-counter">0/2 for Specialty</span>
+                    <span class="lab-counter" id="lab-counter">0/2 for Special Test</span>
                     <button class="lab-close" onclick="toggleLabPanel()">✕</button>
                 </div>
             </div>
@@ -563,13 +572,8 @@
                 <button class="lab-btn" id="lab-UA" onclick="orderLab('UA')">Urinalysis</button>
                 <button class="lab-btn" id="lab-ABG" onclick="orderLab('ABG')">ABG/VBG</button>
                 <button class="lab-btn" id="lab-Coags" onclick="orderLab('Coags')">Coags</button>
-                <button class="lab-btn locked-lab" id="lab-Specialty" onclick="orderLab('Specialty')" disabled data-tip="Order 2 labs first">🔒 Specialty</button>
+                <button class="lab-btn locked-lab" id="lab-Specialty" onclick="orderLab('Specialty')" disabled data-tip="Order 2 labs first">🔒 Special Test</button>
             </div>
-        </div>
-
-        <div id="results-card" class="results-card">
-            <div class="results-header">Lab Results</div>
-            <div id="results-list"></div>
         </div>
 
         <div id="dx-card" class="dx-card">
@@ -790,7 +794,7 @@ async function initGame(){
     caseHxEl.innerHTML = '';
     caseHxEl.innerText = currentCase.hx_brief;
     document.getElementById('date-label').innerText=isArchive?`Archive — ${archiveId}`:'Daily Case';
-    if(currentCase.specialty_name) document.getElementById('lab-Specialty').innerText='🔒 '+currentCase.specialty_name;
+    document.getElementById('lab-Specialty').innerText='🔒 Special Test';
     document.getElementById('opp-icon-wrap').innerHTML=logoIconSVG(38);
     if(!isArchive){
         if(currentUser){
@@ -966,19 +970,13 @@ function updateHP(tookDamage=false){
     fill.style.background=col;
     document.getElementById('hp-val').style.color=hp>=100?'var(--text)':col;
     updateScorePreview();
-    if(tookDamage && gameActive) {
-        // Shake the HP bar
-        const bar = document.querySelector('.hp-bar-side');
-        bar.classList.remove('hp-shake');
-        void bar.offsetWidth;
-        bar.classList.add('hp-shake');
-        // Flash screen red
-        const flash = document.getElementById('damage-flash');
-        flash.classList.remove('flash');
-        void flash.offsetWidth;
-        flash.classList.add('flash');
+    if(hp<=0&&gameActive){
+        const bar=document.querySelector('.hp-bar-side');
+        bar.classList.remove('hp-shake');void bar.offsetWidth;bar.classList.add('hp-shake');
+        const flash=document.getElementById('damage-flash');
+        flash.classList.remove('flash');void flash.offsetWidth;flash.classList.add('flash');
+        endGame(false,'HP Depleted');
     }
-    if(hp<=0&&gameActive)endGame(false,'HP Depleted');
 }
 
 window.getHint=(type,cost)=>{
@@ -1011,20 +1009,20 @@ window.orderLab=(key)=>{
             const ns=[...orderedLabs].filter(k=>k!=='Specialty').length;
             if(ns<2){showToast('Order 2 labs first to unlock Specialty','#475569');return;}
         }
-        hp-=8;updateHP(true);
+        hp-=(key==='Specialty'?15:8);updateHP(true);
     }
     orderedLabs.add(key);
     const ns=[...orderedLabs].filter(k=>k!=='Specialty').length;
     // Update lab counter
     const counter=document.getElementById('lab-counter');
     if(counter){
-        if(ns>=2){counter.textContent='🔓 Specialty unlocked';counter.classList.add('ready');}
-        else{counter.textContent=`${ns}/2 for Specialty`;}
+        if(ns>=2){counter.textContent='🔓 Special Test unlocked';counter.classList.add('ready');}
+        else{counter.textContent=`${ns}/2 for Special Test`;}
     }
     if(ns>=2){
         const sb=document.getElementById('lab-Specialty');
         sb.disabled=false;sb.classList.remove('locked-lab','postgame');
-        sb.innerText=currentCase.specialty_name||'Specialty';
+        sb.innerText='Special Test';
     }
     const result=(currentCase.lab_results&&currentCase.lab_results[key])||'Normal / No findings';
     const label=key==='Specialty'?(currentCase.specialty_name||'Specialty'):key;
@@ -1033,7 +1031,19 @@ window.orderLab=(key)=>{
     card.style.display='block';
     const row=document.createElement('div');
     row.className='lab-result-row';
-    row.innerHTML=`<span class="lrk">${label}</span><span class="lrv">${result}</span>`;
+    // Detect HIGH/LOW/abnormal keywords and inject tag
+    function labTag(text){
+        const hi=/\b(elevated|increased|high|markedly elevated|severely elevated|critically (high|elevated)|positive(?! sharp)|\d+\s*(H|HIGH)|above (normal|limit)|>\s*\d|greater than|marked(ly)?|>\d)/i;
+        const lo=/\b(low|decreased|reduced|critically low|below (normal|limit)|undetectable|suppressed|deficient|<\s*\d|less than)/i;
+        const norm=/\b(normal|within normal|no (acute|significant|finding|evidence)|negative(?! birefringent)|clear|unremarkable)/i;
+        let tag='';
+        if(norm.test(text)) return text;
+        if(hi.test(text)) tag='<span class="lab-tag high">HIGH</span>';
+        else if(lo.test(text)) tag='<span class="lab-tag low">LOW</span>';
+        return tag ? text.replace(/^([^.!,
+]{0,80})/, '$1'+tag) : text;
+    }
+    row.innerHTML=`<span class="lrk">${label}</span><span class="lrv">${labTag(result)}</span>`;
     document.getElementById('results-list').appendChild(row);
 };
 
@@ -1042,7 +1052,7 @@ function unlockAllLabs(){
         const btn=document.getElementById(`lab-${k}`);
         if(!btn||orderedLabs.has(k))return;
         btn.disabled=false;btn.classList.remove('locked-lab');btn.classList.add('postgame');
-        if(k==='Specialty')btn.innerText=currentCase.specialty_name||'Specialty';
+        if(k==='Specialty')btn.innerText='Special Test';
     });
     document.getElementById('lab-panel').style.display='block';
     document.getElementById('btn-lab').classList.add('used');
