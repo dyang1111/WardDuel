@@ -438,7 +438,7 @@
 <!-- AUTH MODAL -->
 <div id="authModal" class="modal">
     <div class="modal-box">
-        <button class="modal-close" onclick="document.getElementById('authModal').style.display='none';if(!gameInitialized&&!currentUser){gameInitialized=true;initGame();}">✕</button>
+        <button class="modal-close" onclick="document.getElementById('authModal').style.display='none'">✕</button>
         <div class="modal-title" id="auth-title">Welcome back</div>
         <div class="modal-sub" id="auth-sub">Sign in to track your score and streak.</div>
         <input type="text" id="username-input" placeholder="Username">
@@ -1484,12 +1484,13 @@ onAuthStateChanged(auth,async(user)=>{
         }
     }
     if(!gameInitialized){
-        if(!currentUser){
-            maybeShowHero();
-            // If hero is showing, wait for user to click Play — dismissHero() will call initGame
-            if(!sessionStorage.getItem('wd_hero_dismissed')) return;
-        }
         gameInitialized=true;
+        // Show hero for first-time anon visitors before game loads
+        if(!currentUser && !sessionStorage.getItem('wd_hero_dismissed')){
+            document.getElementById('hero-screen').classList.remove('hidden');
+        } else {
+            document.getElementById('hero-screen').classList.add('hidden');
+        }
         await initGame();
     }
 });
@@ -1502,12 +1503,12 @@ window.dismissHero = function() {
         gameInitialized=true;
         initGame();
     }
+    // Reset timer to full 300s so hero screen time doesn't count against player
+    if(gameActive){ timeLeft=300; updateMultiplier(); }
 };
 
 function maybeShowHero() {
-    if(currentUser){ document.getElementById('hero-screen').classList.add('hidden'); return; }
-    if(sessionStorage.getItem('wd_hero_dismissed')){ document.getElementById('hero-screen').classList.add('hidden'); return; }
-    document.getElementById('hero-screen').classList.remove('hidden');
+    // Hero visibility handled in onAuthStateChanged
 }
 
 // ── SHARE CARD ──
