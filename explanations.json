@@ -836,5 +836,14 @@
     "step1_buzzwords": "Storiform fibrosis + obliterative phlebitis + >10 IgG4+ plasma cells/HPF (pathognomonic biopsy triad). Serum IgG4 >135 mg/dL. Dramatic steroid response. ANA/SSA/SSB negative.",
     "lab_buzzwords": "Serum IgG4 >135 mg/dL (sensitive but not specific). Biopsy: storiform fibrosis + obliterative phlebitis + IgG4+ plasma cells. Eosinophilia common. Normal lipase despite pancreatic mass.",
     "treatment": "High-dose prednisone \u2014 nearly universal dramatic response (diagnostic and therapeutic). Rituximab for refractory/relapsing disease. Steroid-sparing: mycophenolate or azathioprine. Always biopsy to exclude malignancy first."
+  },
+  "Neuroleptic Malignant Syndrome (NMS)": {
+    "who_gets_it": "Patients started on antipsychotics (typical > atypical) or after rapid dose escalation. Also seen with abrupt withdrawal of dopaminergic drugs (levodopa).",
+    "risk_factors": "High-potency typical antipsychotics (haloperidol, fluphenazine), rapid dose escalation, dehydration, agitation, heat, prior NMS episode.",
+    "typical_presentation": "The FALTER tetrad: Fever (>38.5C) + Altered mental status + Lead-pipe rigidity (severe) + autonomic instability (tachycardia, labile BP, diaphoresis). Plus massively elevated CK from rhabdomyolysis.",
+    "moa": "Dopamine D2 receptor blockade in the striatum (rigidity), hypothalamus (hyperthermia, autonomic instability), and limbic system (AMS). Results in uncontrolled muscle contraction and heat generation.",
+    "step1_buzzwords": "Lead-pipe rigidity, hyperthermia, antipsychotic exposure, CK >1000, low serum iron (characteristic), myoglobinuria. Distinguished from serotonin syndrome by rigidity > tremor and slower onset.",
+    "lab_buzzwords": "CK markedly elevated (often >10,000). Myoglobinuria (brown urine, dipstick blood with no RBCs). Low serum iron. Leukocytosis. AKI from rhabdomyolysis. QTc prolongation.",
+    "treatment": "STOP the offending agent immediately. ICU. Aggressive cooling. IV dantrolene (muscle relaxant \u2014 blocks SR calcium release). Bromocriptine (dopamine agonist). Benzos for agitation. Do NOT restart antipsychotics for 2 weeks minimum."
   }
 }
