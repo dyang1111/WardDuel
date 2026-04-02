@@ -110,7 +110,7 @@
       "UA": "Normal.",
       "ABG": "pH 7.31, bicarb 16 \u2014 mild metabolic acidosis from lactate accumulation.",
       "Coags": "Normal.",
-      "Specialty": "Muscle biopsy: Ragged red fibers on Gomori trichrome stain. Subsarcolemmal mitochondrial accumulation. Electron microscopy: abnormal mitochondrial cristae. Genetic testing: m.3243A>G point mutation in MT-TL1 gene (mitochondrial tRNA-Leu). Heteroplasmy 68% in blood, 84% in muscle. Diagnosis: MELAS \u2014 Mitochondrial Encephalomyopathy, Lactic Acidosis, and Stroke-like episodes."
+      "Specialty": "Muscle biopsy: Ragged red fibers on Gomori trichrome stain. Subsarcolemmal mitochondrial accumulation. Electron microscopy: abnormal mitochondrial cristae. Genetic testing: m.3243A>G point mutation in MT-TL1 gene (mitochondrial tRNA-Leu). Heteroplasmy 68% in blood, 84% in muscle."
     },
     "answer": "MELAS Syndrome"
   },
@@ -133,7 +133,7 @@
       "UA": "No proteinuria \u2014 ruling out nephrotic syndrome as cause of hypoalbuminemia.",
       "ABG": "Normal.",
       "Coags": "Normal.",
-      "Specialty": "Full-thickness surgical biopsy (endoscopic biopsy insufficient \u2014 only samples superficial mucosa): Foveolar hyperplasia with marked pit elongation, gland atrophy, and cystic dilation of glands deep in the mucosa. Parietal cell loss (achlorhydria). Edematous lamina propria. No malignancy. No H. pylori. Alpha-1 antitrypsin fecal clearance markedly elevated \u2014 confirming protein-losing gastropathy. TGF-alpha overexpression on immunostaining. Diagnosis: Menetrier's Disease."
+      "Specialty": "Full-thickness surgical biopsy (endoscopic biopsy insufficient \u2014 only samples superficial mucosa): Foveolar hyperplasia with marked pit elongation, gland atrophy, and cystic dilation of glands deep in the mucosa. Parietal cell loss (achlorhydria). Edematous lamina propria. No malignancy. No H. pylori. Alpha-1 antitrypsin fecal clearance markedly elevated \u2014 confirming protein-losing gastropathy. TGF-alpha overexpression on immunostaining."
     },
     "answer": "Menetrier Disease"
   },
@@ -156,7 +156,7 @@
       "UA": "Dipstick: 1+ blood (false positive \u2014 porphyrins). No RBCs on microscopy. Sample turns deep burgundy after 30min in light.",
       "ABG": "Normal",
       "Coags": "Normal",
-      "Specialty": "Urine porphobilinogen (PBG): 94 \u00b5mol/L (markedly elevated; normal <2). Urine delta-aminolevulinic acid (ALA): Elevated 8x ULN. Fecal porphyrins: Normal \u2014 rules out variegate porphyria and hereditary coproporphyria. Erythrocyte PBG deaminase activity: 45% of normal \u2014 confirms porphobilinogen deaminase deficiency. Acute intermittent porphyria confirmed. OCP and NSAIDs are precipitants \u2014 must be stopped."
+      "Specialty": "Urine porphobilinogen (PBG): 94 \u00b5mol/L (markedly elevated; normal <2). Urine delta-aminolevulinic acid (ALA): Elevated 8x ULN. Fecal porphyrins: Normal \u2014 rules out variegate porphyria and hereditary coproporphyria. Erythrocyte PBG deaminase activity: 45% of normal \u2014 confirms porphobilinogen deaminase deficiency.  OCP and NSAIDs are precipitants \u2014 must be stopped."
     },
     "answer": "Acute Intermittent Porphyria"
   },
@@ -271,7 +271,7 @@
       "UA": "Trace glucose.",
       "ABG": "Normal.",
       "Coags": "Normal.",
-      "Specialty": "Anti-GAD65 antibodies: 4,200 IU/mL (markedly elevated \u2014 normal <1.0). Anti-amphiphysin: negative. Anti-glycine receptor: negative. CSF analysis: mild lymphocytic pleocytosis, elevated IgG index, oligoclonal bands \u2014 intrathecal inflammation. Thyroid peroxidase antibodies elevated. GAD65 antibody level correlates with disease severity. Diagnosis: Stiff Person Syndrome (SPS) \u2014 autoimmune, GAD65-positive variant."
+      "Specialty": "Anti-GAD65 antibodies: 4,200 IU/mL (markedly elevated \u2014 normal <1.0). Anti-amphiphysin: negative. Anti-glycine receptor: negative. CSF analysis: mild lymphocytic pleocytosis, elevated IgG index, oligoclonal bands \u2014 intrathecal inflammation. Thyroid peroxidase antibodies elevated. GAD65 antibody level correlates with disease severity."
     },
     "answer": "Stiff Person Syndrome"
   },
@@ -294,7 +294,7 @@
       "UA": "Normal.",
       "ABG": "Normal.",
       "Coags": "Normal.",
-      "Specialty": "Electrophysiology study: Inducible sustained ventricular tachycardia with LBBB morphology and superior axis \u2014 confirming RV outflow tract origin. Genetic testing: PKP2 (plakophilin-2) pathogenic variant \u2014 desmosomal protein mutation. Autosomal dominant. First-degree relatives require screening. ICD implanted. Diagnosis: Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC)."
+      "Specialty": "Electrophysiology study: Inducible sustained ventricular tachycardia with LBBB morphology and superior axis \u2014 confirming RV outflow tract origin. Genetic testing: PKP2 (plakophilin-2) pathogenic variant \u2014 desmosomal protein mutation. Autosomal dominant. First-degree relatives require screening. ICD implanted."
     },
     "answer": "Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC)"
   },
@@ -340,7 +340,7 @@
       "UA": "Normal.",
       "ABG": "Normal.",
       "Coags": "Normal.",
-      "Specialty": "C4 level: 3 mg/dL (critically low \u2014 normal 16-38). C4 low even between attacks. C1q: Normal. C3: Normal. C1-inhibitor functional assay: 8% of normal activity (severely deficient). C1-inhibitor antigen level: 12% of normal. Tryptase: Normal \u2014 confirming non-mast cell mechanism. C1-INH gene sequencing: frameshift mutation in SERPING1. Diagnosis: Hereditary Angioedema Type I (C1-INH deficiency) \u2014 autosomal dominant."
+      "Specialty": "C4 level: 3 mg/dL (critically low \u2014 normal 16-38). C4 low even between attacks. C1q: Normal. C3: Normal. C1-inhibitor functional assay: 8% of normal activity (severely deficient). C1-inhibitor antigen level: 12% of normal. Tryptase: Normal \u2014 confirming non-mast cell mechanism. C1-INH gene sequencing: frameshift mutation in SERPING1."
     },
     "answer": "Hereditary Angioedema"
   },
@@ -363,7 +363,7 @@
       "UA": "Protein 4+ on dipstick. 24hr urine protein 5.8g (nephrotic range). UPEP: Free lambda light chains (Bence Jones).",
       "ABG": "Normal",
       "Coags": "Factor X activity: 28% (low \u2014 amyloid binds and inactivates factor X; specific association).",
-      "Specialty": "Serum free light chains: Lambda 840 mg/L. Kappa 18 mg/L. Kappa/lambda ratio: 0.02 (severely abnormal \u2014 lambda predominant). Fat pad biopsy: Congo Red stain \u2014 apple-green birefringence under polarized light. Amyloid P scintigraphy: Cardiac and renal uptake. Bone marrow: 18% lambda-restricted plasma cells. Diagnosis: AL amyloidosis (lambda light chain type) with cardiac, renal, and peripheral nerve involvement."
+      "Specialty": "Serum free light chains: Lambda 840 mg/L. Kappa 18 mg/L. Kappa/lambda ratio: 0.02 (severely abnormal \u2014 lambda predominant). Fat pad biopsy: Congo Red stain \u2014 apple-green birefringence under polarized light. Amyloid P scintigraphy: Cardiac and renal uptake. Bone marrow: 18% lambda-restricted plasma cells."
     },
     "answer": "Amyloidosis (AL)"
   },
@@ -386,7 +386,7 @@
       "UA": "Dark brown urine. Dipstick: 4+ blood with 0 RBCs on microscopy \u2014 myoglobinuria. Granular casts.",
       "ABG": "pH 7.31, pCO2 38, bicarb 18 \u2014 metabolic acidosis from rhabdomyolysis and AKI.",
       "Coags": "PT 16, INR 1.5 \u2014 early DIC from hyperthermia.",
-      "Specialty": "CK: 48,000 U/L \u2014 massive rhabdomyolysis from sustained muscle rigidity. Serum iron: markedly low (characteristic of NMS \u2014 iron drops acutely). Haloperidol level: therapeutic range. Diagnosis confirmed: Neuroleptic Malignant Syndrome (NMS). Immediate: stop haloperidol, ICU transfer, aggressive cooling, IV dantrolene 2.5mg/kg, bromocriptine. Benzodiazepines for agitation. Do NOT restart antipsychotics for minimum 2 weeks."
+      "Specialty": "CK: 48,000 U/L \u2014 massive rhabdomyolysis from sustained muscle rigidity. Serum iron: markedly low (characteristic of NMS \u2014 iron drops acutely). Haloperidol level: therapeutic range."
     },
     "answer": "Neuroleptic Malignant Syndrome (NMS)"
   },
@@ -432,7 +432,7 @@
       "UA": "Low specific gravity \u2014 inability to concentrate urine.",
       "ABG": "Mild non-anion gap metabolic acidosis \u2014 hyperchloremic from aldosterone deficiency.",
       "Coags": "Normal",
-      "Specialty": "Basal cortisol AM: 2.1 \u00b5g/dL (severely low; normal >18). ACTH stimulation test (250\u00b5g cosyntropin): Peak cortisol at 60min: 4.8 \u00b5g/dL (normal response >18). ACTH level: 2,480 pg/mL (markedly elevated \u2014 primary adrenal failure). 21-hydroxylase antibodies: Positive \u2014 autoimmune (Addison's disease). DHEAS: Undetectable. Aldosterone: Undetectable. Renin: Markedly elevated. Confirms autoimmune primary adrenal insufficiency (Addison's disease)."
+      "Specialty": "Basal cortisol AM: 2.1 \u00b5g/dL (severely low; normal >18). ACTH stimulation test (250\u00b5g cosyntropin): Peak cortisol at 60min: 4.8 \u00b5g/dL (normal response >18). ACTH level: 2,480 pg/mL (markedly elevated \u2014 primary adrenal failure). 21-hydroxylase antibodies: Positive \u2014 autoimmune primary adrenal insufficiency. DHEAS: Undetectable. Aldosterone: Undetectable. Renin: Markedly elevated. Confirms autoimmune primary adrenal insufficiency (Addison's disease)."
     },
     "answer": "Addison's Disease"
   },
@@ -455,7 +455,7 @@
       "UA": "3+ blood, 2+ protein \u2014 renal arteritis with infarction, not glomerulonephritis.",
       "ABG": "Normal.",
       "Coags": "Normal.",
-      "Specialty": "Mesenteric angiography: Multiple saccular microaneurysms at vessel bifurcations throughout the celiac, SMA, and renal arterial beds. Classic 'string of beads' pattern. ANCA: negative (p-ANCA and c-ANCA). HBsAg positive \u2014 HBV-associated PAN. Hepatitis B DNA: 2.4 million IU/mL. Diagnosis: Polyarteritis Nodosa (HBV-associated)."
+      "Specialty": "Mesenteric angiography: Multiple saccular microaneurysms at vessel bifurcations throughout the celiac, SMA, and renal arterial beds. Classic 'string of beads' pattern. ANCA: negative (p-ANCA and c-ANCA). HBsAg positive \u2014 HBV-associated PAN. Hepatitis B DNA: 2.4 million IU/mL."
     },
     "answer": "Polyarteritis Nodosa"
   },
@@ -662,7 +662,7 @@
       "UA": "Normal.",
       "ABG": "Normal.",
       "Coags": "Normal. Factor V Leiden negative. Antiphospholipid antibodies negative. Protein C/S normal.",
-      "Specialty": "Anti-endothelial cell antibodies (AECA): markedly positive. Anti-alpha-SNAP antibodies: positive \u2014 research assay confirming Susac syndrome endotheliopathy. Fluorescein angiography: branch retinal artery occlusions with Gass plaques at bifurcation points \u2014 pathognomonic. No infectious cause identified (HSV, VZV, CMV, HIV, syphilis all negative). Cochlear MRI: bilateral cochlear enhancement on gadolinium. Diagnosis: Susac Syndrome (retinocochleocerebral vasculopathy)."
+      "Specialty": "Anti-endothelial cell antibodies (AECA): markedly positive. Anti-alpha-SNAP antibodies: positive \u2014 research assay confirming Susac syndrome endotheliopathy. Fluorescein angiography: branch retinal artery occlusions with Gass plaques at bifurcation points \u2014 pathognomonic. No infectious cause identified (HSV, VZV, CMV, HIV, syphilis all negative). Cochlear MRI: bilateral cochlear enhancement on gadolinium."
     },
     "answer": "Susac Syndrome"
   },
@@ -685,7 +685,7 @@
       "UA": "Normal",
       "ABG": "pO2 58 on 6L NC. pH 7.34 \u2014 mild respiratory acidosis from pulmonary edema.",
       "Coags": "Normal",
-      "Specialty": "BNP: 6,800 pg/mL (severely elevated). NT-proBNP: >35,000 pg/mL. PA catheter (Swan-Ganz): PCWP 30mmHg (severely elevated). CO 2.8 L/min (reduced). SVR 2,200 dynes (markedly elevated \u2014 cardiogenic shock physiology). Diagnosis: Decompensated ischemic cardiomyopathy with low-output state (warm/wet \u2192 now cold/wet). Requires IV diuresis + vasodilators; consider inotrope or mechanical circulatory support."
+      "Specialty": "BNP: 6,800 pg/mL (severely elevated). NT-proBNP: >35,000 pg/mL. PA catheter (Swan-Ganz): PCWP 30mmHg (severely elevated). CO 2.8 L/min (reduced). SVR 2,200 dynes (markedly elevated \u2014 cardiogenic shock physiology).  Requires IV diuresis + vasodilators; consider inotrope or mechanical circulatory support."
     },
     "answer": "Congestive Heart Failure (CHF)"
   },
@@ -892,7 +892,7 @@
       "UA": "Concentrated. No infection.",
       "ABG": "pH 7.22, bicarb 11 \u2014 metabolic acidosis from hypoperfusion and mineralocorticoid deficiency.",
       "Coags": "Normal.",
-      "Specialty": "Random cortisol: 1.2 mcg/dL (critically low \u2014 normal stress response >18). ACTH stimulation test: cortisol rises only to 3.4 mcg/dL at 60 minutes (normal >18). ACTH level: undetectable \u2014 secondary adrenal insufficiency from HPA axis suppression by chronic exogenous steroids. IV hydrocortisone 100mg given: BP recovered to 106/70 within 90 minutes. Diagnosis: Adrenal Crisis (secondary, from glucocorticoid withdrawal)."
+      "Specialty": "Random cortisol: 1.2 mcg/dL (critically low \u2014 normal stress response >18). ACTH stimulation test: cortisol rises only to 3.4 mcg/dL at 60 minutes (normal >18). ACTH level: undetectable \u2014 secondary adrenal insufficiency from HPA axis suppression by chronic exogenous steroids. IV hydrocortisone 100mg given: BP recovered to 106/70 within 90 minutes."
     },
     "answer": "Adrenal Crisis"
   },
@@ -938,7 +938,7 @@
       "UA": "Normal.",
       "ABG": "Normal.",
       "Coags": "PT elevated \u2014 vitamin K malabsorption.",
-      "Specialty": "Small bowel biopsy with PAS stain: Lamina propria packed with foamy macrophages containing PAS-positive, diastase-resistant granules \u2014 pathognomonic. Villous blunting with lymphatic dilation. PCR of duodenal biopsy: Tropheryma whipplei DNA confirmed. CSF PCR: Tropheryma whipplei positive \u2014 CNS involvement. Diagnosis: Whipple's Disease with CNS involvement. Treatment: ceftriaxone IV x2 weeks \u2192 trimethoprim-sulfamethoxazole x1-2 years."
+      "Specialty": "Small bowel biopsy with PAS stain: Lamina propria packed with foamy macrophages containing PAS-positive, diastase-resistant granules \u2014 pathognomonic. Villous blunting with lymphatic dilation. PCR of duodenal biopsy: Tropheryma whipplei DNA confirmed. CSF PCR: Tropheryma whipplei positive \u2014 CNS involvement.  Treatment: ceftriaxone IV x2 weeks \u2192 trimethoprim-sulfamethoxazole x1-2 years."
     },
     "answer": "Whipple Disease"
   },
@@ -1099,7 +1099,7 @@
       "UA": "Normal.",
       "ABG": "Normal.",
       "Coags": "Normal.",
-      "Specialty": "Urgent coronary angiography: Normal coronary arteries \u2014 no stenosis, no dissection, no thrombus. Left ventriculography: Apical ballooning with hypercontractile base \u2014 pathognomonic octopus pot appearance. Catecholamine surge confirmed: urine epinephrine 4x upper limit of normal. Diagnosis: Takotsubo Cardiomyopathy (stress cardiomyopathy) \u2014 postpartum emotional trigger. EF recovered to 58% at 6-week follow-up."
+      "Specialty": "Urgent coronary angiography: Normal coronary arteries \u2014 no stenosis, no dissection, no thrombus. Left ventriculography: Apical ballooning with hypercontractile base \u2014 pathognomonic octopus pot appearance. Catecholamine surge confirmed: urine epinephrine 4x upper limit of normal.  EF recovered to 58% at 6-week follow-up."
     },
     "answer": "Takotsubo Cardiomyopathy"
   },
@@ -1145,7 +1145,7 @@
       "UA": "Normal",
       "ABG": "Normal",
       "Coags": "Normal",
-      "Specialty": "CSF: A\u03b242: 220 pg/mL (severely reduced). p-tau 181: 128 pg/mL (markedly elevated). Total tau: 820 pg/mL (elevated). A\u03b242/p-tau 181 ratio: 1.7 (abnormal; <6.5 indicates AD). ApoE: \u03b54/\u03b53 (heterozygous \u2014 3x population risk). Neurodegeneration biomarkers confirm amyloid (A+) and tau pathology (T+). Workup: TSH, B12, RPR, HIV \u2014 all normal. Urine heavy metals \u2014 normal. Lewy body antibody panel: Negative. Diagnosis: Alzheimer's disease \u2014 biomarker-confirmed. Lecanemab or donanemab trial eligibility screening initiated (anti-amyloid immunotherapy)."
+      "Specialty": "CSF: A\u03b242: 220 pg/mL (severely reduced). p-tau 181: 128 pg/mL (markedly elevated). Total tau: 820 pg/mL (elevated). A\u03b242/p-tau 181 ratio: 1.7 (abnormal; <6.5 indicates AD). ApoE: \u03b54/\u03b53 (heterozygous \u2014 3x population risk). Neurodegeneration biomarkers confirm amyloid (A+) and tau pathology (T+). Workup: TSH, B12, RPR, HIV \u2014 all normal. Urine heavy metals \u2014 normal. Lewy body antibody panel: Negative.  Lecanemab or donanemab trial eligibility screening initiated (anti-amyloid immunotherapy)."
     },
     "answer": "Alzheimer Disease"
   },
@@ -1283,7 +1283,7 @@
       "UA": "Hemoglobinuria \u2014 dark brown urine. No RBC casts.",
       "ABG": "Normal.",
       "Coags": "Normal INR. D-dimer elevated \u2014 thrombotic tendency.",
-      "Specialty": "Flow cytometry peripheral blood: Absent CD55 and CD59 on RBCs (52% clone size) and granulocytes (68% clone size) \u2014 GPI-anchor deficient population. Sucrose lysis test: positive (historical). Ham test: positive (historical). PIG-A gene mutation confirmed on sequencing. Diagnosis: Paroxysmal Nocturnal Hemoglobinuria (PNH) \u2014 with thrombotic complications (portal vein + hepatic vein thrombosis causing Budd-Chiari)."
+      "Specialty": "Flow cytometry peripheral blood: Absent CD55 and CD59 on RBCs (52% clone size) and granulocytes (68% clone size) \u2014 GPI-anchor deficient population. Sucrose lysis test: positive (historical). Ham test: positive (historical). PIG-A gene mutation confirmed on sequencing."
     },
     "answer": "Paroxysmal Nocturnal Hemoglobinuria (PNH)"
   },
@@ -1398,7 +1398,7 @@
       "UA": "Normal \u2014 no infection causing the incontinence.",
       "ABG": "Normal.",
       "Coags": "Normal.",
-      "Specialty": "Spinal digital subtraction angiography: Type I dural arteriovenous fistula at T9 \u2014 single arteriovenous connection at the dural sleeve of the right T9 nerve root. Venous drainage into perimedullary veins \u2192 venous hypertension \u2192 progressive cord ischemia (Foix-Alajouanine syndrome if untreated). Endovascular embolization performed: complete obliteration of fistula. Neurological improvement partial at 6 months \u2014 early treatment is critical for recovery. Diagnosis: Spinal Dural Arteriovenous Fistula (Type I)."
+      "Specialty": "Spinal digital subtraction angiography: Type I dural arteriovenous fistula at T9 \u2014 single arteriovenous connection at the dural sleeve of the right T9 nerve root. Venous drainage into perimedullary veins \u2192 venous hypertension \u2192 progressive cord ischemia (Foix-Alajouanine syndrome if untreated). Endovascular embolization performed: complete obliteration of fistula. Neurological improvement partial at 6 months \u2014 early treatment is critical for recovery."
     },
     "answer": "Spinal Dural Arteriovenous Fistula"
   },
@@ -1536,7 +1536,7 @@
       "UA": "Normal.",
       "ABG": "Normal.",
       "Coags": "Normal. No antiphospholipid antibodies.",
-      "Specialty": "Urgent coronary angiography: LAD shows smooth-walled narrowing over a 4cm segment \u2014 NO atherosclerotic plaque, NO thrombus visible on angiography alone. Intravascular OCT (optical coherence tomography): Intramural hematoma within the LAD wall \u2014 false lumen compressing the true lumen. Classic double lumen without communication. No intimal tear identified \u2014 Type 2 SCAD (intramural hematoma type). Fibromuscular dysplasia on renal artery imaging. Conservative management: anticoagulation avoided. EF recovered to 55% at 8 weeks. Diagnosis: Spontaneous Coronary Artery Dissection (SCAD) \u2014 peripartum."
+      "Specialty": "Urgent coronary angiography: LAD shows smooth-walled narrowing over a 4cm segment \u2014 NO atherosclerotic plaque, NO thrombus visible on angiography alone. Intravascular OCT (optical coherence tomography): Intramural hematoma within the LAD wall \u2014 false lumen compressing the true lumen. Classic double lumen without communication. No intimal tear identified \u2014 Type 2 SCAD (intramural hematoma type). Fibromuscular dysplasia on renal artery imaging. Conservative management: anticoagulation avoided. EF recovered to 55% at 8 weeks."
     },
     "answer": "Spontaneous Coronary Artery Dissection (SCAD)"
   },
@@ -1674,7 +1674,7 @@
       "UA": "2+ protein, RBC casts \u2014 tubulointerstitial nephritis.",
       "ABG": "Normal.",
       "Coags": "Normal.",
-      "Specialty": "Serum IgG4: 840 mg/dL (markedly elevated \u2014 normal <135). Serum IgG4:IgG ratio >40%. Submandibular gland biopsy: Dense lymphoplasmacytic infiltrate with >10 IgG4-positive plasma cells per high-power field. Storiform fibrosis pattern. Obliterative phlebitis. ANA negative, SSA/SSB negative (distinguishes from Sjogren's). Steroid trial: dramatic response within 2 weeks \u2014 pancreatic mass decreased 60%, salivary glands regressed. Diagnosis: IgG4-Related Disease (multiorgan: salivary glands, pancreas, kidneys, orbits, retroperitoneum, mediastinum)."
+      "Specialty": "Serum IgG4: 840 mg/dL (markedly elevated \u2014 normal <135). Serum IgG4:IgG ratio >40%. Submandibular gland biopsy: Dense lymphoplasmacytic infiltrate with >10 IgG4-positive plasma cells per high-power field. Storiform fibrosis pattern. Obliterative phlebitis. ANA negative, SSA/SSB negative (distinguishes from Sjogren's). Steroid trial: dramatic response within 2 weeks \u2014 pancreatic mass decreased 60%, salivary glands regressed."
     },
     "answer": "IgG4-Related Disease"
   },
