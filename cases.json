@@ -434,7 +434,7 @@
       "Coags": "Normal",
       "Specialty": "Basal cortisol AM: 2.1 \u00b5g/dL (critically low; normal >18). ACTH stimulation test (250\u00b5g cosyntropin IV): Peak cortisol at 60min: 4.8 \u00b5g/dL \u2014 failed response (normal >18). ACTH level: 2,480 pg/mL (markedly elevated \u2014 primary vs secondary distinguished here). 21-hydroxylase antibodies (anti-adrenal): Positive \u2014 autoimmune etiology confirmed. Aldosterone: Undetectable. Plasma renin: 48 ng/mL/hr (markedly elevated). DHEAS: Undetectable. Adrenal CT: Bilateral adrenal glands small and atrophic \u2014 no hemorrhage, no mass, no calcification."
     },
-    "answer": "Addison's Disease"
+    "answer": "Addison Disease (Adrenal Insufficiency)"
   },
   {
     "date": "2026-04-04",
@@ -1262,7 +1262,7 @@
       "Coags": "PT 15.8s (high) \u2014 early hepatic synthetic dysfunction.",
       "Specialty": "Serum ferritin: 6,200 ng/mL (severely elevated; normal <300 in men). Transferrin saturation: 92% (severely elevated; normal <45%). HFE gene sequencing: Homozygous C282Y mutation (p.Cys282Tyr) \u2014 classic hereditary hemochromatosis. Liver biopsy: Hepatic iron index 4.8 (>1.9 confirms hemochromatosis). Stage 3 fibrosis (periportal bridging). AFP: 24 ng/mL \u2014 hepatocellular carcinoma surveillance required (cirrhosis + hemochromatosis = very high HCC risk). Treatment: Therapeutic phlebotomy weekly until ferritin <50 ng/mL."
     },
-    "answer": "Hereditary Hemochromatosis"
+    "answer": "Hemochromatosis (Hereditary)"
   },
   {
     "date": "2026-05-10",
